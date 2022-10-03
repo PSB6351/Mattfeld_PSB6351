@@ -22,7 +22,7 @@ def infotodict(seqinfo):
     t1w = create_key('sub-{subject}/ses-1/anat/sub-{subject}_run-{item}_T1w')
     dwi = create_key('sub-{subject}/ses-1/dwi/sub-{subject}_run-{item}_dwi')
     loc1_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_loc_ROI_run-1_bold')
-    loc2_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_loc_ROI_run-1_bold')
+    loc2_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_loc_ROI_run-2_bold')
     study1_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-1_bold')
     study2_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-2_bold')
     study3_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-3_bold')
@@ -51,13 +51,13 @@ def infotodict(seqinfo):
             info[loc1_task].append(s[2])
         elif (timepoints == 303) and ("ROI_loc_2" in s[12]):
             info[loc2_task].append(s[2])
-        elif (timepoints == 355) and ('fMRI_REVL_Study1' in s[12]):
+        elif (timepoints == 355) and ('fMRI_REVL_Study_1' in s[12]):
             info[study1_task].append(s[2])
-        elif (timepoints == 351) and ('fMRI_REVL_Study2' in s[12]):
+        elif (timepoints == 351) and ('fMRI_REVL_Study_2' in s[12]):
             info[study2_task].append(s[2])
-        elif (timepoints == 350) and ('fMRI_REVL_Study3' in s[12]):
+        elif (timepoints == 350) and ('fMRI_REVL_Study_3' in s[12]):
             info[study3_task].append(s[2])
-        elif (timepoints == 345) and ('fMRI_REVL_Study4' in s[12]):
+        elif (timepoints == 345) and ('fMRI_REVL_Study_4' in s[12]):
             info[study4_task].append(s[2])
         elif "dMRI_DistortionMap_AP" in s.series_description:
             info[dwi_fmap].append({"item": s[2], "dir": "AP"})
