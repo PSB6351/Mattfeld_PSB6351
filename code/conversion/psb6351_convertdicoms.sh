@@ -7,5 +7,4 @@
 #SBATCH --account acc_psb6351
 #SBATCH --partition classroom
 
-heudiconv -d '/home/rtord002/Mattfeld_PSB6351/sourcedata/Mattfeld_REVL-000-vCAT-{subject}-S1/*/*/*/*/*/*' -s 021 -c dcm2niix -f /home/rtord002/Mattfeld_PSB6351/code/conversion/psb6351_heuristic.py -o /home/rtord002/Mattfeld_PSB6351/dset
-
+heudiconv -d '/home/rtord002/Mattfeld_PSB6351/sourcedata/Mattfeld_REVL-000-vCAT-{subject}-S1/*/*/*/*/*/*' -b --minmeta -s 021 -c dcm2niix -f /home/rtord002/Mattfeld_PSB6351/code/conversion/psb6351_heuristic.py -o /home/rtord002/Mattfeld_PSB6351/dset
