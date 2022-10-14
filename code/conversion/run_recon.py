@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess as sp
 from glob import glob
 
-
+#aaron says go
 file_dir = Path(__file__).parent
 # Produce freesurfer directory if it doesn't exist.
 Path("/home/amattfel/Mattfeld_PSB6351/derivatives/freesurfer").mkdir(
