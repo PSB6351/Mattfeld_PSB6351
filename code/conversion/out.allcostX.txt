@@ -1,0 +1,15 @@
+++ 3dAllineate: AFNI version=AFNI_20.2.10 (Aug  4 2020) [64-bit]
+++ Authored by: Zhark the Registrator
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset, 
+  such as /home/ssuss007/Mattfeld_PSB6351/dset/sub-021/ses-1/func/sub-021_loc_ROI_run-1_bold.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/ssuss007/Mattfeld_PSB6351/dset/sub-021/ses-1/func/sub-021_loc_ROI_run-1_bold.nii.gz is 30.000002 degrees from plumb.
+[7m** ERROR:[0m Unknown and Illegal option '-allcostx' :-( :-( :-(
+   Here's hoping these excerpts from '3dAllineate -help' enlighten:
+        '-allcostX       = Compute and print ALL available cost functionals for the'
+        '-allcostX1D p q = Compute ALL available cost functionals for the set of'
+        '-allcost        = Compute ALL available cost functionals and print them'
