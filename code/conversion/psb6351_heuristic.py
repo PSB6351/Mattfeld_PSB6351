@@ -26,10 +26,10 @@ def infotodict(seqinfo):
     loc2_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_loc2_task')
     study1_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-1_bold')
     study2_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-2_bold')
-    study3_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_tast-study_run-3_bold')
-    study4_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_test-study_run-4-bold')
-    task_fmap = create_key('sub-{subject}/ses-1/fmap/sub-{subject}_task_fmap')
-    dwi_fmap = create_key('sub-{subject}/ses-1/fmap/sub-{subject}_dwi_fmap')
+    study3_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-3_bold')
+    study4_task = create_key('sub-{subject}/ses-1/func/sub-{subject}_task-study_run-4_bold')
+    task_fmap = create_key('sub-{subject}/fmap/sub-{subject}_acq-func_dir-{dir}_run{item}_epi')
+    dwi_fmap = create_key('sub-{subject}/fmap/sub-{subject}_acq-dwi_dir-{dir}_run{item}_epi')
 
 
     info = {t1w : [],
@@ -45,9 +45,9 @@ def infotodict(seqinfo):
 
     for s in seqinfo:
         xdim, ydim, slice_num, timepoints = (s[6], s[7], s[8], s[9])
-        if (slice_num ==  176) and (timepoints == 1) and ("T1w_MPR_vNAV" in s.series_description):
+        if (slice_num ==  176) and (timepoints == 1) and ("T1w_MPR_vNav" in s.series_description):
             info[t1w].append(s[2])
-        elif (slice_num > 1) and (timepoints == 95 ) and ("dMRI_AP_REVL" in s.series_description):
+        elif (slice_num > 1) and (timepoints == 103) and ("dMRI" in s[12]):
             info[dwi].append(s[2])
         elif (timepoints == 304) and ("fMRI_REVL_ROI_loc_1" in s.series_description):
             info[loc1_task].append(s[2])
