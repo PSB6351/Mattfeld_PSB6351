@@ -51,7 +51,7 @@ def infotodict(seqinfo):
             info[dwi].append(s[2])
         elif (timepoints == 304) and ("fMRI_REVL_ROI_loc_1" in s.series_description):
             info[loc1_task].append(s[2])
-        elif (timepoints == 303) and ("fMRI_REVL_ROI_loc_2" in s.series_description):
+        elif (timepoints == 304) and ("fMRI_REVL_ROI_loc_2" in s.series_description):
             info[loc2_task].append(s[2])
         elif (timepoints == 355) and ("fMRI_REVL_Study_1" in s.series_description):
             info[study1_task].append(s[2])
