@@ -11,6 +11,9 @@ Here you can find, work on, and submit materials for the class!
 
 # Setting up your environment
 
+# **!!! THIS IS ONLY FOR STUDENTS WHO DO NOT SET UP THEIR ACCOUNT THROUGH THEIR LAB !!!**
+# **!!! STOP !!! DO NOT PROCEED IF YOU HAVE YOUR ENVIRONMENT SET UP !!!**
+
 ### The first command loads a miniconda software for creating conda virtual environment
 
 1) module load miniconda3-4.5.11-oqs2mbgv3mmo3dll2f2rbxt4plfgyqzv
@@ -41,3 +44,5 @@ promptinfo=`${HOME}/.nodeload`
 PROMPT_COMMAND='PS1="\[\e[1;37m\e[44m\]${project_name}\[\e[0;0m\]${prompt1}${promptinfo}${prompt2}"'
 
 source /home/YOURADUSERNAME/YOURLASTNAME_PSB6351/code/.psb6351_env
+
+# This stuff is super cool!!!
