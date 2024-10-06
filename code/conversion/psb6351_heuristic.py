@@ -19,19 +19,25 @@ def infotodict(seqinfo):
     bids_subject_session_prefix: BIDS subject/session prefix
     """
 
-    keyname(e.g.t1w) = create_key('use/this/to/define/sub-{subject}/path/for/file')
-    # note you should probably have a key for each scan you want to capture
-
+    T1w_Key = create_key('sub-{subject}/anat/sub-{subject}_T1w')
+    fMRI_Key = create_key('sub-{subject}/func/sub-{subject}_task-REVL_bold')
+    
     info = {
-            keyname(e.g.t1w) : [],
-           }
-
+        T1w_Key: [],
+        fMRI_Key: [],
+    }
+    
     for s in seqinfo:
         xdim, ydim, slice_num, timepoints = (s[6], s[7], s[8], s[9])
-        if (slice_num == SOMENUMBER) and (timepoints == 1) and ("NAMEOFSCANTYPE" in s.series_description):
-            info[keyname(e.g.t1w)].append(s[2])
-        elif (slice_num > SOMEOTHERNUMBER) and (timepoints == SOMETHINGELSE) and ("DIFFERENTNAMEOFSCAN" in s[12]):
-            info[?].append(s[2])
+        if (slice_num == 176) and (timepoints == 1) and ("T1w" in s.series_description):
+            info[T1w_Key].append(s.series_id)
+        elif (slice_num > 136) and (timepoints == 135) and ("fMRI" in s.series_description):
+            info[fMRI_Key].append(s.series_id)
+        
         else:
             pass
+    
     return info
+
+    
+    
