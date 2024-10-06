@@ -1,0 +1,41 @@
+bids_dataset
+├── CHANGES
+├── dataset_description.json
+├── participants.json
+├── participants.tsv
+├── README
+├── scans.json
+└── sub-01
+    ├── anat
+    │   ├── sub-01_run-1_T1w.json
+    │   └── sub-01_run-1_T1w.nii.gz
+    ├── dwi
+    │   ├── sub-01_run-1_dwi.bval
+    │   ├── sub-01_run-1_dwi.bvec
+    │   ├── sub-01_run-1_dwi.json
+    │   └── sub-01_run-1_dwi.nii.gz
+    ├── fmap
+    │   ├── sub-01_run-1_dir_AP_bold.json
+    │   ├── sub-01_run-1_dir_AP_bold.nii.gz
+    │   ├── sub-01_run-1_dir_AP_dwi.json
+    │   ├── sub-01_run-1_dir_AP_dwi.nii.gz
+    │   ├── sub-01_run-1_dir_PA_bold.json
+    │   ├── sub-01_run-1_dir_PA_bold.nii.gz
+    │   ├── sub-01_run-1_dir_PA_dwi.json
+    │   └── sub-01_run-1_dir_PA_dwi.nii.gz
+    ├── func
+    │   ├── sub-01_run-1_loc_bold.json
+    │   ├── sub-01_run-1_loc_bold.nii.gz
+    │   ├── sub-01_run-1-task-bold.json
+    │   ├── sub-01_run-1-task-bold.nii.gz
+    │   ├── sub-01_run-2_loc_bold.json
+    │   ├── sub-01_run-2_loc_bold.nii.gz
+    │   ├── sub-01_run-2-task-bold.json
+    │   ├── sub-01_run-2-task-bold.nii.gz
+    │   ├── sub-01_run-3-task-bold.json
+    │   ├── sub-01_run-3-task-bold.nii.gz
+    │   ├── sub-01_run-4-task-bold.json
+    │   └── sub-01_run-4-task-bold.nii.gz
+    └── sub-01_scans.tsv
+
+5 directories, 33 files
