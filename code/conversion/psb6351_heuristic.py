@@ -5,7 +5,7 @@ import os
 
 # run command in the terminal w modified paths:
 # first time running heudiconv:
-# heudiconv --files sourcedata/001/*/resources/DICOM/files/*.dcm -o raw -f convertall -s 001 -ss 1 -c none --overwrite
+# heudiconv --files sourcedata/001/*/resources/DICOM/files/*.dcm -o raw -f convertall -s 001 -ss 01 -c none --overwrite
 # once modified heuristics file, convert to bids formatting:
 # heudiconv --files sourcedata/001/*/resources/DICOM/files/*.dcm -o raw -f code/psb6351_heuristic.py -s 001 -ss 01 -c dcm2niix -b
 
@@ -38,6 +38,9 @@ def infotodict(seqinfo):
     study_bold = create_key(
         "sub-{subject}/{session}/func/sub-{subject}_{session}_task-study_run-{item:02d}_bold"
     )
+    roi_bold = create_key(
+        "sub-{subject}/{session}/func/sub-{subject}_{session}_task-roi_run-{item:02d}_bold"
+    )
 
     # diffusion
     dwi = create_key(
@@ -55,6 +58,7 @@ def infotodict(seqinfo):
     info = {
         t1w: [],
         study_bold: [],
+        roi_bold: [],
         dwi: [],
         fmap_func: [],
         fmap_dwi: [],
@@ -67,24 +71,33 @@ def infotodict(seqinfo):
         if (
             (slice_num == 176)
             and (timepoints == 1)
-            and ("T1w_MPR_vNav" in s.series_description)  # t1w had duplicate
+            and (
+                "T1w_MPR_vNav" in s.series_description
+            )  # t1w had normalized and non-normalized
+            # and ("NORM" in s.image_type)  # Check if image_type contains 'NORM' for normalized
         ):
             next_scan = seqinfo[i + 1]
             if (
                 next_scan[8] != slice_num
-            ):  # if slice number is the same, only save first t1w
+            ):  # if slice number is the same, saves the first t1w
                 pass
             else:
                 info[t1w].append([s[2]])
 
-        # function second
+        # functional second
         elif "fMRI" in s[12]:
             if timepoints == 355:
                 info[study_bold].append([s[2]])
+            elif timepoints == 304:
+                info[roi_bold].append([s[2]])
             elif timepoints == 1:
                 if "PA" in s[12]:
                     info[fmap_func].append(
-                        {"item": s[2], "direction": "PA", "acquisition": "func"}
+                        {
+                            "item": s[2],
+                            "direction": "PA",
+                            "acquisition": "func",
+                        }
                     )
                 else:
                     info[fmap_func].append(
@@ -105,3 +118,11 @@ def infotodict(seqinfo):
                 )
 
     return info
+
+
+"""# enable populate_intended_for for field maps (fmap_func, fmap_dwi)
+POPULATE_INTENDED_FOR_OPTS = {
+    "matching_parameters": ["PhaseEncodingDirection"],
+    "criterion": "Closest",  # Match the closest scan based on these parameters
+}
+"""
