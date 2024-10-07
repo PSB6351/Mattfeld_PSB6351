@@ -1,8 +1,8 @@
 {
   "project": "Mattfeld_PSB6351",
   "bidsifier": "/home/amattfel/Mattfeld_PSB6351/code/singularity-images/adamkimbler_bidsconvert_0.0.1.sif",
-  "heuristics_partial": "/home/data/amattfel/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351_partial.py",
-  "heuristics": "/home/data/amattfel/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351.py",
+  "heuristics_partial": "/home/amattfel/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351_partial.py",
+  "heuristics": "/home/amattfel/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351.py",
   "mriqc": "/home/data/cis/singularity-images/poldracklab_mriqc_0.11.0-2018-06-05-683c7c97cbcc.img",
   "mriqc_settings": {
     "fd_thres": 0.2
