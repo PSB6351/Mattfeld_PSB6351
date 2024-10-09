@@ -3,12 +3,17 @@ sourcedata/
 
 # BIDS converted MRI files
 dset/
+dset2/
+
+# Singularity images
+code/singularity-images
 
 # Derivatives produced during preprocessing
 derivatives/
 
 # Miniconda python environment
 .envs/
+
 
 # Jupyter notebook crash files
 .ipynb_checkpoints
