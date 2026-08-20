@@ -1,6 +1,3 @@
-# Sourcedata MRI files
-sourcedata/
-
 # BIDS converted MRI files
 dset/
 dset2/

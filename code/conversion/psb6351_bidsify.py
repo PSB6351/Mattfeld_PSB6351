@@ -10,14 +10,10 @@ import pandas as pd
 
 script_dir = Path(__file__).parent
 
-#subject_data = pd.read_csv(
-#    "/home/amattfel/Mattfeld_PSB6351/code/conversion/sid_list.csv"
-#)
-
-if 'singularity-3.1' in os.environ['PATH']:
-    os.environ['PATH'] = os.environ['PATH'].replace('/home/applications/singularity/singularity-3.1/bin', '/home/applications/singularity/singularity-3.5.3/bin/')
+if 'WHAT DOES THIS CHANGE TO FOR THE ROARY CLUSTER?' in os.environ['PATH']:
+    os.environ['PATH'] = os.environ['PATH'].replace('/home/applications/WHAT ABOUT HERE???')
 else:
-    os.environ['PATH'] += ':/home/applications/singularity/singularity-3.5.3/bin/'
+    os.environ['PATH'] += ':/home/applications/WHAT ABOUT HERE???'
     
 with open(script_dir / "Mattfeld_PSB6351.json", "r") as _:
     config = json.load(_)
@@ -37,13 +33,9 @@ for tar_file in sorted(list(Path("/home/amattfel/Mattfeld_PSB6351/sourcedata/").
     if os.path.exists(f"/home/amattfel/Mattfeld_PSB6351/dset/sub-{subject}/"):
         continue
     
-    # Skip if subject is marked as excluded
-    #if not subject_data[subject_data["exclude"].notnull()].query(f"id == {subject}").empty:
-    #    continue
-    
     print(subject)
     bidsify_workdir = Path(
-        f'/scratch/madlab/bidsify_{config["project"]}/PSB6351-{subject}/'
+        f'/WHERE IS YOUR WORK DIR????/bidsify_{config["project"]}/PSB6351-{subject}/'
     )
     bidsify_workdir.mkdir(mode=0o777, exist_ok=True, parents=True)
 
@@ -55,7 +47,7 @@ for tar_file in sorted(list(Path("/home/amattfel/Mattfeld_PSB6351/sourcedata/").
     if not tmp_tar_file.is_file():
         tmp_tar_file.parent.mkdir(exist_ok=True, parents=True)
         shutil.copyfile(tar_file, tmp_tar_file)
-    output_dir = Path("/scratch/madlab/Mattfeld_PSB6351/bidsify_dset/")
+    output_dir = Path("/WHERE SHOULD YOUR OUT DIRECTORY BE???/Mattfeld_PSB6351/bidsify_dset")
     output_dir.mkdir(mode=0o777, parents=True, exist_ok=True)
     # Create bidsifier singularity cmd
     cmd = f'singularity run --cleanenv {config["bidsifier"]} \
@@ -64,13 +56,13 @@ for tar_file in sorted(list(Path("/home/amattfel/Mattfeld_PSB6351/sourcedata/").
 
     log_dir = "/home/amattfel/Mattfeld_PSB6351/code/conversion/bidsifier_logs"
     # Pass 'cmd' to sbatch for processing
-    print(f'sbatch -J bidsify-{subject} -p investor --account iacc_madlab \
-          --qos pq_madlab  --wait \
+    print(f'sbatch -J bidsify-{subject} -p WHAT PARTITION --account WHAT ACCOUNT \
+          --qos WHAT QOS  --wait \
           -o {log_dir}/bidsify-{subject} \
           --wrap="{cmd}"')
     process = sp.Popen(
-        f'sbatch -J bidsify-{subject} -p investor --account iacc_madlab \
-          --qos pq_madlab  --wait \
+        f'sbatch -J bidsify-{subject} -p WHAT PARTITION --account WHAT ACCOUNT \
+          --qos WHAT QOS  --wait \
           -o {log_dir}/bidsify-{subject} \
           --wrap="{cmd}"',
         shell=True,
