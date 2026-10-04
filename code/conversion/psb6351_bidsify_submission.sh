@@ -3,6 +3,9 @@
 #SBATCH -J psb6351_dcm_convert
 #SBATCH -o /home/aoste011/Mattfeld_PSB6351/code/conversion/out_dcm
 #SBATCH -e /home/aoste011/Mattfeld_PSB6351/code/conversion/err_dcm
+#SBATCH --qos=classroom
+#SBATCH --account=acc_psb6351
+#SBATCH --mem=16G
 
 # SET UP A HEUDICONV CALL TO BIDSIFY YOUR DATA
 
