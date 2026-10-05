@@ -14,4 +14,4 @@
 #heudiconv -d '/home/sfrai003/Mattfeld_PSB6351/sourcedata/Mattfeld_REVL-000-vCAT-{subject}-S1/*/*/*/*/*/*' -b --minmeta -s 021 -c none -f convertall -o /home/sfrai003/Mattfeld_PSB6351/dset
 
 # WHAT WOULD THE FINAL HEUDICONV SUBMISSION LOOK LIKE?
-heudiconv -d '/home/sfrai003/Mattfeld_PSB6351/sourcedata/Mattfeld_REVL-000-vCAT-{subject}-S1/*/*/*/*/*/*' -b --minmeta -s 021 -c dcm2niix -f /home/sfrai003/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351.py -o /home/sfrai003/Mattfeld_PSB6351/dset
+heudiconv -d '/home/sfrai003/Mattfeld_PSB6351/sourcedata/Mattfeld_REVL-000-vCAT-{subject}-S1/*/*/*/*/*/*' -b --minmeta -s 021 -ss S1 -c dcm2niix -f /home/sfrai003/Mattfeld_PSB6351/code/conversion/Mattfeld_PSB6351.py -o /home/sfrai003/Mattfeld_PSB6351/dset
