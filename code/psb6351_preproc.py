@@ -17,11 +17,10 @@
 # class specific info account = acc_psb6351
 # class specific info qos = classroom
 
-#SBATCH --account CHANGE FOR CLASS ACCOUNT
-#SBATCH --partition highmem1-sapphirerapids <- REMOVE OR CHANGE TO REFLECT CLASS RESOURCES
-#SBATCH --qos CHANGE FOR CLASS ACCOUNT
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM <-CHANGE SO WE DONT WRITE OVER EACH OTHER/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM <-CHANGE SO WE DONT WRITE OVER EACH OTHER/crash/preproc_e
+#SBATCH --account acc_psb6351
+#SBATCH --qos classroom
+#SBATCH -o /home/aoste011/psb6351_work/crash/preproc_o
+#SBATCH -e /home/aoste011/psb6351_work/crash/preproc_e
 
 # The following commands are specific to python programming.
 # Tools that you'll need for your code must be imported.  
@@ -64,8 +63,8 @@ sids = ['sub-021']
 # relevant for linux and osx operating systems....windows uses something different '\\'
 # I am also using f string formatting to insert the first element of the 
 # sids list variable into the string.
-base_dir = 'CHANGE ACCORDINGLY TO FIT YOUR ROOT AND PROJECT DIR'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM <- CHANGE HERE SO THAT WE DONT INTERFERE WITH EACH OTHER'
+base_dir = '/home/aoste011/Mattfeld_PSB6351'
+work_dir = '/home/aoste011/psb6351_work'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
 # Get a list of my study task json and nifti converted files
@@ -136,14 +135,15 @@ def pickfirst(func):
 # searching over the first 201 volumes
 # If the index function returns a list because there were
 # multiple volumes with the same outlier count, pick the first one
+# NOTE (my change): the outlier node passes in a text file, not a list,
+#       so the function now loads the file into a list first.
 def best_vol(outlier_count, middlebest):
+    import numpy as np
+    outlier_count = np.loadtxt(outlier_count).tolist()
     if middlebest == True:
         best_vol_num = int(np.ceil(len(outlier_count)/2)) #PICKING MIDDLE
     else:
         best_vol_num = outlier_count.index(min(outlier_count[:200]))
-        if isinstance(best_vol_num, list):
-            best_vol_num = best_vol_num[0]
-
     return best_vol_num
 
 # Here I am establishing a nipype work flow that I will eventually execute
@@ -202,7 +202,7 @@ getsubs = pe.Node(Function(input_names=['subject_id'],
                            output_names=['subs'],
                            function=get_subs),
                   name='getsubs')
-psb6351_wf.connect(WHAT GOES HERE, 'WHAT GOES HERE?', getsubs, 'subject_id')    
+psb6351_wf.connect(subjID_infosource, 'subject_id', getsubs, 'subject_id')
 
 # NODE 4: Here is a node that takes in fMRI data and identifies
 #         the number of outliers within each volume within a single 4D MRI scan
@@ -223,6 +223,7 @@ id_outliers.inputs.out_file = 'outlier_file'
 #       I am making an assumption as a researcher that I only want to look for
 #       outliers for each volume in the first fMRI scan that is collected
 #       Do you agree with this approach?  If you don't what would you change?
+# MY ANSWER: I do not disagree with this approach, but there are many things to consider. Every run is aligned to one reference volume, picking it from the first run is reasonable. But, it is possible there is a cleaner volume that is later in the run. An alternative option would be counting outliers in all runs and picking the best volume overall. The middle run should be considered as well, for instance, if a participant shifted positions between runs, this reference may fit all the runs better. 
 psb6351_wf.connect(datasource, ('fmri_files', pickfirst), id_outliers, 'in_file')
 
 # NODE 5: This is a function node that take the output from the previous node
@@ -238,24 +239,27 @@ getbestvol = pe.Node(Function(input_names=['outlier_count', 'middlebest'],
                               function=best_vol),
                      name='getbestvol')
 getbestvol.inputs.middlebest = False
-# ADD CONNECTION SYNTAX HERE
+psb6351_wf.connect(id_outliers, 'out_file', getbestvol, 'outlier_count')
 
 # NODE 6: This node is used to extract the specific volume that will serve
 #         as the reference for motion correction.
 #         How would you modify this node to pick the middle volume?
+# MY ANSWER: I would modify this node to pick the middle volume by changing getbestvol.inputs.middlebest = False to True. Then best_vol returns the middle volume number, which ExtractROI uses as t_min.
 # Extract the earliest volume with the
 # the fewest outliers of the first run as the reference 
 extractref = pe.Node(fsl.ExtractROI(t_size=1),
                      name = "extractref")
-psb6351_wf.connect(getbestvol, 'best_vol_num', WHAT GOES HERE?, 'WHAT GOES HERE?')
+psb6351_wf.connect(getbestvol, 'best_vol_num', extractref, 't_min')
 psb6351_wf.connect(datasource, ('fmri_files', pickfirst), extractref, 'in_file')
 
 # NODE 7: This is the node that will perform the motion correction
 #         I am using the AFNI tool (I think this is what fMRIPrep uses)
 #         What if you wanted to use the FSL tool McFlirt....could you change
 #         this node to use that tool?
+# MY ANSWER: Yes, you could change this node to use this tool. You can do this by replacing afni.Volreg() with fsl.MCFLIRT(), connect extractref's roi_file to ref_file instead of basefile, and set save_plots=True to save the motion parameters (a .par file).
 #         NOTE: I'm not using a MapNode...what is the difference between a Node and a MapNode?
 #         Why might you want to use a MapNode in place of a Node?
+# MY ANSWER: The difference between a Node and a MapNode is that a Node runs a step once on its input and MapNode runs the same step separately on each item in a list (set by iterfield), like each of my 6 runs. You'd use a MapNode instead of a Node when you have multiple runs to process the same way, a Node can't take a whole list of runs, and a MapNode lets each run be processed on its own and in parallel on the HPC, which is faster.
 #         Read the following website for an explanation
 #         https://nipype.readthedocs.io/en/0.11.0/users/mapnode_and_iterables.html
 # Below is the command that runs AFNI's 3dvolreg command.
@@ -265,6 +269,7 @@ psb6351_wf.connect(datasource, ('fmri_files', pickfirst), extractref, 'in_file')
 # I'm using the earliest volume with the least number of outliers
 # during the first run as the base file to register to.
 # QUESTION - What cost function does AFNI's 3dVolreg use?
+# MY ANSWER: The cost function that AFNI's 3dVolreg uses is least squares. 3dvolreg adjusts each volume to minimize the sum of squared differences between it and the base (reference) volume.
 volreg = pe.MapNode(afni.Volreg(),
                     iterfield=['in_file'],
                     name = 'volreg')
@@ -277,11 +282,11 @@ psb6351_wf.connect(datasource, 'fmri_files', volreg, 'in_file')
 #         datagrabber and passes it to a function that builds a list
 #         of slice times.  This will be passed to the slice timing correction
 #         node as a list along with the motion corrected fMRI files
-getslctime = pe.Node(Function(WHAT GOES HERE?,
-                              WHAT GOES HERE?,
-                              function=WHAT GOES HERE?),
-                     name='WHAT GOES HERE?')
-# ADD CONNECTION SYNTAX
+getslctime = pe.Node(Function(input_names=['json_file_list'],
+                              output_names=['slice_timing_list'],
+                              function=slc_time),
+                     name='getslctime')
+psb6351_wf.connect(datasource, 'json_files', getslctime, 'json_file_list')
 
 # NODE 9: This is the node that performs the slice timing correction
 #         It requires the motion corrected fMRI files and the list
@@ -289,15 +294,25 @@ getslctime = pe.Node(Function(WHAT GOES HERE?,
 #         slice timing correction?  
 #         How would you change the order of 
 #         motion correction and slice timing?
+# MY ANSWER: I would change the order of the motion correction and slice timing by changing the order of which nodes feed into which and when. To make this change I need to connect datasource fmri_files into tshifter in_file, then connect tshifter out_file into volreg in_file, so slice timing runs first and motion correction runs on its output.
 # Below is the command that runs AFNI's 3dTshift command
 # this is the node that performs the slice timing correction
 # I input the study func files as a list and the slice timing 
 # as a list of lists. I'm using a MapNode to iterate over the two.
 # this should allow me to parallelize this on the HPC
 # QUESTION - What cost function does AFNI's 3dTshift use?
+# MY ANSWER: I believe this is a trick question. As far as I know 3dTshift doesn't use a cost function, because it isn't registering images. It shifts each slice's time series to a common time point using interpolation (Fourier interpolation by default).
 
 # NOTE: TO DO - BUILD A NODE FOR SLICE TIMING CORRECTION USING
 #       AFNI's 3dTshift....is there a comparable tool in FSL? SPM?
+# MY ANSWER: There are comparable tools in FSL and SPM. FSL has slicetimer, and SPM has its own Slice Timing step (spm_slice_timing).
+tshifter = pe.MapNode(afni.TShift(),
+                      iterfield=['in_file', 'slice_timing'],
+                      name='tshifter')
+tshifter.inputs.tr = '1.76s'
+tshifter.inputs.outputtype = 'NIFTI_GZ'
+psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
+psb6351_wf.connect(getslctime, 'slice_timing_list', tshifter, 'slice_timing')
 
 # Calculate the transformation matrix from EPI space to FreeSurfer space
 # using the BBRegister command
@@ -343,16 +358,16 @@ datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
 psb6351_wf.connect(subjID_infosource, 'subject_id', datasink, 'container')
 psb6351_wf.connect(tshifter, 'out_file', datasink, 'sltime_corr')
-psb6351_wf.connect(extractref, 'WHAT GOES HERE?', datasink, 'WHAT GOES HERE?')
+psb6351_wf.connect(extractref, 'roi_file', datasink, 'motion.@refvol')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
-psb6351_wf.connect(WHAT GOES HERE?, 'I WANT TO SAVE THE MOTION FILES - WHAT GOES HERE', WHAT GOES HERE?, 'motion.@WHAT GOES HERE?')
+psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@motparams')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
 # The following two lines set a work directory outside of my 
 # local git repo and runs the workflow
 psb6351_wf.base_dir = work_dir # I deinfe the working directory where I want preliminary files to be written
 psb6351_wf.config['execution']['use_relative_paths'] = True # I assign a execution variable to use relative paths...TRYING TO USE THIS TO FIX A BUG?
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash' <- HOW WOULD THIS NEED TO CHANGE FOR YOUR OWN WORK DIR?
+psb6351_wf.config['execution']['crashdump_dir'] = '/home/aoste011/psb6351_work/crash'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--account CHANGE HERE FOR CLASS ACCOUNT --qos CHANGE HERE FOR CLASS QOS'),
+               plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=16G'),
                             'overwrite':True})
