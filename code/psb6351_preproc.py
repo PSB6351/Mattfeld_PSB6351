@@ -99,10 +99,10 @@ subjID_infosource.iterables = ('subject_id', sids)
 
 # NODE 2: DataGrabber, currently collecting fMRI and JSON files
 info = dict(
-            fmri_files=[['subject_id', 'subject_id']],
-            json_files=[['subject_id', 'subject_id']],
-            anat_file=[['subject_id', 'subject_id']],
-           )
+    fmri_files=[['subject_id', 'subject_id']],
+    json_files=[['subject_id', 'subject_id']],
+    anat_file=[['subject_id', 'subject_id']],
+)
 
 datasource = pe.Node(nio.DataGrabber(infields=['subject_id'], outfields=list(info.keys())),
                      name='datasource')
@@ -116,14 +116,7 @@ datasource.inputs.field_template = dict(
 datasource.inputs.template_args = info
 datasource.inputs.sort_filelist = True
 datasource.inputs.raise_on_empty = True
-psb6351_wf.connect(subjID_infosource, 'subject_id', datasource, 'subject_id')
-
-# NODE 3: Substitution function to be used with DataSink 
-getsubs = pe.Node(Function(input_names=['subject_id'],
-                           output_names=['subs'],
-                           function=get_subs),
-                  name='getsubs')
-psb6351_wf.connect(subjID_infosource, 'subject_id', getsubs, 'subject_id')    
+psb6351_wf.connect(subjID_infosource, 'subject_id', datasource, 'subject_id')    
 
 # NODE 4: Identify number of outliers in the
 #         first fMRI run (note applciation of pickfirst fxn)
@@ -195,7 +188,7 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 
 
-# Use FSL FLIRT to calculate a rigid-body transformation
+# NODE 10: Use FSL FLIRT to calculate a rigid-body transformation
 coreg = pe.Node(
     fsl.FLIRT(
         dof=6,
