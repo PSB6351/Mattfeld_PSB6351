@@ -7,8 +7,8 @@
 #SBATCH --account acc_madlab
 #SBATCH --partition highmem1-sapphirerapids
 #SBATCH --qos highmem1
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_e
+#SBATCH -o /home/umcca001/Mattfeld_PSB6351/ATM/crash/preproc_o
+#SBATCH -e /home/umcca001/Mattfeld_PSB6351/ATM/crash/preproc_e
 
 import os
 from glob import glob
@@ -30,8 +30,8 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 
 # set working, base, and sink directories
-base_dir = '/home/amattfel/Mattfeld_PSB6351'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM'
+base_dir = '/home/umcca001/Mattfeld_PSB6351'
+work_dir = '/home/umcca001/Mattfeld_PSB6351/ATM'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
 # Function for extracting slice timing info from fMRI json sidecars
@@ -101,6 +101,7 @@ subjID_infosource.iterables = ('subject_id', sids)
 info = dict(
             fmri_files=[['subject_id', 'subject_id']],
             json_files=[['subject_id', 'subject_id']],
+            anat_file=[['subject_id', 'subject_id']],
            )
 
 datasource = pe.Node(nio.DataGrabber(infields=['subject_id'], outfields=list(info.keys())),
@@ -110,6 +111,7 @@ datasource.inputs.base_directory = os.path.abspath(base_dir)
 datasource.inputs.field_template = dict(
                                         fmri_files='dset/%s/func/%s*.nii.gz',
                                         json_files='dset/%s/func/%s_*.json',
+                                        anat_file='dset/%s/anat/%s_T1w.nii.gz',
                                        )
 datasource.inputs.template_args = info
 datasource.inputs.sort_filelist = True
@@ -193,6 +195,27 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 
 
+# Use FSL FLIRT to calculate a rigid-body transformation
+coreg = pe.Node(
+    fsl.FLIRT(
+        dof=6,
+        cost='corratio',
+        output_type='NIFTI_GZ'
+    ),
+    name='coreg'
+)
+
+# Connect the functional reference image (moving image)
+psb6351_wf.connect(
+    extractref, 'roi_file',
+    coreg, 'in_file'
+)
+
+# Connect the structural T1w image (fixed image)
+psb6351_wf.connect(
+    datasource, 'anat_file',
+    coreg, 'reference'
+)
 
 
 
@@ -229,13 +252,14 @@ datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
 psb6351_wf.connect(subjID_infosource, 'subject_id', datasink, 'container')
 psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
-psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
-psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
+
+psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@registered_img')
+psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@matrix')
+
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash'
-psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --account acc_madlab --qos highmem1'),
-                            'overwrite':True})
+psb6351_wf.config['execution']['crashdump_dir'] = '/home/umcca001/Mattfeld_PSB6351/ATM/crash'
+psb6351_wf.run(plugin='MultiProc',
+                plugin_args={'n_procs': 4, 'overwrite': True})
