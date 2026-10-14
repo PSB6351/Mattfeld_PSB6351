@@ -1,37 +1,10 @@
 #!/usr/bin/env python
 
-# The line at the very top tells the cpu that will be excuting this job
-# which python to use and how to find it.
-# Without that line this sould just be a simple text file and you would
-# specifically need to type on the command line: python name_of_file.py
-
-# The lines below set up important parameters for the slurm scheduling system
-# The first line tells the slurm scheduler which partition to send the job to
-# The next two lines tells which account to use.
-# The last two lines with the -o and -e flags tell where to write out the 
-# error and output text files.  These are useful when debugging code.  They
-# Are simple text files that cat be viewed with the commands cat or less.
-# The directory where these files are written must be created before otherwise
-# you won't have access to the output and error text files.
-
-# class specific info account = acc_psb6351
-# class specific info qos = classroom
-
 #SBATCH --account acc_gbuzzell
 #SBATCH --partition highmem1-sapphirerapids
 #SBATCH --qos highmem1
-#SBATCH -o /home/cknowlto/scratch
-#SBATCH -e /home/cknowlto/scratch
-
-# The following commands are specific to python programming.
-# Tools that you'll need for your code must be imported.  
-# You can import modules directly without renaming them (e.g., import os)
-# Or you can import and rename things (e.g., import pandas as pd)
-# Or you can import specific features of a module (e.g., from nipype.interfaces.utility import Function)
-# It is traditional in python programming to import everything
-# you might need at the top of your script.  However, the only rule
-# is modules must be imported before they are used.  Also, functions code that begins with def nameoffunc(inputtofunc):
-# require importing their own modules
+#SBATCH -o /home/cknowlto/scratch/preproc_%j.out
+#SBATCH -e /home/cknowlto/scratch/preproc_%j.err
 
 import os
 from glob import glob
@@ -49,40 +22,14 @@ import nipype.interfaces.io as nio
 import nipype.pipeline.engine as pe 
 import nipype.interfaces.utility as util
 
-# Below I am assigning a list with one string element to the variable named sid
-# I do this because I want to iterate over subject ids (aka., sids) and I want 
-# to treat 021 as a whole and not as separate parts of the string which is
-# also iterable. I know this is a list because of the [] brackets
+# Subjects and important dirs
 sids = ['sub-021']
-
-# Below I set up some important directories for getting data and writing
-# files that I won't need in the end. I use the os command path.join to 
-# combine different string elements into a path strcuture that will work
-# across operating systems.  The below is only quasi correct because in the last 
-# string element of both thte func_dir and fmap_dir variables I indicate
-# directory structures with the '/' string.  This forward slash is only 
-# relevant for linux and osx operating systems....windows uses something different '\\'
-# I am also using f string formatting to insert the first element of the 
-# sids list variable into the string.
 base_dir = '/home/cknowlto/Mattfeld_PSB6351'
 work_dir = '/home/cknowlto/scratch'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
-# Get a list of my study task json and nifti converted files
-# I am using the glob function from glob that take a string as input
-# That string can contain wildcards to grab multiple files that meet 
-# the string completion.  I also, use the function sorted to order them
-# so that the func_files and fmap_files are in the same order based on
-# alphanumeric numbering criteria.  This is important when I get
-# specific elements from a .json file for a func file to preprocess.
-# Be careful!!!!  glob will return an empty list if your wildcard
-# string completion comes up empty rather than crash.  Make sure you 
-# have no typos.
-# I plan to replace these lines with a nipype datagrabber soon.
+# Function for extracting slice timing info from fMRI json sidecars
 def slc_time(json_file_list):
-    # NOTE: Functions have unique or unshared variables
-    #       as well as require unique or unshared libraries/modules
-    #       AKA, not global variables or libraries
     import json
     slice_timing_list = [] # Here I define an empty list variable
     for curr_json in json_file_list:
@@ -92,18 +39,6 @@ def slc_time(json_file_list):
 
     return slice_timing_list
 
-# Here I am building a function that eliminates the
-# mapnode directory structure and assists in saving
-# all of the outputs into a single directory.
-# This is a function because it starts with the word def
-# and then has the functon name followed by paraentheses.
-# The name inside the parentheses is a variable name that represents
-# the input to the function.  In this case I'm providing a variable
-# called func_files.  I will iterate over the length of the func_files
-# variable to append tuples to a list variable called subs that have
-# the ways I walsnt to substitute names later in the datasink.  In this
-# case I am getting ride of those names so that everything is saved
-# in the same directory in the end.
 def get_subs(subject_id):
     '''Produces Name Substitutions for Each Contrast'''
     subs = [('_subject_id_%s'%subject_id, '')]
@@ -147,9 +82,6 @@ def best_vol(outlier_files, fmri_files, middlebest):
         best_vol_num = int(np.argmin(counts[best_run])) # select volume w/ lowest num of outlier voxels
     return best_vol_num, fmri_files[best_run]
 
-# Here I am establishing a nipype work flow that I will eventually execute
-# Code here become less python specific and more nipype specific.  They share similarites
-# but have some unique pecularities to take note.
 psb6351_wf = pe.Workflow(name='psb6351_wf') # First I create a workflow...this will serve as the backbone of the pipeline
 psb6351_wf.base_dir = work_dir # I deinfe the working directory where I want preliminary files to be written
 
@@ -339,5 +271,5 @@ psb6351_wf.base_dir = work_dir # I deinfe the working directory where I want pre
 psb6351_wf.config['execution']['use_relative_paths'] = True # I assign a execution variable to use relative paths...TRYING TO USE THIS TO FIX A BUG?
 psb6351_wf.config['execution']['crashdump_dir'] = '/home/cknowlto/scratch'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--account acc_gbuzzell --qos highmem1'),
-                            'overwrite':True})
+               plugin_args={'sbatch_args': '--partition highmem1-sapphirerapids --account acc_gbuzzell --qos highmem1',
+             'overwrite': True})
