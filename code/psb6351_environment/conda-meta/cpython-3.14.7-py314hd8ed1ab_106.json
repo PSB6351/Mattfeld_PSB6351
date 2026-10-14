@@ -1,0 +1,34 @@
+{
+  "build": "py314hd8ed1ab_106",
+  "build_number": 106,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi * *_cp314"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/cpython-3.14.7-py314hd8ed1ab_106",
+  "files": [],
+  "fn": "cpython-3.14.7-py314hd8ed1ab_106.conda",
+  "license": "Python-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/cpython-3.14.7-py314hd8ed1ab_106",
+    "type": 1
+  },
+  "md5": "3b52b830ac00367685c08f98f50963bf",
+  "name": "cpython",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/cpython-3.14.7-py314hd8ed1ab_106.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fd701880cf6f696420aa5b4b530dbdf0c83a16bdb50aeb760b3159eec5c416bf",
+  "size": 51289,
+  "subdir": "noarch",
+  "timestamp": 1788383537000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/cpython-3.14.7-py314hd8ed1ab_106.conda",
+  "version": "3.14.7"
+}

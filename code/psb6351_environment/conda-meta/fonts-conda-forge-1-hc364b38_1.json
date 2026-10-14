@@ -1,0 +1,36 @@
+{
+  "build": "hc364b38_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "font-ttf-ubuntu",
+    "font-ttf-inconsolata",
+    "font-ttf-source-code-pro",
+    "font-ttf-dejavu-sans-mono"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/fonts-conda-forge-1-hc364b38_1",
+  "files": [],
+  "fn": "fonts-conda-forge-1-hc364b38_1.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/fonts-conda-forge-1-hc364b38_1",
+    "type": 1
+  },
+  "md5": "a7970cd949a077b7cb9696379d338681",
+  "name": "fonts-conda-forge",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/fonts-conda-forge-1-hc364b38_1.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "54eea8469786bc2291cc40bca5f46438d3e062a399e8f53f013b6a9f50e98333",
+  "size": 4059,
+  "subdir": "noarch",
+  "timestamp": 1762351264000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fonts-conda-forge-1-hc364b38_1.conda",
+  "version": "1"
+}

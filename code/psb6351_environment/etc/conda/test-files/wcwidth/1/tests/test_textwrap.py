@@ -1,0 +1,687 @@
+"""Tests for sequence-aware text wrapping functions."""
+
+# std imports
+import textwrap
+
+# 3rd party
+import pytest
+
+# local
+import wcwidth
+from wcwidth.textwrap import SequenceTextWrapper, wrap
+
+
+@pytest.fixture(autouse=True)
+def mock_hyperlink_ids(monkeypatch):
+    """Mock secrets.token_hex to return predictable IDs for testing."""
+    counter = 0
+
+    def fake_token_hex(n):
+        nonlocal counter
+        counter += 1
+        return f'{counter:0{n * 2}x}'
+
+    monkeypatch.setattr('secrets.token_hex', fake_token_hex)
+
+
+SGR_RED = '\x1b[31m'
+SGR_BOLD = '\x1b[1m'
+SGR_RESET = '\x1b[0m'
+ATTRS = ('\x1b[31m', '\x1b[34m', '\x1b[4m', '\x1b[7m', '\x1b[41m', '\x1b[37m', '\x1b[107m')
+
+OSC_HYPERLINK = '\x1b]8;;https://example.com\x07link\x1b]8;;\x07'
+CSI_CURSOR = '\x1b[5C'
+CTRL_BEL = '\x07'
+
+ZWJ = '\u200d'
+WOMAN = '\U0001F469'
+GIRL = '\U0001F467'
+FAMILY_ZWJ = f'{WOMAN}{ZWJ}{WOMAN}{ZWJ}{GIRL}'
+SMILEY_VS16 = '\u263a\ufe0f'
+ZWJ_FAMILY = '\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466'
+CAFE_COMBINING = 'cafe\u0301'
+HANGUL_GA = '\u1100\u1161'
+
+
+def _strip(text):
+    return ''.join(seg for seg, is_seq in wcwidth.iter_sequences(text) if not is_seq)
+
+
+def _adjust_stdlib_result(expected, kwargs):
+    """
+    Adjust stdlib textwrap result for known bugs in older Python versions.
+
+    CPython #140627: Older versions leave trailing whitespace and preceding all-whitespace lines
+    when drop_whitespace=True. Fixed in 3.13.11+, 3.14.2+, and 3.15+. We always strip to normalize
+    across versions.
+    """
+    if not expected:
+        return expected
+    if kwargs.get('drop_whitespace', True):
+        # Strip trailing whitespace from each line (old Python bug)
+        expected = [line.rstrip() for line in expected]
+        # Remove leading all-whitespace lines (old Python bug)
+        if expected and not expected[0].strip():
+            expected = expected[1:]
+            if expected and kwargs.get('subsequent_indent'):
+                expected[0] = expected[0][len(kwargs['subsequent_indent']):]
+    return expected
+
+
+def _colorize(text):
+    return ''.join(
+        ATTRS[idx % len(ATTRS)] + char + SGR_RESET if char not in ' -\t' else char
+        for idx, char in enumerate(text)
+    )
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    ('', 10, []),
+    ('   ', 10, []),
+    ('\u5973', 1, ['\u5973']),
+    (ZWJ_FAMILY, 1, [ZWJ_FAMILY]),
+    (HANGUL_GA, 1, [HANGUL_GA]),
+])
+def test_wrap_edge_cases(text, w, expected):
+    assert wrap(text, w) == expected
+
+
+@pytest.mark.parametrize('width', [0, -1])
+def test_wrap_bad_width(width):
+    with pytest.raises(ValueError):
+        wrap('Whatever, it doesn\'t matter.', width)
+
+
+def test_wrap_initial_indent():
+    assert wrap('hello world', 10, initial_indent='> ') == ['> hello', 'world']
+
+
+def test_wrap_indent_consumes_full_width():
+    """When indent width equals self.width, line_width becomes 0."""
+    assert wrap('ab cd', width=3, subsequent_indent='   ') == ['ab', '   c', '   d']
+
+
+@pytest.mark.parametrize('text,w,break_long,expected', [
+    ('abcdefghij', 3, True, ['abc', 'def', 'ghi', 'j']),
+    ('abcdefghij', 3, False, ['abcdefghij']),
+])
+def test_wrap_long_words(text, w, break_long, expected):
+    assert wrap(text, w, break_long_words=break_long) == expected
+
+
+@pytest.mark.parametrize('text,w,break_hyphens,propagate,expected', [
+    ('a-b-c-d', 3, True, True, ['a-', 'b-', 'c-d']),
+    ('a-b-c-d', 3, False, True, ['a-b', '-c-', 'd']),
+    ('---', 2, True, True, ['--', '-']),
+    ('a---b', 2, True, True, ['a-', '--', 'b']),
+    ('a-\x1b[31mb', 2, True, True, ['a-\x1b[31m\x1b[0m', '\x1b[31mb\x1b[0m']),
+    ('a-\x1b[31mb', 2, True, False, ['a-\x1b[31m', 'b']),
+    ('古古-1abcdef', 3, True, True, ['古', '古-', '1ab', 'cde', 'f']),
+    ('古古-1abcdef', 4, True, True, ['古古', '-1ab', 'cdef']),
+    ('古古-1abcdef', 5, True, True, ['古古-', '1abcd', 'ef']),
+    ('e\u0301e\u0301-1abcdef', 4, True, True, ['e\u0301e\u0301-', '1abc', 'def']),
+    ('\U0001f469\U0001f469-1abc', 4, True, True, ['\U0001f469\U0001f469', '-1ab', 'c']),
+    ('\x1b[31m漢漢漢-é', 3, True, False, ['\x1b[31m漢', '漢', '漢-', 'é']),
+    ('\x1b[31m漢漢漢-é', 3, True, True,
+     ['\x1b[31m漢\x1b[0m', '\x1b[31m漢\x1b[0m', '\x1b[31m漢-\x1b[0m', '\x1b[31mé\x1b[0m']),
+    ('a-古古古', 6, True, False, ['a-', '古古古']),
+    ('a-古古古', 5, True, False, ['a-', '古古', '古']),
+])
+def test_wrap_hyphen_long_words(text, w, break_hyphens, propagate, expected):
+    assert wrap(text, w, break_on_hyphens=break_hyphens, propagate_sgr=propagate) == expected
+
+
+# stdlib test_textwrap expectations: hyphen and em-dash splitting matches
+# CPython's wordsep rules exactly.
+@pytest.mark.parametrize('text,w,break_hyphens,expected', [
+    ('yaba daba-doo', 10, True, ['yaba daba-', 'doo']),
+    ('yaba daba-doo', 10, False, ['yaba', 'daba-doo']),
+    ('You can also do--this or even---this.', 15, True,
+     ['You can also do', '--this or even', '---this.']),
+    ('You can also do--this or even---this.', 17, True,
+     ['You can also do--', 'this or even---', 'this.']),
+    ('You can also do--this or even---this.', 29, True,
+     ['You can also do--this or even', '---this.']),
+    ('You can also do--this or even---this.', 32, True,
+     ['You can also do--this or even---', 'this.']),
+    ('aa \xe4\xe4-\xe4\xe4', 7, True, ['aa \xe4\xe4-', '\xe4\xe4']),
+    ('Die Empf\xe4nger-Auswahl', 13, True, ['Die', 'Empf\xe4nger-', 'Auswahl']),
+    ('This is a sentence with non-breaking\u202fspace.', 20, True,
+     ['This is a sentence', 'with non-', 'breaking\u202fspace.']),
+    ('This is a sentence with non-breaking\u202fspace.', 20, False,
+     ['This is a sentence', 'with', 'non-breaking\u202fspace.']),
+    ('This is a sentence with non-breaking\xa0space.', 20, True,
+     ['This is a sentence', 'with non-', 'breaking\xa0space.']),
+    ('This is a sentence with non-breaking\xa0space.', 20, False,
+     ['This is a sentence', 'with', 'non-breaking\xa0space.']),
+    ('You should use the -n option, or --dry-run in its long form.', 20, True,
+     ['You should use the', '-n option, or --dry-', 'run in its long', 'form.']),
+    ('You should use the -n option, or --dry-run in its long form.', 21, True,
+     ['You should use the -n', 'option, or --dry-run', 'in its long form.']),
+    ('You should use the -n option, or --dry-run in its long form.', 39, True,
+     ['You should use the -n option, or --dry-', 'run in its long form.']),
+    ('You should use the -n option, or --dry-run in its long form.', 42, True,
+     ['You should use the -n option, or --dry-run', 'in its long form.']),
+])
+def test_wrap_hyphen_breaks(text, w, break_hyphens, expected):
+    assert wrap(text, w, break_on_hyphens=break_hyphens) == expected
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    ("this-is-a-useful-feature-for-reformatting-posts-from-tim-peters'ly", 40,
+     ['this-is-a-useful-feature-for-', "reformatting-posts-from-tim-peters'ly"]),
+    ("this-is-a-useful-feature-for-reformatting-posts-from-tim-peters'ly", 42,
+     ['this-is-a-useful-feature-for-reformatting-', "posts-from-tim-peters'ly"]),
+])
+def test_wrap_hyphenated_words(text, w, expected):
+    assert wrap(text, w) == expected
+
+
+LONG_WORD_TEXT = (
+    'We used enyzme 2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate'
+    ' synthase.\n')
+LONG_OPTION_TEXT = '1234567890-1234567890--this_is_a_very_long_option_indeed-good-bye"\n'
+
+
+# stdlib test_textwrap.LongWordWithHyphensTestCase expectations, including
+# its quirk of checking text2 with default options in every method.
+@pytest.mark.parametrize('text,w,kwargs,expected', [
+    (LONG_WORD_TEXT, 50, {},
+     ['We used enyzme 2-succinyl-6-hydroxy-2,4-',
+      'cyclohexadiene-1-carboxylate synthase.']),
+    (LONG_WORD_TEXT, 50, {'break_on_hyphens': False},
+     ['We used enyzme 2-succinyl-6-hydroxy-2,4-cyclohexad',
+      'iene-1-carboxylate synthase.']),
+    (LONG_WORD_TEXT, 50, {'break_long_words': False},
+     ['We used enyzme',
+      '2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate',
+      'synthase.']),
+    (LONG_WORD_TEXT, 50, {'break_long_words': False, 'break_on_hyphens': False},
+     ['We used enyzme',
+      '2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate',
+      'synthase.']),
+    (LONG_WORD_TEXT, 10, {},
+     ['We used', 'enyzme 2-', 'succinyl-', '6-hydroxy-', '2,4-',
+      'cyclohexad', 'iene-1-', 'carboxylat', 'e', 'synthase.']),
+    (LONG_WORD_TEXT, 10, {'break_on_hyphens': False},
+     ['We used', 'enyzme 2-s', 'uccinyl-6-', 'hydroxy-2,',
+      '4-cyclohex', 'adiene-1-c', 'arboxylate', 'synthase.']),
+    (LONG_WORD_TEXT, 10, {'break_long_words': False},
+     ['We used', 'enyzme',
+      '2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate',
+      'synthase.']),
+    (LONG_WORD_TEXT, 10, {'break_long_words': False, 'break_on_hyphens': False},
+     ['We used', 'enyzme',
+      '2-succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate',
+      'synthase.']),
+    (LONG_OPTION_TEXT, 10, {},
+     ['1234567890', '-123456789', '0--this_is', '_a_very_lo',
+      'ng_option_', 'indeed-', 'good-bye"']),
+    (LONG_OPTION_TEXT, 10, {'break_on_hyphens': False},
+     ['1234567890', '-123456789', '0--this_is', '_a_very_lo',
+      'ng_option_', 'indeed-goo', 'd-bye"']),
+    (LONG_OPTION_TEXT, 10, {'break_long_words': False},
+     ['1234567890-1234567890', '--',
+      'this_is_a_very_long_option_indeed-', 'good-bye"']),
+    (LONG_OPTION_TEXT, 10, {'break_long_words': False, 'break_on_hyphens': False},
+     ['1234567890-1234567890--this_is_a_very_long_option_indeed-good-bye"']),
+])
+def test_wrap_long_hyphenated_words(text, w, kwargs, expected):
+    assert wrap(text, w, **kwargs) == expected
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    ('I say, chaps! Anyone for "tennis?"\nHmmph!', 20,
+     ['I say, chaps!', 'Anyone for "tennis?"', 'Hmmph!']),
+    ('And she said, "Go to hell!"\nCan you believe that?', 20,
+     ['And she said, "Go to', 'hell!"  Can you', 'believe that?']),
+])
+def test_wrap_fix_sentence_endings(text, w, expected):
+    assert wrap(text, w, fix_sentence_endings=True) == expected
+
+
+# Comprehensive stdlib compatibility
+TEXTWRAP_KWARGS = [
+    {'break_long_words': False, 'drop_whitespace': False},
+    {'break_long_words': False, 'drop_whitespace': True},
+    {'break_long_words': True, 'drop_whitespace': False},
+    {'break_long_words': True, 'drop_whitespace': True},
+    {'break_long_words': True, 'drop_whitespace': False, 'subsequent_indent': ' '},
+    {'break_long_words': True, 'drop_whitespace': True, 'subsequent_indent': ' '},
+    {'break_long_words': True, 'drop_whitespace': True, 'break_on_hyphens': True},
+    {'break_long_words': True, 'drop_whitespace': True, 'break_on_hyphens': False},
+    {'break_long_words': True, 'drop_whitespace': False,
+     'subsequent_indent': '', 'max_lines': 4, 'placeholder': '~'},
+    {'break_long_words': True, 'drop_whitespace': True,
+     'max_lines': 3, 'placeholder': '...'},
+    {'break_long_words': True, 'drop_whitespace': True,
+     'max_lines': 1, 'placeholder': '...'},
+    {'expand_tabs': False, 'break_long_words': True, 'drop_whitespace': True},
+    {'replace_whitespace': False, 'break_long_words': True,
+     'drop_whitespace': True},
+    {'fix_sentence_endings': True, 'break_long_words': True,
+     'drop_whitespace': True},
+]
+
+
+@pytest.mark.parametrize('kwargs', TEXTWRAP_KWARGS)
+@pytest.mark.parametrize('width', [3, 8, 20, 33])
+def test_wrap_matches_stdlib(kwargs, width):
+    pgraph = ' Z! a bc defghij klmnopqrstuvw<<>>xyz012345678900 ' * 2
+    pgraph_colored = _colorize(pgraph)
+    expected = _adjust_stdlib_result(
+        textwrap.wrap(pgraph, width=width, **kwargs), kwargs
+    )
+    wrapper = SequenceTextWrapper(width=width, **kwargs)
+    assert wrapper.wrap(pgraph) == expected
+    # For colored text, strip sequences
+    colored_result = [_strip(line) for line in wrapper.wrap(pgraph_colored)]
+    if kwargs.get('drop_whitespace'):
+        # normalize trailing whitespace, rstrip when drop_whitespace is True
+        # matches CPython #140627 fix
+        colored_result = [line.rstrip() for line in colored_result]
+    assert colored_result == expected
+
+
+@pytest.mark.parametrize('kwargs', TEXTWRAP_KWARGS)
+@pytest.mark.parametrize('width', [8, 20, 37])
+@pytest.mark.parametrize('tabsize', [4, 5, 8])
+def test_wrap_tabsize_matches_stdlib(kwargs, width, tabsize):
+    tabsize = min(tabsize, width)
+    pgraph = ' Z! a bc\t defghij\t kl mnopqrs\ttuvw<<>>xyz012345678900 ' * 2
+    expected = _adjust_stdlib_result(
+        textwrap.wrap(pgraph, width=width, tabsize=tabsize, **kwargs), kwargs
+    )
+    wrapper = SequenceTextWrapper(width=width, tabsize=tabsize, **kwargs)
+    assert wrapper.wrap(pgraph) == expected
+
+
+def test_wrap_multiline_matches_stdlib():
+    given = '\n' + 32 * 'A' + '\n' + 32 * 'B' + '\n' + 32 * 'C' + '\n\n'
+    assert wrap(given, 30) == textwrap.wrap(given, 30)
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    # CJK (2 cells each)
+    ('\u4e2d\u6587\u5b57\u7b26', 4, ['\u4e2d\u6587', '\u5b57\u7b26']),
+    ('\u4e2d\u6587\u5b57', 5, ['\u4e2d\u6587', '\u5b57']),
+    # Combining characters
+    (CAFE_COMBINING + '-latte', 4, ['cafe\u0301', '-lat', 'te']),
+    # Emoji (ZWJ, VS16)
+    (f'{FAMILY_ZWJ} ab', 4, [FAMILY_ZWJ, 'ab']),
+    (f'{SMILEY_VS16} ab', 3, [SMILEY_VS16, 'ab']),
+    ('\U0001F469\U0001F467\U0001F466', 4, ['\U0001F469\U0001F467', '\U0001F466']),
+])
+def test_wrap_unicode(benchmark, text, w, expected):
+    kwargs = {'break_on_hyphens': False} if '-' in text else {}
+    result = benchmark(wrap, text, w, **kwargs)
+    assert result == expected
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    # SGR sequences propagated across lines
+    (f'{SGR_RED}red{SGR_RESET} blue', 4, [f'{SGR_RED}red{SGR_RESET}', 'blue']),
+    # SGR at end of line propagates to next line
+    (f'hello{SGR_RED} world', 6, [f'hello{SGR_RED}{SGR_RESET}', f'{SGR_RED}world{SGR_RESET}']),
+    # Empty/adjacent sequences - sequences kept (no visible content)
+    (f'{SGR_RED}{SGR_RESET}', 10, [f'{SGR_RED}{SGR_RESET}']),
+    # Reset clears style, sequences kept with second line
+    (f'hello {SGR_RED}{SGR_RESET}world', 6, ['hello', f'{SGR_RED}{SGR_RESET}world']),
+    # OSC hyperlinks (with space separator) - not SGR, so preserved as-is
+    (f'{OSC_HYPERLINK} text', 5, [OSC_HYPERLINK, 'text']),
+    # CSI cursor sequences - not SGR, so preserved as-is
+    (f'{CSI_CURSOR}text here', 10, [f'{CSI_CURSOR}text', 'here']),
+    # Control characters
+    (f'{CTRL_BEL}alert text', 6, [f'{CTRL_BEL}alert', 'text']),
+    # Sequences in long word breaking - red starts after 'x', continues across lines
+    ('x\x1b[31mabcdefghij\x1b[0m', 3,
+     ['x\x1b[31mab\x1b[0m', '\x1b[31mcde\x1b[0m', '\x1b[31mfgh\x1b[0m', '\x1b[31mij\x1b[0m']),
+    # Fs sequence (ESC d) - zero-width, stays with preceding text
+    ('abc\x1bdefghij', 3, ['abc\x1bd', 'efg', 'hij']),
+])
+def test_wrap_sequences(benchmark, text, w, expected):
+    """Escape sequence preservation (with propagate_sgr=True default)"""
+    assert benchmark(wrap, text, w) == expected
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    (f'hello{SGR_RED} world', 6, [f'hello{SGR_RED}', 'world']),
+    ('x\x1b[31mabcdefghij\x1b[0m', 3, ['x\x1b[31mab', 'cde', 'fgh', 'ij\x1b[0m']),
+]
+)
+def test_wrap_sequences_no_propagate(text, w, expected):
+    result = wrap(text, w, propagate_sgr=False)
+    assert result == expected
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    (f'{SGR_RED}\u4e2d\u6587{SGR_RESET} ab', 5, [f'{SGR_RED}\u4e2d\u6587{SGR_RESET}', 'ab']),
+    (f'{SGR_RED}{FAMILY_ZWJ}{SGR_RESET} ab', 4, [f'{SGR_RED}{FAMILY_ZWJ}{SGR_RESET}', 'ab']),
+    (f'{SGR_BOLD}\u4e2d{SGR_RESET}y z', 4, [f'{SGR_BOLD}\u4e2d{SGR_RESET}y', 'z']),
+])
+def test_wrap_mixed(benchmark, text, w, expected):
+    """Test mixed sequences + unicode."""
+    result = benchmark(wrap, text, w)
+    assert result == expected
+
+
+@pytest.mark.parametrize('text,w,tabsize,expected', [
+    # CJK (2 cells) + tab: tabsize=4, '\u4e2d' is 2 cols, tab expands to col 4
+    ('\u4e2d\ta b', 6, 4, ['\u4e2d   a', 'b']),
+    # CJK + tab with tabsize=8: '\u4e2d' is 2 cols, tab expands to col 8
+    ('\u4e2d\ta b', 10, 8, ['\u4e2d       a', 'b']),
+    # Emoji + tab (emoji width=2): similar column alignment
+    (f'{SMILEY_VS16}\ta b', 6, 4, [f'{SMILEY_VS16}  a', 'b']),
+    # Multiple CJK + tab: 4 cols, tab to 4 adds 0, but expand_tabs adds min 1
+    ('\u4e2d\u6587\ta', 8, 4, ['\u4e2d\u6587  a']),
+    # ASCII + tab + CJK: 'a' is 1 col, tab to 4 (3 spaces), CJK is 2 cols
+    ('a\t\u4e2d b', 8, 4, ['a   \u4e2d b']),
+])
+def test_wrap_tabsize_wide_chars(text, w, tabsize, expected):
+    """Verify tabsize respects wide character column positions."""
+    assert wrap(text, w, tabsize=tabsize) == expected
+
+
+OSC_START_ST = '\x1b]8;;http://example.com\x1b\\'
+OSC_END_ST = '\x1b]8;;\x1b\\'
+OSC_START_BEL = '\x1b]8;;http://example.com\x07'
+OSC_END_BEL = '\x1b]8;;\x07'
+
+
+@pytest.mark.parametrize('text,w,expected', [
+    (   # standard, ST-variant,
+        f'{OSC_START_ST}link{OSC_END_ST}more',
+        5,
+        [f'{OSC_START_ST}link{OSC_END_ST}', 'more'],
+    ),
+    (   # BEL-variant,
+        f'{OSC_START_BEL}link{OSC_END_BEL}more',
+        5,
+        [f'{OSC_START_BEL}link{OSC_END_BEL}', 'more'],
+    ),
+    (   # hyperlink breaks after word, 'prefix',
+        f'prefix{OSC_START_ST}link{OSC_END_ST}',
+        6,
+        ['prefix', f'{OSC_START_ST}link{OSC_END_ST}'],
+    ),
+    (
+        f'prefix{OSC_START_BEL}link{OSC_END_BEL}',
+        6,
+        ['prefix', f'{OSC_START_BEL}link{OSC_END_BEL}'],
+    ),
+    (   # hyperlink breaks before following, 'suffix',
+        f'prefix{OSC_START_ST}link{OSC_END_ST}suffix',
+        6,
+        ['prefix', f'{OSC_START_ST}link{OSC_END_ST}', 'suffix'],
+    ),
+    (
+        f'prefix{OSC_START_BEL}link{OSC_END_BEL}suffix',
+        6,
+        ['prefix', f'{OSC_START_BEL}link{OSC_END_BEL}', 'suffix'],
+    ),
+    (   # hyperlink *surrounded* by SGR attributes
+        f'foo {SGR_RED}{OSC_START_ST}link{OSC_END_ST}{SGR_RESET} bar',
+        6,
+        ['foo', f'{SGR_RED}{OSC_START_ST}link{OSC_END_ST}{SGR_RESET}', 'bar'],
+    ),
+    (
+        f'foo {SGR_RED}{OSC_START_BEL}link{OSC_END_BEL}{SGR_RESET} bar',
+        6,
+        ['foo', f'{SGR_RED}{OSC_START_BEL}link{OSC_END_BEL}{SGR_RESET}', 'bar'],
+    ),
+    (   # hyperlink *containing* SGR attributes
+        f'foo {OSC_START_ST}{SGR_RED}link{SGR_RESET}{OSC_END_ST} bar',
+        6,
+        ['foo', f'{OSC_START_ST}{SGR_RED}link{SGR_RESET}{OSC_END_ST}', 'bar'],
+    ),
+    (
+        f'foo {OSC_START_BEL}{SGR_RED}link{SGR_RESET}{OSC_END_BEL} bar',
+        6,
+        ['foo', f'{OSC_START_BEL}{SGR_RED}link{SGR_RESET}{OSC_END_BEL}', 'bar'],
+    ),
+    (   # hyperlink with internal space - breaks with id continuation (ST)
+        f'Go {OSC_START_ST}Click here{OSC_END_ST} now',
+        5,
+        [
+            'Go',
+            '\x1b]8;id=00000001;http://example.com\x1b\\Click\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\here\x1b]8;;\x1b\\',
+            'now',
+        ],
+    ),
+    (   # hyperlink with internal space - breaks with id continuation (BEL)
+        f'Go {OSC_START_BEL}Click here{OSC_END_BEL} now',
+        5,
+        [
+            'Go',
+            '\x1b]8;id=00000001;http://example.com\x07Click\x1b]8;;\x07',
+            '\x1b]8;id=00000001;http://example.com\x07here\x1b]8;;\x07',
+            'now',
+        ],
+    ),
+    (   # hyperlink with existing id= parameter is preserved
+        '\x1b]8;id=my-link;http://example.com\x1b\\Click here\x1b]8;;\x1b\\',
+        6,
+        [
+            '\x1b]8;id=my-link;http://example.com\x1b\\Click\x1b]8;;\x1b\\',
+            '\x1b]8;id=my-link;http://example.com\x1b\\here\x1b]8;;\x1b\\',
+        ],
+    ),
+    (   # hyperlink spanning 3+ lines
+        f'{OSC_START_ST}one two three{OSC_END_ST}',
+        5,
+        [
+            '\x1b]8;id=00000001;http://example.com\x1b\\one\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\two\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\three\x1b]8;;\x1b\\',
+        ],
+    ),
+    (   # multiple hyperlinks in same text
+        f'{OSC_START_ST}ab cd{OSC_END_ST} {OSC_START_BEL}ef gh{OSC_END_BEL}',
+        4,
+        [
+            '\x1b]8;id=00000001;http://example.com\x1b\\ab\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\cd\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000002;http://example.com\x07ef\x1b]8;;\x07',
+            '\x1b]8;id=00000002;http://example.com\x07gh\x1b]8;;\x07',
+        ],
+    ),
+    (   # long word inside hyperlink forces character-level breaking
+        f'{OSC_START_ST}abcdefgh{OSC_END_ST}',
+        3,
+        [
+            '\x1b]8;id=00000001;http://example.com\x1b\\abc\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\def\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001;http://example.com\x1b\\gh\x1b]8;;\x1b\\',
+        ],
+    ),
+    (   # params with other keys but no id - id is prepended, other params preserved
+        '\x1b]8;foo=bar;http://example.com\x1b\\Click here\x1b]8;;\x1b\\',
+        6,
+        [
+            '\x1b]8;id=00000001:foo=bar;http://example.com\x1b\\Click\x1b]8;;\x1b\\',
+            '\x1b]8;id=00000001:foo=bar;http://example.com\x1b\\here\x1b]8;;\x1b\\',
+        ],
+    ),
+    (   # id not at start of params (junk:id=given) - full params preserved
+        '\x1b]8;foo=bar:id=mylink;http://example.com\x1b\\Click here\x1b]8;;\x1b\\',
+        6,
+        [
+            '\x1b]8;foo=bar:id=mylink;http://example.com\x1b\\Click\x1b]8;;\x1b\\',
+            '\x1b]8;foo=bar:id=mylink;http://example.com\x1b\\here\x1b]8;;\x1b\\',
+        ],
+    ),
+    (   # wide grapheme after OSC 8 open at width 1 (must not hang)
+        '\x1b]8;;u\x07😀',
+        1,
+        ['\x1b]8;id=00000001;u\x07😀\x1b]8;;\x07'],
+    ),
+    (   # CJK wide char after OSC 8 open at width 1 (must not hang)
+        '\x1b]8;;u\x07あ',
+        1,
+        ['\x1b]8;id=00000001;u\x07あ\x1b]8;;\x07'],
+    ),])
+def test_wrap_hyperlink_word_boundary(text, w, expected):
+    """OSC hyperlink sequences should act as word boundaries."""
+    result = wrap(text, w)
+    assert result == expected
+
+
+@pytest.mark.parametrize('text,kwargs', [
+    ('The quick brown fox jumps over the lazy dog',
+     {'width': 10, 'max_lines': 3, 'placeholder': '...'}),
+    ('1234567890 1234567890 extra',
+     {'width': 10, 'max_lines': 2, 'placeholder': '...'}),
+    ('1234567890 1234567890',
+     {'width': 10, 'max_lines': 1, 'placeholder': '...'}),
+    ('short 1234567890 extra',
+     {'width': 10, 'max_lines': 2, 'placeholder': '...'}),
+    ('hello world',
+     {'width': 10, 'max_lines': 5, 'placeholder': '...'}),
+    ('hello world foo bar baz',
+     {'width': 8, 'max_lines': 2, 'placeholder': ' [...]'}),
+    ('a bb ccc',
+     {'width': 3, 'max_lines': 2, 'placeholder': '.'}),
+    ('a bb ccc dddd',
+     {'width': 4, 'max_lines': 3, 'placeholder': '~'}),
+    (' a ', {'width': 1, 'max_lines': 2, 'drop_whitespace': False, 'placeholder': '~'}),
+    ('hello world', {'width': 20, 'max_lines': 5}),
+    ('ab cd', {'width': 5, 'max_lines': 1}),
+    ('aaa bbb ccc', {'width': 3, 'max_lines': 2, 'placeholder': '...'}),
+    ('hello world foo bar',
+     {'width': 10, 'subsequent_indent': '  ', 'max_lines': 2, 'placeholder': '...'}),
+    ('hello world foo bar',
+     {'width': 10, 'initial_indent': '> ', 'max_lines': 2, 'placeholder': '...'}),
+])
+def test_wrap_max_lines_matches_stdlib(text, kwargs):
+    expected = _adjust_stdlib_result(textwrap.wrap(text, **kwargs), kwargs)
+    assert wrap(text, **kwargs) == expected
+
+
+def test_wrap_placeholder_too_large():
+    with pytest.raises(ValueError, match="placeholder too large"):
+        wrap('hello', width=3, max_lines=1, placeholder='.....')
+    with pytest.raises(ValueError):
+        textwrap.wrap('fox', width=1, max_lines=3, placeholder='...')
+
+
+@pytest.mark.parametrize('text,w,ml,ph,expected', [
+    (f'{SGR_RED}hello world foo bar{SGR_RESET}',
+     8, 2, '...', [f'{SGR_RED}hello{SGR_RESET}', f'{SGR_RED}world...{SGR_RESET}']),
+    (f'{SGR_RED}hello{SGR_RESET} world foo',
+     8, 2, '...', [f'{SGR_RED}hello{SGR_RESET}', 'world...']),
+    (f'{SGR_RED}hello{SGR_RESET} world',
+     6, 1, '.', [f'{SGR_RED}hello{SGR_RESET}.']),
+    ('\u4e2d\u6587 \u5b57\u7b26 hello', 5, 1, '~', ['\u4e2d\u6587~']),
+    ('\u4e2d\u6587 \u5b57\u7b26 hello world', 5, 2, '~', ['\u4e2d\u6587', '\u5b57\u7b26~']),
+    ('\u4e2d\u6587\u5b57\u7b26 hello', 12, 1, '...', ['\u4e2d\u6587\u5b57\u7b26...']),
+])
+def test_wrap_max_lines_sequences(text, w, ml, ph, expected):
+    assert wrap(text, w, max_lines=ml, placeholder=ph) == expected
+
+
+def test_wrap_max_lines_hyperlink_closed():
+    """Truncation inside a hyperlink closes it before the placeholder."""
+    text = f'{OSC_START_ST}Click here please{OSC_END_ST}'
+    result = wrap(text, 10, max_lines=1, placeholder='...')
+    assert len(result) == 1
+    assert result[0].endswith(f'{OSC_END_ST}...')
+    assert OSC_START_ST in result[0]
+
+
+def test_wrap_max_lines_hyperlink_close_on_prev_line():
+    """Fallback to previous line preserves hyperlink close sequence."""
+    text = f'{OSC_START_ST}ab{OSC_END_ST} cccccccccc ddddd'
+    result = wrap(text, 10, max_lines=2, placeholder='...')
+    assert result == [f'{OSC_START_ST}ab{OSC_END_ST}...']
+
+
+@pytest.mark.parametrize('text,kwargs', [
+    ('hello\tworld', {'width': 20, 'expand_tabs': False, 'replace_whitespace': False}),
+    ('hello\tworld foo\tbar baz', {'width': 12, 'expand_tabs': False, 'tabsize': 8}),
+    ('hello\nworld', {'width': 20, 'replace_whitespace': False}),
+    ('a\t b\n c', {'width': 20, 'replace_whitespace': False}),
+    ('Hello world. This is a test.  More text.', {'width': 20, 'fix_sentence_endings': True}),
+    ('Dr. Smith went to Washington. He left.', {'width': 20, 'fix_sentence_endings': True}),
+])
+def test_wrap_stdlib_params(text, kwargs):
+    assert wrap(text, **kwargs) == textwrap.wrap(text, **kwargs)
+
+
+def test_wrap_expand_tabs_false_with_sequences():
+    text = f'{SGR_RED}a\tb{SGR_RESET}'
+    result = wrap(text, 20, expand_tabs=False, replace_whitespace=False)
+    assert '\t' in _strip(result[0])
+
+
+def test_wrap_replace_whitespace_false_newlines_zero_width():
+    """Newlines have zero display width, so more text fits per line than stdlib."""
+    assert wrap('hello\nworld foo\nbar', 10, replace_whitespace=False) == [
+        'hello\nworld', 'foo\nbar']
+
+
+def test_wrap_bare_esc():
+    """Bare ESC not part of a recognized sequence is treated as zero-width."""
+    assert wrap('ab\x1bcd ef', 5) == ['ab\x1bcd', 'ef']
+    assert wrap('ab\x1b\x00cdef', 3) == ['ab\x1b\x00c', 'def']
+
+
+def test_wrap_bare_esc_at_line_start():
+    """
+    Exercises the bare-ESC safety break in _find_first_visible_break.
+
+    A bare \\x1b that does not match ZERO_WIDTH_PATTERN triggers a safety 'break' statement but is
+    not found in any practical terminal sequence or string (ESC followed by NUL).
+    """
+    assert wrap('\x1b\x00あ', 1) == ['\x1b', '\x00', 'あ']
+
+
+def test_wrap_embedded_nul():
+    """Embedded NUL characters are preserved through wrapping."""
+    assert wcwidth.wrap('ab\x00cd ef', 5) == ['ab\x00cd', 'ef']
+    assert wcwidth.wrap('a\x00b', 5) == ['a\x00b']
+    assert wcwidth.wrap('\x00ab', 5) == ['\x00ab']
+
+
+def test_wrap_tab_expansion_counts_codepoints():
+    """Tab expansion column counts codepoints, not UTF-8 bytes."""
+    assert wcwidth.wrap('A\U0001f680\tB', 40) == ['A\U0001f680      B']
+    assert wcwidth.wrap('A\u4e2d\tB', 40) == ['A\u4e2d      B']
+    assert wcwidth.wrap('\x1b[?25l\tX', 40) == ['\x1b[?25l  X']
+
+
+def test_wrap_osc_boundaries():
+    """OSC sequences (OSC 66, OSC 0, hyperlink open) create word boundaries."""
+    assert wcwidth.wrap('abcdefgh\x1b]66;bad\x07X', 8) == ['abcdefgh', '\x1b]66;bad\x07X']
+    assert wcwidth.wrap('abcd\x1b]66;w=5;hello\x07efgh', 8) == ['abcd\x1b]66;w=5;hello\x07efgh']
+    assert wcwidth.wrap('abcd\x1b]0;title\x07efgh', 8) == ['abcd\x1b]0;title\x07efgh']
+    assert wcwidth.wrap('abc\x1b]8;id=x;http://example.com\x1b\\WXYZ\x1b]8;;\x1b\\def', 8) == [
+        'abc\x1b]8;id=x;http://example.com\x1b\\WXYZ\x1b]8;;\x1b\\', 'def']
+
+
+def test_wrap_unterminated_osc():
+    """Unterminated OSC consumes only the ESC ] prefix."""
+    assert wcwidth.wrap('a\x1b]66;', 30) == ['a\x1b]66;']
+    assert wcwidth.wrap('\x1b]66;', 30) == ['\x1b]66;']
+    assert wcwidth.wrap('a\x1b]0;title', 30) == ['a\x1b]0;title']
+
+
+# Tamil, Kannada and Sinhala: wrap() breaks mid-conjunct because it charges one cell per UAX #29
+# grapheme cluster while width() joins a virama conjunct into a single 2-cell cluster.  A
+# conjunct-aware wrap() gives two full 4-cell lines; we intentionally do not implement it, see the
+# note in wrap().
+@pytest.mark.parametrize('text', [
+    '\u0b95\u0bcd\u0b95\u0bcd\u0b95',  # Tamil, க்க்க
+    '\u0c95\u0ccd\u0c95\u0ccd\u0c95',  # Kannada, ಕ್ಕ್ಕ
+    '\u0d9a\u0dca\u0d9a\u0dca\u0d9a',  # Sinhala, ක්ක්ක
+])
+def test_wrap_virama_conjunct_known_limitation(text):
+    """Known limitation: wrap() breaks mid-conjunct on Tamil, Kannada and Sinhala text."""
+    assert [wcwidth.width(line) for line in wrap(text * 4, width=4)] == [3, 4, 3]
+
+
+@pytest.mark.parametrize('text', [' hello', '  hello', '    hello'])
+def test_wrap_drops_leading_whitespace_only_lines(text):
+    """Discard all-whitespace first lines rather than emitting empty lines."""
+    assert wrap(text, width=1) == list('hello')
+    assert wrap(text, width=1, drop_whitespace=False) == list(text)

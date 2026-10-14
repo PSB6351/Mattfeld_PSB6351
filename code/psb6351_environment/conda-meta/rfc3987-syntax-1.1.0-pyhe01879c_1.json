@@ -1,0 +1,180 @@
+{
+  "build": "pyhe01879c_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.9",
+    "lark >=1.2.2"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/rfc3987-syntax-1.1.0-pyhe01879c_1",
+  "files": [
+    "etc/conda/test-files/rfc3987-syntax/1/tests/__init__.py",
+    "etc/conda/test-files/rfc3987-syntax/1/tests/invalid_syntax.json",
+    "etc/conda/test-files/rfc3987-syntax/1/tests/test_syntax.py",
+    "etc/conda/test-files/rfc3987-syntax/1/tests/valid_syntax.json",
+    "lib/python3.14/site-packages/rfc3987_syntax/CITATION.cff",
+    "lib/python3.14/site-packages/rfc3987_syntax/__init__.py",
+    "lib/python3.14/site-packages/rfc3987_syntax/syntax_helpers.py",
+    "lib/python3.14/site-packages/rfc3987_syntax/syntax_rfc3987.lark",
+    "lib/python3.14/site-packages/rfc3987_syntax/utils.py",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/rfc3987_syntax-1.1.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/syntax_helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/utils.cpython-314.pyc"
+  ],
+  "fn": "rfc3987-syntax-1.1.0-pyhe01879c_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/rfc3987-syntax-1.1.0-pyhe01879c_1",
+    "type": 1
+  },
+  "md5": "7234f99325263a5af6d4cd195035e8f2",
+  "name": "rfc3987-syntax",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/rfc3987-syntax-1.1.0-pyhe01879c_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/rfc3987-syntax/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "etc/conda/test-files/rfc3987-syntax/1/tests/invalid_syntax.json",
+        "path_type": "hardlink",
+        "sha256": "e71c264157461d5d6c80db31443953ce715596e0e8d55d9e26408829c629323a",
+        "sha256_in_prefix": "e71c264157461d5d6c80db31443953ce715596e0e8d55d9e26408829c629323a",
+        "size_in_bytes": 50916
+      },
+      {
+        "_path": "etc/conda/test-files/rfc3987-syntax/1/tests/test_syntax.py",
+        "path_type": "hardlink",
+        "sha256": "59ca0993f293cee8034d4ffa180bcfe4cdb4aab326d87fa252a1c5e3814b27f6",
+        "sha256_in_prefix": "59ca0993f293cee8034d4ffa180bcfe4cdb4aab326d87fa252a1c5e3814b27f6",
+        "size_in_bytes": 1477
+      },
+      {
+        "_path": "etc/conda/test-files/rfc3987-syntax/1/tests/valid_syntax.json",
+        "path_type": "hardlink",
+        "sha256": "cadac7d1c71c1c3447d26599fc174a92b9fad3ae6a0dffd414a78c27d4feb8a1",
+        "sha256_in_prefix": "cadac7d1c71c1c3447d26599fc174a92b9fad3ae6a0dffd414a78c27d4feb8a1",
+        "size_in_bytes": 3253
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax/CITATION.cff",
+        "path_type": "hardlink",
+        "sha256": "0dbaa14ed5fa0b7eedcf6302da1a556341e77f4d6d04b57ff30f0ed49d2f173b",
+        "sha256_in_prefix": "0dbaa14ed5fa0b7eedcf6302da1a556341e77f4d6d04b57ff30f0ed49d2f173b",
+        "size_in_bytes": 1847
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "495c22fb129fdb84f53049cf07bc5b2a48c063ae39772931da205b86c66932fb",
+        "sha256_in_prefix": "495c22fb129fdb84f53049cf07bc5b2a48c063ae39772931da205b86c66932fb",
+        "size_in_bytes": 30
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax/syntax_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "775d776cfc5aa23f93147cca7a7a0c362452e4d85537c2453aaab5478557ce29",
+        "sha256_in_prefix": "775d776cfc5aa23f93147cca7a7a0c362452e4d85537c2453aaab5478557ce29",
+        "size_in_bytes": 4072
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax/syntax_rfc3987.lark",
+        "path_type": "hardlink",
+        "sha256": "b337944aea3893d9be4ff5c1064d07802aa3db77fb8e3e02764f6d755ae2b0f5",
+        "sha256_in_prefix": "b337944aea3893d9be4ff5c1064d07802aa3db77fb8e3e02764f6d755ae2b0f5",
+        "size_in_bytes": 2742
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax/utils.py",
+        "path_type": "hardlink",
+        "sha256": "e63e28c89b9446a63aabb0c1e2484b218fff6ed9342d728e1a9fad921b4db50a",
+        "sha256_in_prefix": "e63e28c89b9446a63aabb0c1e2484b218fff6ed9342d728e1a9fad921b4db50a",
+        "size_in_bytes": 136
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "7a518ae5bb5685568b537061e8207a4dbba766ae785b16ad26d930ad3853cb0d",
+        "sha256_in_prefix": "7a518ae5bb5685568b537061e8207a4dbba766ae785b16ad26d930ad3853cb0d",
+        "size_in_bytes": 7688
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "2a357806cdd07916c4b1cf65f4b05a282bd251ba162fa226cbd882ce67ff8921",
+        "sha256_in_prefix": "2a357806cdd07916c4b1cf65f4b05a282bd251ba162fa226cbd882ce67ff8921",
+        "size_in_bytes": 1222
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "9561acfa02374d20f36098db23f67b71fe239936ab8fc684d713f2a9f2d613ab",
+        "sha256_in_prefix": "9561acfa02374d20f36098db23f67b71fe239936ab8fc684d713f2a9f2d613ab",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "site-packages/rfc3987_syntax-1.1.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "50eefaee3617ed933720bd1c13c601ae84a43f273c157e25b595ff177b3491dd",
+        "sha256_in_prefix": "50eefaee3617ed933720bd1c13c601ae84a43f273c157e25b595ff177b3491dd",
+        "size_in_bytes": 1067
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/syntax_helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rfc3987_syntax/__pycache__/utils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "70001ac24ee62058557783d9c5a7bbcfd97bd4911ef5440e3f7a576f9e43bc92",
+  "size": 22913,
+  "subdir": "noarch",
+  "timestamp": 1752876729000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/rfc3987-syntax-1.1.0-pyhe01879c_1.conda",
+  "version": "1.1.0"
+}

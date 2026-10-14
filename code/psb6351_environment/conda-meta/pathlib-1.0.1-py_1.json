@@ -1,0 +1,88 @@
+{
+  "build": "py_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pathlib-1.0.1-py_1",
+  "files": [
+    "lib/python3.14/site-packages/pathlib-1.0.1-py2.7.egg-info/PKG-INFO",
+    "lib/python3.14/site-packages/pathlib-1.0.1-py2.7.egg-info/SOURCES.txt",
+    "lib/python3.14/site-packages/pathlib-1.0.1-py2.7.egg-info/dependency_links.txt",
+    "lib/python3.14/site-packages/pathlib-1.0.1-py2.7.egg-info/installed-files.txt",
+    "lib/python3.14/site-packages/pathlib-1.0.1-py2.7.egg-info/top_level.txt",
+    "lib/python3.14/site-packages/pathlib.py",
+    "lib/python3.14/site-packages/__pycache__/pathlib.cpython-314.pyc"
+  ],
+  "fn": "pathlib-1.0.1-py_1.tar.bz2",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pathlib-1.0.1-py_1",
+    "type": 1
+  },
+  "md5": "930df2b5ca63ffdd1dd5f8b235f344a2",
+  "name": "pathlib",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pathlib-1.0.1-py_1.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pathlib-1.0.1-py2.7.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "21e03037a571f6b0ce18b809f5e9d57f1f8a9b67bb260786b1ee4848cfadfe08",
+        "sha256_in_prefix": "21e03037a571f6b0ce18b809f5e9d57f1f8a9b67bb260786b1ee4848cfadfe08",
+        "size_in_bytes": 6366
+      },
+      {
+        "_path": "site-packages/pathlib-1.0.1-py2.7.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "07f092dc12ae30acfe5c8c0c427f5dbdc51b6233d39be68db88984fedb0b42a6",
+        "sha256_in_prefix": "07f092dc12ae30acfe5c8c0c427f5dbdc51b6233d39be68db88984fedb0b42a6",
+        "size_in_bytes": 145
+      },
+      {
+        "_path": "site-packages/pathlib-1.0.1-py2.7.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "site-packages/pathlib-1.0.1-py2.7.egg-info/installed-files.txt",
+        "path_type": "hardlink",
+        "sha256": "c7e7f8b808373818f99d318eb6bef43c42adeef6f616d25ea5bd51af7eebac08",
+        "sha256_in_prefix": "c7e7f8b808373818f99d318eb6bef43c42adeef6f616d25ea5bd51af7eebac08",
+        "size_in_bytes": 85
+      },
+      {
+        "_path": "site-packages/pathlib-1.0.1-py2.7.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ce179fb1a36e01261aa1917e10b1b74cf167e92d9cb81d5f77c3e53452eb321d",
+        "sha256_in_prefix": "ce179fb1a36e01261aa1917e10b1b74cf167e92d9cb81d5f77c3e53452eb321d",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/pathlib.py",
+        "path_type": "hardlink",
+        "sha256": "f4c7dba104c472eb1c826ed900b04c4c3a4bc03fb63c24d2532865036b5cbeac",
+        "sha256_in_prefix": "f4c7dba104c472eb1c826ed900b04c4c3a4bc03fb63c24d2532865036b5cbeac",
+        "size_in_bytes": 41481
+      },
+      {
+        "_path": "lib/python3.14/site-packages/__pycache__/pathlib.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ab8c9402ef7d8e8b23b66f27a5e9eafd63d3193c6531a62b4ae9b8a949f356e7",
+  "size": 14998,
+  "subdir": "noarch",
+  "timestamp": 1531194126000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pathlib-1.0.1-py_1.tar.bz2",
+  "version": "1.0.1"
+}

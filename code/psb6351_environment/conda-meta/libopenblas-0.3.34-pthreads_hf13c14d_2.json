@@ -1,0 +1,61 @@
+{
+  "build": "pthreads_hf13c14d_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "openblas >=0.3.34,<0.3.35.0a0"
+  ],
+  "depends": [
+    "libgfortran",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libgfortran5 >=15.3.0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libopenblas-0.3.34-pthreads_hf13c14d_2",
+  "files": [
+    "etc/conda/test-files/libopenblas/0/test_openblas.c",
+    "lib/libopenblas.so.0",
+    "lib/libopenblasp-r0.3.34.so"
+  ],
+  "fn": "libopenblas-0.3.34-pthreads_hf13c14d_2.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libopenblas-0.3.34-pthreads_hf13c14d_2",
+    "type": 1
+  },
+  "md5": "7e19fcd73d7f0997d3cb3326d2586a86",
+  "name": "libopenblas",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libopenblas-0.3.34-pthreads_hf13c14d_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/libopenblas/0/test_openblas.c",
+        "path_type": "hardlink",
+        "sha256": "c00f5ab721599cd19465092d53e744b21f8cc26c6c9e1323da7c03ed4dc7ab98",
+        "sha256_in_prefix": "c00f5ab721599cd19465092d53e744b21f8cc26c6c9e1323da7c03ed4dc7ab98",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "lib/libopenblas.so.0",
+        "path_type": "softlink",
+        "sha256": "f1424288e9ac125331102c0150b66fbd244560987779552e0e97d5cfd9de572b",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "lib/libopenblasp-r0.3.34.so",
+        "path_type": "hardlink",
+        "sha256": "f1424288e9ac125331102c0150b66fbd244560987779552e0e97d5cfd9de572b",
+        "sha256_in_prefix": "f1424288e9ac125331102c0150b66fbd244560987779552e0e97d5cfd9de572b",
+        "size_in_bytes": 41542616
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "69a722751e14eab2eb3bfdcb9acb1187afbd962b0c49b48d829341e0f6787f60",
+  "size": 6845411,
+  "subdir": "linux-64",
+  "timestamp": 1789141490000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libopenblas-0.3.34-pthreads_hf13c14d_2.conda",
+  "version": "0.3.34"
+}

@@ -1,0 +1,212 @@
+{
+  "build": "h3d503d9_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libffi",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libglib ==2.90.0 h569388d_0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/glib-tools-2.90.0-h3d503d9_0",
+  "files": [
+    "bin/gapplication",
+    "bin/gdbus",
+    "bin/gi-compile-repository",
+    "bin/gi-decompile-typelib",
+    "bin/gi-inspect-typelib",
+    "bin/gio",
+    "bin/gio-querymodules",
+    "bin/glib-compile-schemas",
+    "bin/gresource",
+    "bin/gsettings",
+    "lib/libgio-2.0.so",
+    "lib/libgirepository-2.0.so",
+    "lib/libglib-2.0.so",
+    "lib/libgmodule-2.0.so",
+    "lib/libgobject-2.0.so",
+    "lib/libgthread-2.0.so",
+    "share/bash-completion/completions/gapplication",
+    "share/bash-completion/completions/gdbus",
+    "share/bash-completion/completions/gio",
+    "share/bash-completion/completions/gresource",
+    "share/bash-completion/completions/gsettings"
+  ],
+  "fn": "glib-tools-2.90.0-h3d503d9_0.conda",
+  "license": "LGPL-2.1-or-later",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/glib-tools-2.90.0-h3d503d9_0",
+    "type": 1
+  },
+  "md5": "d4adaebf8a2c9040ada6549c52a6b8d8",
+  "name": "glib-tools",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/glib-tools-2.90.0-h3d503d9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/gapplication",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "a8197d729213440a01cb8ec273628dedb5e6e6a2d2ff3f724f29f07dc4e0eba4",
+        "sha256_in_prefix": "5c7835e689cd208b1de51abb17ff3342753c7529a4feeb5fdca0d8471d6f86e9",
+        "size_in_bytes": 30704
+      },
+      {
+        "_path": "bin/gdbus",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "74ef19b2cc6943a347261f6e518084cddd8fcd9344d479de50c089075638c5e7",
+        "sha256_in_prefix": "32e7250ce0ed0a41debf63c3c8b9f458e5ddf0768da67045e39c155ae55cd08c",
+        "size_in_bytes": 64808
+      },
+      {
+        "_path": "bin/gi-compile-repository",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "a9fdf5cd82054d5c145ef77749ed48ddc2c3f726b27ac1a692581b54ab75b6e0",
+        "sha256_in_prefix": "e4f2eec3e7bb1f3194e5586646816fbcb7cdeed3fc298d60e3fe37c2437d44ed",
+        "size_in_bytes": 222712
+      },
+      {
+        "_path": "bin/gi-decompile-typelib",
+        "path_type": "hardlink",
+        "sha256": "f90eb5eb8612265a4ab8d4addef6f2c5c760205bce08be62b66316cff84deda9",
+        "sha256_in_prefix": "f90eb5eb8612265a4ab8d4addef6f2c5c760205bce08be62b66316cff84deda9",
+        "size_in_bytes": 58776
+      },
+      {
+        "_path": "bin/gi-inspect-typelib",
+        "path_type": "hardlink",
+        "sha256": "d2f3cdcd6a1ce255f76a2ddb36d0c240468b45bd000345f885d64ba9beafb2dc",
+        "sha256_in_prefix": "d2f3cdcd6a1ce255f76a2ddb36d0c240468b45bd000345f885d64ba9beafb2dc",
+        "size_in_bytes": 16664
+      },
+      {
+        "_path": "bin/gio",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "e8112a17d5c81794beae52c94b62a15443f8b8d3f720ad0be1ff011eb76752ca",
+        "sha256_in_prefix": "afae314eb117335d213900841b27e849399b77eb6dd4b0d5193a5f83f753d318",
+        "size_in_bytes": 115256
+      },
+      {
+        "_path": "bin/gio-querymodules",
+        "path_type": "hardlink",
+        "sha256": "ffd87fb041506e65957c8bd1953140c93321b92caa8661c65073896f557fe2c3",
+        "sha256_in_prefix": "ffd87fb041506e65957c8bd1953140c93321b92caa8661c65073896f557fe2c3",
+        "size_in_bytes": 21480
+      },
+      {
+        "_path": "bin/glib-compile-schemas",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "5c164378bf7befb0f2618e53a593a96eb13d7276e28ad45dcbb44a3a1058fb44",
+        "sha256_in_prefix": "2a498dadacb900073da3daf8b8d266451da9f8395762017c672c3ecf7b133167",
+        "size_in_bytes": 68632
+      },
+      {
+        "_path": "bin/gresource",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "73b2f770c18fcef8090ffb47403009612d8cd8734be8ae3641e98f0f82f61f3b",
+        "sha256_in_prefix": "a4b869503d538fd0e03351659b2fbe2e6cad6cd2999f2229f90399461aa885fb",
+        "size_in_bytes": 25696
+      },
+      {
+        "_path": "bin/gsettings",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_glib-split_1789478025/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla",
+        "sha256": "ca6d18bf8d2a5854f50eb2ff66fe8d1cd8469224da333b69c2c31e22f69a67cf",
+        "sha256_in_prefix": "b1c01a8c520d65ad9bc95a3bcfe063df313e3123e3d903aad82532def1f6ee33",
+        "size_in_bytes": 36776
+      },
+      {
+        "_path": "lib/libgio-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "lib/libgirepository-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "lib/libglib-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 16
+      },
+      {
+        "_path": "lib/libgmodule-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/libgobject-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/libgthread-2.0.so",
+        "path_type": "softlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "share/bash-completion/completions/gapplication",
+        "path_type": "hardlink",
+        "sha256": "74be8dea6107b97cca5afa807d017898c9e7e30a18e4c6cc864402f1c2bc55e4",
+        "sha256_in_prefix": "74be8dea6107b97cca5afa807d017898c9e7e30a18e4c6cc864402f1c2bc55e4",
+        "size_in_bytes": 2370
+      },
+      {
+        "_path": "share/bash-completion/completions/gdbus",
+        "path_type": "hardlink",
+        "sha256": "3f00ef7cd16a4fe2dd50604a4bbbc93e232ff433f7b91f67089546aa31c18b88",
+        "sha256_in_prefix": "3f00ef7cd16a4fe2dd50604a4bbbc93e232ff433f7b91f67089546aa31c18b88",
+        "size_in_bytes": 1809
+      },
+      {
+        "_path": "share/bash-completion/completions/gio",
+        "path_type": "hardlink",
+        "sha256": "2ad236bff3bda3d4e68f0db1d776ef8c51463ac71e04c73076d0598f432401a1",
+        "sha256_in_prefix": "2ad236bff3bda3d4e68f0db1d776ef8c51463ac71e04c73076d0598f432401a1",
+        "size_in_bytes": 4020
+      },
+      {
+        "_path": "share/bash-completion/completions/gresource",
+        "path_type": "hardlink",
+        "sha256": "7e15ef721b7efef3e387914770998a75282a3c1b9b1ba76cc69594d8ee9f1833",
+        "sha256_in_prefix": "7e15ef721b7efef3e387914770998a75282a3c1b9b1ba76cc69594d8ee9f1833",
+        "size_in_bytes": 2188
+      },
+      {
+        "_path": "share/bash-completion/completions/gsettings",
+        "path_type": "hardlink",
+        "sha256": "8cfa89cc6819139176f21c9e95b408ef3b9c4f257c4c0b87f0fe3dc0f7b9d868",
+        "sha256_in_prefix": "8cfa89cc6819139176f21c9e95b408ef3b9c4f257c4c0b87f0fe3dc0f7b9d868",
+        "size_in_bytes": 4218
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a31c2244c6743a85941ac1d19a77ce2cc871afa171b0ad9aaac309af532d0677",
+  "size": 237225,
+  "subdir": "linux-64",
+  "timestamp": 1789478025000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/glib-tools-2.90.0-h3d503d9_0.conda",
+  "version": "2.90.0"
+}

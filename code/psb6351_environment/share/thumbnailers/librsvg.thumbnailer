@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/bin/gdk-pixbuf-thumbnailer
+Exec=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+MimeType=image/svg+xml;image/svg+xml-compressed;

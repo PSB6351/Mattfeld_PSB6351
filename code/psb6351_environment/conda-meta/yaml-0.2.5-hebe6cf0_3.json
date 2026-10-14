@@ -1,0 +1,82 @@
+{
+  "build": "hebe6cf0_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/yaml-0.2.5-hebe6cf0_3",
+  "files": [
+    "include/yaml.h",
+    "lib/libyaml-0.so.2",
+    "lib/libyaml-0.so.2.0.9",
+    "lib/libyaml.a",
+    "lib/libyaml.so",
+    "lib/pkgconfig/yaml-0.1.pc"
+  ],
+  "fn": "yaml-0.2.5-hebe6cf0_3.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/yaml-0.2.5-hebe6cf0_3",
+    "type": 1
+  },
+  "md5": "e741576fb8f89821ac7c1c537322a33d",
+  "name": "yaml",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/yaml-0.2.5-hebe6cf0_3.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/yaml.h",
+        "path_type": "hardlink",
+        "sha256": "de39c9fc2b2c8584775e6d0dc0f13c8e778ceba47d419cff9d85465ca35d6954",
+        "sha256_in_prefix": "de39c9fc2b2c8584775e6d0dc0f13c8e778ceba47d419cff9d85465ca35d6954",
+        "size_in_bytes": 54439
+      },
+      {
+        "_path": "lib/libyaml-0.so.2",
+        "path_type": "softlink",
+        "sha256": "7ee9ab43b39cc0ad7811fa5ad3af8c1a093f519e08fd17f9442efa8a7d07aad0",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "lib/libyaml-0.so.2.0.9",
+        "path_type": "hardlink",
+        "sha256": "7ee9ab43b39cc0ad7811fa5ad3af8c1a093f519e08fd17f9442efa8a7d07aad0",
+        "sha256_in_prefix": "7ee9ab43b39cc0ad7811fa5ad3af8c1a093f519e08fd17f9442efa8a7d07aad0",
+        "size_in_bytes": 132448
+      },
+      {
+        "_path": "lib/libyaml.a",
+        "path_type": "hardlink",
+        "sha256": "2e2bf3c7643230664586f8d95c6c15c511f2f55044217c5ccc738b6b46dcf5f3",
+        "sha256_in_prefix": "2e2bf3c7643230664586f8d95c6c15c511f2f55044217c5ccc738b6b46dcf5f3",
+        "size_in_bytes": 182688
+      },
+      {
+        "_path": "lib/libyaml.so",
+        "path_type": "softlink",
+        "sha256": "7ee9ab43b39cc0ad7811fa5ad3af8c1a093f519e08fd17f9442efa8a7d07aad0",
+        "size_in_bytes": 18
+      },
+      {
+        "_path": "lib/pkgconfig/yaml-0.1.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_yaml_1787228426/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "bd9be2c1b2a3abcc235c146e60e3b9bd156c66efeb1cc2d32a90d38e4e638cd7",
+        "sha256_in_prefix": "bc955262beb11a72f61127a1b64fea1d62752cab6da815297043917f394a59fa",
+        "size_in_bytes": 463
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d164dfa75ecd538f6fd68765defcc06aa875bc697b9b215362d79a2a73125dd0",
+  "size": 84936,
+  "subdir": "linux-64",
+  "timestamp": 1787228426000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/yaml-0.2.5-hebe6cf0_3.conda",
+  "version": "0.2.5"
+}

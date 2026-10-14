@@ -1,0 +1,117 @@
+{
+    "ucschar": [],
+    "iunreserved": [],
+    "sub_delims": [],
+    "iuserinfo": [],
+    "h16": [],
+    "dec_octet": [],
+    "ls32": [],
+    "ipv6address": [],
+    "unreserved": [],
+    "ipvfuture": [],
+    "ip_literal": [],
+    "ireg_name": [],
+    "ihost": [],
+    "port": [],
+    "iauthority": [],
+    "ipchar": [],
+    "isegment": [],
+    "ipath_abempty": [],
+    "isegment_nz": [],
+    "ipath_absolute": [],
+    "ipath_rootless": [],
+    "ipath_empty": [],
+    "ihier_part": [],
+    "iprivate": [],
+    "iquery": [],
+    "absolute_iri": [
+        {
+            "value": "ftp://пример.испытание.example.com/файл.txt",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "https://www.example.com/über",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "https://exämple.example.org/pageセクション1",
+            "expect_lark": true,
+            "reason": ""
+        }
+    ],
+    "gen_delims": [],
+    "ifragment": [],
+    "isegment_nz_nc": [],
+    "ipath_noscheme": [],
+    "ipath": [],
+    "irelative_part": [],
+    "irelative_ref": [],
+    "iri": [
+        {
+            "value": "http:///example.com",
+            "expect_lark": false,
+            "expect_regex": true,
+            "reason": "Regex may match due to naive prefix pattern, but triple slash `http:///` is invalid due to empty authority.",
+            "conforms_with_rfc3987_semantics": false,
+            "semantics_notes": "Can occur when ireg_name is empty. To prevent this, change the ireg_name production rule to: ireg_name: (iunreserved | pct_encoded | sub_delims)+"
+        },
+        {
+            "value": "http://-.~_!$&'()*+,;=:%40:80%2f::::::@example.com",
+            "reason": "a valid IRI with many special characters",
+            "expect_lark": true
+        },
+        {
+            "value": "mailto:用户@例子.公司@example.com",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "ftp://пример.испытание.example.com/файл.txt",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "https://www.example.com/über",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "https://exämple.example.org/page#セクション1",
+            "expect_lark": true,
+            "reason": ""
+        }
+    ],
+    "iri_reference": [
+        {
+            "value": "/documents/नियम.pdf",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "../../фото/лошадь.jpg",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "index.html#संपर्क",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "doc/guide.html#überblick",
+            "expect_lark": true,
+            "reason": ""
+        },
+        {
+            "value": "пример/тест#часть2",
+            "expect_lark": true,
+            "reason": ""
+        }
+    ],
+    "reserved": [],
+    "scheme": [],
+    "pct_encoded": [],
+    "ipv4address": []
+}

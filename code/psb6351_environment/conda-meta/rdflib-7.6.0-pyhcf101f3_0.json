@@ -1,0 +1,1908 @@
+{
+  "build": "pyhcf101f3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.10",
+    "pyparsing >=2.1.0,<4",
+    "isodate >=0.7.2,<1.0.0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/rdflib-7.6.0-pyhcf101f3_0",
+  "files": [
+    "lib/python3.14/site-packages/rdflib/__init__.py",
+    "lib/python3.14/site-packages/rdflib/_networking.py",
+    "lib/python3.14/site-packages/rdflib/_type_checking.py",
+    "lib/python3.14/site-packages/rdflib/collection.py",
+    "lib/python3.14/site-packages/rdflib/compare.py",
+    "lib/python3.14/site-packages/rdflib/compat.py",
+    "lib/python3.14/site-packages/rdflib/container.py",
+    "lib/python3.14/site-packages/rdflib/contrib/__init__.py",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__init__.py",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/client.py",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/exceptions.py",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/models.py",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/util.py",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__init__.py",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/client.py",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/exceptions.py",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/util.py",
+    "lib/python3.14/site-packages/rdflib/events.py",
+    "lib/python3.14/site-packages/rdflib/exceptions.py",
+    "lib/python3.14/site-packages/rdflib/extras/__init__.py",
+    "lib/python3.14/site-packages/rdflib/extras/cmdlineutils.py",
+    "lib/python3.14/site-packages/rdflib/extras/describer.py",
+    "lib/python3.14/site-packages/rdflib/extras/external_graph_libs.py",
+    "lib/python3.14/site-packages/rdflib/extras/infixowl.py",
+    "lib/python3.14/site-packages/rdflib/extras/shacl.py",
+    "lib/python3.14/site-packages/rdflib/graph.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_BRICK.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_CSVW.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DC.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DCAM.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DCAT.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DCMITYPE.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DCTERMS.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_DOAP.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_FOAF.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_GEO.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_ODRL2.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_ORG.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_OWL.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_PROF.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_PROV.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_QB.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_RDF.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_RDFS.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_SDO.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_SH.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_SKOS.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_SOSA.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_SSN.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_TIME.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_VANN.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_VOID.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_WGS.py",
+    "lib/python3.14/site-packages/rdflib/namespace/_XSD.py",
+    "lib/python3.14/site-packages/rdflib/namespace/__init__.py",
+    "lib/python3.14/site-packages/rdflib/parser.py",
+    "lib/python3.14/site-packages/rdflib/paths.py",
+    "lib/python3.14/site-packages/rdflib/plugin.py",
+    "lib/python3.14/site-packages/rdflib/plugins/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/RDFVOC.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/hext.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/jsonld.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/nquads.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/ntriples.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/patch.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/rdfxml.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/trig.py",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/trix.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/hext.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/jsonld.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/longturtle.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/n3.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/nquads.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/nt.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/patch.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/rdfxml.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/trig.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/trix.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/turtle.py",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/xmlwriter.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/context.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/errors.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/keys.py",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/util.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/aggregates.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/algebra.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/datatypes.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/evaluate.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/evalutils.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/operators.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/parser.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/parserutils.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/processor.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/pyparsing_compat.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/csvresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/graph.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/jsonresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/rdfresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/tsvresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/txtresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/xmlresults.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/sparql.py",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/update.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__init__.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/auditable.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/berkeleydb.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/concurrent.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/memory.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/rdf4j.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/regexmatching.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/sparqlconnector.py",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/sparqlstore.py",
+    "lib/python3.14/site-packages/rdflib/py.typed",
+    "lib/python3.14/site-packages/rdflib/query.py",
+    "lib/python3.14/site-packages/rdflib/resource.py",
+    "lib/python3.14/site-packages/rdflib/serializer.py",
+    "lib/python3.14/site-packages/rdflib/store.py",
+    "lib/python3.14/site-packages/rdflib/term.py",
+    "lib/python3.14/site-packages/rdflib/tools/__init__.py",
+    "lib/python3.14/site-packages/rdflib/tools/chunk_serializer.py",
+    "lib/python3.14/site-packages/rdflib/tools/csv2rdf.py",
+    "lib/python3.14/site-packages/rdflib/tools/defined_namespace_creator.py",
+    "lib/python3.14/site-packages/rdflib/tools/graphisomorphism.py",
+    "lib/python3.14/site-packages/rdflib/tools/rdf2dot.py",
+    "lib/python3.14/site-packages/rdflib/tools/rdfpipe.py",
+    "lib/python3.14/site-packages/rdflib/tools/rdfs2dot.py",
+    "lib/python3.14/site-packages/rdflib/tools/sparqlquery.py",
+    "lib/python3.14/site-packages/rdflib/util.py",
+    "lib/python3.14/site-packages/rdflib/void.py",
+    "lib/python3.14/site-packages/rdflib/xsd_datetime.py",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/rdflib-7.6.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/rdflib/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/_networking.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/_type_checking.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/collection.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/compare.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/compat.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/container.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/client.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/models.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/util.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/client.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/util.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/events.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/cmdlineutils.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/describer.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/external_graph_libs.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/infixowl.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/extras/__pycache__/shacl.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/graph.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_BRICK.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_CSVW.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DC.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCAM.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCAT.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCMITYPE.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCTERMS.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DOAP.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_FOAF.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_GEO.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_ODRL2.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_ORG.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_OWL.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_PROF.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_PROV.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_QB.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_RDF.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_RDFS.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SDO.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SH.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SKOS.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SOSA.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SSN.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_TIME.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_VANN.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_VOID.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_WGS.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_XSD.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/namespace/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/paths.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/plugin.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/RDFVOC.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/hext.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/jsonld.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/notation3.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/nquads.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/ntriples.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/patch.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/rdfxml.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/trig.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/trix.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/hext.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/jsonld.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/longturtle.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/n3.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/nquads.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/nt.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/patch.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/rdfxml.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/trig.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/trix.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/turtle.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/xmlwriter.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/context.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/errors.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/keys.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/util.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/aggregates.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/algebra.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/datatypes.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/evaluate.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/evalutils.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/operators.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/parserutils.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/processor.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/pyparsing_compat.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/csvresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/graph.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/jsonresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/rdfresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/tsvresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/txtresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/xmlresults.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/sparql.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/update.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/auditable.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/berkeleydb.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/concurrent.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/memory.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/rdf4j.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/regexmatching.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/sparqlconnector.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/sparqlstore.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/query.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/resource.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/serializer.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/store.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/term.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/chunk_serializer.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/csv2rdf.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/defined_namespace_creator.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/graphisomorphism.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdf2dot.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdfpipe.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdfs2dot.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/tools/__pycache__/sparqlquery.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/util.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/void.cpython-314.pyc",
+    "lib/python3.14/site-packages/rdflib/__pycache__/xsd_datetime.cpython-314.pyc",
+    "bin/csv2rdf",
+    "bin/rdf2dot",
+    "bin/rdfgraphisomorphism",
+    "bin/rdfpipe",
+    "bin/rdfs2dot",
+    "bin/sparqlquery"
+  ],
+  "fn": "rdflib-7.6.0-pyhcf101f3_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/rdflib-7.6.0-pyhcf101f3_0",
+    "type": 1
+  },
+  "md5": "1ba0ceffa17c51959fa5c0996449266d",
+  "name": "rdflib",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/rdflib-7.6.0-pyhcf101f3_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/rdflib/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5b11d35dac2c6f608b8676056a13d786e526ec660aa494c081e01797165792fc",
+        "sha256_in_prefix": "5b11d35dac2c6f608b8676056a13d786e526ec660aa494c081e01797165792fc",
+        "size_in_bytes": 4762
+      },
+      {
+        "_path": "site-packages/rdflib/_networking.py",
+        "path_type": "hardlink",
+        "sha256": "1ca38d08252b41fa56c0380337e34011844c65cd2108277620872fc3ecdabcb8",
+        "sha256_in_prefix": "1ca38d08252b41fa56c0380337e34011844c65cd2108277620872fc3ecdabcb8",
+        "size_in_bytes": 4623
+      },
+      {
+        "_path": "site-packages/rdflib/_type_checking.py",
+        "path_type": "hardlink",
+        "sha256": "5316e6b3b49eec3c5e0f6cbb56fc4c75263d296a474de30726adecf87900de73",
+        "sha256_in_prefix": "5316e6b3b49eec3c5e0f6cbb56fc4c75263d296a474de30726adecf87900de73",
+        "size_in_bytes": 916
+      },
+      {
+        "_path": "site-packages/rdflib/collection.py",
+        "path_type": "hardlink",
+        "sha256": "762f7f9be09907724b520045cc84d692eb5f4fb573cbd822f6df5e80fd5e66a9",
+        "sha256_in_prefix": "762f7f9be09907724b520045cc84d692eb5f4fb573cbd822f6df5e80fd5e66a9",
+        "size_in_bytes": 10085
+      },
+      {
+        "_path": "site-packages/rdflib/compare.py",
+        "path_type": "hardlink",
+        "sha256": "c27a1edd8c4a1111488a87879df6ea8f3b621c85e3a1bf6c6d0a026860751b1e",
+        "sha256_in_prefix": "c27a1edd8c4a1111488a87879df6ea8f3b621c85e3a1bf6c6d0a026860751b1e",
+        "size_in_bytes": 22033
+      },
+      {
+        "_path": "site-packages/rdflib/compat.py",
+        "path_type": "hardlink",
+        "sha256": "966745e9e0e7ae8518111719b18aebf7112f5df6a20fcfa174010aa1eaaf93dc",
+        "sha256_in_prefix": "966745e9e0e7ae8518111719b18aebf7112f5df6a20fcfa174010aa1eaaf93dc",
+        "size_in_bytes": 2406
+      },
+      {
+        "_path": "site-packages/rdflib/container.py",
+        "path_type": "hardlink",
+        "sha256": "4c805bf1e6502014597b3176e46d5c3a71d394e2c4b0c9175d13ece1ebab5473",
+        "sha256_in_prefix": "4c805bf1e6502014597b3176e46d5c3a71d394e2c4b0c9175d13ece1ebab5473",
+        "size_in_bytes": 8138
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/graphdb/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9400733ba6b8e4ac4cee11efb93c52a47cb089cda617cd463cb77a80232fa8be",
+        "sha256_in_prefix": "9400733ba6b8e4ac4cee11efb93c52a47cb089cda617cd463cb77a80232fa8be",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/graphdb/client.py",
+        "path_type": "hardlink",
+        "sha256": "68dfa992847191145a0e6002dd76189f6e99206e54828700986fed0e12301f9c",
+        "sha256_in_prefix": "68dfa992847191145a0e6002dd76189f6e99206e54828700986fed0e12301f9c",
+        "size_in_bytes": 123860
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/graphdb/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "187f0b1896456c5cbb6018f15d4d0ae3efd9b735cd643c8f28406d44f400e400",
+        "sha256_in_prefix": "187f0b1896456c5cbb6018f15d4d0ae3efd9b735cd643c8f28406d44f400e400",
+        "size_in_bytes": 1318
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/graphdb/models.py",
+        "path_type": "hardlink",
+        "sha256": "c35d2d9738a4edec0ce8c4166d6539a86ec8c7b306afeb14e70523842bdd1e4d",
+        "sha256_in_prefix": "c35d2d9738a4edec0ce8c4166d6539a86ec8c7b306afeb14e70523842bdd1e4d",
+        "size_in_bytes": 61466
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/graphdb/util.py",
+        "path_type": "hardlink",
+        "sha256": "c6d7ed2ad53d45817b77a65727ff1eb920cd8f634b671c1656a8e165c9e50da9",
+        "sha256_in_prefix": "c6d7ed2ad53d45817b77a65727ff1eb920cd8f634b671c1656a8e165c9e50da9",
+        "size_in_bytes": 2135
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/rdf4j/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a84cf67f7f9ee59f73228ec927690792d2a8e2a60882ed16a5425f6be8e4be0f",
+        "sha256_in_prefix": "a84cf67f7f9ee59f73228ec927690792d2a8e2a60882ed16a5425f6be8e4be0f",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/rdf4j/client.py",
+        "path_type": "hardlink",
+        "sha256": "04de95d991e4e4ec0f2e78aa33f922a93c9bb71d842788d1233376bebcccd20c",
+        "sha256_in_prefix": "04de95d991e4e4ec0f2e78aa33f922a93c9bb71d842788d1233376bebcccd20c",
+        "size_in_bytes": 44292
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/rdf4j/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "ff46a06d48310e9c576bf791c728455689d813c07a282bda01317f0a26961bd9",
+        "sha256_in_prefix": "ff46a06d48310e9c576bf791c728455689d813c07a282bda01317f0a26961bd9",
+        "size_in_bytes": 1477
+      },
+      {
+        "_path": "site-packages/rdflib/contrib/rdf4j/util.py",
+        "path_type": "hardlink",
+        "sha256": "84c9d0b5b834582b8cceadf593973f9c7f13732ccfe76dffb0d6bb074bb02dc2",
+        "sha256_in_prefix": "84c9d0b5b834582b8cceadf593973f9c7f13732ccfe76dffb0d6bb074bb02dc2",
+        "size_in_bytes": 5931
+      },
+      {
+        "_path": "site-packages/rdflib/events.py",
+        "path_type": "hardlink",
+        "sha256": "4fc3eabdbb834c5620235db14b37e1ad98295d8ed74163baf4513f4deb01a560",
+        "sha256_in_prefix": "4fc3eabdbb834c5620235db14b37e1ad98295d8ed74163baf4513f4deb01a560",
+        "size_in_bytes": 2978
+      },
+      {
+        "_path": "site-packages/rdflib/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "e4b62f9e41aab34b271bc9d17bd385f639dd6899dde786b2292dac947eda8597",
+        "sha256_in_prefix": "e4b62f9e41aab34b271bc9d17bd385f639dd6899dde786b2292dac947eda8597",
+        "size_in_bytes": 850
+      },
+      {
+        "_path": "site-packages/rdflib/extras/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rdflib/extras/cmdlineutils.py",
+        "path_type": "hardlink",
+        "sha256": "e401ff24d17ef834595925e1e4fa078b8966f678af5e78a8cf5c35a4cae40b11",
+        "sha256_in_prefix": "e401ff24d17ef834595925e1e4fa078b8966f678af5e78a8cf5c35a4cae40b11",
+        "size_in_bytes": 1948
+      },
+      {
+        "_path": "site-packages/rdflib/extras/describer.py",
+        "path_type": "hardlink",
+        "sha256": "ae430672817d011270fee69ffa0429a68d097a88935872cd8e307504386d7420",
+        "sha256_in_prefix": "ae430672817d011270fee69ffa0429a68d097a88935872cd8e307504386d7420",
+        "size_in_bytes": 9071
+      },
+      {
+        "_path": "site-packages/rdflib/extras/external_graph_libs.py",
+        "path_type": "hardlink",
+        "sha256": "d56c6bd69a3fdf8d236533441dd4fb612a76ca9da9bf6618885784f19342497f",
+        "sha256_in_prefix": "d56c6bd69a3fdf8d236533441dd4fb612a76ca9da9bf6618885784f19342497f",
+        "size_in_bytes": 12400
+      },
+      {
+        "_path": "site-packages/rdflib/extras/infixowl.py",
+        "path_type": "hardlink",
+        "sha256": "20142f09a473512661cd0ee10d8e63751c6e5b62eaa6a7023e7fed2ff94fd85a",
+        "sha256_in_prefix": "20142f09a473512661cd0ee10d8e63751c6e5b62eaa6a7023e7fed2ff94fd85a",
+        "size_in_bytes": 81391
+      },
+      {
+        "_path": "site-packages/rdflib/extras/shacl.py",
+        "path_type": "hardlink",
+        "sha256": "fc627c0b62ee0d6d7e62747b7c71976f85042bf27ee2f4d38ec6775e93a2c02d",
+        "sha256_in_prefix": "fc627c0b62ee0d6d7e62747b7c71976f85042bf27ee2f4d38ec6775e93a2c02d",
+        "size_in_bytes": 8434
+      },
+      {
+        "_path": "site-packages/rdflib/graph.py",
+        "path_type": "hardlink",
+        "sha256": "0ca332c06bccbc16833fcf91f75557ac9c96e5a33ad2d7a2e1aa3f2d3c2cfc42",
+        "sha256_in_prefix": "0ca332c06bccbc16833fcf91f75557ac9c96e5a33ad2d7a2e1aa3f2d3c2cfc42",
+        "size_in_bytes": 127386
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_BRICK.py",
+        "path_type": "hardlink",
+        "sha256": "5ec300f7eff4d636cc4754fd97edfad34ab82b5bf84d953c9c09fba636e220a0",
+        "sha256_in_prefix": "5ec300f7eff4d636cc4754fd97edfad34ab82b5bf84d953c9c09fba636e220a0",
+        "size_in_bytes": 126990
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_CSVW.py",
+        "path_type": "hardlink",
+        "sha256": "bde31b5009b6e0638dc6cd4a764d5531ab7ae6788a5843f24a5a9c4fc6312d08",
+        "sha256_in_prefix": "bde31b5009b6e0638dc6cd4a764d5531ab7ae6788a5843f24a5a9c4fc6312d08",
+        "size_in_bytes": 12976
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DC.py",
+        "path_type": "hardlink",
+        "sha256": "9a303dd7061d12f4fe1f1efd447660729301fd2570ff28f08fdf05ebf883e2f8",
+        "sha256_in_prefix": "9a303dd7061d12f4fe1f1efd447660729301fd2570ff28f08fdf05ebf883e2f8",
+        "size_in_bytes": 1673
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DCAM.py",
+        "path_type": "hardlink",
+        "sha256": "271bc625ef79dfcd1f0c8bd9b2052120660623d68817b685ff885fe918d8eb76",
+        "sha256_in_prefix": "271bc625ef79dfcd1f0c8bd9b2052120660623d68817b685ff885fe918d8eb76",
+        "size_in_bytes": 887
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DCAT.py",
+        "path_type": "hardlink",
+        "sha256": "a47945e7216c500bba46a7dbcaf50b8abead890a434c288dccf1b021b184898b",
+        "sha256_in_prefix": "a47945e7216c500bba46a7dbcaf50b8abead890a434c288dccf1b021b184898b",
+        "size_in_bytes": 5474
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DCMITYPE.py",
+        "path_type": "hardlink",
+        "sha256": "302d9fd02851816868f214bd46fd5d18edcb63f83558fd563e4c1c61f87a77a7",
+        "sha256_in_prefix": "302d9fd02851816868f214bd46fd5d18edcb63f83558fd563e4c1c61f87a77a7",
+        "size_in_bytes": 1337
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DCTERMS.py",
+        "path_type": "hardlink",
+        "sha256": "e070d4e5f89ded9d2fe8c394b99a6fbc79cd43733331e6e88b3b1f809838ab10",
+        "sha256_in_prefix": "e070d4e5f89ded9d2fe8c394b99a6fbc79cd43733331e6e88b3b1f809838ab10",
+        "size_in_bytes": 10012
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_DOAP.py",
+        "path_type": "hardlink",
+        "sha256": "c24fee2b6e6dbe8023c094a2788a6251e835889a02abac9ddf70f67cf5a89124",
+        "sha256_in_prefix": "c24fee2b6e6dbe8023c094a2788a6251e835889a02abac9ddf70f67cf5a89124",
+        "size_in_bytes": 14664
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_FOAF.py",
+        "path_type": "hardlink",
+        "sha256": "8a8d9aacdcc1b2262d1d7255c73f5476196348f3451240b82ff6265aa4e89aa2",
+        "sha256_in_prefix": "8a8d9aacdcc1b2262d1d7255c73f5476196348f3451240b82ff6265aa4e89aa2",
+        "size_in_bytes": 6247
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_GEO.py",
+        "path_type": "hardlink",
+        "sha256": "2dde457fa6459c9b76cc58e9a57bcb2899e6068fdbe3e276faaba5ea97248f00",
+        "sha256_in_prefix": "2dde457fa6459c9b76cc58e9a57bcb2899e6068fdbe3e276faaba5ea97248f00",
+        "size_in_bytes": 9083
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_ODRL2.py",
+        "path_type": "hardlink",
+        "sha256": "c9e0c806d3f29a6bf4730b31a16db63a881089b70190c975382e08647d84098b",
+        "sha256_in_prefix": "c9e0c806d3f29a6bf4730b31a16db63a881089b70190c975382e08647d84098b",
+        "size_in_bytes": 22158
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_ORG.py",
+        "path_type": "hardlink",
+        "sha256": "ce1a1badfcc49a36a6fd6d0979928a27121cbc80f7484d537162a3ac3f0222ea",
+        "sha256_in_prefix": "ce1a1badfcc49a36a6fd6d0979928a27121cbc80f7484d537162a3ac3f0222ea",
+        "size_in_bytes": 13207
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_OWL.py",
+        "path_type": "hardlink",
+        "sha256": "43f036ef6a2c1e094d1f3bc955a691d3e877d53b8905e2ca4b64d2ecd33947bc",
+        "sha256_in_prefix": "43f036ef6a2c1e094d1f3bc955a691d3e877d53b8905e2ca4b64d2ecd33947bc",
+        "size_in_bytes": 10480
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_PROF.py",
+        "path_type": "hardlink",
+        "sha256": "40a6211bbba531effac0a4b961ee8567fa2084a7959a8ed075cba993bbcc9724",
+        "sha256_in_prefix": "40a6211bbba531effac0a4b961ee8567fa2084a7959a8ed075cba993bbcc9724",
+        "size_in_bytes": 2807
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_PROV.py",
+        "path_type": "hardlink",
+        "sha256": "0cdab4bd30c16bd561e2b5cc567cf9549f2f21148f96d1e7f278658ddc92b5eb",
+        "sha256_in_prefix": "0cdab4bd30c16bd561e2b5cc567cf9549f2f21148f96d1e7f278658ddc92b5eb",
+        "size_in_bytes": 24148
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_QB.py",
+        "path_type": "hardlink",
+        "sha256": "6cf7a02ac67f899878ec73e8791a883769351573581ba9084c408a6aa37be6fc",
+        "sha256_in_prefix": "6cf7a02ac67f899878ec73e8791a883769351573581ba9084c408a6aa37be6fc",
+        "size_in_bytes": 5413
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_RDF.py",
+        "path_type": "hardlink",
+        "sha256": "89c3ea74c90e0b5ba43090f218547a9d6742ecab0ca7572e1d7dbfe7ced25e77",
+        "sha256_in_prefix": "89c3ea74c90e0b5ba43090f218547a9d6742ecab0ca7572e1d7dbfe7ced25e77",
+        "size_in_bytes": 2249
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_RDFS.py",
+        "path_type": "hardlink",
+        "sha256": "1b0d334dbd01d154e7da9bf02376d0604aa31fdd4982e1bf5d2cb775e9fb0c30",
+        "sha256_in_prefix": "1b0d334dbd01d154e7da9bf02376d0604aa31fdd4982e1bf5d2cb775e9fb0c30",
+        "size_in_bytes": 1488
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_SDO.py",
+        "path_type": "hardlink",
+        "sha256": "8825b02c55aaa2ea5b40aeddda4ffbcea0fce1267dd0b0078a37b1a93538ee45",
+        "sha256_in_prefix": "8825b02c55aaa2ea5b40aeddda4ffbcea0fce1267dd0b0078a37b1a93538ee45",
+        "size_in_bytes": 424141
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_SH.py",
+        "path_type": "hardlink",
+        "sha256": "74c2bdae9bc3f49aab56cb1bde36149e2b8e423178520e02fb79caf3a6a13cf4",
+        "sha256_in_prefix": "74c2bdae9bc3f49aab56cb1bde36149e2b8e423178520e02fb79caf3a6a13cf4",
+        "size_in_bytes": 23321
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_SKOS.py",
+        "path_type": "hardlink",
+        "sha256": "aa74d5c9bdf55b132815fdaf45c1270185c95da130b15a4234a794325ef7fddf",
+        "sha256_in_prefix": "aa74d5c9bdf55b132815fdaf45c1270185c95da130b15a4234a794325ef7fddf",
+        "size_in_bytes": 4715
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_SOSA.py",
+        "path_type": "hardlink",
+        "sha256": "073b889504b336068de6360c41a4741c0e02397ebcc2c44e97680e2368a7f2ff",
+        "sha256_in_prefix": "073b889504b336068de6360c41a4741c0e02397ebcc2c44e97680e2368a7f2ff",
+        "size_in_bytes": 7117
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_SSN.py",
+        "path_type": "hardlink",
+        "sha256": "4fd24a80141d8a9cdc29cde8eb1c33e3033d58b23e6af872c115d13aa09b1e43",
+        "sha256_in_prefix": "4fd24a80141d8a9cdc29cde8eb1c33e3033d58b23e6af872c115d13aa09b1e43",
+        "size_in_bytes": 3213
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_TIME.py",
+        "path_type": "hardlink",
+        "sha256": "26248dce2574038afc28cb2d569a4781e63c647cc3cd0873c14ee51f26e96e52",
+        "sha256_in_prefix": "26248dce2574038afc28cb2d569a4781e63c647cc3cd0873c14ee51f26e96e52",
+        "size_in_bytes": 12936
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_VANN.py",
+        "path_type": "hardlink",
+        "sha256": "a4a6a7b4333312eff07ce153ef35d8221165b204c9bbfca582fe4f0a94462c91",
+        "sha256_in_prefix": "a4a6a7b4333312eff07ce153ef35d8221165b204c9bbfca582fe4f0a94462c91",
+        "size_in_bytes": 1232
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_VOID.py",
+        "path_type": "hardlink",
+        "sha256": "372bf71a77224702cbbba68d2fe7de31bad1b98bf87d4eba75e0b00d50854a30",
+        "sha256_in_prefix": "372bf71a77224702cbbba68d2fe7de31bad1b98bf87d4eba75e0b00d50854a30",
+        "size_in_bytes": 4689
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_WGS.py",
+        "path_type": "hardlink",
+        "sha256": "1cf5e72fa32a149f1beae565fd07601b8e7a7592ca7f01fcf54a400bb1b9f0f7",
+        "sha256_in_prefix": "1cf5e72fa32a149f1beae565fd07601b8e7a7592ca7f01fcf54a400bb1b9f0f7",
+        "size_in_bytes": 633
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/_XSD.py",
+        "path_type": "hardlink",
+        "sha256": "bcf3740a0e4f719cea223e0d770845898389ba21d86c251be6ffad06c580406b",
+        "sha256_in_prefix": "bcf3740a0e4f719cea223e0d770845898389ba21d86c251be6ffad06c580406b",
+        "size_in_bytes": 6276
+      },
+      {
+        "_path": "site-packages/rdflib/namespace/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ba598c2c192e83f804f24545fc73f2a70a0555051ad8bfda4cf79d3e441351cc",
+        "sha256_in_prefix": "ba598c2c192e83f804f24545fc73f2a70a0555051ad8bfda4cf79d3e441351cc",
+        "size_in_bytes": 34375
+      },
+      {
+        "_path": "site-packages/rdflib/parser.py",
+        "path_type": "hardlink",
+        "sha256": "e79897a1097f9d978003a66e5a7d3394c177db8aae47389526580000132b4044",
+        "sha256_in_prefix": "e79897a1097f9d978003a66e5a7d3394c177db8aae47389526580000132b4044",
+        "size_in_bytes": 27817
+      },
+      {
+        "_path": "site-packages/rdflib/paths.py",
+        "path_type": "hardlink",
+        "sha256": "b291ec03bce3ac457c05efa5d1fe75b9362453535ef02dbbde33196cf29fb7d1",
+        "sha256_in_prefix": "b291ec03bce3ac457c05efa5d1fe75b9362453535ef02dbbde33196cf29fb7d1",
+        "size_in_bytes": 20416
+      },
+      {
+        "_path": "site-packages/rdflib/plugin.py",
+        "path_type": "hardlink",
+        "sha256": "ac420398bb01347f8bdcedfda03ff07cfa82b2d72fb81334ea9b8822dbb92044",
+        "sha256_in_prefix": "ac420398bb01347f8bdcedfda03ff07cfa82b2d72fb81334ea9b8822dbb92044",
+        "size_in_bytes": 13082
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dfd9c690b2c0cb9e217cc0cef630a9528680715783766282281df1450eca9e40",
+        "sha256_in_prefix": "dfd9c690b2c0cb9e217cc0cef630a9528680715783766282281df1450eca9e40",
+        "size_in_bytes": 111
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/RDFVOC.py",
+        "path_type": "hardlink",
+        "sha256": "593a970a84fc2eede8e7ccfa22a10282edf468aba65060d1417e220292a06521",
+        "sha256_in_prefix": "593a970a84fc2eede8e7ccfa22a10282edf468aba65060d1417e220292a06521",
+        "size_in_bytes": 481
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "64333a3d8ea84de7b1378d817d8c4e5b5d22ed2c80760eb977bcc61e2bdd3e5d",
+        "sha256_in_prefix": "64333a3d8ea84de7b1378d817d8c4e5b5d22ed2c80760eb977bcc61e2bdd3e5d",
+        "size_in_bytes": 268
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/hext.py",
+        "path_type": "hardlink",
+        "sha256": "d49e197b143696baa0c22a7eedce493aa056011d3deb55cc9859ad109b93d711",
+        "sha256_in_prefix": "d49e197b143696baa0c22a7eedce493aa056011d3deb55cc9859ad109b93d711",
+        "size_in_bytes": 6459
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/jsonld.py",
+        "path_type": "hardlink",
+        "sha256": "0fff4c97523ef4770c7bea8de748ca36ee30782eb30cdcf6cfea7fe463174bec",
+        "sha256_in_prefix": "0fff4c97523ef4770c7bea8de748ca36ee30782eb30cdcf6cfea7fe463174bec",
+        "size_in_bytes": 24409
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/notation3.py",
+        "path_type": "hardlink",
+        "sha256": "a3e361632567b5326a06318e93e081f31f93c7497d1b52cbb91f2ef460a9d3ca",
+        "sha256_in_prefix": "a3e361632567b5326a06318e93e081f31f93c7497d1b52cbb91f2ef460a9d3ca",
+        "size_in_bytes": 67404
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/nquads.py",
+        "path_type": "hardlink",
+        "sha256": "eabe2e607e075049fcaef3621d08f094b8d7faaef7550a263774e77ce519253a",
+        "sha256_in_prefix": "eabe2e607e075049fcaef3621d08f094b8d7faaef7550a263774e77ce519253a",
+        "size_in_bytes": 5333
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/ntriples.py",
+        "path_type": "hardlink",
+        "sha256": "11a82b53369986ef1de3db8af4b04a25b44368af8c0ed872099d0b56d041b57f",
+        "sha256_in_prefix": "11a82b53369986ef1de3db8af4b04a25b44368af8c0ed872099d0b56d041b57f",
+        "size_in_bytes": 12632
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/patch.py",
+        "path_type": "hardlink",
+        "sha256": "2963a4645a03812bbbad5ab31b63ac33c72a77941efe8e41531be461e50692de",
+        "sha256_in_prefix": "2963a4645a03812bbbad5ab31b63ac33c72a77941efe8e41531be461e50692de",
+        "size_in_bytes": 6555
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/rdfxml.py",
+        "path_type": "hardlink",
+        "sha256": "03f5da5267e29b070bfd32b3dd778d42e17e1978564354f92728185b2f826f43",
+        "sha256_in_prefix": "03f5da5267e29b070bfd32b3dd778d42e17e1978564354f92728185b2f826f43",
+        "size_in_bytes": 26145
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/trig.py",
+        "path_type": "hardlink",
+        "sha256": "fca2a64b95d89c632ff29aa8541353a3d2f22e335372bd462a43b26f48ec70c5",
+        "sha256_in_prefix": "fca2a64b95d89c632ff29aa8541353a3d2f22e335372bd462a43b26f48ec70c5",
+        "size_in_bytes": 5428
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/parsers/trix.py",
+        "path_type": "hardlink",
+        "sha256": "821fe6b2a0f11bcc6e88d514ade7b8d8a6c32541d18e6aa9f596e3c18de40509",
+        "sha256_in_prefix": "821fe6b2a0f11bcc6e88d514ade7b8d8a6c32541d18e6aa9f596e3c18de40509",
+        "size_in_bytes": 10078
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "73842597946ec67ad9a2a84e9e83c5c5355fe38e2ccf354435a9b5e23cc60ae8",
+        "sha256_in_prefix": "73842597946ec67ad9a2a84e9e83c5c5355fe38e2ccf354435a9b5e23cc60ae8",
+        "size_in_bytes": 293
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/hext.py",
+        "path_type": "hardlink",
+        "sha256": "c5cfff74c3e528ee5b790a902d6143db03f295d86def6b7a076afcd394c6d41a",
+        "sha256_in_prefix": "c5cfff74c3e528ee5b790a902d6143db03f295d86def6b7a076afcd394c6d41a",
+        "size_in_bytes": 7549
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/jsonld.py",
+        "path_type": "hardlink",
+        "sha256": "e2ca4671dcd76d30d60cb309d87385b2a9929c5b869ff902cfacfcb9c3cb0730",
+        "sha256_in_prefix": "e2ca4671dcd76d30d60cb309d87385b2a9929c5b869ff902cfacfcb9c3cb0730",
+        "size_in_bytes": 15400
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/longturtle.py",
+        "path_type": "hardlink",
+        "sha256": "dbfbcb458ceb82ad409a0174e7e426a776c66bae0e14a9cb639cdc3dbc4cad6e",
+        "sha256_in_prefix": "dbfbcb458ceb82ad409a0174e7e426a776c66bae0e14a9cb639cdc3dbc4cad6e",
+        "size_in_bytes": 12375
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/n3.py",
+        "path_type": "hardlink",
+        "sha256": "fd7856a719a7eb91a8878f08bff26426512759745606ca7790a8a7980bd6d017",
+        "sha256_in_prefix": "fd7856a719a7eb91a8878f08bff26426512759745606ca7790a8a7980bd6d017",
+        "size_in_bytes": 3447
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/nquads.py",
+        "path_type": "hardlink",
+        "sha256": "9ed4a117c8870a82364adf1d2ea1959f2a7ca5c9bc1852e787003ab40cc4bbf1",
+        "sha256_in_prefix": "9ed4a117c8870a82364adf1d2ea1959f2a7ca5c9bc1852e787003ab40cc4bbf1",
+        "size_in_bytes": 1988
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/nt.py",
+        "path_type": "hardlink",
+        "sha256": "46fae413efd53c1c1dfdb78c40abcd316c31db12a2c4640175c439e618204a32",
+        "sha256_in_prefix": "46fae413efd53c1c1dfdb78c40abcd316c31db12a2c4640175c439e618204a32",
+        "size_in_bytes": 3106
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/patch.py",
+        "path_type": "hardlink",
+        "sha256": "dcc36086766005fff80e38c4b045d39549126ad43d5184624e5b2d75f87efbcb",
+        "sha256_in_prefix": "dcc36086766005fff80e38c4b045d39549126ad43d5184624e5b2d75f87efbcb",
+        "size_in_bytes": 4085
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/rdfxml.py",
+        "path_type": "hardlink",
+        "sha256": "330f8e462a95d2584365c52d4f5865d721f8a3c61e20404d29d9f61b9bab3fb8",
+        "sha256_in_prefix": "330f8e462a95d2584365c52d4f5865d721f8a3c61e20404d29d9f61b9bab3fb8",
+        "size_in_bytes": 15774
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/trig.py",
+        "path_type": "hardlink",
+        "sha256": "29ddcff85dc8974b607828fdc1513cc78542b25f22f69753da3fc763d4cf14f3",
+        "sha256_in_prefix": "29ddcff85dc8974b607828fdc1513cc78542b25f22f69753da3fc763d4cf14f3",
+        "size_in_bytes": 4020
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/trix.py",
+        "path_type": "hardlink",
+        "sha256": "921682767c8a6b746c53b3c2a7d311768add600ffc348e10ec8bdfd16bf2edac",
+        "sha256_in_prefix": "921682767c8a6b746c53b3c2a7d311768add600ffc348e10ec8bdfd16bf2edac",
+        "size_in_bytes": 3467
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/turtle.py",
+        "path_type": "hardlink",
+        "sha256": "6dc5151f2c5bdba6cb41155d4a276ea908803d1e9bff8eb46862ffd76e93162c",
+        "sha256_in_prefix": "6dc5151f2c5bdba6cb41155d4a276ea908803d1e9bff8eb46862ffd76e93162c",
+        "size_in_bytes": 17928
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/serializers/xmlwriter.py",
+        "path_type": "hardlink",
+        "sha256": "2cd81c302881adb196b46eb4c4109e43e38dddeafdd0f0aba7e954700b40bfb5",
+        "sha256_in_prefix": "2cd81c302881adb196b46eb4c4109e43e38dddeafdd0f0aba7e954700b40bfb5",
+        "size_in_bytes": 4340
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/jsonld/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/jsonld/context.py",
+        "path_type": "hardlink",
+        "sha256": "f1ac5b9c822dcec118149bba190fe5aa3e4dbb8533da1f54a53f1d0101f37b0a",
+        "sha256_in_prefix": "f1ac5b9c822dcec118149bba190fe5aa3e4dbb8533da1f54a53f1d0101f37b0a",
+        "size_in_bytes": 23112
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/jsonld/errors.py",
+        "path_type": "hardlink",
+        "sha256": "4064426856a71b26265ebc362cd4d360162496fcff6d41b9572cac645c98c58e",
+        "sha256_in_prefix": "4064426856a71b26265ebc362cd4d360162496fcff6d41b9572cac645c98c58e",
+        "size_in_bytes": 435
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/jsonld/keys.py",
+        "path_type": "hardlink",
+        "sha256": "4872b29e256a341a15e8cb542a693f96d136257a0551bc298bbbed5bcb4b1ab6",
+        "sha256_in_prefix": "4872b29e256a341a15e8cb542a693f96d136257a0551bc298bbbed5bcb4b1ab6",
+        "size_in_bytes": 534
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/shared/jsonld/util.py",
+        "path_type": "hardlink",
+        "sha256": "2646213408544ed4a4930919e3db3acbebde9861473b50e2efe1e72b4492818a",
+        "sha256_in_prefix": "2646213408544ed4a4930919e3db3acbebde9861473b50e2efe1e72b4492818a",
+        "size_in_bytes": 12852
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "afc24b487b3c2670d90f852f24e3933be505b2b0d12a0f562338f8d0735fbc53",
+        "sha256_in_prefix": "afc24b487b3c2670d90f852f24e3933be505b2b0d12a0f562338f8d0735fbc53",
+        "size_in_bytes": 1389
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/aggregates.py",
+        "path_type": "hardlink",
+        "sha256": "ae64a464f9e290eedd04c923916b388364bf7858c605d6e191da48a45584ab29",
+        "sha256_in_prefix": "ae64a464f9e290eedd04c923916b388364bf7858c605d6e191da48a45584ab29",
+        "size_in_bytes": 10681
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/algebra.py",
+        "path_type": "hardlink",
+        "sha256": "22441c48e62b22c40ec17a1ffaf5360b7b08cfb971cfe8ad59a599e8766d81b3",
+        "sha256_in_prefix": "22441c48e62b22c40ec17a1ffaf5360b7b08cfb971cfe8ad59a599e8766d81b3",
+        "size_in_bytes": 60938
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/datatypes.py",
+        "path_type": "hardlink",
+        "sha256": "13c3a8e1e22497577aae0eb08f38e8934643790102ca05376d3c44b08cfcbc72",
+        "sha256_in_prefix": "13c3a8e1e22497577aae0eb08f38e8934643790102ca05376d3c44b08cfcbc72",
+        "size_in_bytes": 2547
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/evaluate.py",
+        "path_type": "hardlink",
+        "sha256": "991944f756398773c4ddf0da0bf5a3c2285f2a67140c9976a8a806ba5d8402be",
+        "sha256_in_prefix": "991944f756398773c4ddf0da0bf5a3c2285f2a67140c9976a8a806ba5d8402be",
+        "size_in_bytes": 21870
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/evalutils.py",
+        "path_type": "hardlink",
+        "sha256": "1d4167779189ebf38257ecc8e2089d0a71df6470b10f7ccde8cb5176bd359d09",
+        "sha256_in_prefix": "1d4167779189ebf38257ecc8e2089d0a71df6470b10f7ccde8cb5176bd359d09",
+        "size_in_bytes": 4908
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/operators.py",
+        "path_type": "hardlink",
+        "sha256": "349d36859ec3dca3b56e33d43786d034a33f3c1a1ba1eef71a13bf95a0809437",
+        "sha256_in_prefix": "349d36859ec3dca3b56e33d43786d034a33f3c1a1ba1eef71a13bf95a0809437",
+        "size_in_bytes": 36752
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/parser.py",
+        "path_type": "hardlink",
+        "sha256": "9bff0501465fc90fb2da7461b35e6f88ad724272a88fdb89b43945eb958c9fdf",
+        "sha256_in_prefix": "9bff0501465fc90fb2da7461b35e6f88ad724272a88fdb89b43945eb958c9fdf",
+        "size_in_bytes": 51890
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/parserutils.py",
+        "path_type": "hardlink",
+        "sha256": "1d6b919bd9f76d30df279b5dc5dd93eb33055b8ea801ace65acf182b7887b3d9",
+        "sha256_in_prefix": "1d6b919bd9f76d30df279b5dc5dd93eb33055b8ea801ace65acf182b7887b3d9",
+        "size_in_bytes": 9233
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/processor.py",
+        "path_type": "hardlink",
+        "sha256": "f6f5786782c8d5c0518e1c2564ba9b444690189c539c286a21c48d437fef67e8",
+        "sha256_in_prefix": "f6f5786782c8d5c0518e1c2564ba9b444690189c539c286a21c48d437fef67e8",
+        "size_in_bytes": 4963
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/pyparsing_compat.py",
+        "path_type": "hardlink",
+        "sha256": "c9c1a8e14c82d488c5b9dd16565bff2e4192118f622a3e9126f26f034e5fb8d6",
+        "sha256_in_prefix": "c9c1a8e14c82d488c5b9dd16565bff2e4192118f622a3e9126f26f034e5fb8d6",
+        "size_in_bytes": 3135
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bd2fa9e54d9c897b36d8de00a9901d48c0830aa21918aea02a9fd099d20655b2",
+        "sha256_in_prefix": "bd2fa9e54d9c897b36d8de00a9901d48c0830aa21918aea02a9fd099d20655b2",
+        "size_in_bytes": 670
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/csvresults.py",
+        "path_type": "hardlink",
+        "sha256": "a1c49d91c964783a4fe9b74efb98b88d6497a445346446ef49d6bc1aef4b4695",
+        "sha256_in_prefix": "a1c49d91c964783a4fe9b74efb98b88d6497a445346446ef49d6bc1aef4b4695",
+        "size_in_bytes": 3819
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/graph.py",
+        "path_type": "hardlink",
+        "sha256": "eac95ff7a91e032337c34b2d18df63749425db19cf9d84ab3afe4072a4d7f504",
+        "sha256_in_prefix": "eac95ff7a91e032337c34b2d18df63749425db19cf9d84ab3afe4072a4d7f504",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/jsonresults.py",
+        "path_type": "hardlink",
+        "sha256": "95840b7a3fcad425b2dd28d8a9b8773eadabc3f7369b61c5760833d7ef87a791",
+        "sha256_in_prefix": "95840b7a3fcad425b2dd28d8a9b8773eadabc3f7369b61c5760833d7ef87a791",
+        "size_in_bytes": 5670
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/rdfresults.py",
+        "path_type": "hardlink",
+        "sha256": "d271b03dc764ca12d74d019d35d1523bb096110262f275a3af17d59813b74854",
+        "sha256_in_prefix": "d271b03dc764ca12d74d019d35d1523bb096110262f275a3af17d59813b74854",
+        "size_in_bytes": 2780
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/tsvresults.py",
+        "path_type": "hardlink",
+        "sha256": "dcf1b230a758106fe2b7afa9c2be3ea8a896bb9a50a6e3fb2ba5c3295f017d63",
+        "sha256_in_prefix": "dcf1b230a758106fe2b7afa9c2be3ea8a896bb9a50a6e3fb2ba5c3295f017d63",
+        "size_in_bytes": 3513
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/txtresults.py",
+        "path_type": "hardlink",
+        "sha256": "c14de755ebc3691a559d717b9f65399ef6aa9d1be4d5b390e3a66e7dc54ebd9d",
+        "sha256_in_prefix": "c14de755ebc3691a559d717b9f65399ef6aa9d1be4d5b390e3a66e7dc54ebd9d",
+        "size_in_bytes": 3136
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/results/xmlresults.py",
+        "path_type": "hardlink",
+        "sha256": "1a479e7c3d56b97e9008eec8b8605517d125b3650551540a65abe6127809516e",
+        "sha256_in_prefix": "1a479e7c3d56b97e9008eec8b8605517d125b3650551540a65abe6127809516e",
+        "size_in_bytes": 12337
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/sparql.py",
+        "path_type": "hardlink",
+        "sha256": "938b13a453cf85f42b559bbf303c06d9710801fbc39dfcb87ff79fb87b15a55f",
+        "sha256_in_prefix": "938b13a453cf85f42b559bbf303c06d9710801fbc39dfcb87ff79fb87b15a55f",
+        "size_in_bytes": 15855
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/sparql/update.py",
+        "path_type": "hardlink",
+        "sha256": "7ee9f81e241c55148bd4a7ab452791cf75749c882731957dd1c4dc8abbbc5fc1",
+        "sha256_in_prefix": "7ee9f81e241c55148bd4a7ab452791cf75749c882731957dd1c4dc8abbbc5fc1",
+        "size_in_bytes": 11776
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "86c52674aaccb7df9e449e91ff54975bd332eca5f743b1ad0edc0d6ec8ae1623",
+        "sha256_in_prefix": "86c52674aaccb7df9e449e91ff54975bd332eca5f743b1ad0edc0d6ec8ae1623",
+        "size_in_bytes": 259
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/auditable.py",
+        "path_type": "hardlink",
+        "sha256": "1e14e53cc499cdb915f7084c8460c6c71f74157dae07b95d49d61300cd4da811",
+        "sha256_in_prefix": "1e14e53cc499cdb915f7084c8460c6c71f74157dae07b95d49d61300cd4da811",
+        "size_in_bytes": 8000
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/berkeleydb.py",
+        "path_type": "hardlink",
+        "sha256": "07e6b756e6428dedc22b4e033703d049902904ada115876adb7861e814746ff0",
+        "sha256_in_prefix": "07e6b756e6428dedc22b4e033703d049902904ada115876adb7861e814746ff0",
+        "size_in_bytes": 30131
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/concurrent.py",
+        "path_type": "hardlink",
+        "sha256": "4a22af6cb6ffdd21d092265cb9b86010fd933618083085af09ef67359b328521",
+        "sha256_in_prefix": "4a22af6cb6ffdd21d092265cb9b86010fd933618083085af09ef67359b328521",
+        "size_in_bytes": 2779
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/memory.py",
+        "path_type": "hardlink",
+        "sha256": "a5f0808447f3cd1932a7a8011dfea7e8c8feab35e322b55041dad598f51426c2",
+        "sha256_in_prefix": "a5f0808447f3cd1932a7a8011dfea7e8c8feab35e322b55041dad598f51426c2",
+        "size_in_bytes": 30062
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/rdf4j.py",
+        "path_type": "hardlink",
+        "sha256": "17243effd9965a84d7d225f67ec58c4ea01906667adf0a7d33ce10ca542c2cbd",
+        "sha256_in_prefix": "17243effd9965a84d7d225f67ec58c4ea01906667adf0a7d33ce10ca542c2cbd",
+        "size_in_bytes": 7479
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/regexmatching.py",
+        "path_type": "hardlink",
+        "sha256": "e2731b70937b6b215d965e95852526080588c0c04704e814fd8b7c2d3bd0d80a",
+        "sha256_in_prefix": "e2731b70937b6b215d965e95852526080588c0c04704e814fd8b7c2d3bd0d80a",
+        "size_in_bytes": 6490
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/sparqlconnector.py",
+        "path_type": "hardlink",
+        "sha256": "6865429c228bec5983189188733ac54fce5e38017b90f0e4764a14ed6e182e6c",
+        "sha256_in_prefix": "6865429c228bec5983189188733ac54fce5e38017b90f0e4764a14ed6e182e6c",
+        "size_in_bytes": 7194
+      },
+      {
+        "_path": "site-packages/rdflib/plugins/stores/sparqlstore.py",
+        "path_type": "hardlink",
+        "sha256": "ba0460b1297203e3e2f1ffb47a05802c19db8009cf40ae5bf426e57411ebb2ce",
+        "sha256_in_prefix": "ba0460b1297203e3e2f1ffb47a05802c19db8009cf40ae5bf426e57411ebb2ce",
+        "size_in_bytes": 38904
+      },
+      {
+        "_path": "site-packages/rdflib/py.typed",
+        "path_type": "hardlink",
+        "sha256": "293f563729f8f3bf198ac8a13638c5dc19b6aaef11f6cd85e62ac9ae0f2fc614",
+        "sha256_in_prefix": "293f563729f8f3bf198ac8a13638c5dc19b6aaef11f6cd85e62ac9ae0f2fc614",
+        "size_in_bytes": 66
+      },
+      {
+        "_path": "site-packages/rdflib/query.py",
+        "path_type": "hardlink",
+        "sha256": "4423d11e10a43df7ee8fcb07d3c0918efd54cd5356e7f1808c8f3c5b98fa9d5f",
+        "sha256_in_prefix": "4423d11e10a43df7ee8fcb07d3c0918efd54cd5356e7f1808c8f3c5b98fa9d5f",
+        "size_in_bytes": 15526
+      },
+      {
+        "_path": "site-packages/rdflib/resource.py",
+        "path_type": "hardlink",
+        "sha256": "19017bf3286166b3150558eeb4f9d61df5b150988e109dc14b2fdbd726938502",
+        "sha256_in_prefix": "19017bf3286166b3150558eeb4f9d61df5b150988e109dc14b2fdbd726938502",
+        "size_in_bytes": 13666
+      },
+      {
+        "_path": "site-packages/rdflib/serializer.py",
+        "path_type": "hardlink",
+        "sha256": "10c39837ce92cdff6fe7af97456d8576b0d661b2064220afc42ddc8d2501939d",
+        "sha256_in_prefix": "10c39837ce92cdff6fe7af97456d8576b0d661b2064220afc42ddc8d2501939d",
+        "size_in_bytes": 1924
+      },
+      {
+        "_path": "site-packages/rdflib/store.py",
+        "path_type": "hardlink",
+        "sha256": "2557d9e0723f87faffa0e26c748be26aef73ab244d46815a5b4a45002f1ab346",
+        "sha256_in_prefix": "2557d9e0723f87faffa0e26c748be26aef73ab244d46815a5b4a45002f1ab346",
+        "size_in_bytes": 16089
+      },
+      {
+        "_path": "site-packages/rdflib/term.py",
+        "path_type": "hardlink",
+        "sha256": "564280e97c4e64b5b704bd1fff96ebc374ebd2dcc2df134cda62452a3f83c1db",
+        "sha256_in_prefix": "564280e97c4e64b5b704bd1fff96ebc374ebd2dcc2df134cda62452a3f83c1db",
+        "size_in_bytes": 91610
+      },
+      {
+        "_path": "site-packages/rdflib/tools/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "63363b132cf8cf0f086f97e5e5bbf86d05f36c06ec5716b62ebc9b4ed243630d",
+        "sha256_in_prefix": "63363b132cf8cf0f086f97e5e5bbf86d05f36c06ec5716b62ebc9b4ed243630d",
+        "size_in_bytes": 58
+      },
+      {
+        "_path": "site-packages/rdflib/tools/chunk_serializer.py",
+        "path_type": "hardlink",
+        "sha256": "995b7fef215e887651513736490a451f69e2b428b775535cd93ac9ad33b66688",
+        "sha256_in_prefix": "995b7fef215e887651513736490a451f69e2b428b775535cd93ac9ad33b66688",
+        "size_in_bytes": 4776
+      },
+      {
+        "_path": "site-packages/rdflib/tools/csv2rdf.py",
+        "path_type": "hardlink",
+        "sha256": "7b7d0c1e8ef2cbf3b0836f2243fd13e8f8cf6c6a4873bab54093eafe0836cfc9",
+        "sha256_in_prefix": "7b7d0c1e8ef2cbf3b0836f2243fd13e8f8cf6c6a4873bab54093eafe0836cfc9",
+        "size_in_bytes": 16693
+      },
+      {
+        "_path": "site-packages/rdflib/tools/defined_namespace_creator.py",
+        "path_type": "hardlink",
+        "sha256": "d039ece74fe0465eed3bbacbea3376512600003be32d61644254c8f0c65f4a4c",
+        "sha256_in_prefix": "d039ece74fe0465eed3bbacbea3376512600003be32d61644254c8f0c65f4a4c",
+        "size_in_bytes": 6719
+      },
+      {
+        "_path": "site-packages/rdflib/tools/graphisomorphism.py",
+        "path_type": "hardlink",
+        "sha256": "f206716c7e6f2a1a59eaf21563ca2127c4a805124e31985054392128caf666e0",
+        "sha256_in_prefix": "f206716c7e6f2a1a59eaf21563ca2127c4a805124e31985054392128caf666e0",
+        "size_in_bytes": 3411
+      },
+      {
+        "_path": "site-packages/rdflib/tools/rdf2dot.py",
+        "path_type": "hardlink",
+        "sha256": "a8ec0427765b4bffcb8ab3471c66ea74f73a25f45372cf428c6853078757a515",
+        "sha256_in_prefix": "a8ec0427765b4bffcb8ab3471c66ea74f73a25f45372cf428c6853078757a515",
+        "size_in_bytes": 4982
+      },
+      {
+        "_path": "site-packages/rdflib/tools/rdfpipe.py",
+        "path_type": "hardlink",
+        "sha256": "d78628a85de410aa4e51bfb100328518aaf7aff612fcad26d9dfc809fc298eae",
+        "sha256_in_prefix": "d78628a85de410aa4e51bfb100328518aaf7aff612fcad26d9dfc809fc298eae",
+        "size_in_bytes": 5521
+      },
+      {
+        "_path": "site-packages/rdflib/tools/rdfs2dot.py",
+        "path_type": "hardlink",
+        "sha256": "357128989eea34027051957fad9fec3d06090d3491d1f455c4cf093d11fee3c0",
+        "sha256_in_prefix": "357128989eea34027051957fad9fec3d06090d3491d1f455c4cf093d11fee3c0",
+        "size_in_bytes": 3771
+      },
+      {
+        "_path": "site-packages/rdflib/tools/sparqlquery.py",
+        "path_type": "hardlink",
+        "sha256": "d8816f78202a5937590be67ebc2302f2b3ab3e91749438c0f6e88095c6907e1d",
+        "sha256_in_prefix": "d8816f78202a5937590be67ebc2302f2b3ab3e91749438c0f6e88095c6907e1d",
+        "size_in_bytes": 11401
+      },
+      {
+        "_path": "site-packages/rdflib/util.py",
+        "path_type": "hardlink",
+        "sha256": "fbc43943f09e5ebe33864df684be70e6f3ebb1795b0560c7345ea679fc709510",
+        "sha256_in_prefix": "fbc43943f09e5ebe33864df684be70e6f3ebb1795b0560c7345ea679fc709510",
+        "size_in_bytes": 18246
+      },
+      {
+        "_path": "site-packages/rdflib/void.py",
+        "path_type": "hardlink",
+        "sha256": "eb98155855c6857dca324019fa78c27a5181ee4586913cf60e76efbf5be1b257",
+        "sha256_in_prefix": "eb98155855c6857dca324019fa78c27a5181ee4586913cf60e76efbf5be1b257",
+        "size_in_bytes": 4635
+      },
+      {
+        "_path": "site-packages/rdflib/xsd_datetime.py",
+        "path_type": "hardlink",
+        "sha256": "88f5fe16466721f72618e981001a33d3108e574ac3301606da33bcaf8fa80555",
+        "sha256_in_prefix": "88f5fe16466721f72618e981001a33d3108e574ac3301606da33bcaf8fa80555",
+        "size_in_bytes": 23387
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "222cacb93aba7c168d6f32f63bc5a28951b38188bd2e057f060110846353aba8",
+        "sha256_in_prefix": "222cacb93aba7c168d6f32f63bc5a28951b38188bd2e057f060110846353aba8",
+        "size_in_bytes": 12562
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "387bf0157765d40054f43e385282717423e59c6473e032460e21d4ccc789cf79",
+        "sha256_in_prefix": "387bf0157765d40054f43e385282717423e59c6473e032460e21d4ccc789cf79",
+        "size_in_bytes": 21009
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "909091253fe0d1a75f009cd3c761943264bcd2b4c92151d109f1b40d080bab7a",
+        "sha256_in_prefix": "909091253fe0d1a75f009cd3c761943264bcd2b4c92151d109f1b40d080bab7a",
+        "size_in_bytes": 88
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "d7f689e24ec1654479e8507df9a63396e0651b2584ee4d828a74f11fb28476c9",
+        "sha256_in_prefix": "d7f689e24ec1654479e8507df9a63396e0651b2584ee4d828a74f11fb28476c9",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "b48e248c159348b2e8d91096ab8c9875ac0b4a8320e19c5711fea603e8284291",
+        "sha256_in_prefix": "b48e248c159348b2e8d91096ab8c9875ac0b4a8320e19c5711fea603e8284291",
+        "size_in_bytes": 254
+      },
+      {
+        "_path": "site-packages/rdflib-7.6.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "53a705e51bfd199e8c97d0442376cb4bbd4ffcf13ba4f2c4c2794211400e4012",
+        "sha256_in_prefix": "53a705e51bfd199e8c97d0442376cb4bbd4ffcf13ba4f2c4c2794211400e4012",
+        "size_in_bytes": 1524
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/_networking.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/_type_checking.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/collection.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/compare.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/container.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/client.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/models.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/graphdb/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/client.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/contrib/rdf4j/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/events.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/cmdlineutils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/describer.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/external_graph_libs.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/infixowl.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/extras/__pycache__/shacl.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/graph.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_BRICK.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_CSVW.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DC.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCAM.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCAT.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCMITYPE.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DCTERMS.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_DOAP.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_FOAF.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_GEO.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_ODRL2.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_ORG.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_OWL.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_PROF.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_PROV.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_QB.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_RDF.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_RDFS.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SDO.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SH.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SKOS.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SOSA.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_SSN.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_TIME.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_VANN.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_VOID.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_WGS.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/_XSD.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/namespace/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/paths.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/plugin.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/RDFVOC.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/hext.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/jsonld.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/notation3.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/nquads.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/ntriples.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/patch.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/rdfxml.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/trig.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/parsers/__pycache__/trix.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/hext.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/jsonld.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/longturtle.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/n3.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/nquads.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/nt.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/patch.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/rdfxml.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/trig.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/trix.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/turtle.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/serializers/__pycache__/xmlwriter.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/context.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/errors.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/keys.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/shared/jsonld/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/aggregates.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/algebra.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/datatypes.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/evaluate.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/evalutils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/operators.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/parserutils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/processor.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/pyparsing_compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/csvresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/graph.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/jsonresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/rdfresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/tsvresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/txtresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/results/__pycache__/xmlresults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/sparql.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/sparql/__pycache__/update.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/auditable.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/berkeleydb.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/concurrent.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/memory.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/rdf4j.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/regexmatching.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/sparqlconnector.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/plugins/stores/__pycache__/sparqlstore.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/query.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/resource.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/serializer.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/store.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/term.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/chunk_serializer.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/csv2rdf.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/defined_namespace_creator.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/graphisomorphism.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdf2dot.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdfpipe.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/rdfs2dot.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/tools/__pycache__/sparqlquery.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/void.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/rdflib/__pycache__/xsd_datetime.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/csv2rdf",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/rdf2dot",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/rdfgraphisomorphism",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/rdfpipe",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/rdfs2dot",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/sparqlquery",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b1ebe0cf1803d9b5e2584af6e7c414b8baa9ba2f41bb0e61d991cbfa5cfcf130",
+  "size": 488680,
+  "subdir": "noarch",
+  "timestamp": 1770995041000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/rdflib-7.6.0-pyhcf101f3_0.conda",
+  "version": "7.6.0"
+}

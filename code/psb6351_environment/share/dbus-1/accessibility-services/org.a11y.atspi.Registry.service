@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.a11y.atspi.Registry
+Exec=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/libexec/at-spi2-registryd --use-gnome-session

@@ -1,0 +1,44 @@
+{
+  "build": "h7cc23a3_1004",
+  "build_number": 1004,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pthread-stubs-0.4-h7cc23a3_1004",
+  "files": [
+    "lib/pkgconfig/pthread-stubs.pc"
+  ],
+  "fn": "pthread-stubs-0.4-h7cc23a3_1004.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pthread-stubs-0.4-h7cc23a3_1004",
+    "type": 1
+  },
+  "md5": "bb66b610707b811e3c65181a6431e7a8",
+  "name": "pthread-stubs",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pthread-stubs-0.4-h7cc23a3_1004.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/pthread-stubs.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/pthread-stubs_1788381776905/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "sha256": "c9a844b28023ac5ea120967c3fe1801bd01699a96f209f46c9b8cfd953b5aaad",
+        "sha256_in_prefix": "d693fd638c5608a5e83f08338a0e0193960b1cd2be0a31bf28800f25a7bfbe5e",
+        "size_in_bytes": 490
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "4a44fd00ea73b79ca2c89b0727b9ccf61c506ead71e67a9abfa4c590042b5a4a",
+  "size": 9630,
+  "subdir": "linux-64",
+  "timestamp": 1788381877000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/pthread-stubs-0.4-h7cc23a3_1004.conda",
+  "version": "0.4"
+}

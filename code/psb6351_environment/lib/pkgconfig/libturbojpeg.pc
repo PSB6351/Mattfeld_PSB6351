@@ -1,0 +1,10 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+libdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib
+includedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/include
+
+Name: libturbojpeg
+Description: A SIMD-accelerated JPEG codec that provides the TurboJPEG API
+Version: 3.2.0
+Libs: -L${libdir} -lturbojpeg
+Cflags: -I${includedir}

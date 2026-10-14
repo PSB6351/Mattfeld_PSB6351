@@ -1,0 +1,8 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+includex11dir=${prefix}/include/X11
+
+Name: Xproto
+Description: Xproto headers
+Version: 7.0.34
+Cflags: -I${includedir}

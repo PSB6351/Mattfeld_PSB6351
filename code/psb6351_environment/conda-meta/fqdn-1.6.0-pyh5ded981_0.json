@@ -1,0 +1,166 @@
+{
+  "build": "pyh5ded981_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.11,<4"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/fqdn-1.6.0-pyh5ded981_0",
+  "files": [
+    "etc/conda/test-files/fqdn/1/pyproject.toml",
+    "etc/conda/test-files/fqdn/1/tests/__init__.py",
+    "etc/conda/test-files/fqdn/1/tests/test_fqdn.py",
+    "lib/python3.14/site-packages/fqdn/__init__.py",
+    "lib/python3.14/site-packages/fqdn/__init__.pyi",
+    "lib/python3.14/site-packages/fqdn/_compat.py",
+    "lib/python3.14/site-packages/fqdn/py.typed",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/fqdn-1.6.0.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/fqdn/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/fqdn/__pycache__/_compat.cpython-314.pyc"
+  ],
+  "fn": "fqdn-1.6.0-pyh5ded981_0.conda",
+  "license": "MPL-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/fqdn-1.6.0-pyh5ded981_0",
+    "type": 1
+  },
+  "md5": "239078c29cd5e17134522f6f61e9507b",
+  "name": "fqdn",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/fqdn-1.6.0-pyh5ded981_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/fqdn/1/pyproject.toml",
+        "path_type": "hardlink",
+        "sha256": "65ec0496bb8d670bdc8fe499d61f838fb451dafc1a83fed85403d16307e7a46c",
+        "sha256_in_prefix": "65ec0496bb8d670bdc8fe499d61f838fb451dafc1a83fed85403d16307e7a46c",
+        "size_in_bytes": 3803
+      },
+      {
+        "_path": "etc/conda/test-files/fqdn/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "etc/conda/test-files/fqdn/1/tests/test_fqdn.py",
+        "path_type": "hardlink",
+        "sha256": "6692f014ded5ce9d4921942e63611818770add8852a3a2f9146a72b19de88f18",
+        "sha256_in_prefix": "6692f014ded5ce9d4921942e63611818770add8852a3a2f9146a72b19de88f18",
+        "size_in_bytes": 11788
+      },
+      {
+        "_path": "site-packages/fqdn/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b155327abdb6041e2941aa07eaf3b8e3ebc4f557aa1ad516968046a477ef5403",
+        "sha256_in_prefix": "b155327abdb6041e2941aa07eaf3b8e3ebc4f557aa1ad516968046a477ef5403",
+        "size_in_bytes": 4788
+      },
+      {
+        "_path": "site-packages/fqdn/__init__.pyi",
+        "path_type": "hardlink",
+        "sha256": "884c8b7ce3606a6cd0e4c1fd3fef968169150c7909ee6f316c2939011e397651",
+        "sha256_in_prefix": "884c8b7ce3606a6cd0e4c1fd3fef968169150c7909ee6f316c2939011e397651",
+        "size_in_bytes": 695
+      },
+      {
+        "_path": "site-packages/fqdn/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "b627858d2b709b4b68a031fd8219dd01df838324a22b87f58a6e1ca6f31c71d8",
+        "sha256_in_prefix": "b627858d2b709b4b68a031fd8219dd01df838324a22b87f58a6e1ca6f31c71d8",
+        "size_in_bytes": 174
+      },
+      {
+        "_path": "site-packages/fqdn/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "3baa3c9f310023b1ea28d08f35a2179ca4dd624149902d0e0dbdd68dcac58db0",
+        "sha256_in_prefix": "3baa3c9f310023b1ea28d08f35a2179ca4dd624149902d0e0dbdd68dcac58db0",
+        "size_in_bytes": 9403
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f0c0e616ccd850ac2e4825a3a1b802fefa0e1a89302c27e0410d461312df1422",
+        "sha256_in_prefix": "f0c0e616ccd850ac2e4825a3a1b802fefa0e1a89302c27e0410d461312df1422",
+        "size_in_bytes": 1025
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "03eca79a34ddccfa99e3435246aa743bdc902d913b08687bbb1642b5317a5335",
+        "sha256_in_prefix": "03eca79a34ddccfa99e3435246aa743bdc902d913b08687bbb1642b5317a5335",
+        "size_in_bytes": 115
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "sha256_in_prefix": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "size_in_bytes": 16725
+      },
+      {
+        "_path": "site-packages/fqdn-1.6.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "40a3f55eb3067e3b538a907acabe110b2b171ca3de61c93009ea98626d040099",
+        "sha256_in_prefix": "40a3f55eb3067e3b538a907acabe110b2b171ca3de61c93009ea98626d040099",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.14/site-packages/fqdn/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/fqdn/__pycache__/_compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ccdb3a4e7b74978977cd29d6cd7cb8fbaab84700318f79ffa87ed5cedb8e7781",
+  "size": 28558,
+  "subdir": "noarch",
+  "timestamp": 1790601212000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/fqdn-1.6.0-pyh5ded981_0.conda",
+  "version": "1.6.0"
+}

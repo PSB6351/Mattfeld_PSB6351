@@ -1,0 +1,31 @@
+{
+  "build": "ha770c72_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libharfbuzz-devel 14.5.1 h23af247_0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/harfbuzz-14.5.1-ha770c72_0",
+  "files": [],
+  "fn": "harfbuzz-14.5.1-ha770c72_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/harfbuzz-14.5.1-ha770c72_0",
+    "type": 1
+  },
+  "md5": "efe22611632c03e6dc124a6b19f788cc",
+  "name": "harfbuzz",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/harfbuzz-14.5.1-ha770c72_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "cc0b3cc8e0200637d36ff51c865f7a83fefc9036347bdab21db4a721021947c2",
+  "size": 11031,
+  "subdir": "linux-64",
+  "timestamp": 1790860750000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/harfbuzz-14.5.1-ha770c72_0.conda",
+  "version": "14.5.1"
+}

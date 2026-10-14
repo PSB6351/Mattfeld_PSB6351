@@ -1,0 +1,33 @@
+{
+  "build": "h69a702a_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "libgfortran-ng ==16.2.0 *_7"
+  ],
+  "depends": [
+    "libgfortran5 16.2.0 h6b99dfc_7"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libgfortran-16.2.0-h69a702a_7",
+  "files": [],
+  "fn": "libgfortran-16.2.0-h69a702a_7.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libgfortran-16.2.0-h69a702a_7",
+    "type": 1
+  },
+  "md5": "3a8d285f5f22138ef826ad54cf267e73",
+  "name": "libgfortran",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libgfortran-16.2.0-h69a702a_7.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "9682ae4dd11487e10b904b3cb3ab6379cad25233d45fdfdf90d54349df244494",
+  "size": 28571,
+  "subdir": "linux-64",
+  "timestamp": 1790303139000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgfortran-16.2.0-h69a702a_7.conda",
+  "version": "16.2.0"
+}

@@ -1,0 +1,33 @@
+{
+  "build": "9_cp314",
+  "build_number": 9,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "python 3.14.* *_cp314"
+  ],
+  "depends": [],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/python_abi-3.14-9_cp314",
+  "files": [],
+  "fn": "python_abi-3.14-9_cp314.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/python_abi-3.14-9_cp314",
+    "type": 1
+  },
+  "md5": "350d89b50d7de805abf2e63e29dee451",
+  "name": "python_abi",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/python_abi-3.14-9_cp314.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e7f8e965bbfb98e08feb2365cacdad8bb218fa5b5a0a2752f747287f425f213c",
+  "size": 6791,
+  "subdir": "noarch",
+  "timestamp": 1788302824000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/python_abi-3.14-9_cp314.conda",
+  "version": "3.14"
+}

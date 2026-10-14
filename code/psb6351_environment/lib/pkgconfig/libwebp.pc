@@ -1,0 +1,12 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libwebp
+Description: Library for the WebP graphics format
+Version: 1.6.0
+Requires.private: libsharpyuv
+Cflags: -I${includedir}
+Libs: -L${libdir} -lwebp
+Libs.private: -lm  -lpthread

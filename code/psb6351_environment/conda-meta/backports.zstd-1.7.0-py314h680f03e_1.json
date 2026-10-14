@@ -1,0 +1,33 @@
+{
+  "build": "py314h680f03e_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.14"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/backports.zstd-1.7.0-py314h680f03e_1",
+  "files": [],
+  "fn": "backports.zstd-1.7.0-py314h680f03e_1.conda",
+  "license": "BSD-3-Clause AND MIT AND EPL-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/backports.zstd-1.7.0-py314h680f03e_1",
+    "type": 1
+  },
+  "md5": "67924260a851b5273e39f9b28b6b5e24",
+  "name": "backports.zstd",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/backports.zstd-1.7.0-py314h680f03e_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ad0f78582ee64ec1c66a3daac32986e81b400d3ac719e5a3cbdb22e55065760e",
+  "size": 7539,
+  "subdir": "noarch",
+  "timestamp": 1788491291000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/backports.zstd-1.7.0-py314h680f03e_1.conda",
+  "version": "1.7.0"
+}

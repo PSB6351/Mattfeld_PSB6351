@@ -246,8 +246,8 @@ datasink.inputs.base_directory = sink_dir
 psb6351_wf.connect(subjID_infosource, 'subject_id', datasink, 'container')
 psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 
-psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@registered_img')
-psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@matrix')
+psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@registered_file')
+psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@mat_file')
 
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')

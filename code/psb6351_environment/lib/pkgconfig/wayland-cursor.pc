@@ -1,0 +1,10 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: Wayland Cursor
+Description: Wayland cursor helper library
+Version: 1.26.0
+Requires.private: wayland-client
+Libs: -L${libdir} -lwayland-cursor
+Cflags: -I${includedir}

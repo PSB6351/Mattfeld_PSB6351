@@ -1,0 +1,208 @@
+{
+  "build": "pyh5ded981_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.11",
+    "typing-extensions",
+    "python"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/flexcache-0.3-pyh5ded981_2",
+  "files": [
+    "lib/python3.14/site-packages/flexcache/__init__.py",
+    "lib/python3.14/site-packages/flexcache/flexcache.py",
+    "lib/python3.14/site-packages/flexcache/py.typed",
+    "lib/python3.14/site-packages/flexcache/testsuite/__init__.py",
+    "lib/python3.14/site-packages/flexcache/testsuite/test_byhash.py",
+    "lib/python3.14/site-packages/flexcache/testsuite/test_bymtime.py",
+    "lib/python3.14/site-packages/flexcache/testsuite/test_custom_diskcache.py",
+    "lib/python3.14/site-packages/flexcache/testsuite/test_header.py",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/METADATA",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/RECORD",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/WHEEL",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/licenses/AUTHORS",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/flexcache-0.3.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/flexcache/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/__pycache__/flexcache.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_byhash.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_bymtime.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_custom_diskcache.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_header.cpython-314.pyc"
+  ],
+  "fn": "flexcache-0.3-pyh5ded981_2.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/flexcache-0.3-pyh5ded981_2",
+    "type": 1
+  },
+  "md5": "9ed9902b7f19311ba0836f9dd0b4d7e0",
+  "name": "flexcache",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/flexcache-0.3-pyh5ded981_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/flexcache/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "ddd324049fd720d011783dcd40c4d201b042f41a5c4aacaf05cebde79d428bda",
+        "sha256_in_prefix": "ddd324049fd720d011783dcd40c4d201b042f41a5c4aacaf05cebde79d428bda",
+        "size_in_bytes": 1324
+      },
+      {
+        "_path": "site-packages/flexcache/flexcache.py",
+        "path_type": "hardlink",
+        "sha256": "95c67bc30207ee460ed9c35f1f1ddec65130a3e50dc4d3cd2223a4c581c0e990",
+        "sha256_in_prefix": "95c67bc30207ee460ed9c35f1f1ddec65130a3e50dc4d3cd2223a4c581c0e990",
+        "size_in_bytes": 14597
+      },
+      {
+        "_path": "site-packages/flexcache/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexcache/testsuite/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexcache/testsuite/test_byhash.py",
+        "path_type": "hardlink",
+        "sha256": "7802242ec8351ed2cedf74d4754052a8f6dcdafb071f4e6597f9c3e281276bc8",
+        "sha256_in_prefix": "7802242ec8351ed2cedf74d4754052a8f6dcdafb071f4e6597f9c3e281276bc8",
+        "size_in_bytes": 3093
+      },
+      {
+        "_path": "site-packages/flexcache/testsuite/test_bymtime.py",
+        "path_type": "hardlink",
+        "sha256": "40b61bf654f22da47e9ac87f090c6abc21e08e9f77e75d6602eed954867e7db4",
+        "sha256_in_prefix": "40b61bf654f22da47e9ac87f090c6abc21e08e9f77e75d6602eed954867e7db4",
+        "size_in_bytes": 3287
+      },
+      {
+        "_path": "site-packages/flexcache/testsuite/test_custom_diskcache.py",
+        "path_type": "hardlink",
+        "sha256": "03232ba3bd2bc9e3ec1de8959bba789626e8ef5cdaedbe03ca43a2e37e0ea5eb",
+        "sha256_in_prefix": "03232ba3bd2bc9e3ec1de8959bba789626e8ef5cdaedbe03ca43a2e37e0ea5eb",
+        "size_in_bytes": 2063
+      },
+      {
+        "_path": "site-packages/flexcache/testsuite/test_header.py",
+        "path_type": "hardlink",
+        "sha256": "a67b780bd064912b0f94efef2623e23173909368b119ba34853d1417a9ab87b8",
+        "sha256_in_prefix": "a67b780bd064912b0f94efef2623e23173909368b119ba34853d1417a9ab87b8",
+        "size_in_bytes": 4858
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b913e65d12b48e7442119b169365018351d8919db0260262cfd92f3ad357da8d",
+        "sha256_in_prefix": "b913e65d12b48e7442119b169365018351d8919db0260262cfd92f3ad357da8d",
+        "size_in_bytes": 6976
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "334449adb19896821180341fcaa912148e190d99aa32ee2a6801b13e2cf4dd27",
+        "sha256_in_prefix": "334449adb19896821180341fcaa912148e190d99aa32ee2a6801b13e2cf4dd27",
+        "size_in_bytes": 1890
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7615222e37b27f8544667213b3a81b6f2b793c59f28a4be2a8b0c2ae664efa4c",
+        "sha256_in_prefix": "7615222e37b27f8544667213b3a81b6f2b793c59f28a4be2a8b0c2ae664efa4c",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/licenses/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "d77ff2d5d56354e790addb409bb0af6b965bc98a65ec2fc958dcca651fb98399",
+        "sha256_in_prefix": "d77ff2d5d56354e790addb409bb0af6b965bc98a65ec2fc958dcca651fb98399",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a276fa944e6becfe51ae313094cb048f7aa6c2e5cc823138e8c1e74f73f79d61",
+        "sha256_in_prefix": "a276fa944e6becfe51ae313094cb048f7aa6c2e5cc823138e8c1e74f73f79d61",
+        "size_in_bytes": 1584
+      },
+      {
+        "_path": "site-packages/flexcache-0.3.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "38ee8f841d407434dffd423977fc54a408ba83fe6aaa68e7cd74b327a10fa508",
+        "sha256_in_prefix": "38ee8f841d407434dffd423977fc54a408ba83fe6aaa68e7cd74b327a10fa508",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/__pycache__/flexcache.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_byhash.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_bymtime.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_custom_diskcache.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexcache/testsuite/__pycache__/test_header.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fc30fd32ab60300e5ea6c15e3a39b3f3124a9236211fbb8bdb99708d3fbfed33",
+  "size": 18768,
+  "subdir": "noarch",
+  "timestamp": 1788605834000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/flexcache-0.3-pyh5ded981_2.conda",
+  "version": "0.3"
+}

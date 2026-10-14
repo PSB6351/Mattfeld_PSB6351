@@ -1,0 +1,76 @@
+{
+  "build": "hb03c661_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14",
+    "xorg-libx11 >=1.8.12,<2.0a0",
+    "xorg-libxext >=1.3.6,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/xorg-libxxf86vm-1.1.7-hb03c661_0",
+  "files": [
+    "include/X11/extensions/xf86vmode.h",
+    "lib/libXxf86vm.so",
+    "lib/libXxf86vm.so.1",
+    "lib/libXxf86vm.so.1.0.0",
+    "lib/pkgconfig/xxf86vm.pc"
+  ],
+  "fn": "xorg-libxxf86vm-1.1.7-hb03c661_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/xorg-libxxf86vm-1.1.7-hb03c661_0",
+    "type": 1
+  },
+  "md5": "665d152b9c6e78da404086088077c844",
+  "name": "xorg-libxxf86vm",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/xorg-libxxf86vm-1.1.7-hb03c661_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/X11/extensions/xf86vmode.h",
+        "path_type": "hardlink",
+        "sha256": "06be35454c49bde32c6e84e1543382bc11c854fc193339d64277b2110ca2f21d",
+        "sha256_in_prefix": "06be35454c49bde32c6e84e1543382bc11c854fc193339d64277b2110ca2f21d",
+        "size_in_bytes": 7619
+      },
+      {
+        "_path": "lib/libXxf86vm.so",
+        "path_type": "softlink",
+        "sha256": "bd8d178c0028df34b8684416d6b9f44850e9a6adb6b290fb51450946558a92c6",
+        "size_in_bytes": 29624
+      },
+      {
+        "_path": "lib/libXxf86vm.so.1",
+        "path_type": "softlink",
+        "sha256": "bd8d178c0028df34b8684416d6b9f44850e9a6adb6b290fb51450946558a92c6",
+        "size_in_bytes": 29624
+      },
+      {
+        "_path": "lib/libXxf86vm.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "bd8d178c0028df34b8684416d6b9f44850e9a6adb6b290fb51450946558a92c6",
+        "sha256_in_prefix": "bd8d178c0028df34b8684416d6b9f44850e9a6adb6b290fb51450946558a92c6",
+        "size_in_bytes": 29624
+      },
+      {
+        "_path": "lib/pkgconfig/xxf86vm.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xorg-libxxf86vm_1769434567989/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "sha256": "3d610be3ce702ba0be4961d1b14c0394e10f409149ed33a42e780c56c24feba9",
+        "sha256_in_prefix": "ac1a05345498115b859cafd7d70238ccc7367baa65d66ddcad84c45b17adf601",
+        "size_in_bytes": 592
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "64db17baaf36fa03ed8fae105e2e671a7383e22df4077486646f7dbf12842c9f",
+  "size": 18701,
+  "subdir": "linux-64",
+  "timestamp": 1769434732000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/xorg-libxxf86vm-1.1.7-hb03c661_0.conda",
+  "version": "1.1.7"
+}

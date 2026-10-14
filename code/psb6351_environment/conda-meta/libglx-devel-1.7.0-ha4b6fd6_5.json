@@ -1,0 +1,69 @@
+{
+  "build": "ha4b6fd6_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "xorg-xorgproto",
+    "__glibc >=2.17,<3.0.a0",
+    "xorg-libx11 >=1.8.13,<2.0a0",
+    "libglx 1.7.0 ha4b6fd6_5"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libglx-devel-1.7.0-ha4b6fd6_5",
+  "files": [
+    "include/GL/glx.h",
+    "include/GL/glxext.h",
+    "lib/libGLX.so",
+    "lib/pkgconfig/glx.pc"
+  ],
+  "fn": "libglx-devel-1.7.0-ha4b6fd6_5.conda",
+  "license": "LicenseRef-libglvnd",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libglx-devel-1.7.0-ha4b6fd6_5",
+    "type": 1
+  },
+  "md5": "fb00b4fb800f2d431303a5c1625ef9d0",
+  "name": "libglx-devel",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libglx-devel-1.7.0-ha4b6fd6_5.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/GL/glx.h",
+        "path_type": "hardlink",
+        "sha256": "bfdd02a03fcc60e04a902107277bf42711cf325b4aeca6b9491a754923ad544f",
+        "sha256_in_prefix": "bfdd02a03fcc60e04a902107277bf42711cf325b4aeca6b9491a754923ad544f",
+        "size_in_bytes": 16906
+      },
+      {
+        "_path": "include/GL/glxext.h",
+        "path_type": "hardlink",
+        "sha256": "1649a24997d9bd448f52e3d59c67fc3985b04433251efb584b62ae2d4294ef36",
+        "sha256_in_prefix": "1649a24997d9bd448f52e3d59c67fc3985b04433251efb584b62ae2d4294ef36",
+        "size_in_bytes": 47796
+      },
+      {
+        "_path": "lib/libGLX.so",
+        "path_type": "softlink",
+        "sha256": "676c31677ee9bd618f025f407d2ef6ae4b54fc095ddc537cb531b849292313ca",
+        "size_in_bytes": 348424
+      },
+      {
+        "_path": "lib/pkgconfig/glx.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libglvnd-split_1787309893880/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "11e2aac12ee65567386fc8f31be4b2e3126e4363f06c7f43a2a86f3506951ed5",
+        "sha256_in_prefix": "f2ee62478bedb348f47b772ecedd7af931a9ff86f149a4802fe93e5733c97a1b",
+        "size_in_bytes": 423
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "aff3841e3404d78e1887fef988ca4842930c577399d566fa0980808756b1df51",
+  "size": 27698,
+  "subdir": "linux-64",
+  "timestamp": 1787310053000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libglx-devel-1.7.0-ha4b6fd6_5.conda",
+  "version": "1.7.0"
+}

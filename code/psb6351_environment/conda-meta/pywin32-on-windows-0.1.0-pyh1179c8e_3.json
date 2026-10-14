@@ -1,0 +1,34 @@
+{
+  "build": "pyh1179c8e_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__unix",
+    "python >=2.7"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pywin32-on-windows-0.1.0-pyh1179c8e_3",
+  "files": [],
+  "fn": "pywin32-on-windows-0.1.0-pyh1179c8e_3.tar.bz2",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pywin32-on-windows-0.1.0-pyh1179c8e_3",
+    "type": 1
+  },
+  "md5": "2807a0becd1d986fe1ef9b7f8135f215",
+  "name": "pywin32-on-windows",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pywin32-on-windows-0.1.0-pyh1179c8e_3.tar.bz2",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6502696aaef571913b22a808b15c185bd8ea4aabb952685deb29e6a6765761cb",
+  "size": 4856,
+  "subdir": "noarch",
+  "timestamp": 1646866525000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pywin32-on-windows-0.1.0-pyh1179c8e_3.tar.bz2",
+  "version": "0.1.0"
+}

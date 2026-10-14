@@ -1,0 +1,113 @@
+{
+  "build": "pyhcf101f3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/ci-info-0.4.0-pyhcf101f3_0",
+  "files": [
+    "lib/python3.14/site-packages/ci_info/__init__.py",
+    "lib/python3.14/site-packages/ci_info/vendors.json",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/ci_info-0.4.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/ci_info/__pycache__/__init__.cpython-314.pyc"
+  ],
+  "fn": "ci-info-0.4.0-pyhcf101f3_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/ci-info-0.4.0-pyhcf101f3_0",
+    "type": 1
+  },
+  "md5": "6aee7bd2b0efa283db227b8395021318",
+  "name": "ci-info",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/ci-info-0.4.0-pyhcf101f3_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/ci_info/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "315126ba558dc25af5fab88dd810bc9b4735bcac941245824f5bf122853b8e73",
+        "sha256_in_prefix": "315126ba558dc25af5fab88dd810bc9b4735bcac941245824f5bf122853b8e73",
+        "size_in_bytes": 2913
+      },
+      {
+        "_path": "site-packages/ci_info/vendors.json",
+        "path_type": "hardlink",
+        "sha256": "0328633dd00a573777cc47c1d5790ad494becc9f3436ed723bd1a66f6515e003",
+        "sha256_in_prefix": "0328633dd00a573777cc47c1d5790ad494becc9f3436ed723bd1a66f6515e003",
+        "size_in_bytes": 6424
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b1f86717ba6a60ac3b6dfa58572ecd2ffb7f61d060a2cf0ac3dd7054595f4f38",
+        "sha256_in_prefix": "b1f86717ba6a60ac3b6dfa58572ecd2ffb7f61d060a2cf0ac3dd7054595f4f38",
+        "size_in_bytes": 7199
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "fe664b3c7ee9eb910e5e79128842a19b50ab431bd56bc47f42373fde3dfca041",
+        "sha256_in_prefix": "fe664b3c7ee9eb910e5e79128842a19b50ab431bd56bc47f42373fde3dfca041",
+        "size_in_bytes": 783
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "6a16b456bad8be00c9dd7c65ddd6ff83f303216f997b10ddadcfe6f8793c618e",
+        "sha256_in_prefix": "6a16b456bad8be00c9dd7c65ddd6ff83f303216f997b10ddadcfe6f8793c618e",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "84352ca52e6df36918d8367979e97420c3b09656982ff0bdc3c2412e7c714653",
+        "sha256_in_prefix": "84352ca52e6df36918d8367979e97420c3b09656982ff0bdc3c2412e7c714653",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "site-packages/ci_info-0.4.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "709305d977905057b296390ca5b7fbfd5703f1ab1b36e23ddeed4c5e2d5d4dc0",
+        "sha256_in_prefix": "709305d977905057b296390ca5b7fbfd5703f1ab1b36e23ddeed4c5e2d5d4dc0",
+        "size_in_bytes": 1083
+      },
+      {
+        "_path": "lib/python3.14/site-packages/ci_info/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fb867fe5f0273d2511c62c14d17f4b24556e2b65f082346d72f050dfccf321c0",
+  "size": 15461,
+  "subdir": "noarch",
+  "timestamp": 1770244486000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/ci-info-0.4.0-pyhcf101f3_0.conda",
+  "version": "0.4.0"
+}

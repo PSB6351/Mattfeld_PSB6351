@@ -1,0 +1,2069 @@
+{
+    "ucschar": [
+        {
+            "value": "\u001f",
+            "reason": "Control character not allowed in UCS range"
+        },
+        {
+            "value": "",
+            "reason": "DEL character is outside UCS allowed range"
+        },
+        {
+            "value": "",
+            "reason": "Control character not part of ucschar"
+        },
+        {
+            "value": "￾",
+            "reason": "Noncharacter in Unicode"
+        },
+        {
+            "value": "￿",
+            "reason": "Noncharacter in Unicode"
+        },
+        {
+            "value": "\u0000",
+            "reason": "Null byte is not allowed"
+        },
+        {
+            "value": "",
+            "reason": "C1 control character, disallowed"
+        }
+    ],
+    "iunreserved": [
+        {
+            "value": "!",
+            "reason": "Exclamation mark is not unreserved"
+        },
+        {
+            "value": "*",
+            "reason": "Asterisk is reserved, not unreserved"
+        },
+        {
+            "value": "(",
+            "reason": "Left parenthesis is not unreserved"
+        },
+        {
+            "value": ")",
+            "reason": "Right parenthesis is not unreserved"
+        },
+        {
+            "value": "=",
+            "reason": "Equals sign is reserved"
+        },
+        {
+            "value": "+",
+            "reason": "Plus sign is reserved"
+        },
+        {
+            "value": ",",
+            "reason": "Comma is reserved"
+        },
+        {
+            "value": ";",
+            "reason": "Semicolon is reserved"
+        },
+        {
+            "value": "&",
+            "reason": "Ampersand is reserved"
+        },
+        {
+            "value": "'",
+            "reason": "Single quote is reserved"
+        },
+        {
+            "value": ":",
+            "reason": "Colon is a gen-delim"
+        },
+        {
+            "value": "@",
+            "reason": "At symbol is a gen-delim"
+        },
+        {
+            "value": "/",
+            "reason": "Slash is a gen-delim"
+        },
+        {
+            "value": "?",
+            "reason": "Question mark is a gen-delim"
+        },
+        {
+            "value": "#",
+            "reason": "Hash is a gen-delim"
+        },
+        {
+            "value": "[",
+            "reason": "Left bracket is a gen-delim"
+        },
+        {
+            "value": "]",
+            "reason": "Right bracket is a gen-delim"
+        },
+        {
+            "value": " ",
+            "reason": "Space is not allowed"
+        },
+        {
+            "value": "\t",
+            "reason": "Tab is not allowed"
+        },
+        {
+            "value": "\n",
+            "reason": "Newline is not allowed"
+        }
+    ],
+    "sub_delims": [
+        {
+            "value": "%",
+            "reason": "Percent is for pct-encoded, not a sub-delim"
+        },
+        {
+            "value": "/",
+            "reason": "Slash is a gen-delim, not sub-delim"
+        },
+        {
+            "value": " ",
+            "reason": "Space is not allowed"
+        },
+        {
+            "value": "a",
+            "reason": "Alphabet characters are not sub-delims"
+        },
+        {
+            "value": "1",
+            "reason": "Digits are not sub-delims"
+        },
+        {
+            "value": ":",
+            "reason": "Colon is gen-delim"
+        },
+        {
+            "value": "@",
+            "reason": "At symbol is a gen-delim"
+        },
+        {
+            "value": "#",
+            "reason": "Hash is gen-delim"
+        },
+        {
+            "value": "[",
+            "reason": "Bracket is gen-delim"
+        },
+        {
+            "value": "]",
+            "reason": "Bracket is gen-delim"
+        },
+        {
+            "value": "?",
+            "reason": "Question mark is gen-delim"
+        },
+        {
+            "value": "\\",
+            "reason": "Backslash is invalid"
+        },
+        {
+            "value": "`",
+            "reason": "Backtick is not allowed"
+        },
+        {
+            "value": "^",
+            "reason": "Caret is not allowed"
+        },
+        {
+            "value": "{",
+            "reason": "Curly brace is not allowed"
+        },
+        {
+            "value": "}",
+            "reason": "Curly brace is not allowed"
+        },
+        {
+            "value": "|",
+            "reason": "Pipe is not allowed"
+        },
+        {
+            "value": "~",
+            "reason": "Tilde is unreserved, not sub-delim"
+        }
+    ],
+    "iuserinfo": [
+        {
+            "value": "user name",
+            "reason": "Contains space"
+        },
+        {
+            "value": "user\nname",
+            "reason": "Contains newline"
+        },
+        {
+            "value": "user\tname",
+            "reason": "Contains tab"
+        },
+        {
+            "value": "user@name@",
+            "reason": "Multiple '@' symbols"
+        },
+        {
+            "value": "user%2G",
+            "reason": "Invalid percent-encoding"
+        },
+        {
+            "value": "user|name",
+            "reason": "Pipe character not allowed"
+        },
+        {
+            "value": "user\\name",
+            "reason": "Backslash not allowed"
+        },
+        {
+            "value": "user`name",
+            "reason": "Backtick is not valid"
+        },
+        {
+            "value": "user{",
+            "reason": "Left curly brace not allowed"
+        },
+        {
+            "value": "user}",
+            "reason": "Right curly brace not allowed"
+        },
+        {
+            "value": "user#",
+            "reason": "Fragment indicator is invalid"
+        },
+        {
+            "value": "user[",
+            "reason": "Left bracket is a gen-delim"
+        },
+        {
+            "value": "user]",
+            "reason": "Right bracket is a gen-delim"
+        }
+    ],
+    "h16": [
+        {
+            "value": "12345",
+            "reason": "Too many hex digits (more than 4)"
+        },
+        {
+            "value": "G123",
+            "reason": "Contains non-hex character 'G'"
+        },
+        {
+            "value": "12Z4",
+            "reason": "Contains non-hex character 'Z'"
+        },
+        {
+            "value": "",
+            "reason": "Empty string, must have 1 to 4 hex digits"
+        },
+        {
+            "value": "1 23",
+            "reason": "Contains space"
+        },
+        {
+            "value": "12\n",
+            "reason": "Contains newline"
+        },
+        {
+            "value": "ABCG",
+            "reason": "Invalid hex character 'G'"
+        },
+        {
+            "value": "XYZ",
+            "reason": "All characters invalid"
+        },
+        {
+            "value": "00000",
+            "reason": "Too many digits"
+        },
+        {
+            "value": "FFFFF",
+            "reason": "Exceeds 4-digit limit"
+        },
+        {
+            "value": "-123",
+            "reason": "Negative sign not allowed"
+        },
+        {
+            "value": "12.3",
+            "reason": "Decimal point is invalid"
+        },
+        {
+            "value": "1G3F",
+            "reason": "G is not a hex digit"
+        },
+        {
+            "value": "1#3F",
+            "reason": "Special character not allowed"
+        },
+        {
+            "value": "1234 ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " 1234",
+            "reason": "Leading space"
+        },
+        {
+            "value": "12\t34",
+            "reason": "Tab character included"
+        },
+        {
+            "value": "1\n23",
+            "reason": "Newline in middle"
+        },
+        {
+            "value": "DEADG",
+            "reason": "5 characters, last one invalid"
+        },
+        {
+            "value": "C0FFEE",
+            "reason": "More than 4 hex digits"
+        }
+    ],
+    "dec_octet": [
+        {
+            "value": "256",
+            "reason": "Octet exceeds 255"
+        },
+        {
+            "value": "300",
+            "reason": "Octet exceeds valid range"
+        },
+        {
+            "value": "01",
+            "reason": "Leading zero in multi-digit number"
+        },
+        {
+            "value": "-1",
+            "reason": "Negative number"
+        },
+        {
+            "value": "1.0",
+            "reason": "Decimal point not allowed"
+        },
+        {
+            "value": "a12",
+            "reason": "Non-numeric character"
+        },
+        {
+            "value": "12b",
+            "reason": "Trailing character"
+        },
+        {
+            "value": "1 ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " 1",
+            "reason": "Leading space"
+        },
+        {
+            "value": "",
+            "reason": "Empty string"
+        },
+        {
+            "value": "  ",
+            "reason": "Whitespace only"
+        },
+        {
+            "value": "\n",
+            "reason": "Newline only"
+        },
+        {
+            "value": "2O0",
+            "reason": "'O' instead of zero"
+        },
+        {
+            "value": "999",
+            "reason": "Out of range"
+        },
+        {
+            "value": "0x1",
+            "reason": "Hexadecimal not allowed"
+        },
+        {
+            "value": "2555",
+            "reason": "Too many digits"
+        },
+        {
+            "value": "1e2",
+            "reason": "Scientific notation is invalid"
+        },
+        {
+            "value": "1/2",
+            "reason": "Slash not allowed"
+        },
+        {
+            "value": "1,2",
+            "reason": "Comma instead of dot"
+        },
+        {
+            "value": "+100",
+            "reason": "Plus sign is not valid"
+        }
+    ],
+    "ls32": [
+        {
+            "value": "GGGG:GGGG",
+            "reason": "All segments contain invalid hex"
+        },
+        {
+            "value": "12345:6789",
+            "reason": "First segment too long"
+        },
+        {
+            "value": "abcd:12345",
+            "reason": "Second segment too long"
+        },
+        {
+            "value": "12:34:56",
+            "reason": "Too many segments"
+        },
+        {
+            "value": "192.168.300.1",
+            "reason": "Invalid IPv4 address"
+        },
+        {
+            "value": "256.256.256.256",
+            "reason": "Octets out of range"
+        },
+        {
+            "value": "192.168.1",
+            "reason": "Incomplete IPv4 address"
+        },
+        {
+            "value": "1:2:3",
+            "reason": "Too many segments for ls32"
+        },
+        {
+            "value": ":::",
+            "reason": "Invalid colons"
+        },
+        {
+            "value": "",
+            "reason": "Empty string"
+        },
+        {
+            "value": "1:2G",
+            "reason": "G is not a hex digit"
+        },
+        {
+            "value": "12-34",
+            "reason": "Dash not allowed"
+        },
+        {
+            "value": "abcd:",
+            "reason": "Second segment missing"
+        },
+        {
+            "value": ":1234",
+            "reason": "First segment missing"
+        },
+        {
+            "value": "192.168.1.1.1",
+            "reason": "Too many IPv4 segments"
+        },
+        {
+            "value": "....",
+            "reason": "Only dots"
+        },
+        {
+            "value": "::ffff",
+            "reason": "Incomplete ls32 after ::"
+        },
+        {
+            "value": "0:0:0",
+            "reason": "Too many colons"
+        },
+        {
+            "value": "g123:abcd",
+            "reason": "Invalid character in hex"
+        },
+        {
+            "value": "abcd:123z",
+            "reason": "Invalid hex digit"
+        }
+    ],
+    "ipv6address": [
+        {
+            "value": ":::::::",
+            "reason": "Too many colons"
+        },
+        {
+            "value": "1234::1234::1234",
+            "reason": "Multiple '::' not allowed"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:8:9",
+            "reason": "Too many segments"
+        },
+        {
+            "value": "1:2:3:4:5:6:7",
+            "reason": "Too few segments"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:G",
+            "reason": "Non-hex character in segment"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:00000",
+            "reason": "Segment too long"
+        },
+        {
+            "value": ":1:2:3:4:5:6:7",
+            "reason": "Starts with colon"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:",
+            "reason": "Ends with colon"
+        },
+        {
+            "value": "1::2::3",
+            "reason": "Multiple double colons"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:8:9",
+            "reason": "Nine segments"
+        },
+        {
+            "value": "1:2:3:4:5:6::7:8",
+            "reason": "Too many segments with '::'"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:Z",
+            "reason": "Invalid hex digit"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:💀",
+            "reason": "Emoji is not valid in hex"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:8/64",
+            "reason": "Contains CIDR notation"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:12345",
+            "reason": "Segment exceeds 4 hex digits"
+        },
+        {
+            "value": "1:2:3:4:5:6:7: ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " ::1",
+            "reason": "Leading space"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:gg",
+            "reason": "Invalid characters in segment"
+        },
+        {
+            "value": "1:2:3:4:5:6:7:\\n",
+            "reason": "Escape character not valid"
+        }
+    ],
+    "unreserved": [
+        {
+            "value": "!",
+            "reason": "Exclamation mark is reserved"
+        },
+        {
+            "value": "@",
+            "reason": "At symbol is reserved"
+        },
+        {
+            "value": ":",
+            "reason": "Colon is a gen-delim"
+        },
+        {
+            "value": "/",
+            "reason": "Slash is a gen-delim"
+        },
+        {
+            "value": "?",
+            "reason": "Question mark is reserved"
+        },
+        {
+            "value": "#",
+            "reason": "Fragment indicator is reserved"
+        },
+        {
+            "value": "[",
+            "reason": "Left bracket is reserved"
+        },
+        {
+            "value": "]",
+            "reason": "Right bracket is reserved"
+        },
+        {
+            "value": "&",
+            "reason": "Ampersand is a sub-delim"
+        },
+        {
+            "value": "=",
+            "reason": "Equal sign is reserved"
+        },
+        {
+            "value": "%",
+            "reason": "Used for pct-encoding, not unreserved"
+        },
+        {
+            "value": " ",
+            "reason": "Space is not allowed"
+        },
+        {
+            "value": "\t",
+            "reason": "Tab is not allowed"
+        },
+        {
+            "value": "`",
+            "reason": "Backtick is not allowed"
+        },
+        {
+            "value": "\\",
+            "reason": "Backslash is not allowed"
+        },
+        {
+            "value": "^",
+            "reason": "Caret is not allowed"
+        },
+        {
+            "value": "{",
+            "reason": "Left curly brace is not allowed"
+        },
+        {
+            "value": "}",
+            "reason": "Right curly brace is not allowed"
+        },
+        {
+            "value": "|",
+            "reason": "Pipe character is not allowed"
+        },
+        {
+            "value": "~ ",
+            "reason": "Tilde followed by space"
+        }
+    ],
+    "ipvfuture": [
+        {
+            "value": "v1",
+            "reason": "Missing '.' separator"
+        },
+        {
+            "value": "v.123",
+            "reason": "Missing version number"
+        },
+        {
+            "value": "v1.@",
+            "reason": "Invalid character '@'"
+        },
+        {
+            "value": "v1.#",
+            "reason": "Invalid character '#'"
+        },
+        {
+            "value": "v1.💡",
+            "reason": "Emoji is not allowed"
+        },
+        {
+            "value": "v1.[]",
+            "reason": "Brackets are not part of allowed charset"
+        },
+        {
+            "value": "v1",
+            "reason": "No suffix after version"
+        },
+        {
+            "value": "v1/",
+            "reason": "Slash is not valid here"
+        },
+        {
+            "value": "v.abc",
+            "reason": "Missing version number"
+        },
+        {
+            "value": "v123",
+            "reason": "Missing '.' separator"
+        },
+        {
+            "value": "v123.",
+            "reason": "Suffix missing"
+        },
+        {
+            "value": "vX.abc",
+            "reason": "X is not a hex digit"
+        }
+    ],
+    "ip_literal": [
+        {
+            "value": "[192.168.1.1",
+            "reason": "Missing closing bracket"
+        },
+        {
+            "value": "192.168.1.1]",
+            "reason": "Missing opening bracket"
+        },
+        {
+            "value": "[v1.abc",
+            "reason": "Missing closing bracket for IPvFuture"
+        },
+        {
+            "value": "[1:2:3:4:5:6:7:8:9]",
+            "reason": "Too many IPv6 segments"
+        },
+        {
+            "value": "[::1::1]",
+            "reason": "Multiple '::' in IPv6"
+        },
+        {
+            "value": "[v1]",
+            "reason": "Missing version and suffix"
+        },
+        {
+            "value": "[v1.#]",
+            "reason": "Invalid character in IPvFuture"
+        },
+        {
+            "value": "[::gggg]",
+            "reason": "Invalid hex in IPv6"
+        },
+        {
+            "value": "[]",
+            "reason": "Empty brackets"
+        },
+        {
+            "value": "[::ffff:300.168.1.1]",
+            "reason": "IPv4 octet out of range"
+        },
+        {
+            "value": "[1:2:3:4:5:6:7:8:9]",
+            "reason": "Too many fields"
+        },
+        {
+            "value": "[v1.💡]",
+            "reason": "Emoji not allowed in IPvFuture"
+        },
+        {
+            "value": "[v.abc]",
+            "reason": "Missing version value"
+        },
+        {
+            "value": "[::/128]",
+            "reason": "CIDR notation not allowed"
+        },
+        {
+            "value": "[2001::85a3::8a2e]",
+            "reason": "Double '::' disallowed"
+        },
+        {
+            "value": "[v123.]",
+            "reason": "Missing suffix"
+        },
+        {
+            "value": "[g:h:i:j:k:l:m:n]",
+            "reason": "Invalid characters in IPv6"
+        },
+        {
+            "value": "[2001:db8::g1]",
+            "reason": "'g' is not a hex digit"
+        },
+        {
+            "value": "[::1]extra",
+            "reason": "Trailing characters after closing bracket"
+        }
+    ],
+    "ireg_name": [
+        {
+            "value": "exa mple",
+            "reason": "Space not allowed in reg-name"
+        },
+        {
+            "value": "example#",
+            "reason": "Fragment marker is not allowed"
+        },
+        {
+            "value": "example/",
+            "reason": "Slash is not part of reg-name"
+        },
+        {
+            "value": "example\\",
+            "reason": "Backslash is invalid"
+        },
+        {
+            "value": "exa[mple]",
+            "reason": "Brackets not allowed"
+        },
+        {
+            "value": "%GG",
+            "reason": "Invalid percent encoding"
+        },
+        {
+            "value": "%",
+            "reason": "Incomplete percent encoding"
+        },
+        {
+            "value": "example%",
+            "reason": "Trailing '%' character"
+        },
+        {
+            "value": "example|name",
+            "reason": "Pipe character is not allowed"
+        },
+        {
+            "value": "example\n",
+            "reason": "Newline not valid"
+        },
+        {
+            "value": "exa\tmple",
+            "reason": "Tab character not allowed"
+        },
+        {
+            "value": "example@",
+            "reason": "At symbol not valid in reg-name"
+        },
+        {
+            "value": "exa>mple",
+            "reason": "Greater-than is invalid"
+        },
+        {
+            "value": "exa<mple",
+            "reason": "Less-than is invalid"
+        }
+    ],
+    "ihost": [
+        {
+            "value": "[::1",
+            "reason": "Missing closing bracket in IP-literal"
+        },
+        {
+            "value": "example.com ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " example.com",
+            "reason": "Leading space"
+        },
+        {
+            "value": "exa[mple]",
+            "reason": "Invalid bracket characters"
+        },
+        {
+            "value": "example#.com",
+            "reason": "Fragment character in host"
+        },
+        {
+            "value": "exa|mple",
+            "reason": "Pipe character invalid"
+        },
+        {
+            "value": "exa\tmple",
+            "reason": "Tab character invalid"
+        },
+        {
+            "value": "exa\nmple",
+            "reason": "Newline in host"
+        },
+        {
+            "value": "ex@mple",
+            "reason": "At symbol not allowed"
+        },
+        {
+            "value": "exa%GGmple",
+            "reason": "Invalid percent-encoding"
+        },
+        {
+            "value": "[v1.]",
+            "reason": "Malformed IP-literal"
+        }
+    ],
+    "port": [
+        {
+            "value": "abc",
+            "reason": "Contains non-numeric characters"
+        },
+        {
+            "value": "-80",
+            "reason": "Negative number not allowed"
+        },
+        {
+            "value": "22 ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " 22",
+            "reason": "Leading space"
+        },
+        {
+            "value": "22\n",
+            "reason": "Contains newline"
+        },
+        {
+            "value": "22.5",
+            "reason": "Decimal point not allowed"
+        },
+        {
+            "value": "22a",
+            "reason": "Letter suffix not allowed"
+        },
+        {
+            "value": "!",
+            "reason": "Symbol not allowed"
+        },
+        {
+            "value": ":",
+            "reason": "Colon is delimiter, not part of port"
+        },
+        {
+            "value": "0x50",
+            "reason": "Hexadecimal format not allowed"
+        },
+        {
+            "value": "+80",
+            "reason": "Plus sign not allowed"
+        },
+        {
+            "value": "80-",
+            "reason": "Dash not valid"
+        },
+        {
+            "value": "80/udp",
+            "reason": "Protocol suffix not valid here"
+        },
+        {
+            "value": "port",
+            "reason": "Alphabetic word not valid"
+        },
+        {
+            "value": "\t80",
+            "reason": "Tab character not allowed"
+        },
+        {
+            "value": "6553A",
+            "reason": "Hex letter not valid"
+        }
+    ],
+    "iauthority": [
+        {
+            "value": "user@host:port",
+            "reason": "Non-numeric port"
+        },
+        {
+            "value": "user@/path",
+            "reason": "Host cannot start with '/'"
+        },
+        {
+            "value": ":host",
+            "reason": "Invalid leading colon"
+        },
+        {
+            "value": "host::80",
+            "reason": "Double colon not valid"
+        },
+        {
+            "value": "user@@host",
+            "reason": "Double '@'"
+        },
+        {
+            "value": "user@host:abc",
+            "reason": "Port not numeric"
+        },
+        {
+            "value": "host:80:80",
+            "reason": "Too many ':'"
+        },
+        {
+            "value": "user@:host",
+            "reason": "Colon used instead of '@'"
+        },
+        {
+            "value": "user@host@80",
+            "reason": "Multiple '@'"
+        },
+        {
+            "value": "/host:80",
+            "reason": "Invalid leading slash"
+        },
+        {
+            "value": " ",
+            "reason": "Whitespace is invalid"
+        },
+        {
+            "value": "user@host:65a",
+            "reason": "Letter in port"
+        },
+        {
+            "value": "host[80]",
+            "reason": "Brackets not allowed"
+        },
+        {
+            "value": "host|80",
+            "reason": "Pipe is invalid"
+        }
+    ],
+    "ipchar": [
+        {
+            "value": " ",
+            "reason": "Space is not allowed in ipchar"
+        },
+        {
+            "value": "\n",
+            "reason": "Newline is invalid"
+        },
+        {
+            "value": "\t",
+            "reason": "Tab character is not valid"
+        },
+        {
+            "value": "#",
+            "reason": "Fragment delimiter, not part of ipchar"
+        },
+        {
+            "value": "[",
+            "reason": "Bracket is a gen-delim, not ipchar"
+        },
+        {
+            "value": "]",
+            "reason": "Bracket is a gen-delim, not ipchar"
+        },
+        {
+            "value": "|",
+            "reason": "Pipe is not part of ipchar"
+        },
+        {
+            "value": "\\",
+            "reason": "Backslash is invalid"
+        },
+        {
+            "value": "`",
+            "reason": "Backtick is not permitted"
+        },
+        {
+            "value": "{",
+            "reason": "Curly brace is not permitted"
+        },
+        {
+            "value": "}",
+            "reason": "Curly brace is not permitted"
+        },
+        {
+            "value": "^",
+            "reason": "Caret is not allowed"
+        },
+        {
+            "value": "\u0001",
+            "reason": "Control character is not valid"
+        }
+    ],
+    "isegment": [
+        {
+            "value": "seg|ment",
+            "reason": "Pipe is not allowed"
+        },
+        {
+            "value": "seg<ment",
+            "reason": "Less-than is invalid"
+        },
+        {
+            "value": "seg>ment",
+            "reason": "Greater-than is invalid"
+        },
+        {
+            "value": "seg#ment",
+            "reason": "Fragment marker not allowed"
+        },
+        {
+            "value": "seg[ment",
+            "reason": "Left bracket not valid"
+        },
+        {
+            "value": "seg]ment",
+            "reason": "Right bracket not valid"
+        },
+        {
+            "value": "seg ment",
+            "reason": "Space in segment"
+        },
+        {
+            "value": "seg\nment",
+            "reason": "Newline in segment"
+        },
+        {
+            "value": "seg\tment",
+            "reason": "Tab in segment"
+        },
+        {
+            "value": "seg%GG",
+            "reason": "Invalid percent-encoding"
+        },
+        {
+            "value": "%",
+            "reason": "Incomplete percent encoding"
+        },
+        {
+            "value": "seg%",
+            "reason": "Ends with '%'"
+        },
+        {
+            "value": "seg\\ment",
+            "reason": "Backslash is invalid"
+        },
+        {
+            "value": "seg`ment",
+            "reason": "Backtick not valid"
+        },
+        {
+            "value": "seg^ment",
+            "reason": "Caret not allowed"
+        },
+        {
+            "value": "seg{ment",
+            "reason": "Left curly brace not valid"
+        },
+        {
+            "value": "seg}ment",
+            "reason": "Right curly brace not valid"
+        }
+    ],
+    "ipath_abempty": [
+        {
+            "value": "path",
+            "reason": "Path does not begin with '/'"
+        },
+        {
+            "value": "/seg ment",
+            "reason": "Space in segment"
+        },
+        {
+            "value": "/seg#ment",
+            "reason": "Fragment character in path"
+        },
+        {
+            "value": "/seg[ment",
+            "reason": "Left bracket in path"
+        },
+        {
+            "value": "/seg]ment",
+            "reason": "Right bracket in path"
+        },
+        {
+            "value": "/%",
+            "reason": "Incomplete percent encoding"
+        },
+        {
+            "value": "/seg%",
+            "reason": "Ends with '%'"
+        },
+        {
+            "value": "/seg\nment",
+            "reason": "Newline in path"
+        },
+        {
+            "value": "/seg\tment",
+            "reason": "Tab in path"
+        },
+        {
+            "value": "/seg\\ment",
+            "reason": "Backslash in path"
+        },
+        {
+            "value": "/seg|ment",
+            "reason": "Pipe in path"
+        },
+        {
+            "value": "/seg<ment",
+            "reason": "Less-than in path"
+        },
+        {
+            "value": "/seg>ment",
+            "reason": "Greater-than in path"
+        },
+        {
+            "value": "/seg{ment",
+            "reason": "Curly brace in path"
+        },
+        {
+            "value": "/seg}ment",
+            "reason": "Curly brace in path"
+        }
+    ],
+    "isegment_nz": [
+        {
+            "value": "",
+            "reason": "Segment must be non-zero length"
+        },
+        {
+            "value": " ",
+            "reason": "Space not allowed"
+        },
+        {
+            "value": "\t",
+            "reason": "Tab not allowed"
+        },
+        {
+            "value": "\n",
+            "reason": "Newline not allowed"
+        },
+        {
+            "value": "#",
+            "reason": "Fragment delimiter not allowed"
+        },
+        {
+            "value": "[",
+            "reason": "Bracket not allowed"
+        },
+        {
+            "value": "]",
+            "reason": "Bracket not allowed"
+        },
+        {
+            "value": "%",
+            "reason": "Incomplete percent-encoding"
+        },
+        {
+            "value": "%GG",
+            "reason": "Invalid percent encoding"
+        },
+        {
+            "value": "`",
+            "reason": "Backtick not allowed"
+        },
+        {
+            "value": "/",
+            "reason": "Slash separates segments"
+        },
+        {
+            "value": "|",
+            "reason": "Pipe not allowed"
+        },
+        {
+            "value": "{",
+            "reason": "Left curly brace not allowed"
+        },
+        {
+            "value": "}",
+            "reason": "Right curly brace not allowed"
+        }
+    ],
+    "ipath_absolute": [
+        {
+            "value": "segment",
+            "reason": "Missing leading slash"
+        },
+        {
+            "value": "//segment",
+            "reason": "Begins with double slash"
+        },
+        {
+            "value": "/%",
+            "reason": "Incomplete percent-encoding"
+        },
+        {
+            "value": "/seg ment",
+            "reason": "Space in segment"
+        },
+        {
+            "value": "/seg#ment",
+            "reason": "Fragment delimiter in path"
+        },
+        {
+            "value": "/seg[ment",
+            "reason": "Bracket in path"
+        },
+        {
+            "value": "/seg]ment",
+            "reason": "Bracket in path"
+        },
+        {
+            "value": "/seg|ment",
+            "reason": "Pipe character not allowed"
+        },
+        {
+            "value": "/seg\\ment",
+            "reason": "Backslash is not valid"
+        },
+        {
+            "value": "/seg{ment",
+            "reason": "Curly brace not allowed"
+        },
+        {
+            "value": "/seg}ment",
+            "reason": "Curly brace not allowed"
+        },
+        {
+            "value": "/seg`ment",
+            "reason": "Backtick not allowed"
+        },
+        {
+            "value": "/seg^ment",
+            "reason": "Caret not allowed"
+        }
+    ],
+    "ipath_rootless": [
+        {
+            "value": "/segment",
+            "reason": "Begins with '/' not allowed in rootless"
+        },
+        {
+            "value": "segment%",
+            "reason": "Ends with '%'"
+        },
+        {
+            "value": "segment#",
+            "reason": "Contains fragment character"
+        },
+        {
+            "value": "seg ment",
+            "reason": "Space in segment"
+        },
+        {
+            "value": "segment[",
+            "reason": "Left bracket not allowed"
+        },
+        {
+            "value": "segment]",
+            "reason": "Right bracket not allowed"
+        },
+        {
+            "value": "segment\\",
+            "reason": "Backslash not allowed"
+        },
+        {
+            "value": "segment|",
+            "reason": "Pipe character not allowed"
+        },
+        {
+            "value": "segment{",
+            "reason": "Curly brace not allowed"
+        },
+        {
+            "value": "segment}",
+            "reason": "Curly brace not allowed"
+        },
+        {
+            "value": "segment\n",
+            "reason": "Newline in segment"
+        },
+        {
+            "value": "segment\t",
+            "reason": "Tab in segment"
+        },
+        {
+            "value": "",
+            "reason": "Empty rootless path not allowed"
+        }
+    ],
+    "ipath_empty": [
+        {
+            "value": "/",
+            "reason": "Slash makes it non-empty"
+        },
+        {
+            "value": "segment",
+            "reason": "Non-empty path"
+        },
+        {
+            "value": " ",
+            "reason": "Space character not allowed"
+        },
+        {
+            "value": "%20",
+            "reason": "Percent-encoded character still makes path non-empty"
+        },
+        {
+            "value": "\t",
+            "reason": "Tab character"
+        },
+        {
+            "value": "\n",
+            "reason": "Newline character"
+        },
+        {
+            "value": "💡",
+            "reason": "Emoji character"
+        },
+        {
+            "value": "abc",
+            "reason": "Literal characters"
+        },
+        {
+            "value": "123",
+            "reason": "Digit characters"
+        },
+        {
+            "value": "./",
+            "reason": "Dot-slash implies relative path"
+        },
+        {
+            "value": "..",
+            "reason": "Double dots indicate directory traversal"
+        },
+        {
+            "value": "#",
+            "reason": "Fragment marker"
+        },
+        {
+            "value": ":",
+            "reason": "Colon"
+        },
+        {
+            "value": ";",
+            "reason": "Semicolon"
+        },
+        {
+            "value": "=",
+            "reason": "Equal sign"
+        },
+        {
+            "value": "&",
+            "reason": "Ampersand"
+        },
+        {
+            "value": "@",
+            "reason": "At symbol"
+        },
+        {
+            "value": "|",
+            "reason": "Pipe"
+        },
+        {
+            "value": "[]",
+            "reason": "Brackets"
+        },
+        {
+            "value": "{}",
+            "reason": "Curly braces"
+        }
+    ],
+    "ihier_part": [
+        {
+            "value": "/path with space",
+            "reason": "Space in path"
+        },
+        {
+            "value": "//example.com:port",
+            "reason": "Port is not numeric"
+        },
+        {
+            "value": "/#frag",
+            "reason": "Fragment not part of ihier-part"
+        },
+        {
+            "value": "http://host path",
+            "reason": "Space in authority or path"
+        },
+        {
+            "value": "/%GG",
+            "reason": "Invalid percent encoding"
+        }
+    ],
+    "iprivate": [
+        {
+            "value": " ",
+            "reason": "Space not allowed in iprivate"
+        },
+        {
+            "value": "",
+            "reason": "DEL character not in private range"
+        },
+        {
+            "value": "ÿ",
+            "reason": "Extended Latin not private"
+        },
+        {
+            "value": "\u0000",
+            "reason": "NULL byte not private"
+        },
+        {
+            "value": "豈",
+            "reason": "CJK Compatibility Ideographs"
+        },
+        {
+            "value": "퟿",
+            "reason": "Upper limit of non-private BMP"
+        },
+        {
+            "value": "￿",
+            "reason": "Noncharacter"
+        },
+        {
+            "value": "Ā",
+            "reason": "Latin Extended-A"
+        },
+        {
+            "value": "͸",
+            "reason": "Unassigned code point"
+        },
+        {
+            "value": "΀",
+            "reason": "Unassigned code point"
+        },
+        {
+            "value": "ჿFF",
+            "reason": "Outside defined private planes"
+        },
+        {
+            "value": "﻿",
+            "reason": "Byte Order Mark"
+        },
+        {
+            "value": "💡",
+            "reason": "Emoji not in private range"
+        },
+        {
+            "value": "🧃",
+            "reason": "Emoji not in private range"
+        },
+        {
+            "value": "💀",
+            "reason": "Emoji not in private range"
+        },
+        {
+            "value": "🔥",
+            "reason": "Emoji not in private range"
+        },
+        {
+            "value": "​",
+            "reason": "Zero-width space not private"
+        },
+        {
+            "value": "‮",
+            "reason": "Bidi override character not private"
+        },
+        {
+            "value": "⁠",
+            "reason": "Word joiner character not private"
+        }
+    ],
+    "iquery": [
+        {
+            "value": "q=1 2",
+            "reason": "Space in query not encoded"
+        },
+        {
+            "value": "q=%%",
+            "reason": "Double percent signs"
+        },
+        {
+            "value": "q=%GG",
+            "reason": "Invalid percent encoding"
+        },
+        {
+            "value": "q=#",
+            "reason": "Hash introduces fragment"
+        },
+        {
+            "value": "q=[val]",
+            "reason": "Brackets may be reserved"
+        },
+        {
+            "value": "q=<val>",
+            "reason": "Angle brackets not allowed"
+        },
+        {
+            "value": "q=`val`",
+            "reason": "Backticks are not safe"
+        },
+        {
+            "value": "q=|val|",
+            "reason": "Pipes not valid in query"
+        },
+        {
+            "value": "q=abc%",
+            "reason": "Trailing percent sign"
+        },
+        {
+            "value": "q=value\n",
+            "reason": "Newline in query"
+        },
+        {
+            "value": "q=value\t",
+            "reason": "Tab in query"
+        },
+        {
+            "value": "q=value|pipe",
+            "reason": "Pipe symbol not valid"
+        },
+        {
+            "value": "q=value^",
+            "reason": "Caret not valid"
+        },
+        {
+            "value": "q=value{}",
+            "reason": "Curly braces not valid"
+        },
+        {
+            "value": "q=val#frag",
+            "reason": "Hash ends query unexpectedly"
+        }
+    ],
+    "absolute_iri": [
+        {
+            "value": "://example.com",
+            "reason": "Missing scheme"
+        },
+        {
+            "value": "http://exa mple.com",
+            "reason": "Space in host"
+        },
+        {
+            "value": "mailto:user@ example.com",
+            "reason": "Space in address"
+        },
+        {
+            "value": "http://example.com/%",
+            "reason": "Invalid percent encoding"
+        },
+        {
+            "value": "http://example.com:abc",
+            "reason": "Non-numeric port"
+        },
+        {
+            "value": "http://[2001:db8::1",
+            "reason": "Unterminated IPv6"
+        },
+        {
+            "value": "http://example.com?#frag",
+            "reason": "Empty query with fragment"
+        },
+        {
+            "value": "http://example.com|test",
+            "reason": "Illegal character in path"
+        },
+        {
+            "value": "http://example.com?q=%GG",
+            "reason": "Bad percent encoding in query"
+        },
+        {
+            "value": "http://user@:host",
+            "reason": "Colon in host"
+        }
+    ],
+    "gen_delims": [
+        {
+            "value": ":path",
+            "reason": "Colon used as prefix"
+        },
+        {
+            "value": "/dir//file",
+            "reason": "Double slash"
+        },
+        {
+            "value": "param#extra",
+            "reason": "Fragment not part of param"
+        },
+        {
+            "value": "query?again",
+            "reason": "Double query markers"
+        },
+        {
+            "value": "#frag1#frag2",
+            "reason": "Multiple fragments"
+        },
+        {
+            "value": "[host",
+            "reason": "Unclosed bracket"
+        },
+        {
+            "value": "]host",
+            "reason": "Bracket without match"
+        },
+        {
+            "value": "user@:host",
+            "reason": "Colon in host"
+        },
+        {
+            "value": "mailto:user@example.com#",
+            "reason": "Dangling fragment"
+        },
+        {
+            "value": ":@",
+            "reason": "Misuse of delimiters"
+        },
+        {
+            "value": "/?#@",
+            "reason": "Invalid sequence of gen-delims"
+        },
+        {
+            "value": "[:]",
+            "reason": "Unescaped gen-delims in host"
+        },
+        {
+            "value": "http://[host]",
+            "reason": "Improper IPv6 use"
+        }
+    ],
+    "ifragment": [
+        {
+            "value": "frag ment",
+            "reason": "Space in fragment"
+        },
+        {
+            "value": "frag%",
+            "reason": "Incomplete percent encoding"
+        },
+        {
+            "value": "frag%GG",
+            "reason": "Invalid percent encoding"
+        },
+        {
+            "value": "frag#",
+            "reason": "Extra fragment delimiter"
+        },
+        {
+            "value": "frag\nment",
+            "reason": "Newline in fragment"
+        },
+        {
+            "value": "frag\tment",
+            "reason": "Tab in fragment"
+        },
+        {
+            "value": "frag{ment",
+            "reason": "Curly brace in fragment"
+        },
+        {
+            "value": "frag}ment",
+            "reason": "Curly brace in fragment"
+        },
+        {
+            "value": "frag[ment",
+            "reason": "Bracket in fragment"
+        },
+        {
+            "value": "frag]ment",
+            "reason": "Bracket in fragment"
+        },
+        {
+            "value": "frag|ment",
+            "reason": "Pipe character in fragment"
+        },
+        {
+            "value": "frag`ment",
+            "reason": "Backtick in fragment"
+        },
+        {
+            "value": "frag^ment",
+            "reason": "Caret in fragment"
+        }
+    ],
+    "isegment_nz_nc": [],
+    "ipath_noscheme": [],
+    "ipath": [],
+    "irelative_part": [],
+    "irelative_ref": [],
+    "iri": [
+        {
+            "value": "http://example.com/%ZZ",
+            "expect_lark": false,
+            "expect_regex": true,
+            "reason": "Invalid percent-encoding: %ZZ is not two hex digits. Lark enforces this via `% HEXDIG HEXDIG`, regex may not.",
+            "conforms_with_rfc3987": false
+        },
+        {
+            "value": "http://example.com/abc def",
+            "expect_lark": false,
+            "expect_regex": true,
+            "reason": "Contains unencoded space, which violates URI/IRI syntax. Regex may not catch this unless explicitly encoded.",
+            "conforms_with_rfc3987": false
+        },
+        {
+            "value": "iri_invalid_0",
+            "reason": "Example 1 violates the grammar for 'iri' due to invalid characters or structure."
+        }
+    ],
+    "iri_reference": [
+        {
+            "value": "://example.com",
+            "reason": "Missing scheme"
+        },
+        {
+            "value": "http://[v1]",
+            "reason": "Malformed IP-literal"
+        },
+        {
+            "value": "http://host#frag#extra",
+            "reason": "Multiple fragments"
+        },
+        {
+            "value": "ftp://host:-21",
+            "reason": "Negative port"
+        },
+        {
+            "value": "mailto:user@ example.com",
+            "reason": "Space in address"
+        },
+        {
+            "value": "http://example.com:port",
+            "reason": "Port not numeric"
+        },
+        {
+            "value": "http://example.com/%",
+            "reason": "Incomplete percent encoding"
+        },
+        {
+            "value": "http://example.com|test",
+            "reason": "Pipe not valid"
+        },
+        {
+            "value": "http://[host]",
+            "reason": "Improper IPv6 format"
+        }
+    ],
+    "reserved": [
+        {
+            "value": " ",
+            "reason": "Space is not a reserved character"
+        },
+        {
+            "value": "%",
+            "reason": "Requires encoding"
+        },
+        {
+            "value": "💡",
+            "reason": "Emoji is not a reserved character"
+        }
+    ],
+    "scheme": [
+        {
+            "value": "1http",
+            "reason": "Starts with a digit"
+        },
+        {
+            "value": "+scheme",
+            "reason": "Starts with '+' instead of a letter"
+        },
+        {
+            "value": "http*",
+            "reason": "Contains illegal character '*'"
+        },
+        {
+            "value": "ht@tp",
+            "reason": "Contains illegal character '@'"
+        },
+        {
+            "value": "http#",
+            "reason": "Contains illegal character '#'"
+        },
+        {
+            "value": "http scheme",
+            "reason": "Contains space"
+        },
+        {
+            "value": "",
+            "reason": "Empty string"
+        },
+        {
+            "value": "123",
+            "reason": "Only digits, no leading letter"
+        },
+        {
+            "value": "http!",
+            "reason": "Contains illegal character '!'"
+        },
+        {
+            "value": "ht,tp",
+            "reason": "Contains illegal character ','"
+        },
+        {
+            "value": "http\\",
+            "reason": "Contains backslash"
+        },
+        {
+            "value": "http/",
+            "reason": "Contains slash"
+        },
+        {
+            "value": "http:",
+            "reason": "Colon is not part of scheme definition itself"
+        },
+        {
+            "value": "http\n",
+            "reason": "Contains newline"
+        },
+        {
+            "value": "http\t",
+            "reason": "Contains tab"
+        },
+        {
+            "value": "http🙂",
+            "reason": "Contains emoji"
+        },
+        {
+            "value": "http`",
+            "reason": "Contains backtick"
+        },
+        {
+            "value": "http%",
+            "reason": "Contains percent sign"
+        },
+        {
+            "value": "http=",
+            "reason": "Contains equal sign"
+        }
+    ],
+    "pct_encoded": [
+        {
+            "value": "%",
+            "reason": "Only percent sign"
+        },
+        {
+            "value": "%2",
+            "reason": "Missing second hex digit"
+        },
+        {
+            "value": "%G1",
+            "reason": "G is not a valid hex digit"
+        },
+        {
+            "value": "%1Z",
+            "reason": "Z is not a valid hex digit"
+        },
+        {
+            "value": "%%20",
+            "reason": "Double percent signs"
+        },
+        {
+            "value": "%2F%",
+            "reason": "Extra percent after encoding"
+        },
+        {
+            "value": "%u1234",
+            "reason": "Unicode escape, not valid percent encoding"
+        },
+        {
+            "value": "%1",
+            "reason": "Single hex digit after %"
+        },
+        {
+            "value": "% 2F",
+            "reason": "Space between % and digits"
+        },
+        {
+            "value": "%2F2F",
+            "reason": "Extra digits"
+        },
+        {
+            "value": "%2G",
+            "reason": "G is not valid hex"
+        },
+        {
+            "value": "%xy",
+            "reason": "Both characters invalid"
+        },
+        {
+            "value": "%20%2",
+            "reason": "Second escape incomplete"
+        },
+        {
+            "value": "%2/",
+            "reason": "Slash is not valid hex"
+        },
+        {
+            "value": "%00%",
+            "reason": "Percent at the end"
+        },
+        {
+            "value": "%#",
+            "reason": "Fragment delimiter instead of hex"
+        },
+        {
+            "value": "%0",
+            "reason": "Incomplete escape"
+        },
+        {
+            "value": "%ZZ",
+            "reason": "Invalid hex digits"
+        },
+        {
+            "value": "%F",
+            "reason": "Only one valid digit"
+        },
+        {
+            "value": "%1G",
+            "reason": "Second digit invalid"
+        }
+    ],
+    "ipv4address": [
+        {
+            "value": "256.256.256.256",
+            "reason": "Octets exceed 255"
+        },
+        {
+            "value": "192.168.1",
+            "reason": "Missing one octet"
+        },
+        {
+            "value": "192.168.1.1.1",
+            "reason": "Too many octets"
+        },
+        {
+            "value": "192.168.01.1",
+            "reason": "Leading zero in octet"
+        },
+        {
+            "value": "192.168.1.a",
+            "reason": "Non-digit character"
+        },
+        {
+            "value": "192.168..1",
+            "reason": "Empty octet"
+        },
+        {
+            "value": "192.168.1.-1",
+            "reason": "Negative number in octet"
+        },
+        {
+            "value": "192.168.1.256",
+            "reason": "Fourth octet out of range"
+        },
+        {
+            "value": "192.168.1.1.",
+            "reason": "Trailing dot"
+        },
+        {
+            "value": ".192.168.1.1",
+            "reason": "Leading dot"
+        },
+        {
+            "value": "192.168.1,1",
+            "reason": "Comma instead of dot"
+        },
+        {
+            "value": "192.168.1.1a",
+            "reason": "Extra characters after valid IP"
+        },
+        {
+            "value": "192.168.1.1 ",
+            "reason": "Trailing space"
+        },
+        {
+            "value": " 192.168.1.1",
+            "reason": "Leading space"
+        },
+        {
+            "value": "192.168.1.1000",
+            "reason": "Fourth octet too large"
+        },
+        {
+            "value": "999.999.999.999",
+            "reason": "All octets out of range"
+        },
+        {
+            "value": "0xC0.0xA8.0x01.0x01",
+            "reason": "Hexadecimal notation not allowed"
+        },
+        {
+            "value": "192.168.1.1\n",
+            "reason": "Newline character"
+        },
+        {
+            "value": "192.168.1.one",
+            "reason": "Spelled-out number"
+        },
+        {
+            "value": "192.168.1",
+            "reason": "Only three octets"
+        }
+    ]
+}

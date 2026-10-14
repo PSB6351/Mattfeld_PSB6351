@@ -1,0 +1,1857 @@
+{
+  "build": "pyhcf101f3_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.10",
+    "graphviz >=2.38.0",
+    "pyparsing >=3.1.0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pydot-4.0.1-pyhcf101f3_2",
+  "files": [
+    "etc/conda/test-files/pydot/1/test/__init__.py",
+    "etc/conda/test-files/pydot/1/test/compare_images.sh",
+    "etc/conda/test-files/pydot/1/test/conftest.py",
+    "etc/conda/test-files/pydot/1/test/graphs/ER.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/Heawood.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/KW91.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/Latin1.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/NaN.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/Petersen.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/a.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/abstract.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/alf.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/arrows.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/arrowsize.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/awilliams.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b102.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b106.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b117.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b123.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b124.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b135.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b143.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b145.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b146.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b15.dot_crashes_dot_bus_error",
+    "etc/conda/test-files/pydot/1/test/graphs/b155.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b22.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b278.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b29.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b3.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b33.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b34.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b36.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b488.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b491.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b51.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b53.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b545.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b56.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b57.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b58.dot_crashes_dot_abort_trap",
+    "etc/conda/test-files/pydot/1/test/graphs/b60.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b62.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b68.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b69.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b7.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b71.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b73.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b73a.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b76.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b77.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b786.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b79.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b80.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b80a.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b85.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b94.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/b993.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/bad.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/badvoro.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/big.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/biglabel.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/cairo.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/center.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clover.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust1.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust2.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust3.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust4.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/clust5.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/color.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/colors.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/colorscheme.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/complex_edges.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/compound.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/crazy.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ctext.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/d.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/dd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/decorate.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/dfa.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/dir.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/edgeclip.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/fig6.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/fsm.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/grammar.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/hashtable.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/honda-tokoro.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/html.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/html2.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/in.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/jcctree.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/jsort.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntc.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntd.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntl.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/layer.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/layer2.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/layers.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ldbxtried.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/longflat.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/lsunix.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/md5_dot.jpe_text",
+    "etc/conda/test-files/pydot/1/test/graphs/md5_orig.jpe_text",
+    "etc/conda/test-files/pydot/1/test/graphs/mike.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/mode.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/multi.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ngk10_4.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/nhg.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/nojustify.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ordering.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/overlap.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/p.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/p4.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pack.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pgram.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pm2way.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pmpipe.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/polypoly.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ports.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/proc3d.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ps.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/ps_user_shapes.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pslib.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pydot_children_wrong_order_clustlabel.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/pydot_children_wrong_order_style.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/record2.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/records.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/rowcolsep.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/rowe.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/russian.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/shapes.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/shells.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/size.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/states.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/structs.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/train11.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/trapeziumlr.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/tree.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/triedds.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/try.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/unix.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/unix2k.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/url.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/user_shapes.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/viewfile.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/viewport.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/weight.dot",
+    "etc/conda/test-files/pydot/1/test/graphs/world.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/escaped_newlines.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/escaped_quoted_label.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/hash_inside_html.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/html_labels.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/numeric_ids_unicode.dot",
+    "etc/conda/test-files/pydot/1/test/my_tests/parsing_test.dot",
+    "etc/conda/test-files/pydot/1/test/test_api.py",
+    "etc/conda/test-files/pydot/1/test/test_classes.py",
+    "etc/conda/test-files/pydot/1/test/test_logging.py",
+    "etc/conda/test-files/pydot/1/test/test_parser.py",
+    "etc/conda/test-files/pydot/1/test/test_pydot.py",
+    "lib/python3.14/site-packages/pydot/__init__.py",
+    "lib/python3.14/site-packages/pydot/_vendor/__init__.py",
+    "lib/python3.14/site-packages/pydot/_vendor/tempfile.py",
+    "lib/python3.14/site-packages/pydot/classes.py",
+    "lib/python3.14/site-packages/pydot/core.py",
+    "lib/python3.14/site-packages/pydot/dot_parser.py",
+    "lib/python3.14/site-packages/pydot/exceptions.py",
+    "lib/python3.14/site-packages/pydot/py.typed",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/METADATA",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/RECORD",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/WHEEL",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/licenses/LICENSES/MIT.txt",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/licenses/LICENSES/Python-2.0.txt",
+    "lib/python3.14/site-packages/pydot-4.0.1.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/pydot/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/_vendor/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/_vendor/__pycache__/tempfile.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/__pycache__/classes.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/__pycache__/core.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/__pycache__/dot_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/pydot/__pycache__/exceptions.cpython-314.pyc"
+  ],
+  "fn": "pydot-4.0.1-pyhcf101f3_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pydot-4.0.1-pyhcf101f3_2",
+    "type": 1
+  },
+  "md5": "15f6d0866b0997c5302fc230a566bc72",
+  "name": "pydot",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pydot-4.0.1-pyhcf101f3_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/compare_images.sh",
+        "path_type": "hardlink",
+        "sha256": "d61f1d855717f9901254bea0909b81f04068976a5ff3f65d930efdf885570743",
+        "sha256_in_prefix": "d61f1d855717f9901254bea0909b81f04068976a5ff3f65d930efdf885570743",
+        "size_in_bytes": 361
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "9e421bb125c34e68967f5459f0d61c544bfa9200d8b8860641f537532ec04191",
+        "sha256_in_prefix": "9e421bb125c34e68967f5459f0d61c544bfa9200d8b8860641f537532ec04191",
+        "size_in_bytes": 1189
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ER.dot",
+        "path_type": "hardlink",
+        "sha256": "4afff596c1f6314e3da60bc514b6004eb0f7276128c9bd00d11bbd5b708cc669",
+        "sha256_in_prefix": "4afff596c1f6314e3da60bc514b6004eb0f7276128c9bd00d11bbd5b708cc669",
+        "size_in_bytes": 650
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/Heawood.dot",
+        "path_type": "hardlink",
+        "sha256": "2c077ec5c647cff5ec58fcfcc7e578e29d08cd6cf0bb118508125a3255046a5d",
+        "sha256_in_prefix": "2c077ec5c647cff5ec58fcfcc7e578e29d08cd6cf0bb118508125a3255046a5d",
+        "size_in_bytes": 790
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/KW91.dot",
+        "path_type": "hardlink",
+        "sha256": "b60d0b6edb798a26920a665da1c8c6a73931e9a4569917fe09a0aadbb27367c5",
+        "sha256_in_prefix": "b60d0b6edb798a26920a665da1c8c6a73931e9a4569917fe09a0aadbb27367c5",
+        "size_in_bytes": 416
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/Latin1.dot",
+        "path_type": "hardlink",
+        "sha256": "8e880d6e3e3a109ea50a90706f626106dd01138c10863db180f30c7fec6a8395",
+        "sha256_in_prefix": "8e880d6e3e3a109ea50a90706f626106dd01138c10863db180f30c7fec6a8395",
+        "size_in_bytes": 99
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/NaN.dot",
+        "path_type": "hardlink",
+        "sha256": "dbcb55b7e662da32aebcda03c8f5b61ee6b412fa0c44458063529266060b2f5b",
+        "sha256_in_prefix": "dbcb55b7e662da32aebcda03c8f5b61ee6b412fa0c44458063529266060b2f5b",
+        "size_in_bytes": 2672
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/Petersen.dot",
+        "path_type": "hardlink",
+        "sha256": "aa6bc461fc55e79a012bbeb212553119f8a4a7f5a6c445783ce9200c9043f214",
+        "sha256_in_prefix": "aa6bc461fc55e79a012bbeb212553119f8a4a7f5a6c445783ce9200c9043f214",
+        "size_in_bytes": 904
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/a.dot",
+        "path_type": "hardlink",
+        "sha256": "9eac57433140408ecbc76485356d4c6f269364ff940fc357ebc67c98faa7a852",
+        "sha256_in_prefix": "9eac57433140408ecbc76485356d4c6f269364ff940fc357ebc67c98faa7a852",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/abstract.dot",
+        "path_type": "hardlink",
+        "sha256": "d1b3b4f5ab27c15025d4ca91f041b5e04a18f52b04da78a0450cea83b7b90027",
+        "sha256_in_prefix": "d1b3b4f5ab27c15025d4ca91f041b5e04a18f52b04da78a0450cea83b7b90027",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/alf.dot",
+        "path_type": "hardlink",
+        "sha256": "b8db69b03c973eb2babeae926ced1f6fe81dc9fe083b08feb07e50d01b538276",
+        "sha256_in_prefix": "b8db69b03c973eb2babeae926ced1f6fe81dc9fe083b08feb07e50d01b538276",
+        "size_in_bytes": 958
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/arrows.dot",
+        "path_type": "hardlink",
+        "sha256": "99e5e99913934f214d2326a69b650da3de372fe8ae9429a64bcddf703b91b966",
+        "sha256_in_prefix": "99e5e99913934f214d2326a69b650da3de372fe8ae9429a64bcddf703b91b966",
+        "size_in_bytes": 2117
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/arrowsize.dot",
+        "path_type": "hardlink",
+        "sha256": "68b8826a30142a5f1044ae7b33fc4fd94dc20ae1397f4231ef89eb638d20abf8",
+        "sha256_in_prefix": "68b8826a30142a5f1044ae7b33fc4fd94dc20ae1397f4231ef89eb638d20abf8",
+        "size_in_bytes": 2093
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/awilliams.dot",
+        "path_type": "hardlink",
+        "sha256": "d2ef7126661ef1b842143ee6882a86de6b4c8767c204b1bef9684241b6d8faae",
+        "sha256_in_prefix": "d2ef7126661ef1b842143ee6882a86de6b4c8767c204b1bef9684241b6d8faae",
+        "size_in_bytes": 7305
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b102.dot",
+        "path_type": "hardlink",
+        "sha256": "3e8a3163042603e3f223f89c490f613f615f5d06f6dae5379739448a4b015a6c",
+        "sha256_in_prefix": "3e8a3163042603e3f223f89c490f613f615f5d06f6dae5379739448a4b015a6c",
+        "size_in_bytes": 102329
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b106.dot",
+        "path_type": "hardlink",
+        "sha256": "471493d2484d65403af5d6808677b5e34e878cb2a68437a7949e9167d1879bdc",
+        "sha256_in_prefix": "471493d2484d65403af5d6808677b5e34e878cb2a68437a7949e9167d1879bdc",
+        "size_in_bytes": 48933
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b117.dot",
+        "path_type": "hardlink",
+        "sha256": "0b1ec30f0d36d6841d1530c2c8c9cc35568a84454341921e02c9001801cbafc5",
+        "sha256_in_prefix": "0b1ec30f0d36d6841d1530c2c8c9cc35568a84454341921e02c9001801cbafc5",
+        "size_in_bytes": 338
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b123.dot",
+        "path_type": "hardlink",
+        "sha256": "b9cbbb0bf3bb1628b1f74f1ca856d290faea257ec2e411daa6448bcec0f1dbe4",
+        "sha256_in_prefix": "b9cbbb0bf3bb1628b1f74f1ca856d290faea257ec2e411daa6448bcec0f1dbe4",
+        "size_in_bytes": 59
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b124.dot",
+        "path_type": "hardlink",
+        "sha256": "160c0a3ebc7fe927c1cb2469bf4caea1c4cbed5d3a239fc26b92da528b08ff20",
+        "sha256_in_prefix": "160c0a3ebc7fe927c1cb2469bf4caea1c4cbed5d3a239fc26b92da528b08ff20",
+        "size_in_bytes": 10284
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b135.dot",
+        "path_type": "hardlink",
+        "sha256": "d7cb9401fd17fd300f800a64a61daf0c8437a0e0e1d79be876ef276a7ed29ee4",
+        "sha256_in_prefix": "d7cb9401fd17fd300f800a64a61daf0c8437a0e0e1d79be876ef276a7ed29ee4",
+        "size_in_bytes": 74
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b143.dot",
+        "path_type": "hardlink",
+        "sha256": "5416deafa3b696ada60a8c7d20b1929f581abd0b3b6459d4fbdd1dada8718498",
+        "sha256_in_prefix": "5416deafa3b696ada60a8c7d20b1929f581abd0b3b6459d4fbdd1dada8718498",
+        "size_in_bytes": 62055
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b145.dot",
+        "path_type": "hardlink",
+        "sha256": "b645317db2aaaded9994fa0c8c24d43fa8068eedcd6abb0c7715cbbb589068ac",
+        "sha256_in_prefix": "b645317db2aaaded9994fa0c8c24d43fa8068eedcd6abb0c7715cbbb589068ac",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b146.dot",
+        "path_type": "hardlink",
+        "sha256": "0fbd6944bc51dca5e7a78ec527cae8eab34283e235f31691a77dc56cee5cd007",
+        "sha256_in_prefix": "0fbd6944bc51dca5e7a78ec527cae8eab34283e235f31691a77dc56cee5cd007",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b15.dot_crashes_dot_bus_error",
+        "path_type": "hardlink",
+        "sha256": "eaf3ebd2b5c3ebd9604cdce50a893b44c3589042a006694f72fb6873f1c47124",
+        "sha256_in_prefix": "eaf3ebd2b5c3ebd9604cdce50a893b44c3589042a006694f72fb6873f1c47124",
+        "size_in_bytes": 8774
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b155.dot",
+        "path_type": "hardlink",
+        "sha256": "442392d0099e0697d1e5b24eea69dd06ebbc741397becc5ba339a01a593c8396",
+        "sha256_in_prefix": "442392d0099e0697d1e5b24eea69dd06ebbc741397becc5ba339a01a593c8396",
+        "size_in_bytes": 542
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b22.dot",
+        "path_type": "hardlink",
+        "sha256": "e442e6bfdee8170bfbd8a0900aa8a2ef4b0ce18f9cb727c64fbbdab55ad936cc",
+        "sha256_in_prefix": "e442e6bfdee8170bfbd8a0900aa8a2ef4b0ce18f9cb727c64fbbdab55ad936cc",
+        "size_in_bytes": 488
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b278.dot",
+        "path_type": "hardlink",
+        "sha256": "0657607f68fa354530e1088267fb83d7b066243909efe50a51d62f515b53cf4c",
+        "sha256_in_prefix": "0657607f68fa354530e1088267fb83d7b066243909efe50a51d62f515b53cf4c",
+        "size_in_bytes": 134
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b29.dot",
+        "path_type": "hardlink",
+        "sha256": "c01d3bc2e3dd1e441da6c54c4ee7bd6ba15c0f7ddeaf62c23672ff29c8c62ba8",
+        "sha256_in_prefix": "c01d3bc2e3dd1e441da6c54c4ee7bd6ba15c0f7ddeaf62c23672ff29c8c62ba8",
+        "size_in_bytes": 62931
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b3.dot",
+        "path_type": "hardlink",
+        "sha256": "36c906b035d2245eb82d8ca6cd9d7471477a8ffc383340eca4bf0ffd55586413",
+        "sha256_in_prefix": "36c906b035d2245eb82d8ca6cd9d7471477a8ffc383340eca4bf0ffd55586413",
+        "size_in_bytes": 754
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b33.dot",
+        "path_type": "hardlink",
+        "sha256": "78651fdac69c23eca21dea7e8b6379b927e54af1bb1bca2843b5b0c29632ae4e",
+        "sha256_in_prefix": "78651fdac69c23eca21dea7e8b6379b927e54af1bb1bca2843b5b0c29632ae4e",
+        "size_in_bytes": 133
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b34.dot",
+        "path_type": "hardlink",
+        "sha256": "508cc8f94c66f6269493d65f2a6869d61c1dbf71f579ad1d096c976b551c833a",
+        "sha256_in_prefix": "508cc8f94c66f6269493d65f2a6869d61c1dbf71f579ad1d096c976b551c833a",
+        "size_in_bytes": 814
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b36.dot",
+        "path_type": "hardlink",
+        "sha256": "616e336c7480c7e6d17e97d4b0a5b4d2e1aadf09dbbf3425e6fd65ad8ddca490",
+        "sha256_in_prefix": "616e336c7480c7e6d17e97d4b0a5b4d2e1aadf09dbbf3425e6fd65ad8ddca490",
+        "size_in_bytes": 10388
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b488.dot",
+        "path_type": "hardlink",
+        "sha256": "e84f1559dc1141b6c08db50240f336ca5bc15f3b06d38e6a6556dd5f880b04da",
+        "sha256_in_prefix": "e84f1559dc1141b6c08db50240f336ca5bc15f3b06d38e6a6556dd5f880b04da",
+        "size_in_bytes": 410
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b491.dot",
+        "path_type": "hardlink",
+        "sha256": "65c20458f3ae2722a0ef44cffa9ab9c9fe74fa1db42260cc730f9bb21e7a1f0a",
+        "sha256_in_prefix": "65c20458f3ae2722a0ef44cffa9ab9c9fe74fa1db42260cc730f9bb21e7a1f0a",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b51.dot",
+        "path_type": "hardlink",
+        "sha256": "cae49600e9421a953d16f98da8b96546f6a43020a4084c8c95261999f5f85ac6",
+        "sha256_in_prefix": "cae49600e9421a953d16f98da8b96546f6a43020a4084c8c95261999f5f85ac6",
+        "size_in_bytes": 19886
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b53.dot",
+        "path_type": "hardlink",
+        "sha256": "19559c63c233a989301bdfc8449c059ad975127c327077d1f4c0892f569be72e",
+        "sha256_in_prefix": "19559c63c233a989301bdfc8449c059ad975127c327077d1f4c0892f569be72e",
+        "size_in_bytes": 2287
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b545.dot",
+        "path_type": "hardlink",
+        "sha256": "37425039c624c78c3c1e347fc117fe3fa1d671cc1c82f940791db692dbe96c2a",
+        "sha256_in_prefix": "37425039c624c78c3c1e347fc117fe3fa1d671cc1c82f940791db692dbe96c2a",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b56.dot",
+        "path_type": "hardlink",
+        "sha256": "e11a9b1d02dec7c2e165e0e489f4205a25407d4649576ffe8e9c948e134821b9",
+        "sha256_in_prefix": "e11a9b1d02dec7c2e165e0e489f4205a25407d4649576ffe8e9c948e134821b9",
+        "size_in_bytes": 1421
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b57.dot",
+        "path_type": "hardlink",
+        "sha256": "957a0486bf1936a4a66dea2a1c5d5b8bc86b66956dbdc74e5391a06b7be9d2f3",
+        "sha256_in_prefix": "957a0486bf1936a4a66dea2a1c5d5b8bc86b66956dbdc74e5391a06b7be9d2f3",
+        "size_in_bytes": 8472
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b58.dot_crashes_dot_abort_trap",
+        "path_type": "hardlink",
+        "sha256": "3d8f10dcc1c58e3e4a685bc33ce01add9a4aa67a87da2112778310d53dafd5f3",
+        "sha256_in_prefix": "3d8f10dcc1c58e3e4a685bc33ce01add9a4aa67a87da2112778310d53dafd5f3",
+        "size_in_bytes": 194
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b60.dot",
+        "path_type": "hardlink",
+        "sha256": "6f8ff9fbe535b786b6f93124fdf783e93b987ae3b799738cad73522f482e96e8",
+        "sha256_in_prefix": "6f8ff9fbe535b786b6f93124fdf783e93b987ae3b799738cad73522f482e96e8",
+        "size_in_bytes": 112
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b62.dot",
+        "path_type": "hardlink",
+        "sha256": "9aaa8081e79dbc4f13507719001a06fbf8bec04f3a303fdc2a8ddcd02746899e",
+        "sha256_in_prefix": "9aaa8081e79dbc4f13507719001a06fbf8bec04f3a303fdc2a8ddcd02746899e",
+        "size_in_bytes": 123
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b68.dot",
+        "path_type": "hardlink",
+        "sha256": "c3ec5058dad78219074c9bcef9b07d6383afd8ef1bc1c2908b8b21ce639a9188",
+        "sha256_in_prefix": "c3ec5058dad78219074c9bcef9b07d6383afd8ef1bc1c2908b8b21ce639a9188",
+        "size_in_bytes": 595
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b69.dot",
+        "path_type": "hardlink",
+        "sha256": "ed6f38196667b85d5ae2adcb8574b11abfc69c3d2a7fe6d53a18b8738789db41",
+        "sha256_in_prefix": "ed6f38196667b85d5ae2adcb8574b11abfc69c3d2a7fe6d53a18b8738789db41",
+        "size_in_bytes": 33033
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b7.dot",
+        "path_type": "hardlink",
+        "sha256": "eb372125773e27d4df5075aa1127e0fc67a7f1313100cd09b7bdda1ba009deb6",
+        "sha256_in_prefix": "eb372125773e27d4df5075aa1127e0fc67a7f1313100cd09b7bdda1ba009deb6",
+        "size_in_bytes": 222
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b71.dot",
+        "path_type": "hardlink",
+        "sha256": "2eb34771a659b1f337bd3f6b9e175ed25bc73bffc682f06d27340d92a6da962b",
+        "sha256_in_prefix": "2eb34771a659b1f337bd3f6b9e175ed25bc73bffc682f06d27340d92a6da962b",
+        "size_in_bytes": 2748
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b73.dot",
+        "path_type": "hardlink",
+        "sha256": "a71df6a3a1b51eda31859575db3224f4e4fb1bef45518d06359ca9dc15b29a32",
+        "sha256_in_prefix": "a71df6a3a1b51eda31859575db3224f4e4fb1bef45518d06359ca9dc15b29a32",
+        "size_in_bytes": 124
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b73a.dot",
+        "path_type": "hardlink",
+        "sha256": "f5c823f77f36f5fc00bbdb3070f3cb9ae4d51f91d8a04fcdab8e8f346c36bde6",
+        "sha256_in_prefix": "f5c823f77f36f5fc00bbdb3070f3cb9ae4d51f91d8a04fcdab8e8f346c36bde6",
+        "size_in_bytes": 134
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b76.dot",
+        "path_type": "hardlink",
+        "sha256": "71fc525dcbc3a1606a5740aba07d3541d804c70f2800acbbeb9bb0fc21012398",
+        "sha256_in_prefix": "71fc525dcbc3a1606a5740aba07d3541d804c70f2800acbbeb9bb0fc21012398",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b77.dot",
+        "path_type": "hardlink",
+        "sha256": "c8d40915282ffdcdaeae471c71d148681f0dec55d54fb99f8972c5f4413e9a5b",
+        "sha256_in_prefix": "c8d40915282ffdcdaeae471c71d148681f0dec55d54fb99f8972c5f4413e9a5b",
+        "size_in_bytes": 53
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b786.dot",
+        "path_type": "hardlink",
+        "sha256": "a763df97ff35ab286bead3f5cb6711dbbb1c54717b25ac4a7df460cd49b06343",
+        "sha256_in_prefix": "a763df97ff35ab286bead3f5cb6711dbbb1c54717b25ac4a7df460cd49b06343",
+        "size_in_bytes": 667
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b79.dot",
+        "path_type": "hardlink",
+        "sha256": "9392a64fecd2b35c4f23f27fb5e95714ba0ed70e144d629fb3d1ed621bfc7228",
+        "sha256_in_prefix": "9392a64fecd2b35c4f23f27fb5e95714ba0ed70e144d629fb3d1ed621bfc7228",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b80.dot",
+        "path_type": "hardlink",
+        "sha256": "041e8814c0c65613834b47021f0abf5a5fd8fa9fcd58510e008acfb309996fff",
+        "sha256_in_prefix": "041e8814c0c65613834b47021f0abf5a5fd8fa9fcd58510e008acfb309996fff",
+        "size_in_bytes": 81
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b80a.dot",
+        "path_type": "hardlink",
+        "sha256": "7690b7da8ff20ed393a8d66ced19e5018d02521dea0b0a906255e069ac440526",
+        "sha256_in_prefix": "7690b7da8ff20ed393a8d66ced19e5018d02521dea0b0a906255e069ac440526",
+        "size_in_bytes": 71
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b85.dot",
+        "path_type": "hardlink",
+        "sha256": "7b644e50bfe68fef140be5212be6f26339213a666c6915e627806f8755897f9f",
+        "sha256_in_prefix": "7b644e50bfe68fef140be5212be6f26339213a666c6915e627806f8755897f9f",
+        "size_in_bytes": 668
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b94.dot",
+        "path_type": "hardlink",
+        "sha256": "37f5bcf7b1edcfcfe90a594379462a1b4a927cfcbc1b491fe31731bd9deef028",
+        "sha256_in_prefix": "37f5bcf7b1edcfcfe90a594379462a1b4a927cfcbc1b491fe31731bd9deef028",
+        "size_in_bytes": 10503
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/b993.dot",
+        "path_type": "hardlink",
+        "sha256": "c66a3aeb9b8cf92adc227949af39a7b7a0b4f583138fbf9264c36b08b0f217e1",
+        "sha256_in_prefix": "c66a3aeb9b8cf92adc227949af39a7b7a0b4f583138fbf9264c36b08b0f217e1",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/bad.dot",
+        "path_type": "hardlink",
+        "sha256": "61c47d08960556de48e77cf1dbdfdd224aabaf01bf48207ec40bc880c89cef9b",
+        "sha256_in_prefix": "61c47d08960556de48e77cf1dbdfdd224aabaf01bf48207ec40bc880c89cef9b",
+        "size_in_bytes": 68
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/badvoro.dot",
+        "path_type": "hardlink",
+        "sha256": "e7918375f27e580dc714aec48f939ea19b82e4835df94fea2afc6e52ac8a1457",
+        "sha256_in_prefix": "e7918375f27e580dc714aec48f939ea19b82e4835df94fea2afc6e52ac8a1457",
+        "size_in_bytes": 33949
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/big.dot",
+        "path_type": "hardlink",
+        "sha256": "5464e4540c994f8facf571c6ec3ddf265291368aaee4d2f23c4c75499a844a1c",
+        "sha256_in_prefix": "5464e4540c994f8facf571c6ec3ddf265291368aaee4d2f23c4c75499a844a1c",
+        "size_in_bytes": 9231
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/biglabel.dot",
+        "path_type": "hardlink",
+        "sha256": "7984c93e8ce5e78c447e13a3c2922537fda790aa01831e70998781cdaa11b4ed",
+        "sha256_in_prefix": "7984c93e8ce5e78c447e13a3c2922537fda790aa01831e70998781cdaa11b4ed",
+        "size_in_bytes": 3246
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/cairo.dot",
+        "path_type": "hardlink",
+        "sha256": "a26844cd5b6d95d9840312b522559d09aca1e70b00368e2bd39b9f13a6321101",
+        "sha256_in_prefix": "a26844cd5b6d95d9840312b522559d09aca1e70b00368e2bd39b9f13a6321101",
+        "size_in_bytes": 5866
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/center.dot",
+        "path_type": "hardlink",
+        "sha256": "c7ce227b13aa17a760399428f952b355c60b214c1083c227334ad73bd8113125",
+        "sha256_in_prefix": "c7ce227b13aa17a760399428f952b355c60b214c1083c227334ad73bd8113125",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clover.dot",
+        "path_type": "hardlink",
+        "sha256": "5aea8fa6b2145e3439dd920dd171765bdd7863c21e69b91a5887d732f3342d62",
+        "sha256_in_prefix": "5aea8fa6b2145e3439dd920dd171765bdd7863c21e69b91a5887d732f3342d62",
+        "size_in_bytes": 69
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust.dot",
+        "path_type": "hardlink",
+        "sha256": "f21f7ec41df564d946522af630028cb9c90c3b2d78ce2d99afa54212e0354804",
+        "sha256_in_prefix": "f21f7ec41df564d946522af630028cb9c90c3b2d78ce2d99afa54212e0354804",
+        "size_in_bytes": 256
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust1.dot",
+        "path_type": "hardlink",
+        "sha256": "e3c09a9d55228ee642a13fd9dab55df343a1e441e97de8e1ef5d5bc8c3bfaebb",
+        "sha256_in_prefix": "e3c09a9d55228ee642a13fd9dab55df343a1e441e97de8e1ef5d5bc8c3bfaebb",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust2.dot",
+        "path_type": "hardlink",
+        "sha256": "90092757bc5966671f3349be36b9133b29732cbe739775422cf66eb6536a9af0",
+        "sha256_in_prefix": "90092757bc5966671f3349be36b9133b29732cbe739775422cf66eb6536a9af0",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust3.dot",
+        "path_type": "hardlink",
+        "sha256": "65321beb01e069143d729a158aa2546b700d25248b9ed9b4264fe6d305c49779",
+        "sha256_in_prefix": "65321beb01e069143d729a158aa2546b700d25248b9ed9b4264fe6d305c49779",
+        "size_in_bytes": 146
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust4.dot",
+        "path_type": "hardlink",
+        "sha256": "dd4f7d38966260e6a05acd03a5e1811fdd9c2863828ea616f19c24224db30c5a",
+        "sha256_in_prefix": "dd4f7d38966260e6a05acd03a5e1811fdd9c2863828ea616f19c24224db30c5a",
+        "size_in_bytes": 401
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/clust5.dot",
+        "path_type": "hardlink",
+        "sha256": "5950749bc4d1fbcc180191adcd475d3e4b6acff1e551ebebb7bb9fb4f0ce4738",
+        "sha256_in_prefix": "5950749bc4d1fbcc180191adcd475d3e4b6acff1e551ebebb7bb9fb4f0ce4738",
+        "size_in_bytes": 238
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/color.dot",
+        "path_type": "hardlink",
+        "sha256": "f239d2ddf2a81b22670b0c24c36e8028a6f333f4db202d371b918f5f519cff40",
+        "sha256_in_prefix": "f239d2ddf2a81b22670b0c24c36e8028a6f333f4db202d371b918f5f519cff40",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/colors.dot",
+        "path_type": "hardlink",
+        "sha256": "18171f4ef8dccb273e286d9af924e5a930d5a671ed9b755c71e3a50b21fa9b39",
+        "sha256_in_prefix": "18171f4ef8dccb273e286d9af924e5a930d5a671ed9b755c71e3a50b21fa9b39",
+        "size_in_bytes": 376
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/colorscheme.dot",
+        "path_type": "hardlink",
+        "sha256": "dab92b7d7b07e562f72b468480fe54757a8727b80ece63eb02e1ef2905316ef2",
+        "sha256_in_prefix": "dab92b7d7b07e562f72b468480fe54757a8727b80ece63eb02e1ef2905316ef2",
+        "size_in_bytes": 290
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/complex_edges.dot",
+        "path_type": "hardlink",
+        "sha256": "31b07ddba6249afeaaeb98aba1248008bb240082dd1867ca9fdeedb2396ad8e7",
+        "sha256_in_prefix": "31b07ddba6249afeaaeb98aba1248008bb240082dd1867ca9fdeedb2396ad8e7",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/compound.dot",
+        "path_type": "hardlink",
+        "sha256": "e8c483a91cecb91c58add92752b1dc3ff8b04dcffbc3ed107986c57d2516d033",
+        "sha256_in_prefix": "e8c483a91cecb91c58add92752b1dc3ff8b04dcffbc3ed107986c57d2516d033",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/crazy.dot",
+        "path_type": "hardlink",
+        "sha256": "1fd261fcde172be0beb452139daea0de4ce6e41e2e65449bf0fbaa55eda7a2fd",
+        "sha256_in_prefix": "1fd261fcde172be0beb452139daea0de4ce6e41e2e65449bf0fbaa55eda7a2fd",
+        "size_in_bytes": 5556
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ctext.dot",
+        "path_type": "hardlink",
+        "sha256": "47b69a22acdebd41ca6e634753de68d9b0ced3b763bf169910a9d6191da57904",
+        "sha256_in_prefix": "47b69a22acdebd41ca6e634753de68d9b0ced3b763bf169910a9d6191da57904",
+        "size_in_bytes": 427
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/d.dot",
+        "path_type": "hardlink",
+        "sha256": "0a3c37e3845e0c02b27a0a05aa7022c5a00b4c9ffbb2e19434c9f596c008b388",
+        "sha256_in_prefix": "0a3c37e3845e0c02b27a0a05aa7022c5a00b4c9ffbb2e19434c9f596c008b388",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/dd.dot",
+        "path_type": "hardlink",
+        "sha256": "63a55c88f3718a7a9241159f54c5d597f69f7713683f024d39cc9688b916ab48",
+        "sha256_in_prefix": "63a55c88f3718a7a9241159f54c5d597f69f7713683f024d39cc9688b916ab48",
+        "size_in_bytes": 1053
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/decorate.dot",
+        "path_type": "hardlink",
+        "sha256": "f3608010be36e4dcaf9b3736eedf0c6533845c9354c541fedbef0578375b8348",
+        "sha256_in_prefix": "f3608010be36e4dcaf9b3736eedf0c6533845c9354c541fedbef0578375b8348",
+        "size_in_bytes": 7561
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/dfa.dot",
+        "path_type": "hardlink",
+        "sha256": "e9f351f0fab62092ca406e74c159068d8e4a641e0ac86bd29f76fec8993e668a",
+        "sha256_in_prefix": "e9f351f0fab62092ca406e74c159068d8e4a641e0ac86bd29f76fec8993e668a",
+        "size_in_bytes": 959
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/dir.dot",
+        "path_type": "hardlink",
+        "sha256": "7de0e5c36bfadc6dbfa1d281fd1c197f0097a3ed00784ecd970bbc7a662daa21",
+        "sha256_in_prefix": "7de0e5c36bfadc6dbfa1d281fd1c197f0097a3ed00784ecd970bbc7a662daa21",
+        "size_in_bytes": 113
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/edgeclip.dot",
+        "path_type": "hardlink",
+        "sha256": "ff0b78824c7d9e6a9eef42bfbaea3faf4263a35c77d997bed0ec43ca4813c4f9",
+        "sha256_in_prefix": "ff0b78824c7d9e6a9eef42bfbaea3faf4263a35c77d997bed0ec43ca4813c4f9",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/fig6.dot",
+        "path_type": "hardlink",
+        "sha256": "8ae99d3c85b3487d9c6fc1862a93c73170bc69d1ec8267d60834ac1f89d6d264",
+        "sha256_in_prefix": "8ae99d3c85b3487d9c6fc1862a93c73170bc69d1ec8267d60834ac1f89d6d264",
+        "size_in_bytes": 835
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/fsm.dot",
+        "path_type": "hardlink",
+        "sha256": "88f0a27f933db544495310fe7fe18ae0e686e9996f9955df5c38c1a32dbbbe43",
+        "sha256_in_prefix": "88f0a27f933db544495310fe7fe18ae0e686e9996f9955df5c38c1a32dbbbe43",
+        "size_in_bytes": 605
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/grammar.dot",
+        "path_type": "hardlink",
+        "sha256": "b052afcbdde1823b112b7910bbdc46a0ff799d415e000ef08223146b951cdb65",
+        "sha256_in_prefix": "b052afcbdde1823b112b7910bbdc46a0ff799d415e000ef08223146b951cdb65",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/hashtable.dot",
+        "path_type": "hardlink",
+        "sha256": "0cb9b2c2bcf9a6a797b970a743964dc9f1219d2af5d680c1c58959f8afd0cc1a",
+        "sha256_in_prefix": "0cb9b2c2bcf9a6a797b970a743964dc9f1219d2af5d680c1c58959f8afd0cc1a",
+        "size_in_bytes": 629
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/honda-tokoro.dot",
+        "path_type": "hardlink",
+        "sha256": "d64090d432751986e72aa8a2bf3dcb48fe17931ac91ade3a1b335fb29ca3e7f3",
+        "sha256_in_prefix": "d64090d432751986e72aa8a2bf3dcb48fe17931ac91ade3a1b335fb29ca3e7f3",
+        "size_in_bytes": 3090
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/html.dot",
+        "path_type": "hardlink",
+        "sha256": "6883e25d00b2cb1ff5d8d388e8ce3661ac1ea382297b17395240646c79be2737",
+        "sha256_in_prefix": "6883e25d00b2cb1ff5d8d388e8ce3661ac1ea382297b17395240646c79be2737",
+        "size_in_bytes": 738
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/html2.dot",
+        "path_type": "hardlink",
+        "sha256": "98aa22ea856da46627dc03116e4a7452189575b54859dfce13bc78b230cc47be",
+        "sha256_in_prefix": "98aa22ea856da46627dc03116e4a7452189575b54859dfce13bc78b230cc47be",
+        "size_in_bytes": 1163
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/in.dot",
+        "path_type": "hardlink",
+        "sha256": "c1c90e966baed68e17ce9920034a6c6a9a5800529fc1fc07c29ba12a7d5fd49f",
+        "sha256_in_prefix": "c1c90e966baed68e17ce9920034a6c6a9a5800529fc1fc07c29ba12a7d5fd49f",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/jcctree.dot",
+        "path_type": "hardlink",
+        "sha256": "de3905eb3d75019ca113566b90487d0f9545eca152f4b492b4c097c659793312",
+        "sha256_in_prefix": "de3905eb3d75019ca113566b90487d0f9545eca152f4b492b4c097c659793312",
+        "size_in_bytes": 778
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/jsort.dot",
+        "path_type": "hardlink",
+        "sha256": "5527a0993b6892be73ca4ce883cc7d45855d71fc124c9eab6134b7f5a38a2e33",
+        "sha256_in_prefix": "5527a0993b6892be73ca4ce883cc7d45855d71fc124c9eab6134b7f5a38a2e33",
+        "size_in_bytes": 6189
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbc.dot",
+        "path_type": "hardlink",
+        "sha256": "a60ced791bbfdd38b38a3d6b9eff61e205bd73894594355b027e9867d299c3e0",
+        "sha256_in_prefix": "a60ced791bbfdd38b38a3d6b9eff61e205bd73894594355b027e9867d299c3e0",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbd.dot",
+        "path_type": "hardlink",
+        "sha256": "88923f00eeebba677005770c9e1661be2aa4f3d3b722c0fcb859d154a68164e5",
+        "sha256_in_prefix": "88923f00eeebba677005770c9e1661be2aa4f3d3b722c0fcb859d154a68164e5",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbl.dot",
+        "path_type": "hardlink",
+        "sha256": "d4da61d8509b109b021093a8a6c4c4601b96ee6a67a8f3d993bf72df8c6ba0e1",
+        "sha256_in_prefix": "d4da61d8509b109b021093a8a6c4c4601b96ee6a67a8f3d993bf72df8c6ba0e1",
+        "size_in_bytes": 247
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fbr.dot",
+        "path_type": "hardlink",
+        "sha256": "29bd7c2e8de9f2ea1d25c060f30e8d0093ac9a37c595095243da000f50c6863d",
+        "sha256_in_prefix": "29bd7c2e8de9f2ea1d25c060f30e8d0093ac9a37c595095243da000f50c6863d",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdc.dot",
+        "path_type": "hardlink",
+        "sha256": "8b8458cf91c40d2e2eeaa7c8938ddd5eecbd8ed37b7cbb3e86eb2465af610033",
+        "sha256_in_prefix": "8b8458cf91c40d2e2eeaa7c8938ddd5eecbd8ed37b7cbb3e86eb2465af610033",
+        "size_in_bytes": 226
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdd.dot",
+        "path_type": "hardlink",
+        "sha256": "6e6bd680336e6cc18042326834acce61c8f439f216abdd34751a67525df36c75",
+        "sha256_in_prefix": "6e6bd680336e6cc18042326834acce61c8f439f216abdd34751a67525df36c75",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdl.dot",
+        "path_type": "hardlink",
+        "sha256": "f9160357b75a50c2457db73c2de25808f25d599c8284686233ef7e0d5160ddb8",
+        "sha256_in_prefix": "f9160357b75a50c2457db73c2de25808f25d599c8284686233ef7e0d5160ddb8",
+        "size_in_bytes": 224
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-fdr.dot",
+        "path_type": "hardlink",
+        "sha256": "b97b6f5d360fc706459f6525ae704945ad41455e744178646f9a4701cb99ea9a",
+        "sha256_in_prefix": "b97b6f5d360fc706459f6525ae704945ad41455e744178646f9a4701cb99ea9a",
+        "size_in_bytes": 225
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftc.dot",
+        "path_type": "hardlink",
+        "sha256": "1e3c1e0e92dc603d2caf74713a5c085523cf392701e1e3c117685e10914c532a",
+        "sha256_in_prefix": "1e3c1e0e92dc603d2caf74713a5c085523cf392701e1e3c117685e10914c532a",
+        "size_in_bytes": 246
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftd.dot",
+        "path_type": "hardlink",
+        "sha256": "90249e9527c75ddb20b79af9bf4f6bb3c0d01de64202383193e43fe4a146f984",
+        "sha256_in_prefix": "90249e9527c75ddb20b79af9bf4f6bb3c0d01de64202383193e43fe4a146f984",
+        "size_in_bytes": 222
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftl.dot",
+        "path_type": "hardlink",
+        "sha256": "db458c867397f06627896aaa6a01d869e3028d870acc064e4182759461b74fa6",
+        "sha256_in_prefix": "db458c867397f06627896aaa6a01d869e3028d870acc064e4182759461b74fa6",
+        "size_in_bytes": 244
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ftr.dot",
+        "path_type": "hardlink",
+        "sha256": "64348b15e9850c903a1c653e5808f8beec8a7f50c1f589a4520a07c0ab5bd0f1",
+        "sha256_in_prefix": "64348b15e9850c903a1c653e5808f8beec8a7f50c1f589a4520a07c0ab5bd0f1",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbc.dot",
+        "path_type": "hardlink",
+        "sha256": "49c4bf9d3ffdd4217f173073ac31c6b91e70eda18793e00297f98e8bcf731984",
+        "sha256_in_prefix": "49c4bf9d3ffdd4217f173073ac31c6b91e70eda18793e00297f98e8bcf731984",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbd.dot",
+        "path_type": "hardlink",
+        "sha256": "4c040a3ef2bd18a15eb48865773ed61bcda769fb03601e3c1fbf04479969aaab",
+        "sha256_in_prefix": "4c040a3ef2bd18a15eb48865773ed61bcda769fb03601e3c1fbf04479969aaab",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbl.dot",
+        "path_type": "hardlink",
+        "sha256": "a45553c496843073cefedb9974bb8f38104241f1bea660ae9cf53b42070ff370",
+        "sha256_in_prefix": "a45553c496843073cefedb9974bb8f38104241f1bea660ae9cf53b42070ff370",
+        "size_in_bytes": 231
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-nbr.dot",
+        "path_type": "hardlink",
+        "sha256": "523cbae8a038e43ae8999986b83fce8bfac16abe6715d67494c841b11a463b19",
+        "sha256_in_prefix": "523cbae8a038e43ae8999986b83fce8bfac16abe6715d67494c841b11a463b19",
+        "size_in_bytes": 232
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndc.dot",
+        "path_type": "hardlink",
+        "sha256": "4cf31871633b6fce645e34b3f3e7b01077e59a735b27b056d0dc3a70a1605538",
+        "sha256_in_prefix": "4cf31871633b6fce645e34b3f3e7b01077e59a735b27b056d0dc3a70a1605538",
+        "size_in_bytes": 210
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndd.dot",
+        "path_type": "hardlink",
+        "sha256": "a27d7016a90a87cb6a01150a33e46997d124294300c9ed1ed139dd1c5c5c5093",
+        "sha256_in_prefix": "a27d7016a90a87cb6a01150a33e46997d124294300c9ed1ed139dd1c5c5c5093",
+        "size_in_bytes": 186
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndl.dot",
+        "path_type": "hardlink",
+        "sha256": "615eb7f1619acf3b0c7e5480dd8b95dd3e0f2ca90f110aa9753b56ce2b803a4a",
+        "sha256_in_prefix": "615eb7f1619acf3b0c7e5480dd8b95dd3e0f2ca90f110aa9753b56ce2b803a4a",
+        "size_in_bytes": 208
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ndr.dot",
+        "path_type": "hardlink",
+        "sha256": "875f38de0a83fd45176d67be795a63d242b9661e9a49a16186257d758b5e75ae",
+        "sha256_in_prefix": "875f38de0a83fd45176d67be795a63d242b9661e9a49a16186257d758b5e75ae",
+        "size_in_bytes": 209
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntc.dot",
+        "path_type": "hardlink",
+        "sha256": "55ec0a9ce12386af946b0aa50c06c6baf58f5336a2df67568a265c5d5f8b3239",
+        "sha256_in_prefix": "55ec0a9ce12386af946b0aa50c06c6baf58f5336a2df67568a265c5d5f8b3239",
+        "size_in_bytes": 230
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntd.dot",
+        "path_type": "hardlink",
+        "sha256": "6ed6bf64f4365bb20d00e2a81757b3cf09999aa7fe469ba9c6c5a41b0489b4c2",
+        "sha256_in_prefix": "6ed6bf64f4365bb20d00e2a81757b3cf09999aa7fe469ba9c6c5a41b0489b4c2",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntl.dot",
+        "path_type": "hardlink",
+        "sha256": "add97d7adb8acb13ee917db3455e1e4c44a0633cd7300a164d7942608d2d041a",
+        "sha256_in_prefix": "add97d7adb8acb13ee917db3455e1e4c44a0633cd7300a164d7942608d2d041a",
+        "size_in_bytes": 228
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelclust-ntr.dot",
+        "path_type": "hardlink",
+        "sha256": "05e2fb6ce790918ed4b923d51e9f94eeb99cb40416341c0f49cde046bbf2c054",
+        "sha256_in_prefix": "05e2fb6ce790918ed4b923d51e9f94eeb99cb40416341c0f49cde046bbf2c054",
+        "size_in_bytes": 229
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbc.dot",
+        "path_type": "hardlink",
+        "sha256": "4d2b1320d5311f049efc1451c3f9159257ad91f7882e2464a84ac38ab0541d1b",
+        "sha256_in_prefix": "4d2b1320d5311f049efc1451c3f9159257ad91f7882e2464a84ac38ab0541d1b",
+        "size_in_bytes": 286
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbd.dot",
+        "path_type": "hardlink",
+        "sha256": "e96891fe32177ddf4aa0fce9bd62cfa4cf932516aebed2651dbf59b6f8e9abbe",
+        "sha256_in_prefix": "e96891fe32177ddf4aa0fce9bd62cfa4cf932516aebed2651dbf59b6f8e9abbe",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbl.dot",
+        "path_type": "hardlink",
+        "sha256": "286c48185214f95ea286a0a1e29767ee98c08df59f586bb1f121e4dbe947e2eb",
+        "sha256_in_prefix": "286c48185214f95ea286a0a1e29767ee98c08df59f586bb1f121e4dbe947e2eb",
+        "size_in_bytes": 284
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fbr.dot",
+        "path_type": "hardlink",
+        "sha256": "371012d7895b009c9ee29ebfd7832f655223c5f6e878c25069a2eb56b834c2c9",
+        "sha256_in_prefix": "371012d7895b009c9ee29ebfd7832f655223c5f6e878c25069a2eb56b834c2c9",
+        "size_in_bytes": 285
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdc.dot",
+        "path_type": "hardlink",
+        "sha256": "0ae5b598cb0a9ee865c0dcb1d073fddcd174cc248df538ed9af70b2dcd48d56f",
+        "sha256_in_prefix": "0ae5b598cb0a9ee865c0dcb1d073fddcd174cc248df538ed9af70b2dcd48d56f",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdd.dot",
+        "path_type": "hardlink",
+        "sha256": "c3ffc009fc84497272430f8588515d7f52707f68343e55ab0715e66ffbca6092",
+        "sha256_in_prefix": "c3ffc009fc84497272430f8588515d7f52707f68343e55ab0715e66ffbca6092",
+        "size_in_bytes": 243
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdl.dot",
+        "path_type": "hardlink",
+        "sha256": "64620af1cb6c7de0aae16ff5d17062f1b0b251d4f455066b2ca5966c0b388c75",
+        "sha256_in_prefix": "64620af1cb6c7de0aae16ff5d17062f1b0b251d4f455066b2ca5966c0b388c75",
+        "size_in_bytes": 263
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-fdr.dot",
+        "path_type": "hardlink",
+        "sha256": "ced7c00983ce4644d0da498207c0ff61e9f9dc8911464701bd9df35b2bbf5be9",
+        "sha256_in_prefix": "ced7c00983ce4644d0da498207c0ff61e9f9dc8911464701bd9df35b2bbf5be9",
+        "size_in_bytes": 264
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftc.dot",
+        "path_type": "hardlink",
+        "sha256": "8fcb498e269361d0b835c722a3fd1432cd926e17eee495d1fd9c24062f8d55ab",
+        "sha256_in_prefix": "8fcb498e269361d0b835c722a3fd1432cd926e17eee495d1fd9c24062f8d55ab",
+        "size_in_bytes": 283
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftd.dot",
+        "path_type": "hardlink",
+        "sha256": "e1ae943f25f6feb36ba5099ce5e1c192ae6e8cfd565ecda055d0079b90ab82ff",
+        "sha256_in_prefix": "e1ae943f25f6feb36ba5099ce5e1c192ae6e8cfd565ecda055d0079b90ab82ff",
+        "size_in_bytes": 261
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftl.dot",
+        "path_type": "hardlink",
+        "sha256": "bcb8e1319959044d3f3f8401ec669d5c2107012fb019b66407fb8f3232c9e558",
+        "sha256_in_prefix": "bcb8e1319959044d3f3f8401ec669d5c2107012fb019b66407fb8f3232c9e558",
+        "size_in_bytes": 281
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ftr.dot",
+        "path_type": "hardlink",
+        "sha256": "7fd7de12c1d04b0baa37c1bc1fdcfc551b7a683419136f294e281c1d05dc96b9",
+        "sha256_in_prefix": "7fd7de12c1d04b0baa37c1bc1fdcfc551b7a683419136f294e281c1d05dc96b9",
+        "size_in_bytes": 282
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbc.dot",
+        "path_type": "hardlink",
+        "sha256": "626fa9b0033bfed1d7c5b976e77f75b8ad99e4b7c8956be3a27fc8971b586b36",
+        "sha256_in_prefix": "626fa9b0033bfed1d7c5b976e77f75b8ad99e4b7c8956be3a27fc8971b586b36",
+        "size_in_bytes": 270
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbd.dot",
+        "path_type": "hardlink",
+        "sha256": "0c4b6c22633ab11879229655953e35d2dc820cb6ca9fa2950864b44148fc2c10",
+        "sha256_in_prefix": "0c4b6c22633ab11879229655953e35d2dc820cb6ca9fa2950864b44148fc2c10",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbl.dot",
+        "path_type": "hardlink",
+        "sha256": "22bf3e49ad091b4353bfbfe3ac1d7722082cfdea7fc170170dbf1a9e6068f666",
+        "sha256_in_prefix": "22bf3e49ad091b4353bfbfe3ac1d7722082cfdea7fc170170dbf1a9e6068f666",
+        "size_in_bytes": 268
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-nbr.dot",
+        "path_type": "hardlink",
+        "sha256": "3fa66a1e646483a8afaa033b7d19a0cae72d173c4542f1c68ab8b7ee67e24175",
+        "sha256_in_prefix": "3fa66a1e646483a8afaa033b7d19a0cae72d173c4542f1c68ab8b7ee67e24175",
+        "size_in_bytes": 269
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndc.dot",
+        "path_type": "hardlink",
+        "sha256": "03b28ed2cb037730fa25aeaa72aa4e054fc572137d86b6ff3ab84acaf714487b",
+        "sha256_in_prefix": "03b28ed2cb037730fa25aeaa72aa4e054fc572137d86b6ff3ab84acaf714487b",
+        "size_in_bytes": 249
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndd.dot",
+        "path_type": "hardlink",
+        "sha256": "7331114ea81a32251df4ffbd6136dfec5dfa2d9f4c2a75babef3e1d4d96b9e74",
+        "sha256_in_prefix": "7331114ea81a32251df4ffbd6136dfec5dfa2d9f4c2a75babef3e1d4d96b9e74",
+        "size_in_bytes": 227
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndl.dot",
+        "path_type": "hardlink",
+        "sha256": "279061e813b4cd00a0ce5fc3ec496ccac7cd602bda6932c50ba7dce220d6bfbb",
+        "sha256_in_prefix": "279061e813b4cd00a0ce5fc3ec496ccac7cd602bda6932c50ba7dce220d6bfbb",
+        "size_in_bytes": 247
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ndr.dot",
+        "path_type": "hardlink",
+        "sha256": "9110da141b05674a6c0b607691e44180f8388114e7478257ede5cc57d9cdde98",
+        "sha256_in_prefix": "9110da141b05674a6c0b607691e44180f8388114e7478257ede5cc57d9cdde98",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntc.dot",
+        "path_type": "hardlink",
+        "sha256": "a6a52c1915b8a63aafc0649a016d6aded07c2fad3ff570f9527ee0cfdfb4e58a",
+        "sha256_in_prefix": "a6a52c1915b8a63aafc0649a016d6aded07c2fad3ff570f9527ee0cfdfb4e58a",
+        "size_in_bytes": 267
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntd.dot",
+        "path_type": "hardlink",
+        "sha256": "95581e0d286c4b2a9226b3a3d3812410e6178c754b448a437b56f3a109a2a4a4",
+        "sha256_in_prefix": "95581e0d286c4b2a9226b3a3d3812410e6178c754b448a437b56f3a109a2a4a4",
+        "size_in_bytes": 245
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntl.dot",
+        "path_type": "hardlink",
+        "sha256": "79d92f7ceed17236eecd29da70a0267690f3e8dad8a32587d265887adfc09577",
+        "sha256_in_prefix": "79d92f7ceed17236eecd29da70a0267690f3e8dad8a32587d265887adfc09577",
+        "size_in_bytes": 265
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/labelroot-ntr.dot",
+        "path_type": "hardlink",
+        "sha256": "d6b3825d326b01d32383fc5d26d713aec0c938c2854659c32c41c2265b58bd2c",
+        "sha256_in_prefix": "d6b3825d326b01d32383fc5d26d713aec0c938c2854659c32c41c2265b58bd2c",
+        "size_in_bytes": 266
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/layer.dot",
+        "path_type": "hardlink",
+        "sha256": "95860bd04b137574abfc531b7f612eceaf306cf3c608f42b15a068410f6d29b0",
+        "sha256_in_prefix": "95860bd04b137574abfc531b7f612eceaf306cf3c608f42b15a068410f6d29b0",
+        "size_in_bytes": 260
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/layer2.dot",
+        "path_type": "hardlink",
+        "sha256": "7a0ea14991d6162e1f00abd37eb0f36c691c50d585986d5c53f88e665b112414",
+        "sha256_in_prefix": "7a0ea14991d6162e1f00abd37eb0f36c691c50d585986d5c53f88e665b112414",
+        "size_in_bytes": 274
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/layers.dot",
+        "path_type": "hardlink",
+        "sha256": "18ab5daaf4643b557a3642e727e6709709b5eb8a3341d61c2cfa7d4b41f0ebbc",
+        "sha256_in_prefix": "18ab5daaf4643b557a3642e727e6709709b5eb8a3341d61c2cfa7d4b41f0ebbc",
+        "size_in_bytes": 258
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ldbxtried.dot",
+        "path_type": "hardlink",
+        "sha256": "ed0514ca60f477a96c87fbe02c717328505be4d0f0fa0b4462cdb0737810099d",
+        "sha256_in_prefix": "ed0514ca60f477a96c87fbe02c717328505be4d0f0fa0b4462cdb0737810099d",
+        "size_in_bytes": 5155
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/longflat.dot",
+        "path_type": "hardlink",
+        "sha256": "a360f5f985ebae0c887d99f4eacc062776d13004ce60849f7f99b41f5bb19e75",
+        "sha256_in_prefix": "a360f5f985ebae0c887d99f4eacc062776d13004ce60849f7f99b41f5bb19e75",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/lsunix.dot",
+        "path_type": "hardlink",
+        "sha256": "e70c4ea70c237cf11c528e8c6787406af1807328be0d83d454ce8dc462934ce8",
+        "sha256_in_prefix": "e70c4ea70c237cf11c528e8c6787406af1807328be0d83d454ce8dc462934ce8",
+        "size_in_bytes": 1465
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/md5_dot.jpe_text",
+        "path_type": "hardlink",
+        "sha256": "72a3fa9448604c32f1e0ae0f5ca657ae73123a0c08d591e87ad149aa3a53f439",
+        "sha256_in_prefix": "72a3fa9448604c32f1e0ae0f5ca657ae73123a0c08d591e87ad149aa3a53f439",
+        "size_in_bytes": 10582
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/md5_orig.jpe_text",
+        "path_type": "hardlink",
+        "sha256": "8685a8b00ab4b4ef2d87199570236104ebcc480776a50c3968fb1846038c307f",
+        "sha256_in_prefix": "8685a8b00ab4b4ef2d87199570236104ebcc480776a50c3968fb1846038c307f",
+        "size_in_bytes": 11461
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/mike.dot",
+        "path_type": "hardlink",
+        "sha256": "d812f4b8fe5d4764140d59e7c992d4f94b1e4c403ac6945f94e7c3bd614e5960",
+        "sha256_in_prefix": "d812f4b8fe5d4764140d59e7c992d4f94b1e4c403ac6945f94e7c3bd614e5960",
+        "size_in_bytes": 381
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/mode.dot",
+        "path_type": "hardlink",
+        "sha256": "66aadd8feeb00f9173cf63fea34bb28378cf88e2b0166b2428487cb9ed9fac98",
+        "sha256_in_prefix": "66aadd8feeb00f9173cf63fea34bb28378cf88e2b0166b2428487cb9ed9fac98",
+        "size_in_bytes": 14907
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/multi.dot",
+        "path_type": "hardlink",
+        "sha256": "a4f4afcf4ffb6f05d67abece297637a8eaa3d9cf9eeeea617b24e03dd0ed91f0",
+        "sha256_in_prefix": "a4f4afcf4ffb6f05d67abece297637a8eaa3d9cf9eeeea617b24e03dd0ed91f0",
+        "size_in_bytes": 48
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ngk10_4.dot",
+        "path_type": "hardlink",
+        "sha256": "8b13c8cd0059af18c653ceb92cc0f4b4268d605f63164dcdd8c03550e3fad1f9",
+        "sha256_in_prefix": "8b13c8cd0059af18c653ceb92cc0f4b4268d605f63164dcdd8c03550e3fad1f9",
+        "size_in_bytes": 1718
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/nhg.dot",
+        "path_type": "hardlink",
+        "sha256": "9d0af0732c8c2143141d7ddafb5dd448696b9123711c3f0c5cd42c3a50bf6416",
+        "sha256_in_prefix": "9d0af0732c8c2143141d7ddafb5dd448696b9123711c3f0c5cd42c3a50bf6416",
+        "size_in_bytes": 339
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/nojustify.dot",
+        "path_type": "hardlink",
+        "sha256": "a8c0a9a698b3e5403c21be9273a56fbf2eed992c5ba239ea2a2ffc93d11a8420",
+        "sha256_in_prefix": "a8c0a9a698b3e5403c21be9273a56fbf2eed992c5ba239ea2a2ffc93d11a8420",
+        "size_in_bytes": 268
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ordering.dot",
+        "path_type": "hardlink",
+        "sha256": "37cc108e886ebdf3b923b3963d82e8d1343a609f59b4d9116e3b480fafe96414",
+        "sha256_in_prefix": "37cc108e886ebdf3b923b3963d82e8d1343a609f59b4d9116e3b480fafe96414",
+        "size_in_bytes": 161
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/overlap.dot",
+        "path_type": "hardlink",
+        "sha256": "f11546b01c43eadbf2c481cb75877be3cb146d68d366e651a861b0c9f3d98acf",
+        "sha256_in_prefix": "f11546b01c43eadbf2c481cb75877be3cb146d68d366e651a861b0c9f3d98acf",
+        "size_in_bytes": 1357
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/p.dot",
+        "path_type": "hardlink",
+        "sha256": "771e456efec96fae1b51da3da3bf1b2fc05e9434fab49d8adec325b5818e847e",
+        "sha256_in_prefix": "771e456efec96fae1b51da3da3bf1b2fc05e9434fab49d8adec325b5818e847e",
+        "size_in_bytes": 259
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/p4.dot",
+        "path_type": "hardlink",
+        "sha256": "46e3436c25cd861095f3441a316852db91e89257866b30937ece9b43f54ba1af",
+        "sha256_in_prefix": "46e3436c25cd861095f3441a316852db91e89257866b30937ece9b43f54ba1af",
+        "size_in_bytes": 309
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pack.dot",
+        "path_type": "hardlink",
+        "sha256": "ebfad7087e945917f1312fb138289ce03e814d5054ed0470556b4bfc22a1672f",
+        "sha256_in_prefix": "ebfad7087e945917f1312fb138289ce03e814d5054ed0470556b4bfc22a1672f",
+        "size_in_bytes": 131
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pgram.dot",
+        "path_type": "hardlink",
+        "sha256": "8bb210bc824dd5f8d9e26591b90dd8665d376369f8d3a0fa85439617c3c61cb6",
+        "sha256_in_prefix": "8bb210bc824dd5f8d9e26591b90dd8665d376369f8d3a0fa85439617c3c61cb6",
+        "size_in_bytes": 2614
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pm2way.dot",
+        "path_type": "hardlink",
+        "sha256": "76bad46eff8906d09703b34e185e714f26f88f6ee32b35105ef7baa8d475bebf",
+        "sha256_in_prefix": "76bad46eff8906d09703b34e185e714f26f88f6ee32b35105ef7baa8d475bebf",
+        "size_in_bytes": 2020
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pmpipe.dot",
+        "path_type": "hardlink",
+        "sha256": "f54994f8b83d64b70881d806d77dcfb0ce87bfa0eef28ef87265620719f4650c",
+        "sha256_in_prefix": "f54994f8b83d64b70881d806d77dcfb0ce87bfa0eef28ef87265620719f4650c",
+        "size_in_bytes": 3499
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/polypoly.dot",
+        "path_type": "hardlink",
+        "sha256": "20970a77dd5e6e8b3074e1a78e137c0c24bc013582c1f2124042d0e376760b33",
+        "sha256_in_prefix": "20970a77dd5e6e8b3074e1a78e137c0c24bc013582c1f2124042d0e376760b33",
+        "size_in_bytes": 6617
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ports.dot",
+        "path_type": "hardlink",
+        "sha256": "a21dbc8230ea2faa8672f500511a26cf2b326916bcafde62c037bec75ba86b92",
+        "sha256_in_prefix": "a21dbc8230ea2faa8672f500511a26cf2b326916bcafde62c037bec75ba86b92",
+        "size_in_bytes": 739
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/proc3d.dot",
+        "path_type": "hardlink",
+        "sha256": "97090e19671ca02443809d2b18ad9d07d49232261d7e77ca621cc4aea7c8ae4f",
+        "sha256_in_prefix": "97090e19671ca02443809d2b18ad9d07d49232261d7e77ca621cc4aea7c8ae4f",
+        "size_in_bytes": 6121
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ps.dot",
+        "path_type": "hardlink",
+        "sha256": "fc7986129f26e9beb2503f424f35014a40c57d55cedd9c49c403dd8e722c97a3",
+        "sha256_in_prefix": "fc7986129f26e9beb2503f424f35014a40c57d55cedd9c49c403dd8e722c97a3",
+        "size_in_bytes": 55
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/ps_user_shapes.dot",
+        "path_type": "hardlink",
+        "sha256": "a4c923ce8e22a2b47627e9645da78edb6225a50e9168fdbb041d1c8b83d96523",
+        "sha256_in_prefix": "a4c923ce8e22a2b47627e9645da78edb6225a50e9168fdbb041d1c8b83d96523",
+        "size_in_bytes": 29
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pslib.dot",
+        "path_type": "hardlink",
+        "sha256": "e19bb235220ee592ed4ea80675a4ad6fee8fbe9c2e6af66e5a21447d6346ab87",
+        "sha256_in_prefix": "e19bb235220ee592ed4ea80675a4ad6fee8fbe9c2e6af66e5a21447d6346ab87",
+        "size_in_bytes": 5899
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pydot_children_wrong_order_clustlabel.dot",
+        "path_type": "hardlink",
+        "sha256": "2106e6823bc04305cd2397ecd4f1903b20aed74e2abd8007c03f732ec913a143",
+        "sha256_in_prefix": "2106e6823bc04305cd2397ecd4f1903b20aed74e2abd8007c03f732ec913a143",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/pydot_children_wrong_order_style.dot",
+        "path_type": "hardlink",
+        "sha256": "057659bbd4d0032ae3b9e0f6a6f8470c8972e171f7313f0e7a9f380fa45ae984",
+        "sha256_in_prefix": "057659bbd4d0032ae3b9e0f6a6f8470c8972e171f7313f0e7a9f380fa45ae984",
+        "size_in_bytes": 983
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/record2.dot",
+        "path_type": "hardlink",
+        "sha256": "c37166e504a3ed903e84b3ed9e60497b169e0c94519cfbb6fc299c573755e5be",
+        "sha256_in_prefix": "c37166e504a3ed903e84b3ed9e60497b169e0c94519cfbb6fc299c573755e5be",
+        "size_in_bytes": 155
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/records.dot",
+        "path_type": "hardlink",
+        "sha256": "c10edfa3319011c257c31eb0ccf11e6fa762c7cc9d7af0ddae663b04184d6d6a",
+        "sha256_in_prefix": "c10edfa3319011c257c31eb0ccf11e6fa762c7cc9d7af0ddae663b04184d6d6a",
+        "size_in_bytes": 415
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/rowcolsep.dot",
+        "path_type": "hardlink",
+        "sha256": "8ebc9309c3c358aafd6f7041f32b6b54670809e47260d5a746e9fac7267687f5",
+        "sha256_in_prefix": "8ebc9309c3c358aafd6f7041f32b6b54670809e47260d5a746e9fac7267687f5",
+        "size_in_bytes": 86
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/rowe.dot",
+        "path_type": "hardlink",
+        "sha256": "68740927c4c37ebecc6cfdc9708ab57ab4fa8d6157b3637540285c85b6640437",
+        "sha256_in_prefix": "68740927c4c37ebecc6cfdc9708ab57ab4fa8d6157b3637540285c85b6640437",
+        "size_in_bytes": 765
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/russian.dot",
+        "path_type": "hardlink",
+        "sha256": "72b51763a249ee73252dfefca3abf77b975d9358781bcace40b0daec868a5f3e",
+        "sha256_in_prefix": "72b51763a249ee73252dfefca3abf77b975d9358781bcace40b0daec868a5f3e",
+        "size_in_bytes": 520
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/shapes.dot",
+        "path_type": "hardlink",
+        "sha256": "01a434e5a10fa24c57863a5b17bb563d3fa284b8a0197d186537ea57e33cb6b6",
+        "sha256_in_prefix": "01a434e5a10fa24c57863a5b17bb563d3fa284b8a0197d186537ea57e33cb6b6",
+        "size_in_bytes": 816
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/shells.dot",
+        "path_type": "hardlink",
+        "sha256": "a9f70bd7db220ea974af49b02a513ccdf8c03630dcfa920a109e6da57bcbc426",
+        "sha256_in_prefix": "a9f70bd7db220ea974af49b02a513ccdf8c03630dcfa920a109e6da57bcbc426",
+        "size_in_bytes": 1102
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/size.dot",
+        "path_type": "hardlink",
+        "sha256": "77d1ce8d409574a3078346875808bcf81e5db87b920c057f6e1e2d1c601dcef1",
+        "sha256_in_prefix": "77d1ce8d409574a3078346875808bcf81e5db87b920c057f6e1e2d1c601dcef1",
+        "size_in_bytes": 1706
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/states.dot",
+        "path_type": "hardlink",
+        "sha256": "87e11fb6966046935f2b4be5b54672a52d9987219f872cdee0b65967bbcd5f09",
+        "sha256_in_prefix": "87e11fb6966046935f2b4be5b54672a52d9987219f872cdee0b65967bbcd5f09",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/structs.dot",
+        "path_type": "hardlink",
+        "sha256": "ea14daff31015605337ac58eba41baaaa3e3205964098984bcbb96c6033e8636",
+        "sha256_in_prefix": "ea14daff31015605337ac58eba41baaaa3e3205964098984bcbb96c6033e8636",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/train11.dot",
+        "path_type": "hardlink",
+        "sha256": "5378b7b4286a84daf647f74998ad3e4f241510b24aaac3b855250ef8e1f7101a",
+        "sha256_in_prefix": "5378b7b4286a84daf647f74998ad3e4f241510b24aaac3b855250ef8e1f7101a",
+        "size_in_bytes": 777
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/trapeziumlr.dot",
+        "path_type": "hardlink",
+        "sha256": "043f5b11cd27f4e3d668020c3244217f1dfe562a5331a0e8ae7ae73998d59c73",
+        "sha256_in_prefix": "043f5b11cd27f4e3d668020c3244217f1dfe562a5331a0e8ae7ae73998d59c73",
+        "size_in_bytes": 1484
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/tree.dot",
+        "path_type": "hardlink",
+        "sha256": "e2bfbcabc74746af4021ccdaaaca0ef1c90ce8390e0b4d7aaafb77756c0a2cbd",
+        "sha256_in_prefix": "e2bfbcabc74746af4021ccdaaaca0ef1c90ce8390e0b4d7aaafb77756c0a2cbd",
+        "size_in_bytes": 588
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/triedds.dot",
+        "path_type": "hardlink",
+        "sha256": "0b50ddccb90cf82a97d9a8bc2c6e60d08e7c652b9da26ac7bd363f3e39909541",
+        "sha256_in_prefix": "0b50ddccb90cf82a97d9a8bc2c6e60d08e7c652b9da26ac7bd363f3e39909541",
+        "size_in_bytes": 1610
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/try.dot",
+        "path_type": "hardlink",
+        "sha256": "bc6d17fe4b4ede5490ed7ff5d8a020f6a6043e877aa071896dfd7f2c6dd3abb8",
+        "sha256_in_prefix": "bc6d17fe4b4ede5490ed7ff5d8a020f6a6043e877aa071896dfd7f2c6dd3abb8",
+        "size_in_bytes": 163
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/unix.dot",
+        "path_type": "hardlink",
+        "sha256": "e2c0157140642c42f3165f81bc81125ae0516110f7916dc7464f26bbfb881b1a",
+        "sha256_in_prefix": "e2c0157140642c42f3165f81bc81125ae0516110f7916dc7464f26bbfb881b1a",
+        "size_in_bytes": 1433
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/unix2k.dot",
+        "path_type": "hardlink",
+        "sha256": "49d1139d83b83eab9f45bc0b89c66bb26553f4098e503af0c3a3724d61c23df4",
+        "sha256_in_prefix": "49d1139d83b83eab9f45bc0b89c66bb26553f4098e503af0c3a3724d61c23df4",
+        "size_in_bytes": 1719
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/url.dot",
+        "path_type": "hardlink",
+        "sha256": "67751836aac1c30d1f1e00e9f9c832ab6d83e127abf671a4a7190866dd5795cd",
+        "sha256_in_prefix": "67751836aac1c30d1f1e00e9f9c832ab6d83e127abf671a4a7190866dd5795cd",
+        "size_in_bytes": 1248
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/user_shapes.dot",
+        "path_type": "hardlink",
+        "sha256": "69516adc6a12ec5c1b8eb87ae452d512331edc68896c418278a662ecbd056dd1",
+        "sha256_in_prefix": "69516adc6a12ec5c1b8eb87ae452d512331edc68896c418278a662ecbd056dd1",
+        "size_in_bytes": 119
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/viewfile.dot",
+        "path_type": "hardlink",
+        "sha256": "5c3944f1ee97fbb35a15e57e878048b50049b1ea7ce77f1a1e19960de7358f52",
+        "sha256_in_prefix": "5c3944f1ee97fbb35a15e57e878048b50049b1ea7ce77f1a1e19960de7358f52",
+        "size_in_bytes": 1767
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/viewport.dot",
+        "path_type": "hardlink",
+        "sha256": "33f5240e5a12bf8599ecb2d4d339b7926040624c69611f6889cdda44d328598c",
+        "sha256_in_prefix": "33f5240e5a12bf8599ecb2d4d339b7926040624c69611f6889cdda44d328598c",
+        "size_in_bytes": 37292
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/weight.dot",
+        "path_type": "hardlink",
+        "sha256": "0906d75c9e6753273512b7f83abcb03484c27e61a88bce62cfada1d7b898eac1",
+        "sha256_in_prefix": "0906d75c9e6753273512b7f83abcb03484c27e61a88bce62cfada1d7b898eac1",
+        "size_in_bytes": 1720
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/graphs/world.dot",
+        "path_type": "hardlink",
+        "sha256": "20d53d78ca4723c9e8cf8099e71702b5f0f4b283d6845417b41875c35c11c772",
+        "sha256_in_prefix": "20d53d78ca4723c9e8cf8099e71702b5f0f4b283d6845417b41875c35c11c772",
+        "size_in_bytes": 980
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/escaped_newlines.dot",
+        "path_type": "hardlink",
+        "sha256": "1e3c7ee6dfbafb89b7c640ef740ca9180223b48ac02ef92e979d5de5dedf43ab",
+        "sha256_in_prefix": "1e3c7ee6dfbafb89b7c640ef740ca9180223b48ac02ef92e979d5de5dedf43ab",
+        "size_in_bytes": 63
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/escaped_quoted_label.dot",
+        "path_type": "hardlink",
+        "sha256": "511cb1defd2f2dd0566d07d41d69b5a2e5db9f2e46f0afcad783b9c652c3e17b",
+        "sha256_in_prefix": "511cb1defd2f2dd0566d07d41d69b5a2e5db9f2e46f0afcad783b9c652c3e17b",
+        "size_in_bytes": 66
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/hash_inside_html.dot",
+        "path_type": "hardlink",
+        "sha256": "c8e3d824290f611b8c4dc391bc6ad698512ba76a3ef0742370af2a66de8ed4d8",
+        "sha256_in_prefix": "c8e3d824290f611b8c4dc391bc6ad698512ba76a3ef0742370af2a66de8ed4d8",
+        "size_in_bytes": 221
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/html_labels.dot",
+        "path_type": "hardlink",
+        "sha256": "ad59aa182cee2bb84222d93ba25651c146842fd45e1e48a5dac40736c0ba8e66",
+        "sha256_in_prefix": "ad59aa182cee2bb84222d93ba25651c146842fd45e1e48a5dac40736c0ba8e66",
+        "size_in_bytes": 342
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/numeric_ids_unicode.dot",
+        "path_type": "hardlink",
+        "sha256": "308eb8048fdd37394e810dd3b0a0c145814ecf0111d871ef8f1ce81a908b45f6",
+        "sha256_in_prefix": "308eb8048fdd37394e810dd3b0a0c145814ecf0111d871ef8f1ce81a908b45f6",
+        "size_in_bytes": 617
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/my_tests/parsing_test.dot",
+        "path_type": "hardlink",
+        "sha256": "f4eddd28a15df7f2c8628ebc5cea09dcc29748234cbb3f5aa27a35b79f7136be",
+        "sha256_in_prefix": "f4eddd28a15df7f2c8628ebc5cea09dcc29748234cbb3f5aa27a35b79f7136be",
+        "size_in_bytes": 2472
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/test_api.py",
+        "path_type": "hardlink",
+        "sha256": "e28cae9dfaa81ee3ed5b41265b5523fed6a092ac82d8809fe6ce2db0158cf14b",
+        "sha256_in_prefix": "e28cae9dfaa81ee3ed5b41265b5523fed6a092ac82d8809fe6ce2db0158cf14b",
+        "size_in_bytes": 15152
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/test_classes.py",
+        "path_type": "hardlink",
+        "sha256": "6b9a83bbc4e2c5fa31b844e5031e32e614412633117bae038600c7d185c3f938",
+        "sha256_in_prefix": "6b9a83bbc4e2c5fa31b844e5031e32e614412633117bae038600c7d185c3f938",
+        "size_in_bytes": 1835
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/test_logging.py",
+        "path_type": "hardlink",
+        "sha256": "bfc520b831cdbd0623d3d5e6ba7b81f1c1971e34f8ecfc5ada718be78b5e59fd",
+        "sha256_in_prefix": "bfc520b831cdbd0623d3d5e6ba7b81f1c1971e34f8ecfc5ada718be78b5e59fd",
+        "size_in_bytes": 821
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/test_parser.py",
+        "path_type": "hardlink",
+        "sha256": "ca0820ce92760af996204721c658b209b415569a5c72a75069e5ad3b17a87efd",
+        "sha256_in_prefix": "ca0820ce92760af996204721c658b209b415569a5c72a75069e5ad3b17a87efd",
+        "size_in_bytes": 4833
+      },
+      {
+        "_path": "etc/conda/test-files/pydot/1/test/test_pydot.py",
+        "path_type": "hardlink",
+        "sha256": "7736cd5cb645f1bf40144d529f4ce12196456f57228a7693bbfbfb96376b2df6",
+        "sha256_in_prefix": "7736cd5cb645f1bf40144d529f4ce12196456f57228a7693bbfbfb96376b2df6",
+        "size_in_bytes": 8026
+      },
+      {
+        "_path": "site-packages/pydot/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "99da8598f0d0c7946bfb8fe177e2385ff441533e4df7d52053102853ef353da6",
+        "sha256_in_prefix": "99da8598f0d0c7946bfb8fe177e2385ff441533e4df7d52053102853ef353da6",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "site-packages/pydot/_vendor/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pydot/_vendor/tempfile.py",
+        "path_type": "hardlink",
+        "sha256": "c8568cb2cdff9cbcbc99990fb664480571509870c5c601f163cb4e8576aa97e8",
+        "sha256_in_prefix": "c8568cb2cdff9cbcbc99990fb664480571509870c5c601f163cb4e8576aa97e8",
+        "size_in_bytes": 32187
+      },
+      {
+        "_path": "site-packages/pydot/classes.py",
+        "path_type": "hardlink",
+        "sha256": "06f4d90aaf5e84f628fc21579d1eda927fe686259ffbe04188b31aa933fe1e55",
+        "sha256_in_prefix": "06f4d90aaf5e84f628fc21579d1eda927fe686259ffbe04188b31aa933fe1e55",
+        "size_in_bytes": 2720
+      },
+      {
+        "_path": "site-packages/pydot/core.py",
+        "path_type": "hardlink",
+        "sha256": "dfb914f6d162c21bdb0fa72f31914aef4a4634ee50a77b20f1b3df5d7f059e09",
+        "sha256_in_prefix": "dfb914f6d162c21bdb0fa72f31914aef4a4634ee50a77b20f1b3df5d7f059e09",
+        "size_in_bytes": 56510
+      },
+      {
+        "_path": "site-packages/pydot/dot_parser.py",
+        "path_type": "hardlink",
+        "sha256": "ee2af37f2857c9779cd7e49328f42ab2ee16fe63311a6174cd8072d67acd5d1f",
+        "sha256_in_prefix": "ee2af37f2857c9779cd7e49328f42ab2ee16fe63311a6174cd8072d67acd5d1f",
+        "size_in_bytes": 11106
+      },
+      {
+        "_path": "site-packages/pydot/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "bb654783e1301c1dac1e6e1e85225d0a8bf2363b24865f046cbc34b60a053e1f",
+        "sha256_in_prefix": "bb654783e1301c1dac1e6e1e85225d0a8bf2363b24865f046cbc34b60a053e1f",
+        "size_in_bytes": 656
+      },
+      {
+        "_path": "site-packages/pydot/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ccff72ac79446d01743370f6be3b3e4d656e96b5fa0bfff57af8fc30968a4191",
+        "sha256_in_prefix": "ccff72ac79446d01743370f6be3b3e4d656e96b5fa0bfff57af8fc30968a4191",
+        "size_in_bytes": 11232
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "2e98ecaf9cd4ad9da1cdcd64308fbbda9c5e101f6b1dce66f978e94682b5b69f",
+        "sha256_in_prefix": "2e98ecaf9cd4ad9da1cdcd64308fbbda9c5e101f6b1dce66f978e94682b5b69f",
+        "size_in_bytes": 1721
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "sha256_in_prefix": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "463e86a35be3790ba73ea3a780d769fbca3981f038b9164d205821aa1e7af139",
+        "sha256_in_prefix": "463e86a35be3790ba73ea3a780d769fbca3981f038b9164d205821aa1e7af139",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/licenses/LICENSES/MIT.txt",
+        "path_type": "hardlink",
+        "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+        "sha256_in_prefix": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+        "size_in_bytes": 1078
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/licenses/LICENSES/Python-2.0.txt",
+        "path_type": "hardlink",
+        "sha256": "893c2bafbb8133f7aa97e1f79a3ee3241ebca7025f56278e9e1f72bb98592f9d",
+        "sha256_in_prefix": "893c2bafbb8133f7aa97e1f79a3ee3241ebca7025f56278e9e1f72bb98592f9d",
+        "size_in_bytes": 9411
+      },
+      {
+        "_path": "site-packages/pydot-4.0.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "80dc4c221b881bb1ccc075af9df3a6c150e234812743559d06fca97f22f4d605",
+        "sha256_in_prefix": "80dc4c221b881bb1ccc075af9df3a6c150e234812743559d06fca97f22f4d605",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/_vendor/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/_vendor/__pycache__/tempfile.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/__pycache__/classes.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/__pycache__/core.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/__pycache__/dot_parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pydot/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "af7213a8ca077895e7e10c8f33d5de3436b8a26828422e8a113cc59c9277a3e2",
+  "size": 150656,
+  "subdir": "noarch",
+  "timestamp": 1766345630000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pydot-4.0.1-pyhcf101f3_2.conda",
+  "version": "4.0.1"
+}

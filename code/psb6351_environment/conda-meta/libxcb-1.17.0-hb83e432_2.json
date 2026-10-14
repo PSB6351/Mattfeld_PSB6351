@@ -1,0 +1,1116 @@
+{
+  "build": "hb83e432_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "pthread-stubs",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "xorg-libxau >=1.0.12,<2.0a0",
+    "xorg-libxdmcp >=1.1.5,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libxcb-1.17.0-hb83e432_2",
+  "files": [
+    "include/xcb/bigreq.h",
+    "include/xcb/composite.h",
+    "include/xcb/damage.h",
+    "include/xcb/dbe.h",
+    "include/xcb/dpms.h",
+    "include/xcb/dri2.h",
+    "include/xcb/dri3.h",
+    "include/xcb/ge.h",
+    "include/xcb/glx.h",
+    "include/xcb/present.h",
+    "include/xcb/randr.h",
+    "include/xcb/record.h",
+    "include/xcb/render.h",
+    "include/xcb/res.h",
+    "include/xcb/screensaver.h",
+    "include/xcb/shape.h",
+    "include/xcb/shm.h",
+    "include/xcb/sync.h",
+    "include/xcb/xc_misc.h",
+    "include/xcb/xcb.h",
+    "include/xcb/xcbext.h",
+    "include/xcb/xevie.h",
+    "include/xcb/xf86dri.h",
+    "include/xcb/xfixes.h",
+    "include/xcb/xinerama.h",
+    "include/xcb/xinput.h",
+    "include/xcb/xkb.h",
+    "include/xcb/xprint.h",
+    "include/xcb/xproto.h",
+    "include/xcb/xselinux.h",
+    "include/xcb/xtest.h",
+    "include/xcb/xv.h",
+    "include/xcb/xvmc.h",
+    "lib/libxcb-composite.so",
+    "lib/libxcb-composite.so.0",
+    "lib/libxcb-composite.so.0.0.0",
+    "lib/libxcb-damage.so",
+    "lib/libxcb-damage.so.0",
+    "lib/libxcb-damage.so.0.0.0",
+    "lib/libxcb-dbe.so",
+    "lib/libxcb-dbe.so.0",
+    "lib/libxcb-dbe.so.0.0.0",
+    "lib/libxcb-dpms.so",
+    "lib/libxcb-dpms.so.0",
+    "lib/libxcb-dpms.so.0.0.0",
+    "lib/libxcb-dri2.so",
+    "lib/libxcb-dri2.so.0",
+    "lib/libxcb-dri2.so.0.0.0",
+    "lib/libxcb-dri3.so",
+    "lib/libxcb-dri3.so.0",
+    "lib/libxcb-dri3.so.0.1.0",
+    "lib/libxcb-glx.so",
+    "lib/libxcb-glx.so.0",
+    "lib/libxcb-glx.so.0.0.0",
+    "lib/libxcb-present.so",
+    "lib/libxcb-present.so.0",
+    "lib/libxcb-present.so.0.0.0",
+    "lib/libxcb-randr.so",
+    "lib/libxcb-randr.so.0",
+    "lib/libxcb-randr.so.0.1.0",
+    "lib/libxcb-record.so",
+    "lib/libxcb-record.so.0",
+    "lib/libxcb-record.so.0.0.0",
+    "lib/libxcb-render.so",
+    "lib/libxcb-render.so.0",
+    "lib/libxcb-render.so.0.0.0",
+    "lib/libxcb-res.so",
+    "lib/libxcb-res.so.0",
+    "lib/libxcb-res.so.0.0.0",
+    "lib/libxcb-screensaver.so",
+    "lib/libxcb-screensaver.so.0",
+    "lib/libxcb-screensaver.so.0.0.0",
+    "lib/libxcb-shape.so",
+    "lib/libxcb-shape.so.0",
+    "lib/libxcb-shape.so.0.0.0",
+    "lib/libxcb-shm.so",
+    "lib/libxcb-shm.so.0",
+    "lib/libxcb-shm.so.0.0.0",
+    "lib/libxcb-sync.so",
+    "lib/libxcb-sync.so.1",
+    "lib/libxcb-sync.so.1.0.0",
+    "lib/libxcb-xf86dri.so",
+    "lib/libxcb-xf86dri.so.0",
+    "lib/libxcb-xf86dri.so.0.0.0",
+    "lib/libxcb-xfixes.so",
+    "lib/libxcb-xfixes.so.0",
+    "lib/libxcb-xfixes.so.0.0.0",
+    "lib/libxcb-xinerama.so",
+    "lib/libxcb-xinerama.so.0",
+    "lib/libxcb-xinerama.so.0.0.0",
+    "lib/libxcb-xinput.so",
+    "lib/libxcb-xinput.so.0",
+    "lib/libxcb-xinput.so.0.1.0",
+    "lib/libxcb-xkb.so",
+    "lib/libxcb-xkb.so.1",
+    "lib/libxcb-xkb.so.1.0.0",
+    "lib/libxcb-xlib.so.0",
+    "lib/libxcb-xlib.so.0.0.0",
+    "lib/libxcb-xtest.so",
+    "lib/libxcb-xtest.so.0",
+    "lib/libxcb-xtest.so.0.0.0",
+    "lib/libxcb-xv.so",
+    "lib/libxcb-xv.so.0",
+    "lib/libxcb-xv.so.0.0.0",
+    "lib/libxcb-xvmc.so",
+    "lib/libxcb-xvmc.so.0",
+    "lib/libxcb-xvmc.so.0.0.0",
+    "lib/libxcb.so",
+    "lib/libxcb.so.1",
+    "lib/libxcb.so.1.1.0",
+    "lib/pkgconfig/xcb-composite.pc",
+    "lib/pkgconfig/xcb-damage.pc",
+    "lib/pkgconfig/xcb-dbe.pc",
+    "lib/pkgconfig/xcb-dpms.pc",
+    "lib/pkgconfig/xcb-dri2.pc",
+    "lib/pkgconfig/xcb-dri3.pc",
+    "lib/pkgconfig/xcb-glx.pc",
+    "lib/pkgconfig/xcb-present.pc",
+    "lib/pkgconfig/xcb-randr.pc",
+    "lib/pkgconfig/xcb-record.pc",
+    "lib/pkgconfig/xcb-render.pc",
+    "lib/pkgconfig/xcb-res.pc",
+    "lib/pkgconfig/xcb-screensaver.pc",
+    "lib/pkgconfig/xcb-shape.pc",
+    "lib/pkgconfig/xcb-shm.pc",
+    "lib/pkgconfig/xcb-sync.pc",
+    "lib/pkgconfig/xcb-xf86dri.pc",
+    "lib/pkgconfig/xcb-xfixes.pc",
+    "lib/pkgconfig/xcb-xinerama.pc",
+    "lib/pkgconfig/xcb-xinput.pc",
+    "lib/pkgconfig/xcb-xkb.pc",
+    "lib/pkgconfig/xcb-xtest.pc",
+    "lib/pkgconfig/xcb-xv.pc",
+    "lib/pkgconfig/xcb-xvmc.pc",
+    "lib/pkgconfig/xcb.pc"
+  ],
+  "fn": "libxcb-1.17.0-hb83e432_2.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libxcb-1.17.0-hb83e432_2",
+    "type": 1
+  },
+  "md5": "61f0ffba9161cbb3a77722869b21e4bb",
+  "name": "libxcb",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libxcb-1.17.0-hb83e432_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/xcb/bigreq.h",
+        "path_type": "hardlink",
+        "sha256": "bbc4c19af6fca3cf9bf284ca97457712e6c44f3532d9935eb2fbca59e27d3a25",
+        "sha256_in_prefix": "bbc4c19af6fca3cf9bf284ca97457712e6c44f3532d9935eb2fbca59e27d3a25",
+        "size_in_bytes": 2961
+      },
+      {
+        "_path": "include/xcb/composite.h",
+        "path_type": "hardlink",
+        "sha256": "ca519efcf513541ae516b95b38c9f04b46da82a56fd65e713965a6e9bfb947fb",
+        "sha256_in_prefix": "ca519efcf513541ae516b95b38c9f04b46da82a56fd65e713965a6e9bfb947fb",
+        "size_in_bytes": 19127
+      },
+      {
+        "_path": "include/xcb/damage.h",
+        "path_type": "hardlink",
+        "sha256": "2559f45c771fd82eb20f67b788e258deadd6613af341b91510dd584606577896",
+        "sha256_in_prefix": "2559f45c771fd82eb20f67b788e258deadd6613af341b91510dd584606577896",
+        "size_in_bytes": 14707
+      },
+      {
+        "_path": "include/xcb/dbe.h",
+        "path_type": "hardlink",
+        "sha256": "5584a5179b7b274f89ac02bac9db457351da3945f200b8287aec7dd40980003f",
+        "sha256_in_prefix": "5584a5179b7b274f89ac02bac9db457351da3945f200b8287aec7dd40980003f",
+        "size_in_bytes": 24836
+      },
+      {
+        "_path": "include/xcb/dpms.h",
+        "path_type": "hardlink",
+        "sha256": "aa3d525123e0b1978aa5b6a1787a0ed09e6cae7c27945ded40c36b294a688d60",
+        "sha256_in_prefix": "aa3d525123e0b1978aa5b6a1787a0ed09e6cae7c27945ded40c36b294a688d60",
+        "size_in_bytes": 13479
+      },
+      {
+        "_path": "include/xcb/dri2.h",
+        "path_type": "hardlink",
+        "sha256": "30b96a825b28e11e65f1529a3986d241c5cde298be0b224315d96a4d14cfac03",
+        "sha256_in_prefix": "30b96a825b28e11e65f1529a3986d241c5cde298be0b224315d96a4d14cfac03",
+        "size_in_bytes": 35759
+      },
+      {
+        "_path": "include/xcb/dri3.h",
+        "path_type": "hardlink",
+        "sha256": "825f1ffd6eaaee9db2585f10982689ffa4f265bd04a7765e58c13c5458c9b719",
+        "sha256_in_prefix": "825f1ffd6eaaee9db2585f10982689ffa4f265bd04a7765e58c13c5458c9b719",
+        "size_in_bytes": 29133
+      },
+      {
+        "_path": "include/xcb/ge.h",
+        "path_type": "hardlink",
+        "sha256": "43415614975435d3ce9385534d12c33c384a8bd3c8de775a8a8c9eb6fb7a428f",
+        "sha256_in_prefix": "43415614975435d3ce9385534d12c33c384a8bd3c8de775a8a8c9eb6fb7a428f",
+        "size_in_bytes": 2981
+      },
+      {
+        "_path": "include/xcb/glx.h",
+        "path_type": "hardlink",
+        "sha256": "99924e8abe6daa54f6e13cbf6e059ae116dabf862576309fdf6ec7fc7801ecc0",
+        "sha256_in_prefix": "99924e8abe6daa54f6e13cbf6e059ae116dabf862576309fdf6ec7fc7801ecc0",
+        "size_in_bytes": 252818
+      },
+      {
+        "_path": "include/xcb/present.h",
+        "path_type": "hardlink",
+        "sha256": "67c7909705a210cd04966ca751599e1e6645b92bc614e5e8b6ecd5a69b4caab6",
+        "sha256_in_prefix": "67c7909705a210cd04966ca751599e1e6645b92bc614e5e8b6ecd5a69b4caab6",
+        "size_in_bytes": 23861
+      },
+      {
+        "_path": "include/xcb/randr.h",
+        "path_type": "hardlink",
+        "sha256": "910646163feeb1695d6f2e0b5bc49fe9fe9d80f815064c2fb10059a56b6b6bfc",
+        "sha256_in_prefix": "910646163feeb1695d6f2e0b5bc49fe9fe9d80f815064c2fb10059a56b6b6bfc",
+        "size_in_bytes": 139936
+      },
+      {
+        "_path": "include/xcb/record.h",
+        "path_type": "hardlink",
+        "sha256": "717bffacab552ba6ead0b4e077bdc2845bb00a84468c018fb11679e1e4b16133",
+        "sha256_in_prefix": "717bffacab552ba6ead0b4e077bdc2845bb00a84468c018fb11679e1e4b16133",
+        "size_in_bytes": 27966
+      },
+      {
+        "_path": "include/xcb/render.h",
+        "path_type": "hardlink",
+        "sha256": "e5f76a9183896af58921da80be3dbe6ac33ff549009f41e125fdadf57f418126",
+        "sha256_in_prefix": "e5f76a9183896af58921da80be3dbe6ac33ff549009f41e125fdadf57f418126",
+        "size_in_bytes": 104116
+      },
+      {
+        "_path": "include/xcb/res.h",
+        "path_type": "hardlink",
+        "sha256": "4a8e3e6d31ed3315a82c97428e791757a508daea7ae2f3ddc629a7e418bb381d",
+        "sha256_in_prefix": "4a8e3e6d31ed3315a82c97428e791757a508daea7ae2f3ddc629a7e418bb381d",
+        "size_in_bytes": 24483
+      },
+      {
+        "_path": "include/xcb/screensaver.h",
+        "path_type": "hardlink",
+        "sha256": "0c5537a8af3be2686cb5b7a24423727bb724ebe1567ea7925ae66592d26d6ed8",
+        "sha256_in_prefix": "0c5537a8af3be2686cb5b7a24423727bb724ebe1567ea7925ae66592d26d6ed8",
+        "size_in_bytes": 16460
+      },
+      {
+        "_path": "include/xcb/shape.h",
+        "path_type": "hardlink",
+        "sha256": "cde14f4e8d82d1183054c30fb8176d7740e34c662eaa47f73924de2329b31e90",
+        "sha256_in_prefix": "cde14f4e8d82d1183054c30fb8176d7740e34c662eaa47f73924de2329b31e90",
+        "size_in_bytes": 20806
+      },
+      {
+        "_path": "include/xcb/shm.h",
+        "path_type": "hardlink",
+        "sha256": "a95ebf5a7d7c84951678b5fe7f48e4b8e9343901190a375a19bd3db69599da7a",
+        "sha256_in_prefix": "a95ebf5a7d7c84951678b5fe7f48e4b8e9343901190a375a19bd3db69599da7a",
+        "size_in_bytes": 27681
+      },
+      {
+        "_path": "include/xcb/sync.h",
+        "path_type": "hardlink",
+        "sha256": "31b26960aa01aad3abd55d772ea645878ded314238b2378c0a3b5ba069f3781a",
+        "sha256_in_prefix": "31b26960aa01aad3abd55d772ea645878ded314238b2378c0a3b5ba069f3781a",
+        "size_in_bytes": 43756
+      },
+      {
+        "_path": "include/xcb/xc_misc.h",
+        "path_type": "hardlink",
+        "sha256": "489f7db5d4d8d92ffe70fdcca0a8f5773ad5f4c9a7531383c85dad4d6f1afe9d",
+        "sha256_in_prefix": "489f7db5d4d8d92ffe70fdcca0a8f5773ad5f4c9a7531383c85dad4d6f1afe9d",
+        "size_in_bytes": 7137
+      },
+      {
+        "_path": "include/xcb/xcb.h",
+        "path_type": "hardlink",
+        "sha256": "70218365dcfd8b2e9202b145e9bafbaba042872eae046888680bf58c38cf30e6",
+        "sha256_in_prefix": "70218365dcfd8b2e9202b145e9bafbaba042872eae046888680bf58c38cf30e6",
+        "size_in_bytes": 22326
+      },
+      {
+        "_path": "include/xcb/xcbext.h",
+        "path_type": "hardlink",
+        "sha256": "b101d53f1bed75e659e7469f0b7a3eb213bf1cf228f821580c7020b8e70be647",
+        "sha256_in_prefix": "b101d53f1bed75e659e7469f0b7a3eb213bf1cf228f821580c7020b8e70be647",
+        "size_in_bytes": 13990
+      },
+      {
+        "_path": "include/xcb/xevie.h",
+        "path_type": "hardlink",
+        "sha256": "0f23f3be2239688249e1abc61005a761e0ad2e22810ae05a07ecf75af915106e",
+        "sha256_in_prefix": "0f23f3be2239688249e1abc61005a761e0ad2e22810ae05a07ecf75af915106e",
+        "size_in_bytes": 11593
+      },
+      {
+        "_path": "include/xcb/xf86dri.h",
+        "path_type": "hardlink",
+        "sha256": "4b373191f3f9514dfd21a677ecc89b8044e6c169a8bcac1c9257eeaf64f7a4dc",
+        "sha256_in_prefix": "4b373191f3f9514dfd21a677ecc89b8044e6c169a8bcac1c9257eeaf64f7a4dc",
+        "size_in_bytes": 28034
+      },
+      {
+        "_path": "include/xcb/xfixes.h",
+        "path_type": "hardlink",
+        "sha256": "2c0608c444293f064ecfd385f8e0fd4235a3d09c7397a11970eae4fc96f8aff8",
+        "sha256_in_prefix": "2c0608c444293f064ecfd385f8e0fd4235a3d09c7397a11970eae4fc96f8aff8",
+        "size_in_bytes": 62303
+      },
+      {
+        "_path": "include/xcb/xinerama.h",
+        "path_type": "hardlink",
+        "sha256": "7d09cb8b743f8a92e206816c464393fdd42ce032fd73e90b7a3fe92233aedfa8",
+        "sha256_in_prefix": "7d09cb8b743f8a92e206816c464393fdd42ce032fd73e90b7a3fe92233aedfa8",
+        "size_in_bytes": 14955
+      },
+      {
+        "_path": "include/xcb/xinput.h",
+        "path_type": "hardlink",
+        "sha256": "ece203736670ed2a9f2f47e9931aa9175c1165fec0a9d8a0f23b8bf788d67ecd",
+        "sha256_in_prefix": "ece203736670ed2a9f2f47e9931aa9175c1165fec0a9d8a0f23b8bf788d67ecd",
+        "size_in_bytes": 311095
+      },
+      {
+        "_path": "include/xcb/xkb.h",
+        "path_type": "hardlink",
+        "sha256": "91583e0ccc11c7e017cfb48d2b9faa7a6cad556491934087c9f055306da8d55d",
+        "sha256_in_prefix": "91583e0ccc11c7e017cfb48d2b9faa7a6cad556491934087c9f055306da8d55d",
+        "size_in_bytes": 246448
+      },
+      {
+        "_path": "include/xcb/xprint.h",
+        "path_type": "hardlink",
+        "sha256": "08dfb8dec1d5461c5478f1b2f7cd23b92e4f1cb25100d45355069b002080dc2d",
+        "sha256_in_prefix": "08dfb8dec1d5461c5478f1b2f7cd23b92e4f1cb25100d45355069b002080dc2d",
+        "size_in_bytes": 57343
+      },
+      {
+        "_path": "include/xcb/xproto.h",
+        "path_type": "hardlink",
+        "sha256": "6f45223c52dc24621e7b307b26d39e4d7c884dc08900be619361e076fcac40ec",
+        "sha256_in_prefix": "6f45223c52dc24621e7b307b26d39e4d7c884dc08900be619361e076fcac40ec",
+        "size_in_bytes": 385776
+      },
+      {
+        "_path": "include/xcb/xselinux.h",
+        "path_type": "hardlink",
+        "sha256": "448c417a42ba653941c67779cab38941202d2494668e0fe0cbf698c4e83451f8",
+        "sha256_in_prefix": "448c417a42ba653941c67779cab38941202d2494668e0fe0cbf698c4e83451f8",
+        "size_in_bytes": 56622
+      },
+      {
+        "_path": "include/xcb/xtest.h",
+        "path_type": "hardlink",
+        "sha256": "9864ef03fc9f77e5bcf737aefc98b446af1f1c27c540aedd8ef68cc49b9bfe3d",
+        "sha256_in_prefix": "9864ef03fc9f77e5bcf737aefc98b446af1f1c27c540aedd8ef68cc49b9bfe3d",
+        "size_in_bytes": 7589
+      },
+      {
+        "_path": "include/xcb/xv.h",
+        "path_type": "hardlink",
+        "sha256": "5e612c45d1bda49c4fda8b5d87c97bae9f5988421af3400444843f38fe3d2dd9",
+        "sha256_in_prefix": "5e612c45d1bda49c4fda8b5d87c97bae9f5988421af3400444843f38fe3d2dd9",
+        "size_in_bytes": 58022
+      },
+      {
+        "_path": "include/xcb/xvmc.h",
+        "path_type": "hardlink",
+        "sha256": "5c85ffb29d0bf2eebaa6e66bcd003a8b72c023e6be003a99c9c0d16d6c9baadd",
+        "sha256_in_prefix": "5c85ffb29d0bf2eebaa6e66bcd003a8b72c023e6be003a99c9c0d16d6c9baadd",
+        "size_in_bytes": 24530
+      },
+      {
+        "_path": "lib/libxcb-composite.so",
+        "path_type": "softlink",
+        "sha256": "3af4c3ac2ceaef3b9bb1937888d0d08db02ca70be0ba451aee45d56535f1c084",
+        "size_in_bytes": 17288
+      },
+      {
+        "_path": "lib/libxcb-composite.so.0",
+        "path_type": "softlink",
+        "sha256": "3af4c3ac2ceaef3b9bb1937888d0d08db02ca70be0ba451aee45d56535f1c084",
+        "size_in_bytes": 17288
+      },
+      {
+        "_path": "lib/libxcb-composite.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "3af4c3ac2ceaef3b9bb1937888d0d08db02ca70be0ba451aee45d56535f1c084",
+        "sha256_in_prefix": "3af4c3ac2ceaef3b9bb1937888d0d08db02ca70be0ba451aee45d56535f1c084",
+        "size_in_bytes": 17288
+      },
+      {
+        "_path": "lib/libxcb-damage.so",
+        "path_type": "softlink",
+        "sha256": "6c38a5f2665d4f7e38180f3f7d82c57772fd778dce6d917caf56b3554b4ff467",
+        "size_in_bytes": 16384
+      },
+      {
+        "_path": "lib/libxcb-damage.so.0",
+        "path_type": "softlink",
+        "sha256": "6c38a5f2665d4f7e38180f3f7d82c57772fd778dce6d917caf56b3554b4ff467",
+        "size_in_bytes": 16384
+      },
+      {
+        "_path": "lib/libxcb-damage.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "6c38a5f2665d4f7e38180f3f7d82c57772fd778dce6d917caf56b3554b4ff467",
+        "sha256_in_prefix": "6c38a5f2665d4f7e38180f3f7d82c57772fd778dce6d917caf56b3554b4ff467",
+        "size_in_bytes": 16384
+      },
+      {
+        "_path": "lib/libxcb-dbe.so",
+        "path_type": "softlink",
+        "sha256": "bccb10d376340e33240bf10d3d1bce3408515263fe3ea617f4226d4a0fbb598e",
+        "size_in_bytes": 22224
+      },
+      {
+        "_path": "lib/libxcb-dbe.so.0",
+        "path_type": "softlink",
+        "sha256": "bccb10d376340e33240bf10d3d1bce3408515263fe3ea617f4226d4a0fbb598e",
+        "size_in_bytes": 22224
+      },
+      {
+        "_path": "lib/libxcb-dbe.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "bccb10d376340e33240bf10d3d1bce3408515263fe3ea617f4226d4a0fbb598e",
+        "sha256_in_prefix": "bccb10d376340e33240bf10d3d1bce3408515263fe3ea617f4226d4a0fbb598e",
+        "size_in_bytes": 22224
+      },
+      {
+        "_path": "lib/libxcb-dpms.so",
+        "path_type": "softlink",
+        "sha256": "3c10b0787c736797afcf5411113a51b4fd36da40978cf88135d0fca7e104d756",
+        "size_in_bytes": 17080
+      },
+      {
+        "_path": "lib/libxcb-dpms.so.0",
+        "path_type": "softlink",
+        "sha256": "3c10b0787c736797afcf5411113a51b4fd36da40978cf88135d0fca7e104d756",
+        "size_in_bytes": 17080
+      },
+      {
+        "_path": "lib/libxcb-dpms.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "3c10b0787c736797afcf5411113a51b4fd36da40978cf88135d0fca7e104d756",
+        "sha256_in_prefix": "3c10b0787c736797afcf5411113a51b4fd36da40978cf88135d0fca7e104d756",
+        "size_in_bytes": 17080
+      },
+      {
+        "_path": "lib/libxcb-dri2.so",
+        "path_type": "softlink",
+        "sha256": "ff06f163c6c1afcbb0e348ac9881c9eea75f608233895fa24f5057722a03493b",
+        "size_in_bytes": 27816
+      },
+      {
+        "_path": "lib/libxcb-dri2.so.0",
+        "path_type": "softlink",
+        "sha256": "ff06f163c6c1afcbb0e348ac9881c9eea75f608233895fa24f5057722a03493b",
+        "size_in_bytes": 27816
+      },
+      {
+        "_path": "lib/libxcb-dri2.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "ff06f163c6c1afcbb0e348ac9881c9eea75f608233895fa24f5057722a03493b",
+        "sha256_in_prefix": "ff06f163c6c1afcbb0e348ac9881c9eea75f608233895fa24f5057722a03493b",
+        "size_in_bytes": 27816
+      },
+      {
+        "_path": "lib/libxcb-dri3.so",
+        "path_type": "softlink",
+        "sha256": "eeae4c0815883ebb451dae3d48dde1ee2cecfa30a187b0a95531f37ad9823f0d",
+        "size_in_bytes": 27688
+      },
+      {
+        "_path": "lib/libxcb-dri3.so.0",
+        "path_type": "softlink",
+        "sha256": "eeae4c0815883ebb451dae3d48dde1ee2cecfa30a187b0a95531f37ad9823f0d",
+        "size_in_bytes": 27688
+      },
+      {
+        "_path": "lib/libxcb-dri3.so.0.1.0",
+        "path_type": "hardlink",
+        "sha256": "eeae4c0815883ebb451dae3d48dde1ee2cecfa30a187b0a95531f37ad9823f0d",
+        "sha256_in_prefix": "eeae4c0815883ebb451dae3d48dde1ee2cecfa30a187b0a95531f37ad9823f0d",
+        "size_in_bytes": 27688
+      },
+      {
+        "_path": "lib/libxcb-glx.so",
+        "path_type": "softlink",
+        "sha256": "feebb05dc755929d5f3387347593b063ed84441ace5ea9b5dbac197f3b5166b2",
+        "size_in_bytes": 161232
+      },
+      {
+        "_path": "lib/libxcb-glx.so.0",
+        "path_type": "softlink",
+        "sha256": "feebb05dc755929d5f3387347593b063ed84441ace5ea9b5dbac197f3b5166b2",
+        "size_in_bytes": 161232
+      },
+      {
+        "_path": "lib/libxcb-glx.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "feebb05dc755929d5f3387347593b063ed84441ace5ea9b5dbac197f3b5166b2",
+        "sha256_in_prefix": "feebb05dc755929d5f3387347593b063ed84441ace5ea9b5dbac197f3b5166b2",
+        "size_in_bytes": 161232
+      },
+      {
+        "_path": "lib/libxcb-present.so",
+        "path_type": "softlink",
+        "sha256": "61b9d3c1ffc4929fa1505529d287b9a7d86cdd2b9460eff2e53ed694ffc9801a",
+        "size_in_bytes": 21600
+      },
+      {
+        "_path": "lib/libxcb-present.so.0",
+        "path_type": "softlink",
+        "sha256": "61b9d3c1ffc4929fa1505529d287b9a7d86cdd2b9460eff2e53ed694ffc9801a",
+        "size_in_bytes": 21600
+      },
+      {
+        "_path": "lib/libxcb-present.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "61b9d3c1ffc4929fa1505529d287b9a7d86cdd2b9460eff2e53ed694ffc9801a",
+        "sha256_in_prefix": "61b9d3c1ffc4929fa1505529d287b9a7d86cdd2b9460eff2e53ed694ffc9801a",
+        "size_in_bytes": 21600
+      },
+      {
+        "_path": "lib/libxcb-randr.so",
+        "path_type": "softlink",
+        "sha256": "7fbbbc9f5679421e6b185ce8669634b663d53cefeb672e84c668c6fb299fb7a6",
+        "size_in_bytes": 95248
+      },
+      {
+        "_path": "lib/libxcb-randr.so.0",
+        "path_type": "softlink",
+        "sha256": "7fbbbc9f5679421e6b185ce8669634b663d53cefeb672e84c668c6fb299fb7a6",
+        "size_in_bytes": 95248
+      },
+      {
+        "_path": "lib/libxcb-randr.so.0.1.0",
+        "path_type": "hardlink",
+        "sha256": "7fbbbc9f5679421e6b185ce8669634b663d53cefeb672e84c668c6fb299fb7a6",
+        "sha256_in_prefix": "7fbbbc9f5679421e6b185ce8669634b663d53cefeb672e84c668c6fb299fb7a6",
+        "size_in_bytes": 95248
+      },
+      {
+        "_path": "lib/libxcb-record.so",
+        "path_type": "softlink",
+        "sha256": "d86dbac3ea3ac11ed420b8130525ffec19b1a38b4e81ddb20b98bdadf8129301",
+        "size_in_bytes": 27832
+      },
+      {
+        "_path": "lib/libxcb-record.so.0",
+        "path_type": "softlink",
+        "sha256": "d86dbac3ea3ac11ed420b8130525ffec19b1a38b4e81ddb20b98bdadf8129301",
+        "size_in_bytes": 27832
+      },
+      {
+        "_path": "lib/libxcb-record.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "d86dbac3ea3ac11ed420b8130525ffec19b1a38b4e81ddb20b98bdadf8129301",
+        "sha256_in_prefix": "d86dbac3ea3ac11ed420b8130525ffec19b1a38b4e81ddb20b98bdadf8129301",
+        "size_in_bytes": 27832
+      },
+      {
+        "_path": "lib/libxcb-render.so",
+        "path_type": "softlink",
+        "sha256": "57034504da09555b43b045fdf0d3ce9285db9eaabe01a24877ec5515290d3a26",
+        "size_in_bytes": 76720
+      },
+      {
+        "_path": "lib/libxcb-render.so.0",
+        "path_type": "softlink",
+        "sha256": "57034504da09555b43b045fdf0d3ce9285db9eaabe01a24877ec5515290d3a26",
+        "size_in_bytes": 76720
+      },
+      {
+        "_path": "lib/libxcb-render.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "57034504da09555b43b045fdf0d3ce9285db9eaabe01a24877ec5515290d3a26",
+        "sha256_in_prefix": "57034504da09555b43b045fdf0d3ce9285db9eaabe01a24877ec5515290d3a26",
+        "size_in_bytes": 76720
+      },
+      {
+        "_path": "lib/libxcb-res.so",
+        "path_type": "softlink",
+        "sha256": "f6d6d967805d772be70f397beafae46924507cd4fe9cc50bd508ed9168a49a1b",
+        "size_in_bytes": 23016
+      },
+      {
+        "_path": "lib/libxcb-res.so.0",
+        "path_type": "softlink",
+        "sha256": "f6d6d967805d772be70f397beafae46924507cd4fe9cc50bd508ed9168a49a1b",
+        "size_in_bytes": 23016
+      },
+      {
+        "_path": "lib/libxcb-res.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "f6d6d967805d772be70f397beafae46924507cd4fe9cc50bd508ed9168a49a1b",
+        "sha256_in_prefix": "f6d6d967805d772be70f397beafae46924507cd4fe9cc50bd508ed9168a49a1b",
+        "size_in_bytes": 23016
+      },
+      {
+        "_path": "lib/libxcb-screensaver.so",
+        "path_type": "softlink",
+        "sha256": "4fa80787af749ccdf69893729ad89cf5cff7ba88fd8d94c609147e18f50ec5d8",
+        "size_in_bytes": 21408
+      },
+      {
+        "_path": "lib/libxcb-screensaver.so.0",
+        "path_type": "softlink",
+        "sha256": "4fa80787af749ccdf69893729ad89cf5cff7ba88fd8d94c609147e18f50ec5d8",
+        "size_in_bytes": 21408
+      },
+      {
+        "_path": "lib/libxcb-screensaver.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "4fa80787af749ccdf69893729ad89cf5cff7ba88fd8d94c609147e18f50ec5d8",
+        "sha256_in_prefix": "4fa80787af749ccdf69893729ad89cf5cff7ba88fd8d94c609147e18f50ec5d8",
+        "size_in_bytes": 21408
+      },
+      {
+        "_path": "lib/libxcb-shape.so",
+        "path_type": "softlink",
+        "sha256": "f9b9a29281ace1f57ec777d433ae268f780365819f8a8d8fda69e9ba7ddb3ade",
+        "size_in_bytes": 21904
+      },
+      {
+        "_path": "lib/libxcb-shape.so.0",
+        "path_type": "softlink",
+        "sha256": "f9b9a29281ace1f57ec777d433ae268f780365819f8a8d8fda69e9ba7ddb3ade",
+        "size_in_bytes": 21904
+      },
+      {
+        "_path": "lib/libxcb-shape.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "f9b9a29281ace1f57ec777d433ae268f780365819f8a8d8fda69e9ba7ddb3ade",
+        "sha256_in_prefix": "f9b9a29281ace1f57ec777d433ae268f780365819f8a8d8fda69e9ba7ddb3ade",
+        "size_in_bytes": 21904
+      },
+      {
+        "_path": "lib/libxcb-shm.so",
+        "path_type": "softlink",
+        "sha256": "d560624e0f4a720eb68179b90c37bb0d5939cefecd2ef7c1aaaeae38ea3fe890",
+        "size_in_bytes": 17096
+      },
+      {
+        "_path": "lib/libxcb-shm.so.0",
+        "path_type": "softlink",
+        "sha256": "d560624e0f4a720eb68179b90c37bb0d5939cefecd2ef7c1aaaeae38ea3fe890",
+        "size_in_bytes": 17096
+      },
+      {
+        "_path": "lib/libxcb-shm.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "d560624e0f4a720eb68179b90c37bb0d5939cefecd2ef7c1aaaeae38ea3fe890",
+        "sha256_in_prefix": "d560624e0f4a720eb68179b90c37bb0d5939cefecd2ef7c1aaaeae38ea3fe890",
+        "size_in_bytes": 17096
+      },
+      {
+        "_path": "lib/libxcb-sync.so",
+        "path_type": "softlink",
+        "sha256": "202ef4ca6d145173527af10b453df76429a80a45d36d8684a86036149be88fea",
+        "size_in_bytes": 42304
+      },
+      {
+        "_path": "lib/libxcb-sync.so.1",
+        "path_type": "softlink",
+        "sha256": "202ef4ca6d145173527af10b453df76429a80a45d36d8684a86036149be88fea",
+        "size_in_bytes": 42304
+      },
+      {
+        "_path": "lib/libxcb-sync.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "202ef4ca6d145173527af10b453df76429a80a45d36d8684a86036149be88fea",
+        "sha256_in_prefix": "202ef4ca6d145173527af10b453df76429a80a45d36d8684a86036149be88fea",
+        "size_in_bytes": 42304
+      },
+      {
+        "_path": "lib/libxcb-xf86dri.so",
+        "path_type": "softlink",
+        "sha256": "4289c027ef13efded50479c1ea82d635b0fbd5a3aee3b0ba7cde00a5082d6ef7",
+        "size_in_bytes": 23728
+      },
+      {
+        "_path": "lib/libxcb-xf86dri.so.0",
+        "path_type": "softlink",
+        "sha256": "4289c027ef13efded50479c1ea82d635b0fbd5a3aee3b0ba7cde00a5082d6ef7",
+        "size_in_bytes": 23728
+      },
+      {
+        "_path": "lib/libxcb-xf86dri.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "4289c027ef13efded50479c1ea82d635b0fbd5a3aee3b0ba7cde00a5082d6ef7",
+        "sha256_in_prefix": "4289c027ef13efded50479c1ea82d635b0fbd5a3aee3b0ba7cde00a5082d6ef7",
+        "size_in_bytes": 23728
+      },
+      {
+        "_path": "lib/libxcb-xfixes.so",
+        "path_type": "softlink",
+        "sha256": "f7e7fb8ce09b4c438ae76299dd02694c29c0d2606beb4df09c30ab29a1a65237",
+        "size_in_bytes": 49536
+      },
+      {
+        "_path": "lib/libxcb-xfixes.so.0",
+        "path_type": "softlink",
+        "sha256": "f7e7fb8ce09b4c438ae76299dd02694c29c0d2606beb4df09c30ab29a1a65237",
+        "size_in_bytes": 49536
+      },
+      {
+        "_path": "lib/libxcb-xfixes.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "f7e7fb8ce09b4c438ae76299dd02694c29c0d2606beb4df09c30ab29a1a65237",
+        "sha256_in_prefix": "f7e7fb8ce09b4c438ae76299dd02694c29c0d2606beb4df09c30ab29a1a65237",
+        "size_in_bytes": 49536
+      },
+      {
+        "_path": "lib/libxcb-xinerama.so",
+        "path_type": "softlink",
+        "sha256": "5a6cfe2de80a9befac48dd1a9f38cdf49542ff56a7426d04306c0effe13a4f1c",
+        "size_in_bytes": 21304
+      },
+      {
+        "_path": "lib/libxcb-xinerama.so.0",
+        "path_type": "softlink",
+        "sha256": "5a6cfe2de80a9befac48dd1a9f38cdf49542ff56a7426d04306c0effe13a4f1c",
+        "size_in_bytes": 21304
+      },
+      {
+        "_path": "lib/libxcb-xinerama.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "5a6cfe2de80a9befac48dd1a9f38cdf49542ff56a7426d04306c0effe13a4f1c",
+        "sha256_in_prefix": "5a6cfe2de80a9befac48dd1a9f38cdf49542ff56a7426d04306c0effe13a4f1c",
+        "size_in_bytes": 21304
+      },
+      {
+        "_path": "lib/libxcb-xinput.so",
+        "path_type": "softlink",
+        "sha256": "cdd832d9bdee2646a69b960c7a715a4f7f81c607185816f510a74b3b0583335a",
+        "size_in_bytes": 205736
+      },
+      {
+        "_path": "lib/libxcb-xinput.so.0",
+        "path_type": "softlink",
+        "sha256": "cdd832d9bdee2646a69b960c7a715a4f7f81c607185816f510a74b3b0583335a",
+        "size_in_bytes": 205736
+      },
+      {
+        "_path": "lib/libxcb-xinput.so.0.1.0",
+        "path_type": "hardlink",
+        "sha256": "cdd832d9bdee2646a69b960c7a715a4f7f81c607185816f510a74b3b0583335a",
+        "sha256_in_prefix": "cdd832d9bdee2646a69b960c7a715a4f7f81c607185816f510a74b3b0583335a",
+        "size_in_bytes": 205736
+      },
+      {
+        "_path": "lib/libxcb-xkb.so",
+        "path_type": "softlink",
+        "sha256": "71237fd04ac09c66872a5e79ba535522a84e78ed7235ed9fcff1f11e5a3513f1",
+        "size_in_bytes": 162400
+      },
+      {
+        "_path": "lib/libxcb-xkb.so.1",
+        "path_type": "softlink",
+        "sha256": "71237fd04ac09c66872a5e79ba535522a84e78ed7235ed9fcff1f11e5a3513f1",
+        "size_in_bytes": 162400
+      },
+      {
+        "_path": "lib/libxcb-xkb.so.1.0.0",
+        "path_type": "hardlink",
+        "sha256": "71237fd04ac09c66872a5e79ba535522a84e78ed7235ed9fcff1f11e5a3513f1",
+        "sha256_in_prefix": "71237fd04ac09c66872a5e79ba535522a84e78ed7235ed9fcff1f11e5a3513f1",
+        "size_in_bytes": 162400
+      },
+      {
+        "_path": "lib/libxcb-xlib.so.0",
+        "path_type": "softlink",
+        "sha256": "fbda68bc3a822fbc42e716c63970a76cfdfc524262cfdbb6be7cb1887b3cc402",
+        "size_in_bytes": 14984
+      },
+      {
+        "_path": "lib/libxcb-xlib.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "fbda68bc3a822fbc42e716c63970a76cfdfc524262cfdbb6be7cb1887b3cc402",
+        "sha256_in_prefix": "fbda68bc3a822fbc42e716c63970a76cfdfc524262cfdbb6be7cb1887b3cc402",
+        "size_in_bytes": 14984
+      },
+      {
+        "_path": "lib/libxcb-xtest.so",
+        "path_type": "softlink",
+        "sha256": "6c7a8e2e2d377a73af4402e4d8bb066fb7cf05065e52d7c5250342a2a8f5ffc3",
+        "size_in_bytes": 16192
+      },
+      {
+        "_path": "lib/libxcb-xtest.so.0",
+        "path_type": "softlink",
+        "sha256": "6c7a8e2e2d377a73af4402e4d8bb066fb7cf05065e52d7c5250342a2a8f5ffc3",
+        "size_in_bytes": 16192
+      },
+      {
+        "_path": "lib/libxcb-xtest.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "6c7a8e2e2d377a73af4402e4d8bb066fb7cf05065e52d7c5250342a2a8f5ffc3",
+        "sha256_in_prefix": "6c7a8e2e2d377a73af4402e4d8bb066fb7cf05065e52d7c5250342a2a8f5ffc3",
+        "size_in_bytes": 16192
+      },
+      {
+        "_path": "lib/libxcb-xv.so",
+        "path_type": "softlink",
+        "sha256": "3aeb95c6afe817399d28e98fda6f07ddaeeb84d70e650b3531c9707e168d8cc3",
+        "size_in_bytes": 43344
+      },
+      {
+        "_path": "lib/libxcb-xv.so.0",
+        "path_type": "softlink",
+        "sha256": "3aeb95c6afe817399d28e98fda6f07ddaeeb84d70e650b3531c9707e168d8cc3",
+        "size_in_bytes": 43344
+      },
+      {
+        "_path": "lib/libxcb-xv.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "3aeb95c6afe817399d28e98fda6f07ddaeeb84d70e650b3531c9707e168d8cc3",
+        "sha256_in_prefix": "3aeb95c6afe817399d28e98fda6f07ddaeeb84d70e650b3531c9707e168d8cc3",
+        "size_in_bytes": 43344
+      },
+      {
+        "_path": "lib/libxcb-xvmc.so",
+        "path_type": "softlink",
+        "sha256": "8f49b91484bfc74742c7efbec2ef3e1b42da904bcc5a9b1d73a13491f68712da",
+        "size_in_bytes": 23080
+      },
+      {
+        "_path": "lib/libxcb-xvmc.so.0",
+        "path_type": "softlink",
+        "sha256": "8f49b91484bfc74742c7efbec2ef3e1b42da904bcc5a9b1d73a13491f68712da",
+        "size_in_bytes": 23080
+      },
+      {
+        "_path": "lib/libxcb-xvmc.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "8f49b91484bfc74742c7efbec2ef3e1b42da904bcc5a9b1d73a13491f68712da",
+        "sha256_in_prefix": "8f49b91484bfc74742c7efbec2ef3e1b42da904bcc5a9b1d73a13491f68712da",
+        "size_in_bytes": 23080
+      },
+      {
+        "_path": "lib/libxcb.so",
+        "path_type": "softlink",
+        "sha256": "504faa0ca490d23e89505bb430892f18992979a7856869e776ae711fcaab79d7",
+        "size_in_bytes": 228648
+      },
+      {
+        "_path": "lib/libxcb.so.1",
+        "path_type": "softlink",
+        "sha256": "504faa0ca490d23e89505bb430892f18992979a7856869e776ae711fcaab79d7",
+        "size_in_bytes": 228648
+      },
+      {
+        "_path": "lib/libxcb.so.1.1.0",
+        "path_type": "hardlink",
+        "sha256": "504faa0ca490d23e89505bb430892f18992979a7856869e776ae711fcaab79d7",
+        "sha256_in_prefix": "504faa0ca490d23e89505bb430892f18992979a7856869e776ae711fcaab79d7",
+        "size_in_bytes": 228648
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-composite.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2e8e5126f22ecb57170a7b461b9b40ac304be9dce419ebdce37fac00ef0fe06c",
+        "sha256_in_prefix": "85ef7e6cc32c0bc3bc0a33c76f156d47267627870ca133b9f502344313e063b8",
+        "size_in_bytes": 505
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-damage.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2c9b8f601fc22ce77a5f892e517426d9112ad1993b62f69abd4999734a81dab8",
+        "sha256_in_prefix": "5d9266a3b9e9311aa618762891e65d07c6d6b5f6f39416b5b97ac2f627beaff3",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-dbe.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d0638bd8e09f57695814c8692ae38c8130ee30ddcfbe1366c6aadc9daafabd1b",
+        "sha256_in_prefix": "9d80383a48364c6b423e1ac1bb99351a7769490e19253ba4826b5b8c2e171e42",
+        "size_in_bytes": 486
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-dpms.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "4a666c19e8861934c4a0ecb333381b65f6514c9d22b11e80d3ffac1010d01d80",
+        "sha256_in_prefix": "16080b1cc38f7990f7d05220c54606f3c700df80d31561613d2863f2b04a76fe",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-dri2.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "7d1d284ec515b37f2a8678e0b04026babad76c15d47c6e130a1f79a97561247d",
+        "sha256_in_prefix": "9debe878db61c2fb86a8f0bb9f9e44584f5bbc520f47e9260d7a7a9cc41bddf0",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-dri3.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "aefcddb7f5e2f8d794d7d88ca8e0f7962a7ac07fa6a0d567501acc934b2764b8",
+        "sha256_in_prefix": "7b882b0ad9814b19abb4761b38da000d0408942e54f26dd043b56375896119d4",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-glx.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "917ad21baea7144defadff367f615dddeca3f86d34183c7691c948f0deb6ca2c",
+        "sha256_in_prefix": "9b8278c2889e425d04101ba96a5d69e98e651fbcad34c85d0d65a90f049042e5",
+        "size_in_bytes": 476
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-present.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bb76be1910477763676a1a821854d003a423f8d343a46ea700d8db663e0f3fc4",
+        "sha256_in_prefix": "cb360d54d3c7848a0283f11d93a6384f6d56d31756589d4cdc75b16d40d4d6ab",
+        "size_in_bytes": 527
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-randr.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "5345c22b0e5a6deaa207e60021e46eb45a66207575d6216ee64bbaf88c54b965",
+        "sha256_in_prefix": "0acae9b21efa9d6a05107cc26b238ee78776b38bc624d2b8b77fb913e013d676",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-record.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "2441598b790118e8a268ceea8f28788edcb60a2935dfb65589b538d40956014e",
+        "sha256_in_prefix": "5b53bc26d4799f4d9c00646ecd6e8613276cbd922695749e442f8df10a3750af",
+        "size_in_bytes": 485
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-render.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "eb3d9dde22be4a6aa562182258e22f25e0d36b545c317032d3cf0e42d6858f7c",
+        "sha256_in_prefix": "13897615f247afe44b08a533c8efc9d32e9a75370e42f6aac674f711e18a4a65",
+        "size_in_bytes": 485
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-res.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "d74c50da7d76ebcb5a1596cf4b937fd51d89c66689379f767f52eaa1dbb92a5e",
+        "sha256_in_prefix": "35cb48a8a69757ee24af755cf04c4b3aac2d4d67967b273885733ef5b47c001d",
+        "size_in_bytes": 483
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-screensaver.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "68297ab64fd6cf7403563d5d72dab72c5a47cc082563bb758749f6da62e82f48",
+        "sha256_in_prefix": "7e21295aa0bdd442b714f2ec7c55216bef04722ebf32b933f06ccdd21f03acc2",
+        "size_in_bytes": 500
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-shape.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "08b570ce01a344f04192f2dc124b6c34ddd6c709d2b634365189aff5a68b1bb5",
+        "sha256_in_prefix": "c7a132d62554e65e3b307fca9534f9be7c965c9af78b9007cb41bc4241fd8eff",
+        "size_in_bytes": 482
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-shm.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "7e93ee7107c9d78f56e93e0a11541a096b45c9b89d8cfdf57346c4687971dbc8",
+        "sha256_in_prefix": "2934f501c47805c4711789f516835808067b24e58cf5ce31d4ba49aa3f56fb1d",
+        "size_in_bytes": 476
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-sync.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b662b0eb115e1aadbc3130f00ac548a6a92c5a9fa3a87b4e1b7ad67448565918",
+        "sha256_in_prefix": "bbf965777d7d2f2e9c1a24bf18ba501bdb1a0c0079a56b677ce02f6fb25e83d0",
+        "size_in_bytes": 479
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xf86dri.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "bfbe612903a30ec4672c698073ba1114d89fc8bee79092efa54fe564b1f2891d",
+        "sha256_in_prefix": "aadb34ca204614c1ee6778f69e8bc5be236ce115b57714c953d1e5c51a29f99b",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xfixes.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "af9b584cc8799ae3d7999f7fb51c2e2d758fa0ea8db312ccc7f1b3aa01735381",
+        "sha256_in_prefix": "2deac5c57961fc4ef121e2e899a49b15e8f389212ca82b4a12418360f4644cbb",
+        "size_in_bytes": 506
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xinerama.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "0762d0ba1cbd55870d7cb885635b5da98393cd2836049784c3eaf2552c57ad6f",
+        "sha256_in_prefix": "b3def0599318e61a7e2f1352f3418130478767a8c40f260919f72cc55de5677d",
+        "size_in_bytes": 491
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xinput.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "949ec276cbf7719a87b32157a7bdbfce873636380d9cb41bb26dea457b13c3a8",
+        "sha256_in_prefix": "ee26aed057d8606ff04e158731cf2ba2be77ac3f29acdc9b0a0be214f4939589",
+        "size_in_bytes": 511
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xkb.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "32e7f24e2844baecbc04e59189fcd707faf0f0d78312cac8c1ecb9b58d93bda7",
+        "sha256_in_prefix": "76ea2a9b05b3e7082ca18cc5492472e5e2acc2e9c3391b0b11565a2f3c9c4315",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xtest.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "a00e55afd88e7355a361de414a9b213c1b6958bd262bbd3443f07cbfeed2d82b",
+        "sha256_in_prefix": "6421cbcc287f5b84a07d5b14fbc6151851637ddd8f4e22e82aa85d85f0d21cef",
+        "size_in_bytes": 482
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xv.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "1a4f2739e5d5e67aa43db02255fdd3cc8aca0b1deac9137fc3a5dd01f45715f5",
+        "sha256_in_prefix": "063d4c82c97996432e4868847a0756550753c567255481ba850d653d29e4d63b",
+        "size_in_bytes": 481
+      },
+      {
+        "_path": "lib/pkgconfig/xcb-xvmc.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "b358abd98f1852df986e9a3a33a5da341e1635b4e3e617fce7718932f46942f1",
+        "sha256_in_prefix": "bb31149ced06bbb87b42799cbddebbcc63cbd7f30b4018160e880d03d127c792",
+        "size_in_bytes": 486
+      },
+      {
+        "_path": "lib/pkgconfig/xcb.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libxcb_1787885637855/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "sha256": "1e04397b464283870e85f10b261b3e0e32cacca1b56c4da0e067c01c681ebabb",
+        "sha256_in_prefix": "2cc7d1ce137b08d03d16ddbc044c07df2075f42df6852718adfd9dee1e77d0fe",
+        "size_in_bytes": 526
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7b49e6fd2a584b7f072943e6adf4149677af5121246975278804782d37752837",
+  "size": 395120,
+  "subdir": "linux-64",
+  "timestamp": 1787885788000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libxcb-1.17.0-hb83e432_2.conda",
+  "version": "1.17.0"
+}

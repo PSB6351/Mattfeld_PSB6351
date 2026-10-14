@@ -1,0 +1,112 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.11"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/xvfbwrapper-0.2.34-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/METADATA",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/RECORD",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/WHEEL",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/xvfbwrapper-0.2.34.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/xvfbwrapper.py",
+    "lib/python3.14/site-packages/__pycache__/xvfbwrapper.cpython-314.pyc"
+  ],
+  "fn": "xvfbwrapper-0.2.34-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/xvfbwrapper-0.2.34-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "464f7c5ab0e5278ce19f29ca5bde20e1",
+  "name": "xvfbwrapper",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/xvfbwrapper-0.2.34-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "94067f0dd8c9259c0dc98025a1820e7bdddde2a0684d7c82070bf73eb174001e",
+        "sha256_in_prefix": "94067f0dd8c9259c0dc98025a1820e7bdddde2a0684d7c82070bf73eb174001e",
+        "size_in_bytes": 8390
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "302fa308a6d859aff261fa63b68938045b92402dca6d54bd256b33c3e79d12e2",
+        "sha256_in_prefix": "302fa308a6d859aff261fa63b68938045b92402dca6d54bd256b33c3e79d12e2",
+        "size_in_bytes": 827
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "348721390c8e5c7b437f71f2cf873ba84ef3a7f18a296806fbac3ea48a9b28c8",
+        "sha256_in_prefix": "348721390c8e5c7b437f71f2cf873ba84ef3a7f18a296806fbac3ea48a9b28c8",
+        "size_in_bytes": 107
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "0bdf753df86c846c4bfc50b08250c5e976b3fd4619289a8f21b51280f5be245b",
+        "sha256_in_prefix": "0bdf753df86c846c4bfc50b08250c5e976b3fd4619289a8f21b51280f5be245b",
+        "size_in_bytes": 1076
+      },
+      {
+        "_path": "site-packages/xvfbwrapper-0.2.34.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "2c04ba5b5a58cd7bc01e643cf97e485648e3b42ac5827917d7534dccab6630e7",
+        "sha256_in_prefix": "2c04ba5b5a58cd7bc01e643cf97e485648e3b42ac5827917d7534dccab6630e7",
+        "size_in_bytes": 12
+      },
+      {
+        "_path": "site-packages/xvfbwrapper.py",
+        "path_type": "hardlink",
+        "sha256": "2de5397728f9c10ab56bf8e948841282fb00d7f2527f500830f9bb47d5a36b63",
+        "sha256_in_prefix": "2de5397728f9c10ab56bf8e948841282fb00d7f2527f500830f9bb47d5a36b63",
+        "size_in_bytes": 8206
+      },
+      {
+        "_path": "lib/python3.14/site-packages/__pycache__/xvfbwrapper.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "26661c26e3833023b27be3aba938065e6b0b9b328166b601af1d2c56a04d30d0",
+  "size": 14534,
+  "subdir": "noarch",
+  "timestamp": 1790101022000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/xvfbwrapper-0.2.34-pyhd8ed1ab_0.conda",
+  "version": "0.2.34"
+}

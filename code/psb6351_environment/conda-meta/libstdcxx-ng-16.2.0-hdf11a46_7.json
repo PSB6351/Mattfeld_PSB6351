@@ -1,0 +1,31 @@
+{
+  "build": "hdf11a46_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libstdcxx 16.2.0 h934c35e_7"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_7",
+  "files": [],
+  "fn": "libstdcxx-ng-16.2.0-hdf11a46_7.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_7",
+    "type": 1
+  },
+  "md5": "25a23bde5e26d548374f3e02b4669670",
+  "name": "libstdcxx-ng",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libstdcxx-ng-16.2.0-hdf11a46_7.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "337f481db36cc357884f05f404ccd1b3a7e0fc1ee48ec5c884e4281d213bc863",
+  "size": 28665,
+  "subdir": "linux-64",
+  "timestamp": 1790303164000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-16.2.0-hdf11a46_7.conda",
+  "version": "16.2.0"
+}

@@ -1,0 +1,93 @@
+{
+  "build": "h0630a04_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=9.3.0",
+    "dbus >=1.13.6,<2.0a0",
+    "libglib >=2.68.1,<3.0a0",
+    "atk-1.0 >=2.36.0",
+    "at-spi2-core >=2.40.0,<2.41.0a0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/at-spi2-atk-2.38.0-h0630a04_3",
+  "files": [
+    "include/at-spi2-atk/2.0/atk-bridge.h",
+    "lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop",
+    "lib/gtk-2.0/modules/libatk-bridge.so",
+    "lib/libatk-bridge-2.0.so",
+    "lib/libatk-bridge-2.0.so.0",
+    "lib/libatk-bridge-2.0.so.0.0.0",
+    "lib/pkgconfig/atk-bridge-2.0.pc"
+  ],
+  "fn": "at-spi2-atk-2.38.0-h0630a04_3.tar.bz2",
+  "license": "LGPL-2.1-or-later",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/at-spi2-atk-2.38.0-h0630a04_3",
+    "type": 1
+  },
+  "md5": "6b889f174df1e0f816276ae69281af4d",
+  "name": "at-spi2-atk",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/at-spi2-atk-2.38.0-h0630a04_3.tar.bz2",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/at-spi2-atk/2.0/atk-bridge.h",
+        "path_type": "hardlink",
+        "sha256": "2b6a0c00d8c18d16834eb0028826d2b6e8ce9fce38638b41b6cdf69d339b3abe",
+        "sha256_in_prefix": "2b6a0c00d8c18d16834eb0028826d2b6e8ce9fce38638b41b6cdf69d339b3abe",
+        "size_in_bytes": 1302
+      },
+      {
+        "_path": "lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop",
+        "path_type": "hardlink",
+        "sha256": "7865c78ad2c6116b8ac43abe8df30738d87c3a1917e94af52c68afcb0ae23bcc",
+        "sha256_in_prefix": "7865c78ad2c6116b8ac43abe8df30738d87c3a1917e94af52c68afcb0ae23bcc",
+        "size_in_bytes": 213
+      },
+      {
+        "_path": "lib/gtk-2.0/modules/libatk-bridge.so",
+        "path_type": "hardlink",
+        "sha256": "9b2700cf0512ad857f46ab7459c9fe38637822149adade66e385ded588f8a5a7",
+        "sha256_in_prefix": "9b2700cf0512ad857f46ab7459c9fe38637822149adade66e385ded588f8a5a7",
+        "size_in_bytes": 24000
+      },
+      {
+        "_path": "lib/libatk-bridge-2.0.so",
+        "path_type": "softlink",
+        "sha256": "136875a81f4d9cd21ea377d8520f2e726ebe199228545f2081a8ee7c99b3c7d2",
+        "size_in_bytes": 1033384
+      },
+      {
+        "_path": "lib/libatk-bridge-2.0.so.0",
+        "path_type": "softlink",
+        "sha256": "136875a81f4d9cd21ea377d8520f2e726ebe199228545f2081a8ee7c99b3c7d2",
+        "size_in_bytes": 1033384
+      },
+      {
+        "_path": "lib/libatk-bridge-2.0.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "136875a81f4d9cd21ea377d8520f2e726ebe199228545f2081a8ee7c99b3c7d2",
+        "sha256_in_prefix": "136875a81f4d9cd21ea377d8520f2e726ebe199228545f2081a8ee7c99b3c7d2",
+        "size_in_bytes": 1033384
+      },
+      {
+        "_path": "lib/pkgconfig/atk-bridge-2.0.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/at-spi2-atk_1619122738536/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "d98bba0251410cd9abe3237c256df27610e32ec30ab66ccc3a938e596a4a6605",
+        "sha256_in_prefix": "7ac24fff28463a0bee5cad73a501a0827ba4800647df0a16368a873e289ee321",
+        "size_in_bytes": 592
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "26ab9386e80bf196e51ebe005da77d57decf6d989b4f34d96130560bc133479c",
+  "size": 339899,
+  "subdir": "linux-64",
+  "timestamp": 1619122953000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/at-spi2-atk-2.38.0-h0630a04_3.tar.bz2",
+  "version": "2.38.0"
+}

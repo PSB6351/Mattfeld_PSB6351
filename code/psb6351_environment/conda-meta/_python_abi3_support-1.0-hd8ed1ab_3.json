@@ -1,0 +1,34 @@
+{
+  "build": "hd8ed1ab_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "cpython",
+    "python-gil"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/_python_abi3_support-1.0-hd8ed1ab_3",
+  "files": [],
+  "fn": "_python_abi3_support-1.0-hd8ed1ab_3.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/_python_abi3_support-1.0-hd8ed1ab_3",
+    "type": 1
+  },
+  "md5": "3845f3d75991bae0fb90884662f4327c",
+  "name": "_python_abi3_support",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/_python_abi3_support-1.0-hd8ed1ab_3.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2a7204314663eeda5dec482a956f0e2eaf289bd5b9953eaaaad0e81aa64638f2",
+  "size": 8144,
+  "subdir": "noarch",
+  "timestamp": 1784221492000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/_python_abi3_support-1.0-hd8ed1ab_3.conda",
+  "version": "1.0"
+}

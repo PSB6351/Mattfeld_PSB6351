@@ -1,0 +1,921 @@
+{
+  "build": "py311hd139983_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python-abi3",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "_python_abi3_support 1.*",
+    "cpython >=3.11",
+    "python >=3.11"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/wcwidth-0.9.2-py311hd139983_0",
+  "files": [
+    "etc/conda/test-files/wcwidth/1/tests/__init__.py",
+    "etc/conda/test-files/wcwidth/1/tests/conftest.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_ambiguous.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_benchmarks.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_check_release.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_clip.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_clip_cjk_emoji.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_clip_overtyping.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_core.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_emojis.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_fastcall_args.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_grapheme.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_hyperlink.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_justify.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_setup.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_sgr_state.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_term_overrides.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_text_sizing.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_textwrap.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_ucslevel.py",
+    "etc/conda/test-files/wcwidth/1/tests/test_width.py",
+    "lib/python3.14/site-packages/wcwidth/__init__.py",
+    "lib/python3.14/site-packages/wcwidth/_clip.py",
+    "lib/python3.14/site-packages/wcwidth/_constants.py",
+    "lib/python3.14/site-packages/wcwidth/_wcswidth.py",
+    "lib/python3.14/site-packages/wcwidth/_wcwidth.py",
+    "lib/python3.14/site-packages/wcwidth/_wcwidth_c.abi3.so",
+    "lib/python3.14/site-packages/wcwidth/_wcwidth_c.pyi",
+    "lib/python3.14/site-packages/wcwidth/_width.py",
+    "lib/python3.14/site-packages/wcwidth/align.py",
+    "lib/python3.14/site-packages/wcwidth/bisearch.py",
+    "lib/python3.14/site-packages/wcwidth/control_codes.py",
+    "lib/python3.14/site-packages/wcwidth/escape_sequences.py",
+    "lib/python3.14/site-packages/wcwidth/grapheme.py",
+    "lib/python3.14/site-packages/wcwidth/hyperlink.py",
+    "lib/python3.14/site-packages/wcwidth/py.typed",
+    "lib/python3.14/site-packages/wcwidth/sgr_state.py",
+    "lib/python3.14/site-packages/wcwidth/table_ambiguous.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__init__.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_058c7585.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_2148ff29.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_244dc88b.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_336a71a1.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_33ac73f2.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_3a1895d5.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_59180a0d.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_65c6beb5.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_78f828e8.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_8c2ae14d.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_900356bf.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_97904ece.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_a5880eeb.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_b6d33cf4.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_c57c295b.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_cf02297d.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_e18ac6a7.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_e2b75ee3.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_fb5fd79b.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_known_fdc99132.py",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/_registry.py",
+    "lib/python3.14/site-packages/wcwidth/table_mc.py",
+    "lib/python3.14/site-packages/wcwidth/table_overrides.py",
+    "lib/python3.14/site-packages/wcwidth/table_term_programs.py",
+    "lib/python3.14/site-packages/wcwidth/table_vs15.py",
+    "lib/python3.14/site-packages/wcwidth/table_vs16.py",
+    "lib/python3.14/site-packages/wcwidth/table_wide.py",
+    "lib/python3.14/site-packages/wcwidth/table_zero.py",
+    "lib/python3.14/site-packages/wcwidth/text_sizing.py",
+    "lib/python3.14/site-packages/wcwidth/textwrap.py",
+    "lib/python3.14/site-packages/wcwidth/unicode_versions.py",
+    "lib/python3.14/site-packages/wcwidth/wcwidth.py",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/METADATA",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/RECORD",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/WHEEL",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/wcwidth-0.9.2.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/_clip.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/_constants.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/_wcswidth.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/_wcwidth.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/_width.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/align.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/bisearch.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/control_codes.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/escape_sequences.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/grapheme.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/hyperlink.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/sgr_state.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_ambiguous.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_grapheme.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_058c7585.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_2148ff29.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_244dc88b.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_336a71a1.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_33ac73f2.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_3a1895d5.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_59180a0d.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_65c6beb5.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_78f828e8.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_8c2ae14d.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_900356bf.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_97904ece.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_a5880eeb.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_b6d33cf4.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_c57c295b.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_cf02297d.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_e18ac6a7.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_e2b75ee3.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_fb5fd79b.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_fdc99132.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_mc.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_overrides.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_term_programs.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_vs15.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_vs16.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_wide.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/table_zero.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/text_sizing.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/textwrap.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/unicode_versions.cpython-314.pyc",
+    "lib/python3.14/site-packages/wcwidth/__pycache__/wcwidth.cpython-314.pyc"
+  ],
+  "fn": "wcwidth-0.9.2-py311hd139983_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/wcwidth-0.9.2-py311hd139983_0",
+    "type": 1
+  },
+  "md5": "e240064460bf1bbd26bb6750414d08f2",
+  "name": "wcwidth",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/wcwidth-0.9.2-py311hd139983_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bffdae470504de14c992e5bae7a74bae40e233d6a5eca2f58ffbf01917344533",
+        "sha256_in_prefix": "bffdae470504de14c992e5bae7a74bae40e233d6a5eca2f58ffbf01917344533",
+        "size_in_bytes": 42
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "effb839a442292e48bf38f964e0eda9cfbba3203ef09b793010b3e2d372ad018",
+        "sha256_in_prefix": "effb839a442292e48bf38f964e0eda9cfbba3203ef09b793010b3e2d372ad018",
+        "size_in_bytes": 1629
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_ambiguous.py",
+        "path_type": "hardlink",
+        "sha256": "bfb507470f0c7b350e03114f3ea21c8d510a8ef4f7516ffbed2205c514267410",
+        "sha256_in_prefix": "bfb507470f0c7b350e03114f3ea21c8d510a8ef4f7516ffbed2205c514267410",
+        "size_in_bytes": 3299
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_benchmarks.py",
+        "path_type": "hardlink",
+        "sha256": "fc5bf4c5b72d0e4cb1ccd0e00a0710f8c48e53518b72ee1051bb14e993e4a208",
+        "sha256_in_prefix": "fc5bf4c5b72d0e4cb1ccd0e00a0710f8c48e53518b72ee1051bb14e993e4a208",
+        "size_in_bytes": 27619
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_check_release.py",
+        "path_type": "hardlink",
+        "sha256": "33878d0d26063f8640f62b22b38b33a9e099d02b73d32d24ec5a79b3a94cbf5d",
+        "sha256_in_prefix": "33878d0d26063f8640f62b22b38b33a9e099d02b73d32d24ec5a79b3a94cbf5d",
+        "size_in_bytes": 2624
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_clip.py",
+        "path_type": "hardlink",
+        "sha256": "a60a2c220dacdb054f2c77ecfb621de6022c8245dcf92b94efb61432f5571595",
+        "sha256_in_prefix": "a60a2c220dacdb054f2c77ecfb621de6022c8245dcf92b94efb61432f5571595",
+        "size_in_bytes": 41202
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_clip_cjk_emoji.py",
+        "path_type": "hardlink",
+        "sha256": "f7320ff63bbdb0bd2c3bf8f1a7ce159ff7b4cd86dd3a2ac591865a3c97338ad3",
+        "sha256_in_prefix": "f7320ff63bbdb0bd2c3bf8f1a7ce159ff7b4cd86dd3a2ac591865a3c97338ad3",
+        "size_in_bytes": 1307
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_clip_overtyping.py",
+        "path_type": "hardlink",
+        "sha256": "b44d429cba20f99a3d1647d6a53dcf37a6124317a50d8fffab4773547ae43e69",
+        "sha256_in_prefix": "b44d429cba20f99a3d1647d6a53dcf37a6124317a50d8fffab4773547ae43e69",
+        "size_in_bytes": 11519
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_core.py",
+        "path_type": "hardlink",
+        "sha256": "d9da839b66e77595c8122c7f77c615693f2a27c2e65aa01d7b93140e4f02ef6f",
+        "sha256_in_prefix": "d9da839b66e77595c8122c7f77c615693f2a27c2e65aa01d7b93140e4f02ef6f",
+        "size_in_bytes": 27397
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_emojis.py",
+        "path_type": "hardlink",
+        "sha256": "c0148aa98078e520ced3e7c77066c56296d5ec269c33b44a94201dddb935f829",
+        "sha256_in_prefix": "c0148aa98078e520ced3e7c77066c56296d5ec269c33b44a94201dddb935f829",
+        "size_in_bytes": 10524
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_fastcall_args.py",
+        "path_type": "hardlink",
+        "sha256": "20401e685f33b313b7ec3999b01d9acd7de1e3ae678636e1543da3da1a106a58",
+        "sha256_in_prefix": "20401e685f33b313b7ec3999b01d9acd7de1e3ae678636e1543da3da1a106a58",
+        "size_in_bytes": 5272
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_grapheme.py",
+        "path_type": "hardlink",
+        "sha256": "b0ce0e423871f39b3fd04df7200865e415291b1f179553b6796b24e6b5fbd6b5",
+        "sha256_in_prefix": "b0ce0e423871f39b3fd04df7200865e415291b1f179553b6796b24e6b5fbd6b5",
+        "size_in_bytes": 14430
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_hyperlink.py",
+        "path_type": "hardlink",
+        "sha256": "1d92eaa119771bcccbb838f73084df4b3c90506ccc84a6b799d7ed1007cfdfad",
+        "sha256_in_prefix": "1d92eaa119771bcccbb838f73084df4b3c90506ccc84a6b799d7ed1007cfdfad",
+        "size_in_bytes": 2117
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_justify.py",
+        "path_type": "hardlink",
+        "sha256": "3c056ff1acdeb9c4c91d4840cab11626780bbfa668ee7da4760c19fc4c4b4458",
+        "sha256_in_prefix": "3c056ff1acdeb9c4c91d4840cab11626780bbfa668ee7da4760c19fc4c4b4458",
+        "size_in_bytes": 3100
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_setup.py",
+        "path_type": "hardlink",
+        "sha256": "fc57ed766012f8be3420bc8fd42c608794698913cabe3849c17f56cd9e6f252f",
+        "sha256_in_prefix": "fc57ed766012f8be3420bc8fd42c608794698913cabe3849c17f56cd9e6f252f",
+        "size_in_bytes": 3501
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_sgr_state.py",
+        "path_type": "hardlink",
+        "sha256": "6aafac9bca451ec5e1e07647cf5c7c5c06b090201501886436bc40a9e28e30f1",
+        "sha256_in_prefix": "6aafac9bca451ec5e1e07647cf5c7c5c06b090201501886436bc40a9e28e30f1",
+        "size_in_bytes": 14343
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_term_overrides.py",
+        "path_type": "hardlink",
+        "sha256": "ec77c76219f998f6dd7e8fc16e376993a144945aed067cfda9d5d0dfc7e802cf",
+        "sha256_in_prefix": "ec77c76219f998f6dd7e8fc16e376993a144945aed067cfda9d5d0dfc7e802cf",
+        "size_in_bytes": 26494
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_text_sizing.py",
+        "path_type": "hardlink",
+        "sha256": "78e664a488cef97f831fe92830f63f1ce6959fc944645e00445c0b0e7f69b791",
+        "sha256_in_prefix": "78e664a488cef97f831fe92830f63f1ce6959fc944645e00445c0b0e7f69b791",
+        "size_in_bytes": 14748
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_textwrap.py",
+        "path_type": "hardlink",
+        "sha256": "fd2e82da8d202fe02be9eb06098dc7f7b84521dc3d221b1c5967980613a5c016",
+        "sha256_in_prefix": "fd2e82da8d202fe02be9eb06098dc7f7b84521dc3d221b1c5967980613a5c016",
+        "size_in_bytes": 29454
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_ucslevel.py",
+        "path_type": "hardlink",
+        "sha256": "942f89440d52238522fc606d84d941b1c5dd6d6cd95c880c9be6fa25d21cd079",
+        "sha256_in_prefix": "942f89440d52238522fc606d84d941b1c5dd6d6cd95c880c9be6fa25d21cd079",
+        "size_in_bytes": 2259
+      },
+      {
+        "_path": "etc/conda/test-files/wcwidth/1/tests/test_width.py",
+        "path_type": "hardlink",
+        "sha256": "b7537ecabd71a3e0853688b570dd0e91dbcd30fd9c0f3399e47d45a2043d5118",
+        "sha256_in_prefix": "b7537ecabd71a3e0853688b570dd0e91dbcd30fd9c0f3399e47d45a2043d5118",
+        "size_in_bytes": 22883
+      },
+      {
+        "_path": "site-packages/wcwidth/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "646c6b7a3dc93d36475da57f1da58b83879ca323f97c8d7b0345614de51ad9cc",
+        "sha256_in_prefix": "646c6b7a3dc93d36475da57f1da58b83879ca323f97c8d7b0345614de51ad9cc",
+        "size_in_bytes": 4058
+      },
+      {
+        "_path": "site-packages/wcwidth/_clip.py",
+        "path_type": "hardlink",
+        "sha256": "c554e607f766cade102982ff753e8036236922712992f6d6a4fb0c74d4a7ed27",
+        "sha256_in_prefix": "c554e607f766cade102982ff753e8036236922712992f6d6a4fb0c74d4a7ed27",
+        "size_in_bytes": 36972
+      },
+      {
+        "_path": "site-packages/wcwidth/_constants.py",
+        "path_type": "hardlink",
+        "sha256": "04425f05bce4197bac837bbb40c07e10e070da21fc1dd39c28be0f6052425a68",
+        "sha256_in_prefix": "04425f05bce4197bac837bbb40c07e10e070da21fc1dd39c28be0f6052425a68",
+        "size_in_bytes": 6414
+      },
+      {
+        "_path": "site-packages/wcwidth/_wcswidth.py",
+        "path_type": "hardlink",
+        "sha256": "674f1420fce6114b02b7e371fc574c4553776efa5b7b0982df5fcaef93e40b4e",
+        "sha256_in_prefix": "674f1420fce6114b02b7e371fc574c4553776efa5b7b0982df5fcaef93e40b4e",
+        "size_in_bytes": 17687
+      },
+      {
+        "_path": "site-packages/wcwidth/_wcwidth.py",
+        "path_type": "hardlink",
+        "sha256": "d90e01620d4bacb231cc15584cd20c36f36bd1084894d93c5e26eec06fc0e688",
+        "sha256_in_prefix": "d90e01620d4bacb231cc15584cd20c36f36bd1084894d93c5e26eec06fc0e688",
+        "size_in_bytes": 6757
+      },
+      {
+        "_path": "site-packages/wcwidth/_wcwidth_c.abi3.so",
+        "path_type": "hardlink",
+        "sha256": "7226d71a46845447870d1e120d81165f0db9fe4d7b6d2259eb75991f28319477",
+        "sha256_in_prefix": "7226d71a46845447870d1e120d81165f0db9fe4d7b6d2259eb75991f28319477",
+        "size_in_bytes": 1374088
+      },
+      {
+        "_path": "site-packages/wcwidth/_wcwidth_c.pyi",
+        "path_type": "hardlink",
+        "sha256": "863e5d3a16998856ae038fa752c21d261a3c2f4414465f90478e998d8e97a85b",
+        "sha256_in_prefix": "863e5d3a16998856ae038fa752c21d261a3c2f4414465f90478e998d8e97a85b",
+        "size_in_bytes": 1966
+      },
+      {
+        "_path": "site-packages/wcwidth/_width.py",
+        "path_type": "hardlink",
+        "sha256": "4772af44d9bc0a83dd9a260ccbb9641449737bb240acaf799c3a0672e7efcca2",
+        "sha256_in_prefix": "4772af44d9bc0a83dd9a260ccbb9641449737bb240acaf799c3a0672e7efcca2",
+        "size_in_bytes": 22870
+      },
+      {
+        "_path": "site-packages/wcwidth/align.py",
+        "path_type": "hardlink",
+        "sha256": "a563b14f9a297ca71d11d5202f0a49618384d86aac9e76211c8d833b95f99a57",
+        "sha256_in_prefix": "a563b14f9a297ca71d11d5202f0a49618384d86aac9e76211c8d833b95f99a57",
+        "size_in_bytes": 9604
+      },
+      {
+        "_path": "site-packages/wcwidth/bisearch.py",
+        "path_type": "hardlink",
+        "sha256": "63f15dbd84f31570f6a5ae5ca6951e803e525dfcbe07c1c2e00f6bac939d6f8d",
+        "sha256_in_prefix": "63f15dbd84f31570f6a5ae5ca6951e803e525dfcbe07c1c2e00f6bac939d6f8d",
+        "size_in_bytes": 813
+      },
+      {
+        "_path": "site-packages/wcwidth/control_codes.py",
+        "path_type": "hardlink",
+        "sha256": "34690fb17340fcc48d1ff1b5c508ef0e05f89928fe929d532df2cff86214cf4f",
+        "sha256_in_prefix": "34690fb17340fcc48d1ff1b5c508ef0e05f89928fe929d532df2cff86214cf4f",
+        "size_in_bytes": 1579
+      },
+      {
+        "_path": "site-packages/wcwidth/escape_sequences.py",
+        "path_type": "hardlink",
+        "sha256": "ba4b74a7fb1466621686c7071863f8f29a9c58347cbb654d8397b6853c958871",
+        "sha256_in_prefix": "ba4b74a7fb1466621686c7071863f8f29a9c58347cbb654d8397b6853c958871",
+        "size_in_bytes": 8222
+      },
+      {
+        "_path": "site-packages/wcwidth/grapheme.py",
+        "path_type": "hardlink",
+        "sha256": "d05c1dc8b13f302ab456ded777ac5bf37f61e1a46aacad859e0d3569a25c8208",
+        "sha256_in_prefix": "d05c1dc8b13f302ab456ded777ac5bf37f61e1a46aacad859e0d3569a25c8208",
+        "size_in_bytes": 13222
+      },
+      {
+        "_path": "site-packages/wcwidth/hyperlink.py",
+        "path_type": "hardlink",
+        "sha256": "8d6ae404454a0d6a5f590aee969400f55b5d92ebf4b699f33ee492d3982d3d21",
+        "sha256_in_prefix": "8d6ae404454a0d6a5f590aee969400f55b5d92ebf4b699f33ee492d3982d3d21",
+        "size_in_bytes": 4449
+      },
+      {
+        "_path": "site-packages/wcwidth/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/wcwidth/sgr_state.py",
+        "path_type": "hardlink",
+        "sha256": "99e142df163a8c13e2703ff8de4a2eb2c1cb6c8860de5fe0a6695bc9ca2762c2",
+        "sha256_in_prefix": "99e142df163a8c13e2703ff8de4a2eb2c1cb6c8860de5fe0a6695bc9ca2762c2",
+        "size_in_bytes": 13073
+      },
+      {
+        "_path": "site-packages/wcwidth/table_ambiguous.py",
+        "path_type": "hardlink",
+        "sha256": "762d8dfbdd8ad6a71bf50015e89d4dd4dbc5b3d270560e1c3c90130fda98657d",
+        "sha256_in_prefix": "762d8dfbdd8ad6a71bf50015e89d4dd4dbc5b3d270560e1c3c90130fda98657d",
+        "size_in_bytes": 11867
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme.py",
+        "path_type": "hardlink",
+        "sha256": "3176cee3c7c78311592287cd5a44509d48199d98bdf46731058c66974df0ed6d",
+        "sha256_in_prefix": "3176cee3c7c78311592287cd5a44509d48199d98bdf46731058c66974df0ed6d",
+        "size_in_bytes": 146562
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f011706d35210242e89cc7d1f80ad6c37a1a168f8c7eed102fa8a6ba9aec90d6",
+        "sha256_in_prefix": "f011706d35210242e89cc7d1f80ad6c37a1a168f8c7eed102fa8a6ba9aec90d6",
+        "size_in_bytes": 1231
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_058c7585.py",
+        "path_type": "hardlink",
+        "sha256": "f64dfb0e26ca9dd84dea2a905976d1ec839afd2889d3928355986b5b7981ccea",
+        "sha256_in_prefix": "f64dfb0e26ca9dd84dea2a905976d1ec839afd2889d3928355986b5b7981ccea",
+        "size_in_bytes": 70405
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_2148ff29.py",
+        "path_type": "hardlink",
+        "sha256": "41ac7973a19d28de6eefc106974252400de4830e2667c8db6a273dbfead87a42",
+        "sha256_in_prefix": "41ac7973a19d28de6eefc106974252400de4830e2667c8db6a273dbfead87a42",
+        "size_in_bytes": 32859
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_244dc88b.py",
+        "path_type": "hardlink",
+        "sha256": "2c4f6b92663672edf6ec4fa18a467dabaa27de432578e227d4d6427501b4eeac",
+        "sha256_in_prefix": "2c4f6b92663672edf6ec4fa18a467dabaa27de432578e227d4d6427501b4eeac",
+        "size_in_bytes": 1977
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_336a71a1.py",
+        "path_type": "hardlink",
+        "sha256": "96ac284d9954679b9c08e5fff960cf310c8e79f013f18a016f801312270e7df0",
+        "sha256_in_prefix": "96ac284d9954679b9c08e5fff960cf310c8e79f013f18a016f801312270e7df0",
+        "size_in_bytes": 73690
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_33ac73f2.py",
+        "path_type": "hardlink",
+        "sha256": "2c610dbb97770586ae889b4a8dc6878f92b2fcf84343c611d79b90a301214ac3",
+        "sha256_in_prefix": "2c610dbb97770586ae889b4a8dc6878f92b2fcf84343c611d79b90a301214ac3",
+        "size_in_bytes": 51607
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_3a1895d5.py",
+        "path_type": "hardlink",
+        "sha256": "4dbd37b21db0bf8032a8967b002b00486ae9c581aac8ebea79b3fd72c8f558be",
+        "sha256_in_prefix": "4dbd37b21db0bf8032a8967b002b00486ae9c581aac8ebea79b3fd72c8f558be",
+        "size_in_bytes": 28356
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_59180a0d.py",
+        "path_type": "hardlink",
+        "sha256": "b21883121b6481ad076949f927170f2fd10ff7c26a36707cd3cc0951691de522",
+        "sha256_in_prefix": "b21883121b6481ad076949f927170f2fd10ff7c26a36707cd3cc0951691de522",
+        "size_in_bytes": 69393
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_65c6beb5.py",
+        "path_type": "hardlink",
+        "sha256": "f019abaef06b32aa9660a160a951727de6b852d1d28b13fc1ec3aaf1f01a2265",
+        "sha256_in_prefix": "f019abaef06b32aa9660a160a951727de6b852d1d28b13fc1ec3aaf1f01a2265",
+        "size_in_bytes": 72065
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_78f828e8.py",
+        "path_type": "hardlink",
+        "sha256": "dea2fb04295dd5bca549c0b8eff8d130c7ea70b91e5e58d15d0c30009abe6c3b",
+        "sha256_in_prefix": "dea2fb04295dd5bca549c0b8eff8d130c7ea70b91e5e58d15d0c30009abe6c3b",
+        "size_in_bytes": 29457
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_8c2ae14d.py",
+        "path_type": "hardlink",
+        "sha256": "1ad3578a4208995d2e03645868b31a458027b65984191c20dde07adfc8d37703",
+        "sha256_in_prefix": "1ad3578a4208995d2e03645868b31a458027b65984191c20dde07adfc8d37703",
+        "size_in_bytes": 72055
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_900356bf.py",
+        "path_type": "hardlink",
+        "sha256": "1d6fdc64300569255e558d4dc138e1b7d046e7738e2fc59dad00660110e2341b",
+        "sha256_in_prefix": "1d6fdc64300569255e558d4dc138e1b7d046e7738e2fc59dad00660110e2341b",
+        "size_in_bytes": 2579
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_97904ece.py",
+        "path_type": "hardlink",
+        "sha256": "a088789c30bf07ad7fda064db7d5630481d3ab23e128fb0634cba295ad8180c1",
+        "sha256_in_prefix": "a088789c30bf07ad7fda064db7d5630481d3ab23e128fb0634cba295ad8180c1",
+        "size_in_bytes": 68622
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_a5880eeb.py",
+        "path_type": "hardlink",
+        "sha256": "104858312315bd685de023304f8e84e379993312d8f30c667392f97c9a94c801",
+        "sha256_in_prefix": "104858312315bd685de023304f8e84e379993312d8f30c667392f97c9a94c801",
+        "size_in_bytes": 68676
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_b6d33cf4.py",
+        "path_type": "hardlink",
+        "sha256": "2074de0df9b5879ce8e3e579a039b36a6e6c9510c0a0e459f6f753c56f913f70",
+        "sha256_in_prefix": "2074de0df9b5879ce8e3e579a039b36a6e6c9510c0a0e459f6f753c56f913f70",
+        "size_in_bytes": 78876
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_c57c295b.py",
+        "path_type": "hardlink",
+        "sha256": "9fe3ad344629f8bd7a3c8370c1f066ce6d32018b2608662efced9b79d207e8d7",
+        "sha256_in_prefix": "9fe3ad344629f8bd7a3c8370c1f066ce6d32018b2608662efced9b79d207e8d7",
+        "size_in_bytes": 141315
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_cf02297d.py",
+        "path_type": "hardlink",
+        "sha256": "8947a214a2b5092c67829e14886aa1df4aafdd53d97f3d7b40fc2b1906a909e1",
+        "sha256_in_prefix": "8947a214a2b5092c67829e14886aa1df4aafdd53d97f3d7b40fc2b1906a909e1",
+        "size_in_bytes": 32688
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_e18ac6a7.py",
+        "path_type": "hardlink",
+        "sha256": "d02aabe197388e2edb39c5017705cd329109476bb39d164411753a965b8fb228",
+        "sha256_in_prefix": "d02aabe197388e2edb39c5017705cd329109476bb39d164411753a965b8fb228",
+        "size_in_bytes": 145380
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_e2b75ee3.py",
+        "path_type": "hardlink",
+        "sha256": "13e59e3a9dba314b215b75b0bb60203605cfe3a866086fbb12ddde4673ba7eb8",
+        "sha256_in_prefix": "13e59e3a9dba314b215b75b0bb60203605cfe3a866086fbb12ddde4673ba7eb8",
+        "size_in_bytes": 765
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_fb5fd79b.py",
+        "path_type": "hardlink",
+        "sha256": "51352006310a78333493fb22a31c822423db8ef88abd4263c33456bd4fb665b5",
+        "sha256_in_prefix": "51352006310a78333493fb22a31c822423db8ef88abd4263c33456bd4fb665b5",
+        "size_in_bytes": 76258
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_known_fdc99132.py",
+        "path_type": "hardlink",
+        "sha256": "d833e364b2ac8fcbf7df71ae319fb25f52ede91b05ae323c84fab01097e39472",
+        "sha256_in_prefix": "d833e364b2ac8fcbf7df71ae319fb25f52ede91b05ae323c84fab01097e39472",
+        "size_in_bytes": 70400
+      },
+      {
+        "_path": "site-packages/wcwidth/table_grapheme_overrides/_registry.py",
+        "path_type": "hardlink",
+        "sha256": "edca3118e4fc865056653ac7af7c8dd5311a941d2d533ac56544b414b8370182",
+        "sha256_in_prefix": "edca3118e4fc865056653ac7af7c8dd5311a941d2d533ac56544b414b8370182",
+        "size_in_bytes": 785
+      },
+      {
+        "_path": "site-packages/wcwidth/table_mc.py",
+        "path_type": "hardlink",
+        "sha256": "f084236a9b43821968521672ec34c79c336f224c352c17b0eb82afbfcdb1fa61",
+        "sha256_in_prefix": "f084236a9b43821968521672ec34c79c336f224c352c17b0eb82afbfcdb1fa61",
+        "size_in_bytes": 14198
+      },
+      {
+        "_path": "site-packages/wcwidth/table_overrides.py",
+        "path_type": "hardlink",
+        "sha256": "4c8182ab694bc2fa5618a72ba7d7aefe0b8e8a8eab0bbe540a398a5e75a7b6b4",
+        "sha256_in_prefix": "4c8182ab694bc2fa5618a72ba7d7aefe0b8e8a8eab0bbe540a398a5e75a7b6b4",
+        "size_in_bytes": 47858
+      },
+      {
+        "_path": "site-packages/wcwidth/table_term_programs.py",
+        "path_type": "hardlink",
+        "sha256": "89fb81aa4ed85258219d643be4ffba379e26ae2603f0e55932f35d6e4477d56e",
+        "sha256_in_prefix": "89fb81aa4ed85258219d643be4ffba379e26ae2603f0e55932f35d6e4477d56e",
+        "size_in_bytes": 1070
+      },
+      {
+        "_path": "site-packages/wcwidth/table_vs15.py",
+        "path_type": "hardlink",
+        "sha256": "9af55c5c6801b678a4c110126f8032309ac8610640b1ca74be4ea0a3585e478b",
+        "sha256_in_prefix": "9af55c5c6801b678a4c110126f8032309ac8610640b1ca74be4ea0a3585e478b",
+        "size_in_bytes": 5170
+      },
+      {
+        "_path": "site-packages/wcwidth/table_vs16.py",
+        "path_type": "hardlink",
+        "sha256": "16371e2db996fd6e60ac63905f9d9e8323429b71742c765b83a4a5d7519ab0c6",
+        "sha256_in_prefix": "16371e2db996fd6e60ac63905f9d9e8323429b71742c765b83a4a5d7519ab0c6",
+        "size_in_bytes": 6857
+      },
+      {
+        "_path": "site-packages/wcwidth/table_wide.py",
+        "path_type": "hardlink",
+        "sha256": "a167dfa17738fb939b8157193fc9d11f70b1e1ed0385e1a6faee07c8d5ad5085",
+        "sha256_in_prefix": "a167dfa17738fb939b8157193fc9d11f70b1e1ed0385e1a6faee07c8d5ad5085",
+        "size_in_bytes": 9159
+      },
+      {
+        "_path": "site-packages/wcwidth/table_zero.py",
+        "path_type": "hardlink",
+        "sha256": "03d61051c69f286fe77acca5583be371fa674f86cff61a6abdc57fa1a5156cc6",
+        "sha256_in_prefix": "03d61051c69f286fe77acca5583be371fa674f86cff61a6abdc57fa1a5156cc6",
+        "size_in_bytes": 26107
+      },
+      {
+        "_path": "site-packages/wcwidth/text_sizing.py",
+        "path_type": "hardlink",
+        "sha256": "a04343ae0a0eedd6ab470d421c3ea039f9aeaaae325551b1be40033db8c5b8d5",
+        "sha256_in_prefix": "a04343ae0a0eedd6ab470d421c3ea039f9aeaaae325551b1be40033db8c5b8d5",
+        "size_in_bytes": 7946
+      },
+      {
+        "_path": "site-packages/wcwidth/textwrap.py",
+        "path_type": "hardlink",
+        "sha256": "e2256595577749481106e0a14d5d37cf4ad61ff195d9477c53b9365222551964",
+        "sha256_in_prefix": "e2256595577749481106e0a14d5d37cf4ad61ff195d9477c53b9365222551964",
+        "size_in_bytes": 30038
+      },
+      {
+        "_path": "site-packages/wcwidth/unicode_versions.py",
+        "path_type": "hardlink",
+        "sha256": "0504f550c0e77dd1b3c81c408a0d7c1888cfae2ee319aac5c45e755040439bb0",
+        "sha256_in_prefix": "0504f550c0e77dd1b3c81c408a0d7c1888cfae2ee319aac5c45e755040439bb0",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "site-packages/wcwidth/wcwidth.py",
+        "path_type": "hardlink",
+        "sha256": "597eba94e3ed8a01ff6b1a9cbd4d0931315df79d23c55e0c1ab644047a06904b",
+        "sha256_in_prefix": "597eba94e3ed8a01ff6b1a9cbd4d0931315df79d23c55e0c1ab644047a06904b",
+        "size_in_bytes": 2858
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "cce73426c72bcd655c08f6229262e5868bf69c1e9e10130119b275ebd200e2b8",
+        "sha256_in_prefix": "cce73426c72bcd655c08f6229262e5868bf69c1e9e10130119b275ebd200e2b8",
+        "size_in_bytes": 23692
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "15dcf4e04cf8ce9eb332a558cf8e6fcf97e1627c33bf76b1d75b68ceb2db3710",
+        "sha256_in_prefix": "15dcf4e04cf8ce9eb332a558cf8e6fcf97e1627c33bf76b1d75b68ceb2db3710",
+        "size_in_bytes": 8438
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f7c7728eed255b9c7ebc3c4f3c10be0fee54834e37f8ca3d66c7f8d78b8eb6fd",
+        "sha256_in_prefix": "f7c7728eed255b9c7ebc3c4f3c10be0fee54834e37f8ca3d66c7f8d78b8eb6fd",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "76f4de328661438b93717487fc9451dcb7a473764d5191fd0e4251a151c12f47",
+        "sha256_in_prefix": "76f4de328661438b93717487fc9451dcb7a473764d5191fd0e4251a151c12f47",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "70b98a95a2144eb70af8017fa8c6d95ce247e40867436e8bc649e137fe13d21a",
+        "sha256_in_prefix": "70b98a95a2144eb70af8017fa8c6d95ce247e40867436e8bc649e137fe13d21a",
+        "size_in_bytes": 1322
+      },
+      {
+        "_path": "site-packages/wcwidth-0.9.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "2cb8d2f121625d7b8b11c0f604d7457468692967b9a291edbe7eca363f402112",
+        "sha256_in_prefix": "2cb8d2f121625d7b8b11c0f604d7457468692967b9a291edbe7eca363f402112",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/_clip.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/_constants.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/_wcswidth.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/_wcwidth.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/_width.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/align.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/bisearch.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/control_codes.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/escape_sequences.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/grapheme.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/hyperlink.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/sgr_state.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_ambiguous.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_grapheme.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_058c7585.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_2148ff29.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_244dc88b.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_336a71a1.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_33ac73f2.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_3a1895d5.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_59180a0d.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_65c6beb5.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_78f828e8.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_8c2ae14d.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_900356bf.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_97904ece.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_a5880eeb.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_b6d33cf4.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_c57c295b.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_cf02297d.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_e18ac6a7.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_e2b75ee3.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_fb5fd79b.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_known_fdc99132.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/table_grapheme_overrides/__pycache__/_registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_mc.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_overrides.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_term_programs.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_vs15.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_vs16.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_wide.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/table_zero.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/text_sizing.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/textwrap.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/unicode_versions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/wcwidth/__pycache__/wcwidth.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "f3cc5743c960a54a19ec4baa54874bff799f108f4959785246daea5e13222a1a",
+  "size": 368447,
+  "subdir": "linux-64",
+  "timestamp": 1791194573000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/wcwidth-0.9.2-py311hd139983_0.conda",
+  "version": "0.9.2"
+}

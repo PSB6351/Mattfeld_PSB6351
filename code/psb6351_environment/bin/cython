@@ -1,0 +1,11 @@
+#!/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/bin/python
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from Cython.Compiler.Main import setuptools_main
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(setuptools_main())

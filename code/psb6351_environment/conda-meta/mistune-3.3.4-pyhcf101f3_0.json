@@ -1,0 +1,1016 @@
+{
+  "build": "pyhcf101f3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "typing_extensions",
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/mistune-3.3.4-pyhcf101f3_0",
+  "files": [
+    "etc/conda/test-files/mistune/1/pyproject.toml",
+    "etc/conda/test-files/mistune/1/tests/__init__.py",
+    "etc/conda/test-files/mistune/1/tests/fixtures/__init__.py",
+    "etc/conda/test-files/mistune/1/tests/fixtures/abbr.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/cli.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/commonmark.json",
+    "etc/conda/test-files/mistune/1/tests/fixtures/def_list.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/fenced_admonition.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/fenced_figure.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/fenced_image.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/fenced_toc.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/fix-commonmark.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/footnotes.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/hook_toc.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/include/hello.md",
+    "etc/conda/test-files/mistune/1/tests/fixtures/include/hello.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/include/text.html",
+    "etc/conda/test-files/mistune/1/tests/fixtures/include/text.md",
+    "etc/conda/test-files/mistune/1/tests/fixtures/insert.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/mark.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/math.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/renderer_markdown.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/renderer_rst.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/rst_admonition.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/rst_toc.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/ruby.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/spoiler.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/strikethrough.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/subscript.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/superscript.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/table.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/task_lists.txt",
+    "etc/conda/test-files/mistune/1/tests/fixtures/url.txt",
+    "etc/conda/test-files/mistune/1/tests/test_cli.py",
+    "etc/conda/test-files/mistune/1/tests/test_commonmark.py",
+    "etc/conda/test-files/mistune/1/tests/test_directives.py",
+    "etc/conda/test-files/mistune/1/tests/test_hooks.py",
+    "etc/conda/test-files/mistune/1/tests/test_misc.py",
+    "etc/conda/test-files/mistune/1/tests/test_plugins.py",
+    "etc/conda/test-files/mistune/1/tests/test_renderers.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_edge_cases.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_formatting.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_image.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_include.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_inline.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_math.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_ref_links.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_toc.py",
+    "etc/conda/test-files/mistune/1/tests/test_security_urls.py",
+    "etc/conda/test-files/mistune/1/tests/test_syntax.py",
+    "lib/python3.14/site-packages/mistune/__init__.py",
+    "lib/python3.14/site-packages/mistune/__main__.py",
+    "lib/python3.14/site-packages/mistune/_inline/__init__.py",
+    "lib/python3.14/site-packages/mistune/_inline/emphasis.py",
+    "lib/python3.14/site-packages/mistune/_inline/links.py",
+    "lib/python3.14/site-packages/mistune/block_parser.py",
+    "lib/python3.14/site-packages/mistune/core.py",
+    "lib/python3.14/site-packages/mistune/directives/__init__.py",
+    "lib/python3.14/site-packages/mistune/directives/_base.py",
+    "lib/python3.14/site-packages/mistune/directives/_fenced.py",
+    "lib/python3.14/site-packages/mistune/directives/_rst.py",
+    "lib/python3.14/site-packages/mistune/directives/admonition.py",
+    "lib/python3.14/site-packages/mistune/directives/image.py",
+    "lib/python3.14/site-packages/mistune/directives/include.py",
+    "lib/python3.14/site-packages/mistune/directives/toc.py",
+    "lib/python3.14/site-packages/mistune/helpers.py",
+    "lib/python3.14/site-packages/mistune/inline_parser.py",
+    "lib/python3.14/site-packages/mistune/list_parser.py",
+    "lib/python3.14/site-packages/mistune/markdown.py",
+    "lib/python3.14/site-packages/mistune/plugins/__init__.py",
+    "lib/python3.14/site-packages/mistune/plugins/abbr.py",
+    "lib/python3.14/site-packages/mistune/plugins/def_list.py",
+    "lib/python3.14/site-packages/mistune/plugins/footnotes.py",
+    "lib/python3.14/site-packages/mistune/plugins/formatting.py",
+    "lib/python3.14/site-packages/mistune/plugins/math.py",
+    "lib/python3.14/site-packages/mistune/plugins/ruby.py",
+    "lib/python3.14/site-packages/mistune/plugins/speedup.py",
+    "lib/python3.14/site-packages/mistune/plugins/spoiler.py",
+    "lib/python3.14/site-packages/mistune/plugins/table.py",
+    "lib/python3.14/site-packages/mistune/plugins/task_lists.py",
+    "lib/python3.14/site-packages/mistune/plugins/url.py",
+    "lib/python3.14/site-packages/mistune/py.typed",
+    "lib/python3.14/site-packages/mistune/renderers/__init__.py",
+    "lib/python3.14/site-packages/mistune/renderers/_list.py",
+    "lib/python3.14/site-packages/mistune/renderers/html.py",
+    "lib/python3.14/site-packages/mistune/renderers/markdown.py",
+    "lib/python3.14/site-packages/mistune/renderers/rst.py",
+    "lib/python3.14/site-packages/mistune/toc.py",
+    "lib/python3.14/site-packages/mistune/util.py",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/METADATA",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/RECORD",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/WHEEL",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/mistune-3.3.4.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/mistune/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/__main__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/_inline/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/_inline/__pycache__/emphasis.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/_inline/__pycache__/links.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/block_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/core.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/_base.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/_fenced.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/_rst.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/admonition.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/image.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/include.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/directives/__pycache__/toc.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/inline_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/list_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/markdown.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/abbr.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/def_list.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/footnotes.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/formatting.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/math.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/ruby.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/speedup.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/spoiler.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/table.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/task_lists.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/plugins/__pycache__/url.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/renderers/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/renderers/__pycache__/_list.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/renderers/__pycache__/html.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/renderers/__pycache__/markdown.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/renderers/__pycache__/rst.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/toc.cpython-314.pyc",
+    "lib/python3.14/site-packages/mistune/__pycache__/util.cpython-314.pyc",
+    "bin/mistune"
+  ],
+  "fn": "mistune-3.3.4-pyhcf101f3_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/mistune-3.3.4-pyhcf101f3_0",
+    "type": 1
+  },
+  "md5": "1c0ebec41ef9214160da1ee6a0880fce",
+  "name": "mistune",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/mistune-3.3.4-pyhcf101f3_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/mistune/1/pyproject.toml",
+        "path_type": "hardlink",
+        "sha256": "49dc2fe793d3bf81ae4c90e0407278779314931d6c0b471cd4eceef6cfa601b9",
+        "sha256_in_prefix": "49dc2fe793d3bf81ae4c90e0407278779314931d6c0b471cd4eceef6cfa601b9",
+        "size_in_bytes": 2138
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "2bac4a6e1571f59237d4ce7949223ce7eb94e72781c39bbd655222e918fb54b1",
+        "sha256_in_prefix": "2bac4a6e1571f59237d4ce7949223ce7eb94e72781c39bbd655222e918fb54b1",
+        "size_in_bytes": 1145
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5e4128af4efef819015eb7d2de4b98f9026645f42f3bf9284a5c1c5408c319ea",
+        "sha256_in_prefix": "5e4128af4efef819015eb7d2de4b98f9026645f42f3bf9284a5c1c5408c319ea",
+        "size_in_bytes": 1536
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/abbr.txt",
+        "path_type": "hardlink",
+        "sha256": "5c25171e39cd89f7ab552086a1623ce3cc4427d7541d85fb31df13a3e7917569",
+        "sha256_in_prefix": "5c25171e39cd89f7ab552086a1623ce3cc4427d7541d85fb31df13a3e7917569",
+        "size_in_bytes": 3106
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/cli.txt",
+        "path_type": "hardlink",
+        "sha256": "57252b7670f118fb1c8c8b0c5025f6e47e56cd88c2f337153cb45c8046f46085",
+        "sha256_in_prefix": "57252b7670f118fb1c8c8b0c5025f6e47e56cd88c2f337153cb45c8046f46085",
+        "size_in_bytes": 376
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/commonmark.json",
+        "path_type": "hardlink",
+        "sha256": "ae6129f3ce3caf4f99cf4f9a5ad3558a309652b5b887171013e2bf0797289b98",
+        "sha256_in_prefix": "ae6129f3ce3caf4f99cf4f9a5ad3558a309652b5b887171013e2bf0797289b98",
+        "size_in_bytes": 140423
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/def_list.txt",
+        "path_type": "hardlink",
+        "sha256": "29da5efb2d7f87b13b2e638e8085c6eb513645b6981e19ea7dd94e6db66c65e3",
+        "sha256_in_prefix": "29da5efb2d7f87b13b2e638e8085c6eb513645b6981e19ea7dd94e6db66c65e3",
+        "size_in_bytes": 3591
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/fenced_admonition.txt",
+        "path_type": "hardlink",
+        "sha256": "7f88ba78709b589ddaac2f85da0f1902b7e3955f0eac5f6045bd27643657ea56",
+        "sha256_in_prefix": "7f88ba78709b589ddaac2f85da0f1902b7e3955f0eac5f6045bd27643657ea56",
+        "size_in_bytes": 2522
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/fenced_figure.txt",
+        "path_type": "hardlink",
+        "sha256": "83c3d636e8d4f0dd5a767045cf38877fd3c6c03a20c351f06c50e30ae7f30cda",
+        "sha256_in_prefix": "83c3d636e8d4f0dd5a767045cf38877fd3c6c03a20c351f06c50e30ae7f30cda",
+        "size_in_bytes": 3481
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/fenced_image.txt",
+        "path_type": "hardlink",
+        "sha256": "fa7ede5a90b718aaeb46af7f5a4d98a0e17cec0411355f460a166356020e6780",
+        "sha256_in_prefix": "fa7ede5a90b718aaeb46af7f5a4d98a0e17cec0411355f460a166356020e6780",
+        "size_in_bytes": 2343
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/fenced_toc.txt",
+        "path_type": "hardlink",
+        "sha256": "6e5c2e722090cfa411a7f690a2f2322d0126baee8d804dd374a6c3738e9131f1",
+        "sha256_in_prefix": "6e5c2e722090cfa411a7f690a2f2322d0126baee8d804dd374a6c3738e9131f1",
+        "size_in_bytes": 3803
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/fix-commonmark.txt",
+        "path_type": "hardlink",
+        "sha256": "23381bb3c9db7c44b2cd7a3cb2b96eca50c1dceaafe4ec8a1605da3024549395",
+        "sha256_in_prefix": "23381bb3c9db7c44b2cd7a3cb2b96eca50c1dceaafe4ec8a1605da3024549395",
+        "size_in_bytes": 2304
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/footnotes.txt",
+        "path_type": "hardlink",
+        "sha256": "a93adb82a46d3f9f50d42f8b30ffd7ae20b4f7a2a2811dbfc0271f19c1986d43",
+        "sha256_in_prefix": "a93adb82a46d3f9f50d42f8b30ffd7ae20b4f7a2a2811dbfc0271f19c1986d43",
+        "size_in_bytes": 4322
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/hook_toc.txt",
+        "path_type": "hardlink",
+        "sha256": "bb951fceca8be66eaacfca9753e40ba8accbd94efb93e25cac907324d02a9498",
+        "sha256_in_prefix": "bb951fceca8be66eaacfca9753e40ba8accbd94efb93e25cac907324d02a9498",
+        "size_in_bytes": 2000
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/include/hello.md",
+        "path_type": "hardlink",
+        "sha256": "389aaf8f17da55ef35fedf530bc70cd1287042f6410ec94c2b44c1b22c36e60a",
+        "sha256_in_prefix": "389aaf8f17da55ef35fedf530bc70cd1287042f6410ec94c2b44c1b22c36e60a",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/include/hello.txt",
+        "path_type": "hardlink",
+        "sha256": "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03",
+        "sha256_in_prefix": "5891b5b522d5df086d0ff0b110fbd9d21bb4fc7163af34d08286a2e846f6be03",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/include/text.html",
+        "path_type": "hardlink",
+        "sha256": "bac2f8a2e3937f8923da8e560248d2a52867b502fbda531ba73f1d066b35d2ba",
+        "sha256_in_prefix": "bac2f8a2e3937f8923da8e560248d2a52867b502fbda531ba73f1d066b35d2ba",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/include/text.md",
+        "path_type": "hardlink",
+        "sha256": "3ffb497b2829ca6333bc6eb4e7d2959aa7baeaa44180225a4820e0051ae7ef75",
+        "sha256_in_prefix": "3ffb497b2829ca6333bc6eb4e7d2959aa7baeaa44180225a4820e0051ae7ef75",
+        "size_in_bytes": 163
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/insert.txt",
+        "path_type": "hardlink",
+        "sha256": "de7b89a58c2cbd2d4948c10b8c599fd7500b3ae6734d271a35ff2cf2854b1572",
+        "sha256_in_prefix": "de7b89a58c2cbd2d4948c10b8c599fd7500b3ae6734d271a35ff2cf2854b1572",
+        "size_in_bytes": 1165
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/mark.txt",
+        "path_type": "hardlink",
+        "sha256": "6b5c232cf89f61097ae6d032865a99bdcd9f65e3ef99517d9423b2da0aa983d0",
+        "sha256_in_prefix": "6b5c232cf89f61097ae6d032865a99bdcd9f65e3ef99517d9423b2da0aa983d0",
+        "size_in_bytes": 1138
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/math.txt",
+        "path_type": "hardlink",
+        "sha256": "bb67a32acbaecb39577e795fe4d24c624150c7394bd481a5bf29b9e5af710e9c",
+        "sha256_in_prefix": "bb67a32acbaecb39577e795fe4d24c624150c7394bd481a5bf29b9e5af710e9c",
+        "size_in_bytes": 2681
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/renderer_markdown.txt",
+        "path_type": "hardlink",
+        "sha256": "b982e18be294de117c318a392b043cd8547995b0c1a6fc7ff0e8f72c353ce08c",
+        "sha256_in_prefix": "b982e18be294de117c318a392b043cd8547995b0c1a6fc7ff0e8f72c353ce08c",
+        "size_in_bytes": 3573
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/renderer_rst.txt",
+        "path_type": "hardlink",
+        "sha256": "111f65daa41677a5f442f6d5137eb70d9d006d54221b8d6d89bafbf7c7ea497c",
+        "sha256_in_prefix": "111f65daa41677a5f442f6d5137eb70d9d006d54221b8d6d89bafbf7c7ea497c",
+        "size_in_bytes": 3172
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/rst_admonition.txt",
+        "path_type": "hardlink",
+        "sha256": "821676f07a4e595c51c84da87edc592e22e8bbed6241e070040d87a4de7c5d7e",
+        "sha256_in_prefix": "821676f07a4e595c51c84da87edc592e22e8bbed6241e070040d87a4de7c5d7e",
+        "size_in_bytes": 848
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/rst_toc.txt",
+        "path_type": "hardlink",
+        "sha256": "81f54ba03ba750a625ba3a18cc84e548ac2b96ccf818a54e01da2045721c5177",
+        "sha256_in_prefix": "81f54ba03ba750a625ba3a18cc84e548ac2b96ccf818a54e01da2045721c5177",
+        "size_in_bytes": 3790
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/ruby.txt",
+        "path_type": "hardlink",
+        "sha256": "1f7cad5ee3fc8ddcc6eb50c0949cdb3d4ebf9cf83d6f1337c3b51cad4e0f777b",
+        "sha256_in_prefix": "1f7cad5ee3fc8ddcc6eb50c0949cdb3d4ebf9cf83d6f1337c3b51cad4e0f777b",
+        "size_in_bytes": 1805
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/spoiler.txt",
+        "path_type": "hardlink",
+        "sha256": "18ef06cf7f2660749da69743fd4a244564366a2a41009cde646ecc4efe90020e",
+        "sha256_in_prefix": "18ef06cf7f2660749da69743fd4a244564366a2a41009cde646ecc4efe90020e",
+        "size_in_bytes": 1429
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/strikethrough.txt",
+        "path_type": "hardlink",
+        "sha256": "fee85a2207da74bdcf437c2c58804b009b657b4dfd505989fdbee46f78feac07",
+        "sha256_in_prefix": "fee85a2207da74bdcf437c2c58804b009b657b4dfd505989fdbee46f78feac07",
+        "size_in_bytes": 886
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/subscript.txt",
+        "path_type": "hardlink",
+        "sha256": "61fd94b4718edbbfaa782533f659f4f193585fb09e61761a662cd313906932b8",
+        "sha256_in_prefix": "61fd94b4718edbbfaa782533f659f4f193585fb09e61761a662cd313906932b8",
+        "size_in_bytes": 521
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/superscript.txt",
+        "path_type": "hardlink",
+        "sha256": "658ac752d95d74e6e97e7daceba6f48ef279dc6f1389a878610bc608e82f34b3",
+        "sha256_in_prefix": "658ac752d95d74e6e97e7daceba6f48ef279dc6f1389a878610bc608e82f34b3",
+        "size_in_bytes": 523
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/table.txt",
+        "path_type": "hardlink",
+        "sha256": "20ed40b289975c1f386ac79bb3f22fcc6ccbd8b60b87018d3f25f7c7bdf0f3ff",
+        "sha256_in_prefix": "20ed40b289975c1f386ac79bb3f22fcc6ccbd8b60b87018d3f25f7c7bdf0f3ff",
+        "size_in_bytes": 5822
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/task_lists.txt",
+        "path_type": "hardlink",
+        "sha256": "d17a07a9cb077dd25c3b4c4dd7301bc9f508ab75ec83c2293b0ebaca954be76c",
+        "sha256_in_prefix": "d17a07a9cb077dd25c3b4c4dd7301bc9f508ab75ec83c2293b0ebaca954be76c",
+        "size_in_bytes": 3104
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/fixtures/url.txt",
+        "path_type": "hardlink",
+        "sha256": "441ea5e1e27f6edcd52b51f8c20ca1eee8b76d4adcc3b2fcdd419448c528ef21",
+        "sha256_in_prefix": "441ea5e1e27f6edcd52b51f8c20ca1eee8b76d4adcc3b2fcdd419448c528ef21",
+        "size_in_bytes": 530
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_cli.py",
+        "path_type": "hardlink",
+        "sha256": "ca92e47ddf79a6497b9d559723da48b7588de85f06a380d8b16f3cde3ce18edd",
+        "sha256_in_prefix": "ca92e47ddf79a6497b9d559723da48b7588de85f06a380d8b16f3cde3ce18edd",
+        "size_in_bytes": 565
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_commonmark.py",
+        "path_type": "hardlink",
+        "sha256": "bcee524c99b959b66a39372b0f04d30ddfb0fcff664f74fc69a68b9096063e9f",
+        "sha256_in_prefix": "bcee524c99b959b66a39372b0f04d30ddfb0fcff664f74fc69a68b9096063e9f",
+        "size_in_bytes": 430
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_directives.py",
+        "path_type": "hardlink",
+        "sha256": "25dcd908b7befd2b37b04cf59151dc9317384bae73955c891c08a7ab18a49e44",
+        "sha256_in_prefix": "25dcd908b7befd2b37b04cf59151dc9317384bae73955c891c08a7ab18a49e44",
+        "size_in_bytes": 4581
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_hooks.py",
+        "path_type": "hardlink",
+        "sha256": "13b58a89f6e5057095c807a316cf9a4b6bcfc0183748a30901cb733417a5afc8",
+        "sha256_in_prefix": "13b58a89f6e5057095c807a316cf9a4b6bcfc0183748a30901cb733417a5afc8",
+        "size_in_bytes": 878
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_misc.py",
+        "path_type": "hardlink",
+        "sha256": "6cf88e9544a927bbdeefb8285d172ee579dda682fd66deec272e590a8a9ca678",
+        "sha256_in_prefix": "6cf88e9544a927bbdeefb8285d172ee579dda682fd66deec272e590a8a9ca678",
+        "size_in_bytes": 14149
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_plugins.py",
+        "path_type": "hardlink",
+        "sha256": "5ed6d03ed6f6dd82bfc404c87ae044a8680685841647049fa46129d5ad9b5a48",
+        "sha256_in_prefix": "5ed6d03ed6f6dd82bfc404c87ae044a8680685841647049fa46129d5ad9b5a48",
+        "size_in_bytes": 2280
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_renderers.py",
+        "path_type": "hardlink",
+        "sha256": "183ad72d350830306cf1443943941040cb9062bc8d603ab369b3d307438948b1",
+        "sha256_in_prefix": "183ad72d350830306cf1443943941040cb9062bc8d603ab369b3d307438948b1",
+        "size_in_bytes": 6929
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_edge_cases.py",
+        "path_type": "hardlink",
+        "sha256": "040afec966800355a36876d4f0ceda566327d11bf3e37fe8758d40d0e329afbd",
+        "sha256_in_prefix": "040afec966800355a36876d4f0ceda566327d11bf3e37fe8758d40d0e329afbd",
+        "size_in_bytes": 2946
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_formatting.py",
+        "path_type": "hardlink",
+        "sha256": "4319598da8799de05aaa1302653dafc328c4f4de29ab2683b08859da6239ac40",
+        "sha256_in_prefix": "4319598da8799de05aaa1302653dafc328c4f4de29ab2683b08859da6239ac40",
+        "size_in_bytes": 1686
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_image.py",
+        "path_type": "hardlink",
+        "sha256": "dbf19c81a1fd848cd79f5d73f9ae67e98914257f6ebb0feeaaee5b847154b227",
+        "sha256_in_prefix": "dbf19c81a1fd848cd79f5d73f9ae67e98914257f6ebb0feeaaee5b847154b227",
+        "size_in_bytes": 1140
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_include.py",
+        "path_type": "hardlink",
+        "sha256": "38d77d680d836007b3b427438515e625d1ddfa2d0548d965a10abe9221be1448",
+        "sha256_in_prefix": "38d77d680d836007b3b427438515e625d1ddfa2d0548d965a10abe9221be1448",
+        "size_in_bytes": 2742
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_inline.py",
+        "path_type": "hardlink",
+        "sha256": "751f874d608aae22902ba9b105fa5f21c98d4c8f870f2fe7e7bf47ba90c7f03e",
+        "sha256_in_prefix": "751f874d608aae22902ba9b105fa5f21c98d4c8f870f2fe7e7bf47ba90c7f03e",
+        "size_in_bytes": 4926
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_math.py",
+        "path_type": "hardlink",
+        "sha256": "623e5ea30d06abdd9a771b785546bf5da0d8f69954ebebe828073f39b35275a1",
+        "sha256_in_prefix": "623e5ea30d06abdd9a771b785546bf5da0d8f69954ebebe828073f39b35275a1",
+        "size_in_bytes": 994
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_ref_links.py",
+        "path_type": "hardlink",
+        "sha256": "649066870087d725fa90aa50d2d8b235c9d3854f759333db4c6e968a6e2bcab7",
+        "sha256_in_prefix": "649066870087d725fa90aa50d2d8b235c9d3854f759333db4c6e968a6e2bcab7",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_toc.py",
+        "path_type": "hardlink",
+        "sha256": "6c530b3bb07b5fe0b2bbfa205d1e32d756e83d38ae1a9f823b032b0844148c46",
+        "sha256_in_prefix": "6c530b3bb07b5fe0b2bbfa205d1e32d756e83d38ae1a9f823b032b0844148c46",
+        "size_in_bytes": 1352
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_security_urls.py",
+        "path_type": "hardlink",
+        "sha256": "bea8ca934208ca90440c5a765570e92cad3ac8d875ed6110c04c5ef96906a74e",
+        "sha256_in_prefix": "bea8ca934208ca90440c5a765570e92cad3ac8d875ed6110c04c5ef96906a74e",
+        "size_in_bytes": 2759
+      },
+      {
+        "_path": "etc/conda/test-files/mistune/1/tests/test_syntax.py",
+        "path_type": "hardlink",
+        "sha256": "6f2cc5d15bcc38b623ad5a7b0224c3ee3ee3731cd3e8910e057d0d8dc8dae18b",
+        "sha256_in_prefix": "6f2cc5d15bcc38b623ad5a7b0224c3ee3ee3731cd3e8910e057d0d8dc8dae18b",
+        "size_in_bytes": 294
+      },
+      {
+        "_path": "site-packages/mistune/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "febc4745c54869ddaeeecc2f65d40b4f326e7054ba40eb649bfc19809e3078f4",
+        "sha256_in_prefix": "febc4745c54869ddaeeecc2f65d40b4f326e7054ba40eb649bfc19809e3078f4",
+        "size_in_bytes": 2941
+      },
+      {
+        "_path": "site-packages/mistune/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "fde5c464c42eac81b09ba6898e4b9fbcc22075923c264aae9a3375c48bed5cb2",
+        "sha256_in_prefix": "fde5c464c42eac81b09ba6898e4b9fbcc22075923c264aae9a3375c48bed5cb2",
+        "size_in_bytes": 3410
+      },
+      {
+        "_path": "site-packages/mistune/_inline/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "dd42de423d705210638fb2ae17f947f9f6f45db0aa8db45b05bf741ae2f5850e",
+        "sha256_in_prefix": "dd42de423d705210638fb2ae17f947f9f6f45db0aa8db45b05bf741ae2f5850e",
+        "size_in_bytes": 52
+      },
+      {
+        "_path": "site-packages/mistune/_inline/emphasis.py",
+        "path_type": "hardlink",
+        "sha256": "21baf99bf6316e37f0415dc000490616af40674efd5e9698aedd350cb17e89bd",
+        "sha256_in_prefix": "21baf99bf6316e37f0415dc000490616af40674efd5e9698aedd350cb17e89bd",
+        "size_in_bytes": 13171
+      },
+      {
+        "_path": "site-packages/mistune/_inline/links.py",
+        "path_type": "hardlink",
+        "sha256": "5d7cb9a7ea9e050644e8df5641cd660f8443c4724f4b2750aefd2dda5e27af54",
+        "sha256_in_prefix": "5d7cb9a7ea9e050644e8df5641cd660f8443c4724f4b2750aefd2dda5e27af54",
+        "size_in_bytes": 7977
+      },
+      {
+        "_path": "site-packages/mistune/block_parser.py",
+        "path_type": "hardlink",
+        "sha256": "3eecb2e9f2ca27213c1d041c42cb009835a59f36beb961e2481ae6840c657351",
+        "sha256_in_prefix": "3eecb2e9f2ca27213c1d041c42cb009835a59f36beb961e2481ae6840c657351",
+        "size_in_bytes": 18698
+      },
+      {
+        "_path": "site-packages/mistune/core.py",
+        "path_type": "hardlink",
+        "sha256": "9832517bf6b284056ee49b29b1287d267cb8ad95a01e5fe69de3e91d873ef234",
+        "sha256_in_prefix": "9832517bf6b284056ee49b29b1287d267cb8ad95a01e5fe69de3e91d873ef234",
+        "size_in_bytes": 8611
+      },
+      {
+        "_path": "site-packages/mistune/directives/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "a93eed8287b31f6f19417b9f96664d97f3ad377e7592137c534c217c37ae0e4e",
+        "sha256_in_prefix": "a93eed8287b31f6f19417b9f96664d97f3ad377e7592137c534c217c37ae0e4e",
+        "size_in_bytes": 867
+      },
+      {
+        "_path": "site-packages/mistune/directives/_base.py",
+        "path_type": "hardlink",
+        "sha256": "a986228b127ce18c9b18b0ba2b43d5cfa66bdf34a4f38f1482054834d0f73f40",
+        "sha256_in_prefix": "a986228b127ce18c9b18b0ba2b43d5cfa66bdf34a4f38f1482054834d0f73f40",
+        "size_in_bytes": 4605
+      },
+      {
+        "_path": "site-packages/mistune/directives/_fenced.py",
+        "path_type": "hardlink",
+        "sha256": "47add31449b94bf9dc82fc3a4505cc8b5cc2ed72833370507aa1be1548768c0e",
+        "sha256_in_prefix": "47add31449b94bf9dc82fc3a4505cc8b5cc2ed72833370507aa1be1548768c0e",
+        "size_in_bytes": 4826
+      },
+      {
+        "_path": "site-packages/mistune/directives/_rst.py",
+        "path_type": "hardlink",
+        "sha256": "9596e21b46c7bb0f26c8a8b48a4c89a1856297ec13d4ad4a1cbdf4b6ab033bbb",
+        "sha256_in_prefix": "9596e21b46c7bb0f26c8a8b48a4c89a1856297ec13d4ad4a1cbdf4b6ab033bbb",
+        "size_in_bytes": 2203
+      },
+      {
+        "_path": "site-packages/mistune/directives/admonition.py",
+        "path_type": "hardlink",
+        "sha256": "e6811e90b9a21a236e64be4cd55d82b1726aae3fc8f73a19b2a301821ae606c4",
+        "sha256_in_prefix": "e6811e90b9a21a236e64be4cd55d82b1726aae3fc8f73a19b2a301821ae606c4",
+        "size_in_bytes": 2261
+      },
+      {
+        "_path": "site-packages/mistune/directives/image.py",
+        "path_type": "hardlink",
+        "sha256": "d41858864e915a13249ff57cb9efbb3d0ee893e89040d8f0e46a0031d03376ea",
+        "sha256_in_prefix": "d41858864e915a13249ff57cb9efbb3d0ee893e89040d8f0e46a0031d03376ea",
+        "size_in_bytes": 5510
+      },
+      {
+        "_path": "site-packages/mistune/directives/include.py",
+        "path_type": "hardlink",
+        "sha256": "974c712c1040d171729365018dc3c8aea6dac9813cbc3a4ba29ec8d901c61f93",
+        "sha256_in_prefix": "974c712c1040d171729365018dc3c8aea6dac9813cbc3a4ba29ec8d901c61f93",
+        "size_in_bytes": 3880
+      },
+      {
+        "_path": "site-packages/mistune/directives/toc.py",
+        "path_type": "hardlink",
+        "sha256": "0ab1413261d25b95293779c19f02e8e6a869a3213a387264c8ea7f1ff5fccaf3",
+        "sha256_in_prefix": "0ab1413261d25b95293779c19f02e8e6a869a3213a387264c8ea7f1ff5fccaf3",
+        "size_in_bytes": 3930
+      },
+      {
+        "_path": "site-packages/mistune/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "74135e940f2f480395616b915ec100157106151eaa44b189d85c71d65bc7bbcf",
+        "sha256_in_prefix": "74135e940f2f480395616b915ec100157106151eaa44b189d85c71d65bc7bbcf",
+        "size_in_bytes": 6754
+      },
+      {
+        "_path": "site-packages/mistune/inline_parser.py",
+        "path_type": "hardlink",
+        "sha256": "9c69bc3e8053c473b445c2d995db199eb5e2fd5cb070bfb2549ec0e57d2d6fc3",
+        "sha256_in_prefix": "9c69bc3e8053c473b445c2d995db199eb5e2fd5cb070bfb2549ec0e57d2d6fc3",
+        "size_in_bytes": 13421
+      },
+      {
+        "_path": "site-packages/mistune/list_parser.py",
+        "path_type": "hardlink",
+        "sha256": "248e674eec77ba16091e05946c32d52ea2128326a28142c35fe0b41ebe2eba2c",
+        "sha256_in_prefix": "248e674eec77ba16091e05946c32d52ea2128326a28142c35fe0b41ebe2eba2c",
+        "size_in_bytes": 10969
+      },
+      {
+        "_path": "site-packages/mistune/markdown.py",
+        "path_type": "hardlink",
+        "sha256": "c06efb307d990643ba969c703b63026c85bfcac46a86ebce9e1b3d9a9ce911a1",
+        "sha256_in_prefix": "c06efb307d990643ba969c703b63026c85bfcac46a86ebce9e1b3d9a9ce911a1",
+        "size_in_bytes": 4019
+      },
+      {
+        "_path": "site-packages/mistune/plugins/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "30628af1adf5ca5b14052f14ab9ba448bb0de3466874ca65e7d048f79515e631",
+        "sha256_in_prefix": "30628af1adf5ca5b14052f14ab9ba448bb0de3466874ca65e7d048f79515e631",
+        "size_in_bytes": 1570
+      },
+      {
+        "_path": "site-packages/mistune/plugins/abbr.py",
+        "path_type": "hardlink",
+        "sha256": "aa203fe23ec09bc3c49391d608188765f78b2ceabaf3bf599678c1c6797c93e0",
+        "sha256_in_prefix": "aa203fe23ec09bc3c49391d608188765f78b2ceabaf3bf599678c1c6797c93e0",
+        "size_in_bytes": 4282
+      },
+      {
+        "_path": "site-packages/mistune/plugins/def_list.py",
+        "path_type": "hardlink",
+        "sha256": "8feacb6fbf786762101fb2cd35182baeb8ca3fc37d287913fa81d49ce7c57263",
+        "sha256_in_prefix": "8feacb6fbf786762101fb2cd35182baeb8ca3fc37d287913fa81d49ce7c57263",
+        "size_in_bytes": 5751
+      },
+      {
+        "_path": "site-packages/mistune/plugins/footnotes.py",
+        "path_type": "hardlink",
+        "sha256": "b46dddd3e81458ff7d34f6b02750190f07d07ea92761ac3e995d28f40169c794",
+        "sha256_in_prefix": "b46dddd3e81458ff7d34f6b02750190f07d07ea92761ac3e995d28f40169c794",
+        "size_in_bytes": 5462
+      },
+      {
+        "_path": "site-packages/mistune/plugins/formatting.py",
+        "path_type": "hardlink",
+        "sha256": "e05c23d7bb04f845cc138b9b68c1e7c76771070d4f9c7fdea5a9ddd54c0d5ea1",
+        "sha256_in_prefix": "e05c23d7bb04f845cc138b9b68c1e7c76771070d4f9c7fdea5a9ddd54c0d5ea1",
+        "size_in_bytes": 6355
+      },
+      {
+        "_path": "site-packages/mistune/plugins/math.py",
+        "path_type": "hardlink",
+        "sha256": "068c64a5582d136ef0fd27a2ab036ba3c11df2a719d46f55553897193983b89f",
+        "sha256_in_prefix": "068c64a5582d136ef0fd27a2ab036ba3c11df2a719d46f55553897193983b89f",
+        "size_in_bytes": 2853
+      },
+      {
+        "_path": "site-packages/mistune/plugins/ruby.py",
+        "path_type": "hardlink",
+        "sha256": "e7f0ec2c44690aee489bbd36be018d7b56db45a4c5cf473701de21435aaf8637",
+        "sha256_in_prefix": "e7f0ec2c44690aee489bbd36be018d7b56db45a4c5cf473701de21435aaf8637",
+        "size_in_bytes": 3404
+      },
+      {
+        "_path": "site-packages/mistune/plugins/speedup.py",
+        "path_type": "hardlink",
+        "sha256": "7d91f85daffbe974722d61eb0a17e936427adc3ac04aed609b7805a1b4cec25e",
+        "sha256_in_prefix": "7d91f85daffbe974722d61eb0a17e936427adc3ac04aed609b7805a1b4cec25e",
+        "size_in_bytes": 402
+      },
+      {
+        "_path": "site-packages/mistune/plugins/spoiler.py",
+        "path_type": "hardlink",
+        "sha256": "37fa53a415a34a6e274eebd329ec086d6c6c2fe60619e59741e52a9daa27469c",
+        "sha256_in_prefix": "37fa53a415a34a6e274eebd329ec086d6c6c2fe60619e59741e52a9daa27469c",
+        "size_in_bytes": 3411
+      },
+      {
+        "_path": "site-packages/mistune/plugins/table.py",
+        "path_type": "hardlink",
+        "sha256": "17544f277fb825a94266158d0a0b69f6633652a9759db2127965efe014a4d8f1",
+        "sha256_in_prefix": "17544f277fb825a94266158d0a0b69f6633652a9759db2127965efe014a4d8f1",
+        "size_in_bytes": 7605
+      },
+      {
+        "_path": "site-packages/mistune/plugins/task_lists.py",
+        "path_type": "hardlink",
+        "sha256": "e3cf6a459225363f5558a1a4a0228ed5a74d22947df358b39da194aa2475d6f3",
+        "sha256_in_prefix": "e3cf6a459225363f5558a1a4a0228ed5a74d22947df358b39da194aa2475d6f3",
+        "size_in_bytes": 2000
+      },
+      {
+        "_path": "site-packages/mistune/plugins/url.py",
+        "path_type": "hardlink",
+        "sha256": "2227b17145917f95120c195cf3e1023620a296c31fd1fad2166cacf30cab7b3f",
+        "sha256_in_prefix": "2227b17145917f95120c195cf3e1023620a296c31fd1fad2166cacf30cab7b3f",
+        "size_in_bytes": 800
+      },
+      {
+        "_path": "site-packages/mistune/py.typed",
+        "path_type": "hardlink",
+        "sha256": "76eadfdc791e9dfa7de4830b629bfe19c0a76ca965c51639d437264d926ab01f",
+        "sha256_in_prefix": "76eadfdc791e9dfa7de4830b629bfe19c0a76ca965c51639d437264d926ab01f",
+        "size_in_bytes": 181
+      },
+      {
+        "_path": "site-packages/mistune/renderers/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/mistune/renderers/_list.py",
+        "path_type": "hardlink",
+        "sha256": "d52907f664b84c6418dd93e08718ebe87d579aa2f9f495b6eac0b4b175b8a8dd",
+        "sha256_in_prefix": "d52907f664b84c6418dd93e08718ebe87d579aa2f9f495b6eac0b4b175b8a8dd",
+        "size_in_bytes": 2391
+      },
+      {
+        "_path": "site-packages/mistune/renderers/html.py",
+        "path_type": "hardlink",
+        "sha256": "df5bc7e5c1ba3e78b53631b3ee69f02f1847a24ea5c1370e8637bdda72c2fb04",
+        "sha256_in_prefix": "df5bc7e5c1ba3e78b53631b3ee69f02f1847a24ea5c1370e8637bdda72c2fb04",
+        "size_in_bytes": 5717
+      },
+      {
+        "_path": "site-packages/mistune/renderers/markdown.py",
+        "path_type": "hardlink",
+        "sha256": "42dfcf0ab6a46a53d2fe6050e1086895bdc55c4aa0a86ff3b48f7ff7c4e9d25e",
+        "sha256_in_prefix": "42dfcf0ab6a46a53d2fe6050e1086895bdc55c4aa0a86ff3b48f7ff7c4e9d25e",
+        "size_in_bytes": 10993
+      },
+      {
+        "_path": "site-packages/mistune/renderers/rst.py",
+        "path_type": "hardlink",
+        "sha256": "b464111d932b4f630bbdc07209dda0812e5f1ac7f85f488a7aebde0888b246f1",
+        "sha256_in_prefix": "b464111d932b4f630bbdc07209dda0812e5f1ac7f85f488a7aebde0888b246f1",
+        "size_in_bytes": 5941
+      },
+      {
+        "_path": "site-packages/mistune/toc.py",
+        "path_type": "hardlink",
+        "sha256": "544148c2db8e3a8c7cd6387fe09805d31c98bb31ff79816718f8ac21249034ce",
+        "sha256_in_prefix": "544148c2db8e3a8c7cd6387fe09805d31c98bb31ff79816718f8ac21249034ce",
+        "size_in_bytes": 4440
+      },
+      {
+        "_path": "site-packages/mistune/util.py",
+        "path_type": "hardlink",
+        "sha256": "325c70a9ec2ffa61a30511b4a562c83c3c0fa96b2643a0675f4894bfd54af65d",
+        "sha256_in_prefix": "325c70a9ec2ffa61a30511b4a562c83c3c0fa96b2643a0675f4894bfd54af65d",
+        "size_in_bytes": 2662
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0655c262ad851c4ac26b84a0830dc0ab38a302f58c9bf86fe0d31ee2ab03d650",
+        "sha256_in_prefix": "0655c262ad851c4ac26b84a0830dc0ab38a302f58c9bf86fe0d31ee2ab03d650",
+        "size_in_bytes": 1858
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "b692ba46d033d2019f1979c576ad4acb2b6d6f4bb2eb538ee6c45e3ed28bcecc",
+        "sha256_in_prefix": "b692ba46d033d2019f1979c576ad4acb2b6d6f4bb2eb538ee6c45e3ed28bcecc",
+        "size_in_bytes": 6082
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+        "sha256_in_prefix": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "d1f0ff63fd08e3141091241ec24c8edb67006d392cd2f45db1cf7336cd2be6a3",
+        "sha256_in_prefix": "d1f0ff63fd08e3141091241ec24c8edb67006d392cd2f45db1cf7336cd2be6a3",
+        "size_in_bytes": 118
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "43683b9619fb43087d517656413fbda218269ed762dd76dca0d0f76385313377",
+        "sha256_in_prefix": "43683b9619fb43087d517656413fbda218269ed762dd76dca0d0f76385313377",
+        "size_in_bytes": 49
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "539013fd8e19f744f8bf0e27a532bbff54cd689ecef7a800f56ae5dc824be870",
+        "sha256_in_prefix": "539013fd8e19f744f8bf0e27a532bbff54cd689ecef7a800f56ae5dc824be870",
+        "size_in_bytes": 1475
+      },
+      {
+        "_path": "site-packages/mistune-3.3.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "b6325333ae6401dc0a009da603bebdb670c661895f47ca6a46ca1b2a35447dc8",
+        "sha256_in_prefix": "b6325333ae6401dc0a009da603bebdb670c661895f47ca6a46ca1b2a35447dc8",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/__main__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/_inline/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/_inline/__pycache__/emphasis.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/_inline/__pycache__/links.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/block_parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/core.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/_base.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/_fenced.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/_rst.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/admonition.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/image.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/include.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/directives/__pycache__/toc.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/inline_parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/list_parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/markdown.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/abbr.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/def_list.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/footnotes.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/formatting.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/math.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/ruby.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/speedup.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/spoiler.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/table.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/task_lists.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/plugins/__pycache__/url.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/renderers/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/renderers/__pycache__/_list.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/renderers/__pycache__/html.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/renderers/__pycache__/markdown.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/renderers/__pycache__/rst.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/toc.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/mistune/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/mistune",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "306af633cb4ac85d04024d7c243ac2031c488bf5b0912207e7304c27a5d65a85",
+  "size": 93811,
+  "subdir": "noarch",
+  "timestamp": 1784722859000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/mistune-3.3.4-pyhcf101f3_0.conda",
+  "version": "3.3.4"
+}

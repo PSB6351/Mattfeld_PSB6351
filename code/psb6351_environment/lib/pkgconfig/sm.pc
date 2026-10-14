@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SM
+Description: X Session Management Library
+Version: 1.2.6
+Requires:
+Requires.private: ice xproto uuid
+Cflags: -I${includedir}
+Libs: -L${libdir} -lSM
+Libs.private: 

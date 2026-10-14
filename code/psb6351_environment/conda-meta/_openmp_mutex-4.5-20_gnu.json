@@ -1,0 +1,43 @@
+{
+  "build": "20_gnu",
+  "build_number": 20,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "openmp_impl <0.0a0"
+  ],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgomp >=7.5.0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/_openmp_mutex-4.5-20_gnu",
+  "files": [
+    "lib/libgomp.so.1"
+  ],
+  "fn": "_openmp_mutex-4.5-20_gnu.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/_openmp_mutex-4.5-20_gnu",
+    "type": 1
+  },
+  "md5": "a9f577daf3de00bca7c3c76c0ecbd1de",
+  "name": "_openmp_mutex",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/_openmp_mutex-4.5-20_gnu.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libgomp.so.1",
+        "path_type": "softlink",
+        "sha256": "7f03470f3da57b4e659243588bda6c150f09882ee43f33fd72d895586fe95cf7",
+        "size_in_bytes": 1475480
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
+  "size": 28948,
+  "subdir": "linux-64",
+  "timestamp": 1770939786000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda",
+  "version": "4.5"
+}

@@ -1,0 +1,7 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+
+Name: DRI3Proto
+Description: DRI3 extension headers
+Version: 1.4
+Cflags: -I${includedir}

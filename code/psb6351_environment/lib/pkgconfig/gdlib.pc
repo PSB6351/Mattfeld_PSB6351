@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gd
+Description: GD graphics library
+Version: 2.3.3
+Requires:
+Requires.private:   zlib  libpng  freetype2 >= 9.8.3  fontconfig  libjpeg  libtiff-4  libwebp >= 0.2.0
+Cflags: -I${includedir}
+Libs.private:  @LIBICONV@
+Libs: -L${libdir} -lgd

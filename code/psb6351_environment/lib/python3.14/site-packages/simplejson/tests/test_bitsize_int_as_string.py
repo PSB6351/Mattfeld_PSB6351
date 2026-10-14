@@ -1,0 +1,217 @@
+from unittest import TestCase
+
+import simplejson as json
+from simplejson.compat import PY3, integer_types, long_type
+
+
+class TestBitSizeIntAsString(TestCase):
+    # Python 2.5, at least the one that ships on Mac OS X, calculates
+    # 2 ** 31 as 0! It manages to calculate 1 << 31 correctly.
+    values = [
+        (200, 200),
+        ((1 << 31) - 1, (1 << 31) - 1),
+        ((1 << 31), str(1 << 31)),
+        ((1 << 31) + 1, str((1 << 31) + 1)),
+        (-100, -100),
+        ((-1 << 31), str(-1 << 31)),
+        ((-1 << 31) - 1, str((-1 << 31) - 1)),
+        ((-1 << 31) + 1, (-1 << 31) + 1),
+    ]
+
+    def test_invalid_counts(self):
+        for n in ['foo', -1, 0, 1.0]:
+            self.assertRaises(
+                TypeError,
+                json.dumps, 0, int_as_string_bitcount=n)
+
+    def test_ints_outside_range_fails(self):
+        self.assertNotEqual(
+            str(1 << 15),
+            json.loads(json.dumps(1 << 15, int_as_string_bitcount=16)),
+            )
+
+    def test_ints(self):
+        for val, expect in self.values:
+            self.assertEqual(
+                val,
+                json.loads(json.dumps(val)))
+            self.assertEqual(
+                expect,
+                json.loads(json.dumps(val, int_as_string_bitcount=31)),
+                )
+
+    def test_lists(self):
+        for val, expect in self.values:
+            val = [val, val]
+            expect = [expect, expect]
+            self.assertEqual(
+                val,
+                json.loads(json.dumps(val)))
+            self.assertEqual(
+                expect,
+                json.loads(json.dumps(val, int_as_string_bitcount=31)))
+
+    def test_dicts(self):
+        for val, expect in self.values:
+            val = {'k': val}
+            expect = {'k': expect}
+            self.assertEqual(
+                val,
+                json.loads(json.dumps(val)))
+            self.assertEqual(
+                expect,
+                json.loads(json.dumps(val, int_as_string_bitcount=31)))
+
+    def test_comparison_error_propagated(self):
+        # Regression test for C extension bug: PyObject_RichCompareBool
+        # returning -1 is truthy in C, causing the error to be silently
+        # swallowed. The pure Python encoder uses < (not >=/<= via
+        # RichCompareBool), so this only tests the C extension path.
+        from simplejson import encoder
+        if encoder.c_make_encoder is None:
+            return
+        class BadInt(int):
+            def __ge__(self, other):
+                raise RuntimeError("comparison bomb")
+            def __le__(self, other):
+                raise RuntimeError("comparison bomb")
+        # Use bitcount=15 and value 2**16 so the value fits in a
+        # Python 2 int on 32-bit platforms while still exceeding the
+        # bitcount threshold.
+        self.assertRaises(
+            RuntimeError,
+            json.dumps, BadInt(2**16), int_as_string_bitcount=15)
+
+    def test_dict_keys(self):
+        for val, _ in self.values:
+            expect = {str(val): 'value'}
+            val = {val: 'value'}
+            self.assertEqual(
+                expect,
+                json.loads(json.dumps(val)))
+            self.assertEqual(
+                expect,
+                json.loads(json.dumps(val, int_as_string_bitcount=31)))
+
+    def test_boundary_at_max_bitcount(self):
+        """Regression test for -Wshift-negative-value UB in encoder_new.
+
+        The C implementation computes ``-(2 ** n)`` as the minimum
+        stringifiable value; the naive ``-1LL << n`` expression is
+        undefined behavior and overflows into LLONG_MIN incorrectly for
+        n == 63. Exercise each bitcount from 1 to 63 with the exact
+        boundary values to catch any regression in that computation.
+        """
+        max_n = 63
+        for n in (1, 8, 31, 32, 62, max_n):
+            boundary = 1 << n  # i.e. 2**n
+            just_inside_pos = boundary - 1
+            just_inside_neg = -boundary + 1
+            # Values strictly inside [-2**n + 1, 2**n - 1] stay as ints
+            for v in (0, 1, -1, just_inside_pos, just_inside_neg):
+                self.assertEqual(
+                    v,
+                    json.loads(json.dumps(v, int_as_string_bitcount=n)),
+                    "n=%d v=%d should stay an int" % (n, v))
+            # Values at +/- 2**n get stringified (they're at the boundary)
+            for v in (boundary, -boundary):
+                self.assertEqual(
+                    str(v),
+                    json.loads(json.dumps(v, int_as_string_bitcount=n)),
+                    "n=%d v=%d should be stringified" % (n, v))
+
+
+    def test_large_bitcounts(self):
+        for n in (64, 65, 127, 128, 256, 1024):
+            boundary = 1 << n
+            values = [0, boundary - 1, boundary, boundary + 1,
+                      -boundary + 1, -boundary, -boundary - 1]
+            expected = [0, boundary - 1, str(boundary), str(boundary + 1),
+                        -boundary + 1, str(-boundary), str(-boundary - 1)]
+            for indent in (None, 2):
+                self.assertEqual(expected, json.loads(json.dumps(
+                    values, int_as_string_bitcount=n, indent=indent)))
+                self.assertEqual({'value': expected}, json.loads(json.dumps(
+                    {'value': values}, int_as_string_bitcount=n, indent=indent)))
+
+    def test_huge_bitcount_does_not_build_boundary(self):
+        # A threshold can exceed native integer sizes without allocating 2**n.
+        for n in (2 ** 32 + 31, 2 ** 100):
+            self.assertEqual('[0, 1, -1]', json.dumps(
+                [0, 1, -1], int_as_string_bitcount=n))
+
+    def test_large_bitcount_normalizes_subclass_once(self):
+        for integer_type in integer_types:
+            class ChangingInt(integer_type):
+                calls = 0
+
+                def __int__(self):
+                    self.calls += 1
+                    return normalized if self.calls == 1 else 0
+
+                def __long__(self):
+                    raise AssertionError('must normalize through __int__')
+
+            for normalized in (1 << 64, -(1 << 64), 1):
+                expected = str(normalized)
+                if abs(normalized) >= 1 << 64:
+                    expected = '"' + expected + '"'
+                for indent in (None, 2):
+                    value = ChangingInt(1)
+                    self.assertEqual(expected, json.dumps(
+                        value, int_as_string_bitcount=64, indent=indent))
+                    self.assertEqual(1, value.calls)
+
+    def test_large_bitcount_normalization_error_propagates(self):
+        for integer_type in integer_types:
+            class BadInt(integer_type):
+                def __int__(self):
+                    raise RuntimeError('normalization bomb')
+
+            for indent in (None, 2):
+                self.assertRaises(
+                    RuntimeError, json.dumps, BadInt(1),
+                    int_as_string_bitcount=64, indent=indent)
+
+    def _assert_returned_long_is_not_converted(self, returned_type):
+        for integer_type in integer_types:
+            class OriginalInt(integer_type):
+                calls = 0
+
+                def __int__(self):
+                    self.calls += 1
+                    return returned
+
+                def __long__(self):
+                    return long_type(7)
+
+            for normalized in (7, 1 << 64, -(1 << 64)):
+                expected = str(normalized)
+                if abs(normalized) >= 1 << 64:
+                    expected = '"' + expected + '"'
+                for indent in (None, 2):
+                    returned = returned_type(normalized)
+                    value = OriginalInt(7)
+                    self.assertEqual(expected, json.dumps(
+                        value, int_as_string_bitcount=64, indent=indent))
+                    self.assertEqual(1, value.calls)
+
+    def test_large_bitcount_returned_long_value_preserved(self):
+        if PY3:
+            self.skipTest('Python 2 int() can return a long subclass')
+
+        class ReturnedLong(long_type):
+            def __long__(self):
+                return 1 << 64
+
+        self._assert_returned_long_is_not_converted(ReturnedLong)
+
+    def test_large_bitcount_returned_long_hook_not_called(self):
+        if PY3:
+            self.skipTest('Python 2 int() can return a long subclass')
+
+        class ReturnedLong(long_type):
+            def __long__(self):
+                raise RuntimeError('unexpected second conversion')
+
+        self._assert_returned_long_is_not_converted(ReturnedLong)

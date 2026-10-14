@@ -1,0 +1,34 @@
+{
+  "build": "h4df99d1_106",
+  "build_number": 106,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python_abi * *_cp314",
+    "cpython 3.14.7.*"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/python-gil-3.14.7-h4df99d1_106",
+  "files": [],
+  "fn": "python-gil-3.14.7-h4df99d1_106.conda",
+  "license": "Python-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/python-gil-3.14.7-h4df99d1_106",
+    "type": 1
+  },
+  "md5": "b672ecb44198ade19ef249bf99f4b1ff",
+  "name": "python-gil",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/python-gil-3.14.7-h4df99d1_106.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "801ef80bc9f9394d9b3b5cae5a90c33cbbc33004b3e93195b93af818aad8888b",
+  "size": 51276,
+  "subdir": "noarch",
+  "timestamp": 1788383547000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/python-gil-3.14.7-h4df99d1_106.conda",
+  "version": "3.14.7"
+}
