@@ -4,11 +4,10 @@
 # class specific info qos = classroom
 
 # CHANGE YOUR SBATCH ACCORDING TO YOUR ACCESS
-#SBATCH --account acc_madlab
-#SBATCH --partition highmem1-sapphirerapids
-#SBATCH --qos highmem1
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_e
+#SBATCH --account acc_psb6351
+#SBATCH --qos classroom
+#SBATCH -o /home/aoste011/psb6351_work/crash/preproc_o
+#SBATCH -e /home/aoste011/psb6351_work/crash/preproc_e
 
 import os
 from glob import glob
@@ -30,9 +29,16 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 
 # set working, base, and sink directories
-base_dir = '/home/amattfel/Mattfeld_PSB6351'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM'
+base_dir = '/home/aoste011/Mattfeld_PSB6351'
+work_dir = '/home/aoste011/psb6351_work'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
+
+# FreeSurfer setup for bbregister
+# fs_dir is where recon_all writes each subject's folder (e.g., derivatives/freesurfer/sub-021)
+fs_dir = os.path.join(base_dir, 'derivatives/freesurfer')
+os.environ['FREESURFER_HOME'] = '/home/applications/freesurfer/7.1/freesurfer'
+os.environ['PATH'] += ':/home/applications/freesurfer/7.1/freesurfer/bin/'
+os.environ['SUBJECTS_DIR'] = fs_dir
 
 # Function for extracting slice timing info from fMRI json sidecars
 def slc_time(json_file_list):
@@ -79,7 +85,13 @@ def pickfirst(func):
 
 # Function for picking the best volume derived from a 
 # list of outlier counts
+# NOTE (my change, kept from last week): the outlier node passes in a text
+#       FILE, not a list, so the function loads the file into a list first.
+#       numpy is also imported inside the function because nipype Function
+#       nodes run in their own environment and can't see the imports above.
 def best_vol(outlier_count, middlebest):
+    import numpy as np
+    outlier_count = np.loadtxt(outlier_count).tolist()
     if middlebest == True:
         best_vol_num = int(np.ceil(len(outlier_count)/2)) #PICKING MIDDLE
     else:
@@ -190,12 +202,21 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 #          depending on what tool you use you may need to also
 #          modify the recon_all script and add a relevant directory
 #          to your node (again...dependent on tool utilized).
-
-
-
-
-
-
+#
+# MY ANSWER (tool choice):
+#
+# MY ANSWER (how to verify it worked):
+#
+# MY ANSWER (what to save):
+#
+bbreg = pe.Node(fs.BBRegister(contrast_type='t2',
+                              init='fsl',
+                              out_fsl_file=True,
+                              registered_file=True,
+                              subjects_dir=fs_dir),
+                name='bbreg')
+psb6351_wf.connect(subjID_infosource, 'subject_id', bbreg, 'subject_id')
+psb6351_wf.connect(extractref, 'roi_file', bbreg, 'source_file')
 
 
 # Add a mapnode to spatially blur the data
@@ -232,10 +253,14 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
+psb6351_wf.connect(bbreg, 'out_reg_file', datasink, 'bbreg.@reg')
+psb6351_wf.connect(bbreg, 'out_fsl_file', datasink, 'bbreg.@fslmat')
+psb6351_wf.connect(bbreg, 'registered_file', datasink, 'bbreg.@registered')
+psb6351_wf.connect(bbreg, 'min_cost_file', datasink, 'bbreg.@mincost')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash'
+psb6351_wf.config['execution']['crashdump_dir'] = '/home/aoste011/psb6351_work/crash'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --account acc_madlab --qos highmem1'),
+               plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=16G'),
                             'overwrite':True})
