@@ -52,7 +52,7 @@ for subject_dir in (base_dir / "dset").glob("sub-*"):
             -subjid sub-{subject} \
             -sd {fs_dir}/"
     process = sp.Popen(
-        f'sbatch --account acc_psb6351 --qos classroom \
+        f'sbatch --account acc_psb6351 --qos classroom --mem=16G \
             -J recon_all_{subject} -n 4 \
         -o {out_dir}/{subject}_reconall_out \
         --mail-type=END,FAIL --mail-user=aoste011@fiu.edu --wait \
