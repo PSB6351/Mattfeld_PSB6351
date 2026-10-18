@@ -203,11 +203,31 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 #          modify the recon_all script and add a relevant directory
 #          to your node (again...dependent on tool utilized).
 #
-# MY ANSWER (tool choice):
+# MY ANSWER (tool choice): As my tool choice, I used FreeSurfer's bbregister 
+# (boundary-based registration). It needs recon_all to be finished first, so 
+# I completed and ran psb6351_run_recon.py first. Then I ran psb6351_preproc.py.
+# -source_file: the reference volume from extractref. All runs were motion
+#   corrected to this same volume, so one transform applies to every run.
+# -contrast_type='t2': BOLD images are T2*-weighted (gray matter brighter
+#   than white matter), the opposite of the T1.
+# -init='fsl': FSL's flirt gives a rough starting alignment, then
+#   bbregister refines it using the white/gray matter boundary.
 #
-# MY ANSWER (how to verify it worked):
+# MY ANSWER (how to verify it worked): There are multiple ways to check if 
+# it worked. The way I am checking is by looking at the cost value in the 
+# min_cost_file: lower is better, and a high value suggests that the registration 
+# probably failed. My mincost was 0.325, which is low and indicates a good 
+# registration. This can be visually checked by overlaying the registered functional 
+# on the subject's anatomical (brainmask) in Mango/fsleyes and confirming the 
+# brain outline, ventricles, and gray matter line up.
 #
-# MY ANSWER (what to save):
+# MY ANSWER (what to save): There are a few things that should be saved.
+# The transformation files should be saved, these are: out_reg_file 
+# (.dat, FreeSurfer format) and out_fsl_file (.mat, FSL format), so the 
+# functional-to-anatomical transform can be applied in later steps without 
+# redoing the registration. Also the registered_file (functional moved into 
+# anatomical space) for the visual check, and the min_cost_file as a quality 
+# measure.
 #
 bbreg = pe.Node(fs.BBRegister(contrast_type='t2',
                               init='fsl',
