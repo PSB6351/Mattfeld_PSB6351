@@ -29,7 +29,14 @@ for subject_dir in (base_dir / "dset").glob("sub-*"):
     # subject_dir.name gives 'sub-021' -> split on '-' and keep the number '021'
     subject = subject_dir.name.split("-")[-1]
     # If the subject already has a freesurfer directory don't run
-    # MY ANSWER (what needs to exist / why it matters):
+    # MY ANSWER (what needs to exist / why it matters): What needs to exist 
+    # is the subject's FreeSurfer folder (derivatives/freesurfer/sub-021). 
+    # The folder must exist for this to be True. It matters because recon-all takes 6-12+
+    # hours, so we don't want to re-run subjects that are already done, and
+    # recon-all will not run if the subject folder already exists.
+    # When my first recon-all ran out of memory, I had to delete the
+    # half-finished sub-021 folder before it would run again. Then I allocated it
+    # memory (--mem=16G) before I ran it again.
     #
     if Path(
         f"{fs_dir}/sub-{subject}"
@@ -40,7 +47,15 @@ for subject_dir in (base_dir / "dset").glob("sub-*"):
     # across when the structural scan was collected
     # for some participants it was collected during Session1 (S1)
     # while for others it was collecte during Session2 (S2)
-    # MY ANSWER (which directory and file):
+    # MY ANSWER (which directory and file): The directory is dset, which 
+    # is the BIDS-formatted dataset. Specifically, the script looks in the 
+    # subject's anat folder (dset/sub-021/anat/). I used dset instead of 
+    # sourcedata because sourcedata holds the raw scanner files, while 
+    # dset holds the converted and organized NIfTI files. The file is the 
+    # T1-weighted anatomical scan (sub-021_T1w.nii.gz). recon-all needs 
+    # the T1 because it is high resolution and has strong contrast between 
+    # gray matter and white matter, which FreeSurfer uses to build the cortical 
+    # surfaces.
     #
     anat_img = sorted(glob(
         f"{base_dir}/dset/"
