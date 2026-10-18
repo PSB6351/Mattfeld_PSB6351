@@ -26,7 +26,7 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 base_dir = '/home/cknowlto/Mattfeld_PSB6351'
 work_dir = '/home/cknowlto/scratch'
-sink_dir = os.path.join(base_dir, 'derivatives/preproc')
+sink_dir = os.path.join(base_dir, 'derivatives/coregistration')
 
 # Function for extracting slice timing info from fMRI json sidecars
 def slc_time(json_file_list):
@@ -98,6 +98,7 @@ subjID_infosource.iterables = ('subject_id', sids)
 info = dict(
             fmri_files=[['subject_id', 'subject_id']],
             json_files=[['subject_id', 'subject_id']],
+            anat_files=[['subject_id', 'subject_id']] # added the t1 scans for coregistration w/ fsl flirt
            )
 
 # Create a datasource node to get the files that you are preprocessing
@@ -109,6 +110,7 @@ datasource.inputs.base_directory = os.path.abspath(base_dir)
 datasource.inputs.field_template = dict(
                                         fmri_files='dset2/%s/func/%s*.nii.gz',
                                         json_files='dset2/%s/func/%s_*.json',
+                                        anat_files='dset2/%s/anat/%s_run-2_*.nii.gz' # pulling RUN 2 only because run 1 appears to have less granularity and there is less contrast (from doing for f in *T1w.nii.gz; do slicer $f -a ~/${f%.nii.gz}.png; done)
                                        ) #telling workflow to find fmri files in sub dirs in the heudiconv output and then uses sub w/ wildcard to find the nii.gz files and tehn seperately the json side cars in a new var
 datasource.inputs.template_args = info
 datasource.inputs.sort_filelist = True
@@ -246,12 +248,34 @@ tshifter.inputs.outputtype = 'NIFTI_GZ'
 # save the outputs to the datasink
 psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
 psb6351_wf.connect(getslctime, 'slice_timing_list', tshifter, 'slice_timing')
-# NODE FINAL: This is the last node of the workflow. Right now it's number 10
-#             But that will icnrease as you add nodes, so I named it Final
-#             This saves your output that you want to keep...not peripheral files
-#             Take a look at the following webpage to learn more about
-#             DataGrabbers and DataSinks
-#             https://nipype.readthedocs.io/en/0.11.0/users/grabbing_and_sinking.html
+
+
+# NODE 10: Coregistration of functional to anatomical node
+#          You can use what ever tool you want from what every software 
+#          you want to use.  Exemplars include:
+#          Freesurfer's boundary based regsitration = bbregister
+#          FSL's = flirt
+#          AFNI's = align_epi_anat.py
+#          Reference the following webpage and the Interfaces Index
+#          to determine what inputs and outputs are available
+#          https://nipype.readthedocs.io/en/latest/
+#          In addition to the registration files
+#          How do you verify that it worked? What would you need to do?
+#          What would you need to save?
+# Answer: I will need to compare the T1 weighted anatomical to the registered functional volume and see if the sulci/gyri and ventricles line up. I assume what you would want to save from this is an image showing the overlay and that there is a clear line up. In order to accomplish this I used FSL eyes and loaded in the anatomical scan as well as the coregistered functional scan. Then I flickered on and off the view for the registered scan to see how clear brain regions line up (for instance the ventricles should be white on the anatomical scan and when flickering the functional scan on there should be a clear outline in black of the same ventricle). I will show this in class.
+#          To complete this assignment, you're going to have to add
+#          a node here and modify your DataSink accordingly
+#          depending on what tool you use you may need to also
+#          modify the recon_all script and add a relevant directory
+#          to your node (again...dependent on tool utilized).
+skullstrip = pe.Node(fsl.BET(robust=True), name='skullstrip') # FSL flirt reccomends the t1 for coreg to have skull tissue removed with FSL BET
+psb6351_wf.connect(datasource, ('anat_files', pickfirst), skullstrip, 'in_file') # update
+
+coreg = pe.Node(fsl.FLIRT(dof=6, cost='corratio'), name='coreg')
+psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
+psb6351_wf.connect(skullstrip, 'out_file', coreg, 'reference')
+
+# NODE FINAL:
 # Below is the node that collects all the data and saves
 # the outputs that I am interested in. Here in this node
 # I use the substitutions input combined with the earlier
@@ -264,6 +288,9 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'motion.@ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
+psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@mat') #transformed matrix
+psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@registered') # reference volume resampled in t1 space - what I will load into FSL eyes
+psb6351_wf.connect(skullstrip, 'out_file', datasink, 'coreg.@anat') #the FSL BET skull tissue removed
 
 # The following two lines set a work directory outside of my 
 # local git repo and runs the workflow
