@@ -1,14 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 
 
 # class specific info account = acc_psb6351
 # class specific info qos = classroom
 
 # CHANGE YOUR SBATCH ACCORDING TO YOUR ACCESS
-#SBATCH --account acc_madlab
-#SBATCH --partition highmem1-sapphirerapids
-#SBATCH --qos highmem1
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_e
+#SBATCH --account acc_psb6351
+#SBATCH --qos classroom
+#SBATCH -o /home/amele052/Mattfeld_PSB6351/preproc_assignment/crash/preproc_o
+#SBATCH -e /home/amele052/Mattfeld_PSB6351/preproc_assignment/crash/preproc_e
+
+# for the SBATCH lines, I removed one that included the highmem-sapphirerapids, since running my SLURM job was rejected because of it (a stack overflow discussion board mentioned that it might have caused issues with the classroom qos, but I'm not sre). 
 
 import os
 from glob import glob
@@ -30,8 +31,8 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 
 # set working, base, and sink directories
-base_dir = '/home/amattfel/Mattfeld_PSB6351'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM'
+base_dir = '/home/amele052/Mattfeld_PSB6351'
+work_dir = '/home/amele052//Mattfeld_PSB6351/preproc_assignment'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
 # Function for extracting slice timing info from fMRI json sidecars
@@ -191,6 +192,18 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 #          modify the recon_all script and add a relevant directory
 #          to your node (again...dependent on tool utilized).
 
+# I will use FSL's flirt for coregistration! Attempted to follow the FSL documentation as seen in https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.preprocess.html#nipype.interfaces.fsl.preprocess.FLIRT
+# the coreg = pe.Node line creates the node itself, much like the extractref node from Node 6. Coreg input and output lines follow a similar template to what the nipype website above provided in their FSL FLIRT breakdown. psb6351_wf.connect line connects the input (in file; similar to what's seen in Node 7).  
+
+
+# In addition to the registration files, you can verify that it worked by visualizing the data, where you would look at your T1 reference and compare it to the tool of choice to see if the two align. Tools such as afni, fsleyes, and mango can be used for visualization. After opening the T1 image, lay one of the tools (e.g., mango or fsleyes) on top to see if the two match. You would have to save both the file and image (i.e., out_file, out_matrix_file through Datasink). 
+
+coreg = pe.Node(fsl.FLIRT(),
+        name = 'coreg') 
+coreg.inputs.reference = os.path.join(base_dir, 'dset/sub-021/anat/sub-021_run-01_T1w.nii.gz')
+coreg.inputs.dof = 6
+coreg.inputs.output_type = 'NIFTI_GZ'
+psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file') 
 
 
 
@@ -233,9 +246,11 @@ psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
+psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@out_file')
+psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@matrix')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash'
+psb6351_wf.config['execution']['crashdump_dir'] = '/home/amele052/Mattfeld_PSB6351/preproc_assignment/crash'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --account acc_madlab --qos highmem1'),
+               plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom'),
                             'overwrite':True})
