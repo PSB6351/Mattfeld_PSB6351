@@ -3,12 +3,10 @@
 # class specific info account = acc_psb6351
 # class specific info qos = classroom
 
-# CHANGE YOUR SBATCH ACCORDING TO YOUR ACCESS
-#SBATCH --account acc_madlab
-#SBATCH --partition highmem1-sapphirerapids
-#SBATCH --qos highmem1
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_e
+#SBATCH --account acc_psb6351
+#SBATCH --qos classroom
+#SBATCH -o /home/cbeac004/Mattfeld_PSB6351/preproc_assignment/crash/preproc_o
+#SBATCH -e /home/cbeac004/Mattfeld_PSB6351/preproc_assignment/crash/preproc_e
 
 import os
 from glob import glob
@@ -30,8 +28,8 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 
 # set working, base, and sink directories
-base_dir = '/home/amattfel/Mattfeld_PSB6351'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM'
+base_dir = '/home/cbeac004/Mattfeld_PSB6351'
+work_dir = '/home/cbeac004/Mattfeld_PSB6351/preproc_assignment'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
 # Function for extracting slice timing info from fMRI json sidecars
@@ -174,24 +172,36 @@ psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
 psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 # NODE 10: Coregistration of functional to anatomical node
-#          You can use what ever tool you want from what every software 
-#          you want to use.  Exemplars include:
-#          Freesurfer's boundary based regsitration = bbregister
-#          FSL's = flirt
-#          AFNI's = align_epi_anat.py
-#          Reference the following webpage and the Interfaces Index
-#          to determine what inputs and outputs are available
-#          https://nipype.readthedocs.io/en/latest/
-#          In addition to the registration files
+#          Using FSL's flirt to register the motion correction reference
+#          volume (extractref) to the T1 anatomical scan.
+#          Every run was motion corrected to that same volume, so this one
+#          transformation applies to all runs.
+#          Verify: view the registered EPI (coreg/out_file) on top of the
+#          T1 in mango.
+#          QUESTIONS:
 #          How do you verify that it worked? What would you need to do?
+#          - Overlay the registered functional reference volume (flirt
+#            output in T1 space) on top of the subject's T1 anatomical scan
+#            in a viewer (I used Mango).
+#          - Check that the brain lines up with the T1 in all three
+#            views: brain outline/edges, ventricles, and anterior/posterior
+#            and superior/inferior extent. A failed registration would look
+#            shifted, rotated, or scaled relative to the T1.
+#          - I had to copy the T1 and the flirt output to my computer (scp)
+#            to view them.
 #          What would you need to save?
-#          To complete this assignment, you're going to have to add
-#          a node here and modify your DataSink accordingly
-#          depending on what tool you use you may need to also
-#          modify the recon_all script and add a relevant directory
-#          to your node (again...dependent on tool utilized).
-
-
+#          - The transformation matrix (out_matrix_file, .mat) so the same
+#            func->anat transform can be applied to all runs (they were all
+#            motion corrected to the same reference volume) and combined
+#            with later transforms.
+#          - The registered image (out_file) to visually check the
+#            registration.
+#          - The T1 used as the reference (already in dset/).
+coreg = pe.Node(fsl.FLIRT(), name='coreg')
+coreg.inputs.reference = os.path.join(base_dir, 'dset/sub-021/anat/sub-021_run-002_T1w.nii.gz')
+coreg.inputs.dof = 6
+coreg.inputs.output_type = 'NIFTI_GZ'
+psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 
 
 
@@ -232,10 +242,10 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
+psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@out_file')
+psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@matrix')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
-psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash'
+psb6351_wf.config['execution']['crashdump_dir'] = '/home/cbeac004/Mattfeld_PSB6351/preproc_assignment/crash'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --account acc_madlab --qos highmem1'),
-                            'overwrite':True})
+        plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom'),                   'overwrite':True})
