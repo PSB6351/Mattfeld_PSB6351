@@ -31,10 +31,10 @@ sink_dir = os.path.join(base_dir, 'derivatives/coregistration')
 # Function for extracting slice timing info from fMRI json sidecars
 def slc_time(json_file_list):
     import json
-    slice_timing_list = [] # Here I define an empty list variable
+    slice_timing_list = []
     for curr_json in json_file_list:
-        curr_json_data = open(curr_json) # I need to open the json file
-        curr_func_metadata = json.load(curr_json_data) # THen I need to load the json file
+        curr_json_data = open(curr_json)
+        curr_func_metadata = json.load(curr_json_data)
         slice_timing_list.append(curr_func_metadata['SliceTiming'])
 
     return slice_timing_list
@@ -44,6 +44,10 @@ def get_subs(subject_id):
     subs = [('_subject_id_%s'%subject_id, '')]
     return subs
 
+# The following two fucntions will be necessary
+# for the spatial blurring/smoothing out of class work
+# particularly if you intend to use the FSL SUSAN algorithm
+# https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/SUSAN.html
 def getbtthresh(medianvals):
     """Get the brightness threshold for SUSAN."""
     return [0.75*val for val in medianvals]
@@ -52,12 +56,14 @@ def getusans(inlist):
     """Return the usans at the right threshold."""
     return [[tuple([val[0],0.75*val[1]])] for val in inlist]
 
+# Function for grabbing aparc+aseg file from fssource node
 def get_aparc_aseg(files):
     for name in files:
         if 'aparc+aseg' in name:
             return name
     raise ValueError('aparc+aseg.mgz not found')
 
+# Function for grabbing the first item in a list
 def pickfirst(func):
     if isinstance(func, list):
         return func[0]
@@ -85,24 +91,17 @@ def best_vol(outlier_files, fmri_files, middlebest):
 psb6351_wf = pe.Workflow(name='psb6351_wf') # First I create a workflow...this will serve as the backbone of the pipeline
 psb6351_wf.base_dir = work_dir # I deinfe the working directory where I want preliminary files to be written
 
-# NODE 1: This is the node that iterates over the subject ID list
-#         It will create a work flow for each subject...in our case just one
+# NODE 1: Subject iterable, re-create workflow for all subjects in list sids
 subjID_infosource = pe.Node(IdentityInterface(fields=['subject_id']), name = 'subjID_infosource')
 subjID_infosource.iterables = ('subject_id', sids)
 
-# NODE 2: The next two chunks of code are necessary for the
-#         DataGrabber node.  The info dictionary will grow as
-#         you add files to your preprocessing workflow
-#         note the relation between the 'subject_id' and the %s
-#         in the field_template input below
+# NODE 2: DataGrabber, currently collecting fMRI and JSON files
 info = dict(
             fmri_files=[['subject_id', 'subject_id']],
             json_files=[['subject_id', 'subject_id']],
             anat_files=[['subject_id', 'subject_id']] # added the t1 scans for coregistration w/ fsl flirt
            )
 
-# Create a datasource node to get the files that you are preprocessing
-# this will grow as you incoporate more steps into your preprocessing workflow
 datasource = pe.Node(nio.DataGrabber(infields=['subject_id'], outfields=list(info.keys())),
                      name='datasource')
 datasource.inputs.template = '*' #since the node is create on the prev line w/ datagrabber now additional parms can be used - this i believe is similar to a wildcard glob formatting which allowas for setting up criteria on how to index certain files in the workflow
