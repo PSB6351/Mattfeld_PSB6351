@@ -1,38 +1,28 @@
 #!/bin/bash
 
-# Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
-module load fsl-6.0.4 
-module load ants-2.3.5
-module load matlab-2019b 
-module load afni-20.2.06
-module load r-4.2.0-gcc-8.2.0
-module load slurm
-module load cuda-10.0.130-gcc-8.2.0-xeppy24
-module load dsistudio-centos7
-module add dtiprep-1.2.11
-module add slicer-4.11.2
-module add itk-snap-3.8.0
-module load gcc-8.2.0-gcc-4.8.5-sxbf4jq #Centos7
-module load dcm2niix-1.0.20190902
-
-# Setup project specific python environment
-conda activate ~/YOURLASTNAME_PSB6351/.envs/psb6351_environment
+# Setup Nipype, FSL, AFNI, Freesurfer, ANTs, R
+module load fsl > /dev/null
+module load ants > /dev/null
+module load afni > /dev/null
+module add r > /dev/null
+module load cuda > /dev/null
+module load gcc > /dev/null
+module load dcm2niix > /dev/null
 
 # Setup Freesurfer
 export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer/
 source $FREESURFER_HOME/FreeSurferEnv.sh
-export SUBJECTS_DIR=~/YOURLASTNAME_PSB6351/derivatives/freesurfer
+export SUBJECTS_DIR=~/Mattfeld_PSB6351/derivatives/freesurfer
 
-# Setup SPM
-export SPM_PATH=/home/applications/spm12
 # Setup ANTS path
 export ANTSPATH=/home/applications/ANTs/2.3.5/bin
-#Directory to the $PATH so these files can be found
-#PATH=$PATH:/home/applications/ANTs/ANTs-2.1.0-Linux/Scripts/
-#export PATH
 # Setup ANTs threading to 1
 export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=1
+
 # Setup Multithreading
 export MKL_NUM_THREADS=4
 export OMP_NUM_THREADS=4
-export project_name="PSB6351"
+
+# Setup project specific python environment
+conda activate ~/Mattfeld_PSB6351/code/psb6351_environment
+export PATH="$HOME/Mattfeld_PSB6351/code/psb6351_environment/bin:$PATH"
