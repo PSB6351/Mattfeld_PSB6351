@@ -261,6 +261,13 @@ psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
 psb6351_wf.config['execution']['crashdump_dir'] = '/home/aoste011/psb6351_work/crash'
+# Each nipype job loads AFNI/FSL on the compute node itself so the cluster
+# picks the builds that match that node (fixes the libpng16 error on Broadwell nodes)
+slurm_template = ('#!/bin/bash\n'
+                  'source /etc/profile\n'
+                  'module purge\n'
+                  'module load afni/25.2.07-none-none fsl/6.0.6-none-none\n')
 psb6351_wf.run(plugin='SLURM',
                plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=16G'),
+                            'template': slurm_template,
                             'overwrite':True})
