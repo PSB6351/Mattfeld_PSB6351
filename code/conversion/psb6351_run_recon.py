@@ -10,17 +10,17 @@ os.environ['PATH'] += ':/home/applications/freesurfer/7.1/freesurfer/bin/'
 os.environ['FREESURFER_HOME'] = '/home/applications/freesurfer/7.1/freesurfer'
 file_dir = Path(__file__).parent
 # Produce freesurfer directory if it doesn't exist.
-Path("/home/amattfeld/Mattfeld_PSB6351/derivatives/freesurfer").mkdir(
+Path("/home/mali092/Mattfeld_PSB6351/derivatives/freesurfer").mkdir(
     mode=0o777, exist_ok=True, parents=True
 )
 recon_codes = []
 # Iterate over the subject directories after they have been bidsified
-for subject_dir in Path("/home/amattfel/Mattfeld_PSB6351/dset/").glob("sub-*"):
+for subject_dir in Path("/home/mali092/Mattfeld_PSB6351/dset/").glob("sub-*"):
     # Just get the subject number
-    subject = # HOW DO YOU GET THE SUBJECT ID????
+    subject = subject_dir.name.split('-')[-1]
     # If the subject already has a freesurfer directory don't run
     if Path(
-        f"WHAT NEEDS TO EXIST FOR THIS TO BE TRUE/FALSE...WHY DOES THAT MATTER?"
+        f"/home/mali092/Mattfeld_PSB6351/derivatives/freesurfer/sub-{subject}"
     ).exists():
         continue
     print(subject)
@@ -29,19 +29,19 @@ for subject_dir in Path("/home/amattfel/Mattfeld_PSB6351/dset/").glob("sub-*"):
     # for some participants it was collected during Session1 (S1)
     # while for others it was collecte during Session2 (S2)
     anat_img = sorted(glob(
-        "/home/amattfel/Mattfeld_PSB6351/WHAT DIRECTORY SHOULD I LOOK IN?/"
-        f"sub-{subject}/anat/WHAT FILE DO I WANT HERE????"
+        "/home/mali092/Mattfeld_PSB6351/dset/"
+        f"sub-{subject}/ses-S?/anat/*_T1w.nii.gz"
     ))[-1]
     cmd = f"recon-all -all \
             -i {anat_img} \
             -openmp 4 \
             -subjid sub-{subject} \
-            -sd /home/amattfel/Mattfeld_PSB6351/derivatives/freesurfer/"
+            -sd /home/mali092/Mattfeld_PSB6351/derivatives/freesurfer/"
     process = sp.Popen(
-        f'sbatch -p WHAT PARTITION --account WHAT ACCOUNT --qos WHAT QOS \
+        f'sbatch -p default-part --account acc_psb6351 --qos classroom \
             -J recon_all_{subject} -n 4 \
-        -o /home/amattfel/Mattfeld_PSB6351/code/conversion/run_recon_out/{subject}_reconall_out \
-        --mail-type=END,FAIL --mail-user=YOUREMAILAD@fiu.edu --wait \
+        -o /home/mali092/Mattfeld_PSB6351/code/conversion/run_recon_out/{subject}_reconall_out \
+        --mail-type=END,FAIL --mail-user=mali092@fiu.edu --wait \
         --wrap="{cmd}"',
         shell=True,
     )
