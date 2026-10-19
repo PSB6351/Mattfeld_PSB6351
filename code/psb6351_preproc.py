@@ -4,11 +4,11 @@
 # class specific info qos = classroom
 
 # CHANGE YOUR SBATCH ACCORDING TO YOUR ACCESS
-#SBATCH --account acc_madlab
-#SBATCH --partition highmem1-sapphirerapids
-#SBATCH --qos highmem1
-#SBATCH -o /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_o
-#SBATCH -e /scratch/madlab/Mattfeld_PSB6351/ATM/crash/preproc_e
+#SBATCH --account acc_psb6351
+#SBATCH --partition default-part
+#SBATCH --qos classroom
+#SBATCH -o /scratch/classroom/psb6351/mali092/Mattfeld_PSB6351/crash/preproc_o
+#SBATCH -e /scratch/classroom/psb6351/mali092/Mattfeld_PSB6351/crash/preproc_e
 
 import os
 from glob import glob
@@ -30,8 +30,8 @@ import nipype.interfaces.utility as util
 sids = ['sub-021']
 
 # set working, base, and sink directories
-base_dir = '/home/amattfel/Mattfeld_PSB6351'
-work_dir = '/scratch/madlab/Mattfeld_PSB6351/ATM'
+base_dir = '/home/mali092/Mattfeld_PSB6351'
+work_dir = '/scratch/classroom/psb6351/mali092/Mattfeld_PSB6351'
 sink_dir = os.path.join(base_dir, 'derivatives/preproc')
 
 # Function for extracting slice timing info from fMRI json sidecars
@@ -108,8 +108,8 @@ datasource = pe.Node(nio.DataGrabber(infields=['subject_id'], outfields=list(inf
 datasource.inputs.template = '*'
 datasource.inputs.base_directory = os.path.abspath(base_dir)
 datasource.inputs.field_template = dict(
-                                        fmri_files='dset/%s/func/%s*.nii.gz',
-                                        json_files='dset/%s/func/%s_*.json',
+                                        fmri_files='dset/%s/ses-S1/func/%s*.nii.gz',
+                                        json_files='dset/%s/ses-S1/func/%s_*.json',
                                        )
 datasource.inputs.template_args = info
 datasource.inputs.sort_filelist = True
@@ -192,26 +192,68 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 #          to your node (again...dependent on tool utilized).
 
 
+bbregister = pe.Node(fs.BBRegister(),
+                     name = 'bbregister')
 
+bbregister.inputs.subjects_dir = '/home/mali092/Mattfeld_PSB6351/derivatives/freesurfer'
+bbregister.inputs.contrast_type ='bold'
+bbregister.inputs.init ='fsl'
+bbregister.inputs.registered_file = True
 
+## tells BBRegister whcih subject's Freesurfer reconstruction to use
 
+psb6351_wf.connect(subjID_infosource, 'subject_id', bbregister, 'subject_id')
 
+## EPI reference image for BBR
+
+psb6351_wf.connect(extractref, 'roi_file', bbregister,'source_file')
 
 
 # Add a mapnode to spatially blur the data
 # save the outputs to the datasink
 
-# Register a source file to fs space and create a brain mask in source space
+# NODE 11:  Register a source file to fs space and create a brain mask in source space
 # The node below creates the Freesurfer source
 
+fssource = pe.Node(nio.FreeSurferSource(),
+                   name='fssource')
+fssource.inputs.subjects_dir = '/home/mali092/Mattfeld_PSB6351/derivatives/freesurfer'
 
-# Extract aparc+aseg brain mask, binarize, and dilate by 1 voxel
+psb6351_wf.connect(subjID_infosource, 'subject_id', fssource, 'subject_id')
 
-# Transform the binarized aparc+aseg file to the EPI space
+
+# NODE 12: Extract aparc+aseg brain mask, binarize, and dilate by 1 voxel
+## Because the background is exactly 0, while the anatomical labels are positive integers. Putting the threshold between 0 and 1 cleanly separates them
+
+binarize = pe.Node(fs.Binarize(),
+                  name = 'binarize')
+
+binarize.inputs.min = 0.5
+binarize.inputs.dilate = 1
+
+psb6351_wf.connect(fssource, 'aparc_aseg', binarize, 'in_file')
+
+# NODE 13: Transform the binarized aparc+aseg file to the EPI space
 # use a nearest neighbor interpolation
 
+transform_mask = pe.Node(fs.ApplyVolTransform(),
+                         name = 'transform_mask')
+transform_mask.inputs.inverse = True
+transform_mask.inputs.interp = 'nearest'
 
-# Mask the functional runs with the extracted mask
+psb6351_wf.connect(binarize, 'binary_file', transform_mask, 'source_file')
+psb6351_wf.connect(extractref, 'roi_file', transform_mask, 'target_file')
+psb6351_wf.connect(bbregister, 'out_reg_file', transform_mask, 'reg_file')
+
+
+# NODE 14: Mask the functional runs with the extracted mask
+
+maskfunc = pe.MapNode(fsl.ApplyMask(),
+                      iterfield=['in_file'],
+                      name = 'maskfunc')
+psb6351_wf.connect(tshifter, 'out_file', maskfunc, 'in_file')
+
+psb6351_wf.connect(transform_mask, 'transformed_file', maskfunc, 'mask_file')
 
 
 # Smooth each run using SUSAn with the brightness threshold set to 75%
@@ -233,9 +275,13 @@ psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
+psb6351_wf.connect(bbregister, 'out_reg_file', datasink ,'coreg.@reg')
+psb6351_wf.connect(bbregister, 'registered_file', datasink, 'coreg.@registered')
+psb6351_wf.connect(transform_mask, 'transformed_file', datasink, 'coreg.@mask')
+psb6351_wf.connect(maskfunc, 'out_file', datasink, 'func.@mask')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/madlab/Mattfeld_PSB6351/ATM/crash'
+psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/classroom/psb6351/mali092/Mattfeld_PSB6351/ATM/crash'
 psb6351_wf.run(plugin='SLURM',
-               plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --account acc_madlab --qos highmem1'),
+               plugin_args={'sbatch_args': ('--partition default-part --account acc_psb6351 --qos classroom'),
                             'overwrite':True})
