@@ -185,7 +185,7 @@ psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
 
 # BIG NOTE: A lot of the steps that you'll start doing now require a 
 #           hefty amount of memory. Your nodes may crash without very
-#           interpretable error messages (e.g., )
+#           interpretable error messages (e.g., RuntimeError: subprocess exited with code -9.)
 #           In nipype you can control how you allocate HPC resources
 #           per node using similar syntax to below:
 # smooth_median.plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --cpus-per-task=3 --account acc_madlab --qos highmem1'), 'overwrite': True}
