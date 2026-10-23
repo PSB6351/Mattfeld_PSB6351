@@ -176,13 +176,18 @@ psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
 psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 # NODE 10: Coregistration of functional to anatomical node using freesurfer's bbregister
-fs_register = pe.Node(fs.BBRegister(init='fsl'),
-                      name ='fs_register')
-fs_register.inputs.contrast_type = 't2'
-fs_register.inputs.out_fsl_file = True
-fs_register.inputs.subjects_dir = fs_dir
-psb6351_wf.connect(subjID_infosource, 'subject_id', fs_register, 'subject_id')
-psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
+
+# Went and made all the BBRegister node/lines into comments since my previous coregistration work was done using FSL Flirt. Here I'll be building off of FSL as to not accidentally break the code by switching to BBRegister! 
+
+#fs_register = pe.Node(fs.BBRegister(init='fsl'),
+                     # name ='fs_register')
+#fs_register.inputs.contrast_type = 't2'
+#fs_register.inputs.out_fsl_file = True
+#fs_register.inputs.subjects_dir = fs_dir
+#psb6351_wf.connect(subjID_infosource, 'subject_id', fs_register, 'subject_id')
+#psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
+
+
 
 # BIG NOTE: A lot of the steps that you'll start doing now require a 
 #           hefty amount of memory. Your nodes may crash without very
@@ -199,13 +204,27 @@ psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
 # https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.utils.html#nipype.interfaces.afni.utils.Merge
 # For FSL's implementation within the context of nipype check out hte following page:
 # https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.Smooth
+
+
+
 # QUESTIONS TO ANSWER...
+
 # Q1 - What does isotropic mean?
+# Isotropic smoothing uses a Gaussian kernel with the same FWHM in all three axes (x, y, and z). In this assignment, I have applied a 8mm FWHM, meaning it will blur equally in all directions.
+
+
 # Q2 - What are the pros and cons of isotropic spatial smoothing?
+# The benefits of isotropic spatial smoothing is that it is an effective at increasing signal clarity, improving SNR and data alignment. On the other hand, isotropic spatial smoothing can degrade spatial resolution since it blurs structural boundaries, and may drown out minor signals if the filter is too large. 
+
+
 # AFNI has some cool tools to help control the final smoothness of your data
 # Specifically 3dBlurToFWHM, this function will estimate your intrinsic smoothness and iteratively
 # spatially blur up until it achieves a targeted smoothness
+
 # Q3 - Why might this be good?  Are there any potential cons?
+#3dBlurToFWHM is a good technique as it ensures that data end with the same smoothness, making comparisons consistent. That is, 3dBlurToFWHM serves as an "equalizer", smoothing fMRI data regardless of scanner typeor site. This technique would also improve the validity of Random Field Theory (RFT), which was discussed in this week's lecture on spatial and temporal smoothing! Assuming a baseline FWHM with a uniform smoothness makes statistical analyses more robust. Potential cons is that if a mask if used, any issues with the masks could negatively impact the data, producing artifacts if the mask is not properly aligned. It may also scale kernels across various voxels, making it much slower than basic Gaussian smoothing.
+
+
 # If you intend to use AFNI's 3dBlurToFWHM check out hte following page:
 # https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.preprocess.html#nipype.interfaces.afni.preprocess.BlurToFWHM
 # NOTE: If you elect to use this one be careful on how big you make your
@@ -213,9 +232,12 @@ psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
 # FSL has some cool tools that help ensure that you spatially smooth like voxels
 # This is FSL's SUSAN algorithm, this function will use intensities in voxels
 # to constrain smoothing to like intensities (smooth only grey matter with grey matter)
+
 # Q4 - Why might his be good? Cons (hint: begins with an 'e' and ends with 'ge' effects)?
 #      How might the cons influence Gaussian Random Field Theory?
-#
+# SUSAN may be a good application to use since is preserves boundaries by averaging to local voxels with similar brightness, reducing noise while maintaining structural features. Its cons lie in potential edge effects, so the amount of smoothing is dependent on the area of the brain (i.e., smoothing is different in tissue boundaries vs. tissues themselves). These edge effects would influence Gaussian Random Field Theory (GRFT) since the theory assumes that smoothess is homogenous across the imaging itself. With a structure as complex as the brain, these irregular boundaries (and application of SUSAN) could cause data by the edges to get cut off, skewing threshold.
+
+
 # If you choose an isotropic approach or AFNI's 3dBlurToFWHM you need
 # to add just a single node here.
 #
@@ -234,7 +256,10 @@ psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
 #          You have to define where you're going aka 'source_file' and what is moving aka 'target_file'
 #          You have to pass the registration matrix file derived from your coregistration node
 #          You also have to choose an interpolation...
+
 # Q5 - why is nearest neighbor interpolation correct here? What is nearest neighbor interpolation?
+# Nearest neighbor interpolation assigns the value of an adjacent data point (or voxel), without blending. When transforming a 3D fMRI volume to a new space (such as MNI), nearest neighbor interpolation sumply grabs the value of a nearby voxel and replaces it. Here applying nearest neighbor interpolation would be correct since the brain mask is binary (i.e., 0 and 1), and applying this interpolation keeps it within this range. 
+
 # NODE 4 - Now use the mask that is in EPI space to mask the EPI image by voxels that only cover the brain
 #          you can use FSL's fslmaths and the '-mas' flag to work here
 # NODE 5 - Get the median of your EPI data using FSL's fslmath with the following op_string = '-k %s -p 50'
@@ -261,20 +286,40 @@ psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 
 # NODES FOR SPATIAL SMOOTHING GO HERE!!!!
 
+# NODE 11: SPATIAL SMOOTHING USING FSL SMOOTH (based on https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.Smooth)
+smooth = pe.MapNode(fsl.Smooth(),
+        iterfield=['in_file'],
+        name='smooth')
+smooth.inputs.fwhm = 8.0
+smooth.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
+psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
+
+# I set fwhm to 8.0 to match the Nipype's example of "Setting the kernel width using fwhm"!
+
+
 
 # NODE 12: TEMPORAL FILTERING OR SMOOTHING
 # I want you to add a node here to temporally filter the functional data --> should this be a mapnode or regular node?
 # If the functional EPI data are resting state data I want you to implement a 
 # bandpass filter. If the functional EPI data are task data I want you to implement
 # a highpass filter.
+
 # Q6 - why bandpass resting state but only highpass task EPI data?
+
+# Goal is to remove slow drift and lowpass noises such as respiratory or cardiac signals; lowpass filter could remove real task-based signals, hence why only highpass task EPI data (getting rid of slow drift). 
+
+
 # I want you to utilize either the FSL tools implementing fslmaths, what op_string flag would you need?
 # https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.ImageMaths
+# You would use "-bptf", as shown below.
+
 # Or you can use AFNI's 3dBandpass function
 # https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.preprocess.html#nipype.interfaces.afni.preprocess.Bandpass
 # If you use AFNI's tool and you only highpass filter, how do you set your fbot and ftop?
 # If you are electing to use the Discrete Cosine Tranforms (DCTs) to statistically account for low frequency noise
 # you'll need to run a regression model.
+
+
 # For this step I would recommend utilizing AFNI's 3dDeconvolve paired with 3dREMLfit
 # First using 3dDeconvolve you'll need to 
 # define your legendre input as True and your number of polorts as an integer - try 7..
@@ -286,6 +331,37 @@ psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 
 # NODES FOR TEMPORAL FILTERING GO HERE !!!!!
 
+# NODE 12: TEMPORAL FILTERING
+# At first I tried using the DCT approach, but the code ended up not writing the matrix, so I'm attempting to create my temporal filtering node using fslmaths highpass. This issue may be happening because I used FSL FLIRT for the coregistration assignment?
+
+# fslmaths would be MapNode (one file per run).
+
+# deconvolve = pe.Node(afni.Deconvolve(),
+#         name='deconvolve')
+# deconvolve.inputs.legendre = True
+# deconvolve.inputs.polort = 7
+# deconvolve.inputs.x1D = 'output.xmat.1D'
+# # deconvolve.inputs.x1D_stop = True
+# deconvolve.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
+# psb6351_wf.connect(smooth, 'smoothed_file', deconvolve, 'in_files')
+
+# remlfit = pe.Node(afni.Remlfit(),
+#         name = 'remlfit')
+# remlfit.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
+# remlfit.inputs.errts_file = 'dct_residuals.nii.gz'
+# psb6351_wf.connect(smooth, 'smoothed_file', remlfit, 'in_files')
+# psb6351_wf.connect(deconvolve, 'x1D', remlfit, 'matrix')
+
+highpass = pe.MapNode(fsl.ImageMaths(op_string='-bptf 28.41 -1'),
+                      iterfield=['in_file'],
+                      name='highpass')
+highpass.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
+psb6351_wf.connect(smooth, 'smoothed_file', highpass, 'in_file')
+
+# Based on this nipype page (https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.maths.html), the first value after -bptf is the highpass sigma, in volume. Calculating sigma depends on the cutoff time (s), divided by 2*TR.
+
+# I also chose a cutoff time of 100s--based on this week's discussion on spatial and temporal smoothing, the goal is to have cycle over 65-70s (anything less than that range would cause signal loss in lower frequencies), hence why I went for 100s.
+
 # NODE FINAL: DataSink. Modify to save only the files you want at the completion of your workflow
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
@@ -294,12 +370,18 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
-psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
-psb6351_wf.connect(fs_register, 'min_cost_file', datasink, 'register.@reg_cost')
-psb6351_wf.connect(fs_register, 'out_fsl_file', datasink, 'register.@reg_fsl_file')
+
+# Original fs_register lines have been commented out, otherwise they'd cause the code to crash since I used FSL Flirt in the coregistration assignment. Keeping them here for reference!
+#psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
+#psb6351_wf.connect(fs_register, 'min_cost_file', datasink, 'register.@reg_cost')
+#psb6351_wf.connect(fs_register, 'out_fsl_file', datasink, 'register.@reg_fsl_file')
 
 # ADD datasink connections to save spatially smoothed and temporally filtered data
 # if you implemented more than one method for diadatic purposes...save accordingly
+
+psb6351_wf.connect(smooth, 'smoothed_file', datasink, 'smooth.@file')
+psb6351_wf.connect(highpass, 'out_file', datasink, 'highpass.@file')
+# psb6351_wf.connect(remlfit, 'errts_file', datasink, 'dct.@residuals')
 
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@out_file')
