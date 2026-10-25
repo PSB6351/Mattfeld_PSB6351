@@ -5,6 +5,7 @@
 #SBATCH --qos highmem1
 #SBATCH -o /home/cknowlto/scratch/preproc_%j.out
 #SBATCH -e /home/cknowlto/scratch/preproc_%j.err
+#SBATCH --mem=16G
 
 import os
 from glob import glob
@@ -275,10 +276,119 @@ coreg = pe.Node(fsl.FLIRT(dof=6, cost='corratio'), name='coreg')
 psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 psb6351_wf.connect(skullstrip, 'out_file', coreg, 'reference')
 
+# BIG NOTE: A lot of the steps that you'll start doing now require a 
+#           hefty amount of memory. Your nodes may crash without very
+#           interpretable error messages (e.g., RuntimeError: subprocess exited with code -9.)
+#           In nipype you can control how you allocate HPC resources
+#           per node using similar syntax to below:
+# smooth_median.plugin_args={'sbatch_args': ('--partition highmem1-sapphirerapids --cpus-per-task=3 --account acc_madlab --qos highmem1'), 'overwrite': True}
+#           modify your code accordingly to excute without error
+
+# NODE 11: SPATIAL SMOOTHING
+# You have a couple of options here...
+# If you want to smooth isotropically you can use either AFNI's 3dmerge or FSL's fslmath
+# For AFNI's implementation within the context of nipype check out the following page:
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.utils.html#nipype.interfaces.afni.utils.Merge
+# For FSL's implementation within the context of nipype check out hte following page:
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.Smooth
+# QUESTIONS TO ANSWER...
+# Q1 - What does isotropic mean?
+# CK ANSWER: Isotropic refers to something having equal properties in all directions. In this context, it is referring to the type of kernel that is applied to each voxel. The standard kernel used in an isotropic approach is a Gaussian kernel which is distributed equally in all directions. This measure is determined by sigma (controlling the rate of decay and width) in the Gaussian equation which is equal for x, y, and z.
+# Q2 - What are the pros and cons of isotropic spatial smoothing?
+# CK ANSWER: A large pro is that when implemented there is greater alignment across subjects that a ROI or foci of interests is in fact what we expect it to be. This approach we can also expect to help control for the previously known issues with fMRI data where there are many type I errors due to the number of voxels. However hand-in-hand with this is the introduction of blurring which can do the inverse (e.g. type II error where activation is diminished). Seperately, this can also show the area of activation being blurred (especially bad at points where tissues meet or boundaries between tissue and ventricles/CSF) and not indicative of where it truly originated from. Generally to control for this (from what I am reading in papers) is to have a balanced width that isn't overly aggressive but corrects.
+# AFNI has some cool tools to help control the final smoothness of your data
+# Specifically 3dBlurToFWHM, this function will estimate your intrinsic smoothness and iteratively
+# spatially blur up until it achieves a targeted smoothness
+# Q3 - Why might this be good?  Are there any potential cons?
+# CK ANSWER: This seems to be a good option to correct for smoothing errors, assuming it is 100% accurate. However, given it is iterative and is a function that runs for each kernel until an optimal value is reached, it is likely going to 1.) take much longer to run on large amounts of subjects and 2.) be resource intensive.
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.preprocess.html#nipype.interfaces.afni.preprocess.BlurToFWHM
+# NOTE: If you elect to use this one be careful on how big you make your
+# kernel as this process is iterative and can take some time
+# FSL has some cool tools that help ensure that you spatially smooth like voxels
+# This is FSL's SUSAN algorithm, this function will use intensities in voxels
+# to constrain smoothing to like intensities (smooth only grey matter with grey matter)
+# Q4 - Why might his be good? Cons (hint: begins with an 'e' and ends with 'ge' effects)?
+#      How might the cons influence Gaussian Random Field Theory?
+# CK ANSWER: The most obvious benefit with this approach is addressing the Q2 con I listed. There is less chance of smoothing tissue with different tissue type or with CSF/ventricles. However, the edge effects will pose a problem since tissue at the center of a region of the same tissue will have more adjacent voxels to be smoothed with, whereas tissue at the border will have less neighboring voxels which decreases the amount of smoothing. Gaussian Random Field Theory assumes an isotropic or equal distribution where of "randomness" in each direction. This poses a problem when a bordering voxel of a tissue type only has (hypothetically) 50% of the surrounding tissue and violates the stationarity assumption.
+# If you choose an isotropic approach or AFNI's 3dBlurToFWHM you need
+# to add just a single node here.
+#
+# If you choose to use the FSL SUSAN approach, you'll need to add the following
+# NODE 1 - FreeSurferSource node, define subjects_dir as the project's freesurfer directory
+#          and define subject_id as the subject id
+# NODE 2 - You will need to make a brain only mask.  I'm going to guide you to use freesurfers aparc+aseg
+#          To do this you'll use freesurfer's binarize function
+#          binarizing all values in the aparc+aseg file that are greater than 0.5
+#          For this node to work connect the fssource node and in the connection syntax
+#          imbed the get_aparc_aseg function that is already defined for you above
+#          Use this node to also dilate your brian only mask in T1w space by 1 voxel
+# NODE 3 - Now you have a brain only mask in T1w space...you need to move this into the
+#          EPI space by applying the volume transform from T1w space into EPI space
+#          NOTE: This step is best implemented if you used Freesurfer's BBREGISTER for coregistration
+#          You have to define where you're going aka 'source_file' and what is moving aka 'target_file'
+#          You have to pass the registration matrix file derived from your coregistration node
+#          You also have to choose an interpolation...
+# Q5 - why is nearest neighbor interpolation correct here? What is nearest neighbor interpolation?
+# CK ANSWER: Nearest neighbor interpolation is correct here because we want to align them based on the closest singular voxel. Further, averaging or some other approach would smeer the signal at boundary points and therefore we want an approach that aligns based on the singular nearest voxel.
+# NODE 4 - Now use the mask that is in EPI space to mask the EPI image by voxels that only cover the brain
+#          you can use FSL's fslmaths and the '-mas' flag to work here
+# NODE 5 - Get the median of your EPI data using FSL's fslmath with the following op_string = '-k %s -p 50'
+# NODE 6 - Get the mean of your EPI data using FSL's fslmath with the following op_string = '-Tmean'
+# NODE 7 - Use Nipype's util.Merge function to take in 2 inputs and horizontal stack the (aka., 'hstack')
+#          Define your first input as the mean EPI from NODE 6 and your second input as the median EPI from NODE 5
+# NODE 8 - Now you have all you need to implement the SUSAN smooth node
+#          Pass a list of variable smoothing kernel FWHM sizes, use a mapnode to iterate over them
+#          What else needs to be in your iterfield?
+# NODE DATASINK - Modify your datasink node to collect the smoothed output files so you can visualize
+
+
+# NODES FOR SPATIAL SMOOTHING GO HERE!!!!
+# I use the option AFNI offers with the addition of the "blur" for FWHM which uses 3dBlurToFWHM
+
+smooth = pe.MapNode(afni.BlurToFWHM(), iterfield=['in_file'], name='smooth') #mapnode since we need to iterate over multiple times
+smooth.iterables = ('fwhm', [3.0, 6.0, 9.0, 12.0]) #try out the range of mm 
+smooth.inputs.automask = True #this isn't assigned by default - provided it masks dark and light voxels (what free surfer does if I used FSL option)
+smooth.inputs.outputtype = 'NIFTI_GZ'
+psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
+
+# NODE 12: TEMPORAL FILTERING OR SMOOTHING
+# I want you to add a node here to temporally filter the functional data --> should this be a mapnode or regular node?
+# CK ANSWER: Map node.
+# If the functional EPI data are resting state data I want you to implement a 
+# bandpass filter. If the functional EPI data are task data I want you to implement
+# a highpass filter.
+# Q6 - why bandpass resting state but only highpass task EPI data?
+# CK ANSWER: Resting state data inherently means we aren't interested in higher frequency activity locked to a stimuli appearance and therefore we can bandpass and select a specific lower frequnecy range. On the other hand, the task EPI data has important information within the higher frequencies and so only attentuating the lower frequnecies is necessary.
+# I want you to utilize either the FSL tools implementing fslmaths, what op_string flag would you need?
+# CK ANSWER: Op_string is what defines the operation used for the node. We would use the flag -bptf which is a bandpass filter. It requires a values for both the lowpass and highpass filtering but using -1 turns them off which is important since we are only processing task task data and the lowpass filter can be removed.
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.ImageMaths
+# Or you can use AFNI's 3dBandpass function
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.preprocess.html#nipype.interfaces.afni.preprocess.Bandpass
+# If you use AFNI's tool and you only highpass filter, how do you set your fbot and ftop?
+# If you are electing to use the Discrete Cosine Tranforms (DCTs) to statistically account for low frequency noise
+# you'll need to run a regression model.
+# For this step I would recommend utilizing AFNI's 3dDeconvolve paired with 3dREMLfit
+# First using 3dDeconvolve you'll need to 
+# define your legendre input as True and your number of polorts as an integer - try 7..
+# you can also make the x1D_stop flag True as you don't need to run the 3dDeconvolve as 3dREMLfit does the heavy lifting here
+# create another node for the 3dREMLfit passing the x1D matrix from the 3dDeconvolve node and save in your datasink the residuals
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.afni.model.html#nipype.interfaces.afni.model.Deconvolve
+# 
+# If you're feeling ambitious you can implement multiple approaches and compare/contrast them
+
+# NODES FOR TEMPORAL FILTERING GO HERE !!!!!
+# using fsl defaults which is sigma = cutoff / (2 × TR), where cutoff is 100s and TR for us is 1.76 s
+# sigma = 28.41
+# lowpass is set to -1 to turn it off
+highpass = pe.MapNode(fsl.ImageMaths(op_string='-bptf 28.41 -1'), iterfield=['in_file'], name='highpass')
+highpass.inputs.output_type = 'NIFTI_GZ'
+psb6351_wf.connect(smooth, 'out_file', highpass, 'in_file')
+
 # NODE FINAL:
 # Below is the node that collects all the data and saves
 # the outputs that I am interested in. Here in this node
 # I use the substitutions input combined with the earlier
+
 # function to get rid of nesting
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
@@ -291,6 +401,8 @@ psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 psb6351_wf.connect(coreg, 'out_matrix_file', datasink, 'coreg.@mat') #transformed matrix
 psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@registered') # reference volume resampled in t1 space - what I will load into FSL eyes
 psb6351_wf.connect(skullstrip, 'out_file', datasink, 'coreg.@anat') #the FSL BET skull tissue removed
+psb6351_wf.connect(smooth, 'out_file', datasink, 'smooth.@blurred') # smoothed data at each fwhm (3, 6, 9, 12mm)
+psb6351_wf.connect(highpass, 'out_file', datasink, 'filter.@highpass') # highpass filtered data
 
 # The following two lines set a work directory outside of my 
 # local git repo and runs the workflow
