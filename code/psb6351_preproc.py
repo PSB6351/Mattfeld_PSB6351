@@ -350,7 +350,7 @@ smooth.iterables = ('fwhm', [3.0, 6.0, 9.0, 12.0]) #try out the range of mm
 smooth.inputs.automask = True #this isn't assigned by default - provided it masks dark and light voxels (what free surfer does if I used FSL option)
 smooth.inputs.outputtype = 'NIFTI_GZ'
 psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
-
+smooth.plugin_args = {'sbatch_args': '--partition highmem1-sapphirerapids --account acc_gbuzzell --qos highmem1 --mem=32G', 'overwrite': True} # adding mem here due to crash first time
 # NODE 12: TEMPORAL FILTERING OR SMOOTHING
 # I want you to add a node here to temporally filter the functional data --> should this be a mapnode or regular node?
 # CK ANSWER: Map node.
