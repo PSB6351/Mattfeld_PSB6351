@@ -1,0 +1,11 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.7.0
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

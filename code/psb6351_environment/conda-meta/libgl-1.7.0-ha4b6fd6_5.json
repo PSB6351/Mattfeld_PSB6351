@@ -1,0 +1,50 @@
+{
+  "build": "ha4b6fd6_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libglvnd 1.7.0 ha4b6fd6_5",
+    "libglx 1.7.0 ha4b6fd6_5"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libgl-1.7.0-ha4b6fd6_5",
+  "files": [
+    "lib/libGL.so.1",
+    "lib/libGL.so.1.7.0"
+  ],
+  "fn": "libgl-1.7.0-ha4b6fd6_5.conda",
+  "license": "LicenseRef-libglvnd",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libgl-1.7.0-ha4b6fd6_5",
+    "type": 1
+  },
+  "md5": "81141db127a106eb5a91df69a29c9918",
+  "name": "libgl",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libgl-1.7.0-ha4b6fd6_5.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libGL.so.1",
+        "path_type": "softlink",
+        "sha256": "3929382b3712189d005f2c8496d7eee27d63817a4af858a84db12feae3bd29a3",
+        "size_in_bytes": 727544
+      },
+      {
+        "_path": "lib/libGL.so.1.7.0",
+        "path_type": "hardlink",
+        "sha256": "3929382b3712189d005f2c8496d7eee27d63817a4af858a84db12feae3bd29a3",
+        "sha256_in_prefix": "3929382b3712189d005f2c8496d7eee27d63817a4af858a84db12feae3bd29a3",
+        "size_in_bytes": 727544
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7b2e7e31e8a4f5a01c45ecadcd8aa68c8f733b035240bc7ba9881835ef4bf7b4",
+  "size": 131988,
+  "subdir": "linux-64",
+  "timestamp": 1787310049000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgl-1.7.0-ha4b6fd6_5.conda",
+  "version": "1.7.0"
+}

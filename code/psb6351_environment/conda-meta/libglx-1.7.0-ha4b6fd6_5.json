@@ -1,0 +1,50 @@
+{
+  "build": "ha4b6fd6_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "xorg-libx11 >=1.8.13,<2.0a0",
+    "libglvnd 1.7.0 ha4b6fd6_5"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libglx-1.7.0-ha4b6fd6_5",
+  "files": [
+    "lib/libGLX.so.0",
+    "lib/libGLX.so.0.0.0"
+  ],
+  "fn": "libglx-1.7.0-ha4b6fd6_5.conda",
+  "license": "LicenseRef-libglvnd",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libglx-1.7.0-ha4b6fd6_5",
+    "type": 1
+  },
+  "md5": "614e10aae180f87b84f0d1ca8ceb7d9e",
+  "name": "libglx",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libglx-1.7.0-ha4b6fd6_5.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libGLX.so.0",
+        "path_type": "softlink",
+        "sha256": "b0bf9a6bb9c36c55f02c271beda2ea4d8cff31753ff47742a90ce9c4a8f3c953",
+        "size_in_bytes": 348424
+      },
+      {
+        "_path": "lib/libGLX.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "b0bf9a6bb9c36c55f02c271beda2ea4d8cff31753ff47742a90ce9c4a8f3c953",
+        "sha256_in_prefix": "b0bf9a6bb9c36c55f02c271beda2ea4d8cff31753ff47742a90ce9c4a8f3c953",
+        "size_in_bytes": 348424
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d1f0d51aea6bcc5d915969cbed32e72a8ed6a95931b87357ef8d0866573688c4",
+  "size": 79834,
+  "subdir": "linux-64",
+  "timestamp": 1787310042000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libglx-1.7.0-ha4b6fd6_5.conda",
+  "version": "1.7.0"
+}

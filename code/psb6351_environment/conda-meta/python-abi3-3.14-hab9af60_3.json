@@ -1,0 +1,35 @@
+{
+  "build": "hab9af60_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "__unix",
+    "_python_abi3_support",
+    "python 3.14.*"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/python-abi3-3.14-hab9af60_3",
+  "files": [],
+  "fn": "python-abi3-3.14-hab9af60_3.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/python-abi3-3.14-hab9af60_3",
+    "type": 1
+  },
+  "md5": "ad28909b755a16c4f0d3fc8dfbff6fc7",
+  "name": "python-abi3",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/python-abi3-3.14-hab9af60_3.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "08352ff94fe1689afb5f71e67d769cb0e15ab97f0b708b4e52b94209e1314faf",
+  "size": 8216,
+  "subdir": "noarch",
+  "timestamp": 1784221495000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/python-abi3-3.14-hab9af60_3.conda",
+  "version": "3.14"
+}

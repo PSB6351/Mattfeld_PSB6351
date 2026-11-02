@@ -1,0 +1,39 @@
+{
+  "build": "ha770c72_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hicolor-icon-theme-0.17-ha770c72_3",
+  "files": [
+    "share/icons/hicolor/index.theme"
+  ],
+  "fn": "hicolor-icon-theme-0.17-ha770c72_3.conda",
+  "license": "GPL-2.0-or-later",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hicolor-icon-theme-0.17-ha770c72_3",
+    "type": 1
+  },
+  "md5": "129e404c5b001f3ef5581316971e3ea0",
+  "name": "hicolor-icon-theme",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hicolor-icon-theme-0.17-ha770c72_3.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "share/icons/hicolor/index.theme",
+        "path_type": "hardlink",
+        "sha256": "a02db5e1b203d981701481bbef8b6fae1c576baf34927eecbc0feae0d2cb9bc5",
+        "sha256_in_prefix": "a02db5e1b203d981701481bbef8b6fae1c576baf34927eecbc0feae0d2cb9bc5",
+        "size_in_bytes": 55507
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6d7e6e1286cb521059fe69696705100a03b006efb914ffe82a2ae97ecbae66b7",
+  "size": 17625,
+  "subdir": "linux-64",
+  "timestamp": 1771539597000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/hicolor-icon-theme-0.17-ha770c72_3.conda",
+  "version": "0.17"
+}

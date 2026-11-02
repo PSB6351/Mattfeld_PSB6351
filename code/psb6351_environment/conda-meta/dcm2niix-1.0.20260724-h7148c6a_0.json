@@ -1,0 +1,43 @@
+{
+  "build": "h7148c6a_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libstdcxx >=15"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/dcm2niix-1.0.20260724-h7148c6a_0",
+  "files": [
+    "bin/dcm2niix"
+  ],
+  "fn": "dcm2niix-1.0.20260724-h7148c6a_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/dcm2niix-1.0.20260724-h7148c6a_0",
+    "type": 1
+  },
+  "md5": "343aed643e01be9cbfca1fc502e5a6b8",
+  "name": "dcm2niix",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/dcm2niix-1.0.20260724-h7148c6a_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/dcm2niix",
+        "path_type": "hardlink",
+        "sha256": "1643c2fd5b37b38fbc7b2b928fd94b87463af12851be159d8f1840745c2af5ff",
+        "sha256_in_prefix": "1643c2fd5b37b38fbc7b2b928fd94b87463af12851be159d8f1840745c2af5ff",
+        "size_in_bytes": 598872
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "081c759ea53378bc0c016fcd10640d7d6ee66002e56f636da1303331237f955e",
+  "size": 272576,
+  "subdir": "linux-64",
+  "timestamp": 1790185676000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/dcm2niix-1.0.20260724-h7148c6a_0.conda",
+  "version": "1.0.20260724"
+}

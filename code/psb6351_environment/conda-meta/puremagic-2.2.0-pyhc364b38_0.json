@@ -1,0 +1,350 @@
+{
+  "build": "pyhc364b38_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.12"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/puremagic-2.2.0-pyhc364b38_0",
+  "files": [
+    "lib/python3.14/site-packages/puremagic/__init__.py",
+    "lib/python3.14/site-packages/puremagic/__main__.py",
+    "lib/python3.14/site-packages/puremagic/magic_data.json",
+    "lib/python3.14/site-packages/puremagic/main.py",
+    "lib/python3.14/site-packages/puremagic/py.typed",
+    "lib/python3.14/site-packages/puremagic/scanners/__init__.py",
+    "lib/python3.14/site-packages/puremagic/scanners/asf_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/cfbf_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/ebml_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/hdf5_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/helpers.py",
+    "lib/python3.14/site-packages/puremagic/scanners/json_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/mpeg_audio_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/ogg_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/pdf_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/python_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/sndhdr_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/text_scanner.py",
+    "lib/python3.14/site-packages/puremagic/scanners/zip_scanner.py",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/puremagic-2.2.0.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/puremagic/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/__pycache__/__main__.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/__pycache__/main.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/asf_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/cfbf_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/ebml_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/hdf5_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/json_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/mpeg_audio_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/ogg_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/pdf_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/python_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/sndhdr_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/text_scanner.cpython-314.pyc",
+    "lib/python3.14/site-packages/puremagic/scanners/__pycache__/zip_scanner.cpython-314.pyc",
+    "bin/puremagic"
+  ],
+  "fn": "puremagic-2.2.0-pyhc364b38_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/puremagic-2.2.0-pyhc364b38_0",
+    "type": 1
+  },
+  "md5": "10f955ce15ee3df1410461cfe271506c",
+  "name": "puremagic",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/puremagic-2.2.0-pyhc364b38_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/puremagic/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "68b71d188aa944f679ab6e416a1f81cdb28bd2fe01b6e344ba14c4b9d4dfccc2",
+        "sha256_in_prefix": "68b71d188aa944f679ab6e416a1f81cdb28bd2fe01b6e344ba14c4b9d4dfccc2",
+        "size_in_bytes": 130
+      },
+      {
+        "_path": "site-packages/puremagic/__main__.py",
+        "path_type": "hardlink",
+        "sha256": "4b1dbb5cba8acc555463e28642dfed3a5a90bc9b539e5c3a22fbe21cee24c090",
+        "sha256_in_prefix": "4b1dbb5cba8acc555463e28642dfed3a5a90bc9b539e5c3a22fbe21cee24c090",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "site-packages/puremagic/magic_data.json",
+        "path_type": "hardlink",
+        "sha256": "18f3a7724008a09dd21c01a188839c86ea1fe0fa1f87ebb67c0294d23c150861",
+        "sha256_in_prefix": "18f3a7724008a09dd21c01a188839c86ea1fe0fa1f87ebb67c0294d23c150861",
+        "size_in_bytes": 170515
+      },
+      {
+        "_path": "site-packages/puremagic/main.py",
+        "path_type": "hardlink",
+        "sha256": "f09844531903e2eb35b8bd296cbba4cf9b880108baad092014ded94a43d86a5a",
+        "sha256_in_prefix": "f09844531903e2eb35b8bd296cbba4cf9b880108baad092014ded94a43d86a5a",
+        "size_in_bytes": 24992
+      },
+      {
+        "_path": "site-packages/puremagic/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/asf_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "331639dc09448ddfcf6ab18df16cb4bdaa7d93726dcfb3378e0c59defdb49d20",
+        "sha256_in_prefix": "331639dc09448ddfcf6ab18df16cb4bdaa7d93726dcfb3378e0c59defdb49d20",
+        "size_in_bytes": 1996
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/cfbf_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "c34cf2c1125a3f37e7843cc348393124adacd2a3a46cf29ec074313b2374308a",
+        "sha256_in_prefix": "c34cf2c1125a3f37e7843cc348393124adacd2a3a46cf29ec074313b2374308a",
+        "size_in_bytes": 5194
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/ebml_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "64d5f80b054e319e85d45c28ca2ce8b4d945e6fa108d838159d82e21b4c0522f",
+        "sha256_in_prefix": "64d5f80b054e319e85d45c28ca2ce8b4d945e6fa108d838159d82e21b4c0522f",
+        "size_in_bytes": 580
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/hdf5_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "20c0b40bfe086320d4d63992bb5f6cbfb31206231efb993720b914cfcdd8a08d",
+        "sha256_in_prefix": "20c0b40bfe086320d4d63992bb5f6cbfb31206231efb993720b914cfcdd8a08d",
+        "size_in_bytes": 2144
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "f17844425f0d53b6ac46c91303e2a8649749d1def452a02e55348ddf72ab7905",
+        "sha256_in_prefix": "f17844425f0d53b6ac46c91303e2a8649749d1def452a02e55348ddf72ab7905",
+        "size_in_bytes": 138
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/json_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "39a8ebe320c322fcf2a082ff45d874c947cdc71e69135c990dfaab5e779be604",
+        "sha256_in_prefix": "39a8ebe320c322fcf2a082ff45d874c947cdc71e69135c990dfaab5e779be604",
+        "size_in_bytes": 646
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/mpeg_audio_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "a95726c02d5d0417387b707d7afb54d03ab382b36d991409a8f3e51107f45321",
+        "sha256_in_prefix": "a95726c02d5d0417387b707d7afb54d03ab382b36d991409a8f3e51107f45321",
+        "size_in_bytes": 47218
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/ogg_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "0a5c38797d377baa5ca90d1a5d7e98ad87981b68dcea3b64bc41f441598d7d31",
+        "sha256_in_prefix": "0a5c38797d377baa5ca90d1a5d7e98ad87981b68dcea3b64bc41f441598d7d31",
+        "size_in_bytes": 1285
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/pdf_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "48a27096a556ac0570190c7f186b440f118c4c0725d7845a2ec5e94c2d8b579e",
+        "sha256_in_prefix": "48a27096a556ac0570190c7f186b440f118c4c0725d7845a2ec5e94c2d8b579e",
+        "size_in_bytes": 255
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/python_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "1b896abcd013263bca2569347234d67ba305ded6e4392f1d25af8a2e1cebb003",
+        "sha256_in_prefix": "1b896abcd013263bca2569347234d67ba305ded6e4392f1d25af8a2e1cebb003",
+        "size_in_bytes": 1705
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/sndhdr_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "5c690acd0b1eddd1076b68bba59201173b3db8e422794c96821879eedfb82aa4",
+        "sha256_in_prefix": "5c690acd0b1eddd1076b68bba59201173b3db8e422794c96821879eedfb82aa4",
+        "size_in_bytes": 1262
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/text_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "407232d9b51562af42203cf25789ddf40d0a6d1911fcbd60f064b373e58f4d91",
+        "sha256_in_prefix": "407232d9b51562af42203cf25789ddf40d0a6d1911fcbd60f064b373e58f4d91",
+        "size_in_bytes": 9304
+      },
+      {
+        "_path": "site-packages/puremagic/scanners/zip_scanner.py",
+        "path_type": "hardlink",
+        "sha256": "28959faf01453e4fbff02b9fda0fbe3f9cd45f02888ee4ab8776e4682e915f64",
+        "sha256_in_prefix": "28959faf01453e4fbff02b9fda0fbe3f9cd45f02888ee4ab8776e4682e915f64",
+        "size_in_bytes": 13040
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "3365454abd2e093798790fd42383f1a1e8243500fecd82f438408c03302ef805",
+        "sha256_in_prefix": "3365454abd2e093798790fd42383f1a1e8243500fecd82f438408c03302ef805",
+        "size_in_bytes": 7308
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "c32b5afb7553cf4852bff82c6dad4259cf09052ccbb8457ba61df99d5d9b5086",
+        "sha256_in_prefix": "c32b5afb7553cf4852bff82c6dad4259cf09052ccbb8457ba61df99d5d9b5086",
+        "size_in_bytes": 3559
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+        "sha256_in_prefix": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "cf5f8a07a639312f7f5fdc233b9d1df3d9e44cfde563543c03088de9693ad5f2",
+        "sha256_in_prefix": "cf5f8a07a639312f7f5fdc233b9d1df3d9e44cfde563543c03088de9693ad5f2",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "3952f4e76c737a4c4175884a35b0265760c01f0725d3725e57994352aa8543f3",
+        "sha256_in_prefix": "3952f4e76c737a4c4175884a35b0265760c01f0725d3725e57994352aa8543f3",
+        "size_in_bytes": 64
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a6847707e41f6fcab7238b93296c12d9aacae2e9ac129fa3bec70d8f05bc735d",
+        "sha256_in_prefix": "a6847707e41f6fcab7238b93296c12d9aacae2e9ac129fa3bec70d8f05bc735d",
+        "size_in_bytes": 1086
+      },
+      {
+        "_path": "site-packages/puremagic-2.2.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "1d44c498b9ad47d28285a90b87e15376b894e4aca21d1504e596849c10f364c9",
+        "sha256_in_prefix": "1d44c498b9ad47d28285a90b87e15376b894e4aca21d1504e596849c10f364c9",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/__pycache__/__main__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/__pycache__/main.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/asf_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/cfbf_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/ebml_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/hdf5_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/json_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/mpeg_audio_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/ogg_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/pdf_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/python_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/sndhdr_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/text_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/puremagic/scanners/__pycache__/zip_scanner.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/puremagic",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "707f06991f051ed383ee2cf0a3d9746e7d9d969f11b780b37acfa4e9c4bb612d",
+  "size": 71749,
+  "subdir": "noarch",
+  "timestamp": 1775652326000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/puremagic-2.2.0-pyhc364b38_0.conda",
+  "version": "2.2.0"
+}

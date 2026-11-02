@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Setup Nipype, FSL, AFNI, Freesurfer, ANTS, MATLAB
-module load fsl-6.0.4 
-module load ants-2.3.5
-module load matlab-2019b 
-module load afni-20.2.06
-module load r-4.2.0-gcc-8.2.0
-module load slurm
+module load fsl/6.0.6-none-none 
+module load ants/2.5.1
+module load matlab/2023a
+module load afni/25.2.07-none-none
+module load r/4.6.1
+module load slurm/25.5.0
 module load cuda-10.0.130-gcc-8.2.0-xeppy24
 module load dsistudio-centos7
 module add dtiprep-1.2.11
@@ -16,12 +16,12 @@ module load gcc-8.2.0-gcc-4.8.5-sxbf4jq #Centos7
 module load dcm2niix-1.0.20190902
 
 # Setup project specific python environment
-conda activate ~/YOURLASTNAME_PSB6351/.envs/psb6351_environment
+conda activate ~/Mattfeld_PSB6351/.envs/psb6351_environment
 
 # Setup Freesurfer
 export FREESURFER_HOME=/home/applications/freesurfer/7.1/freesurfer/
 source $FREESURFER_HOME/FreeSurferEnv.sh
-export SUBJECTS_DIR=~/YOURLASTNAME_PSB6351/derivatives/freesurfer
+export SUBJECTS_DIR=~/Mattfeld_PSB6351/derivatives/freesurfer
 
 # Setup SPM
 export SPM_PATH=/home/applications/spm12

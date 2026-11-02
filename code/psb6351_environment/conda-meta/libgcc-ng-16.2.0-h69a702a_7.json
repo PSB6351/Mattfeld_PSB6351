@@ -1,0 +1,31 @@
+{
+  "build": "h69a702a_7",
+  "build_number": 7,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc 16.2.0 ha9f2e26_7"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_7",
+  "files": [],
+  "fn": "libgcc-ng-16.2.0-h69a702a_7.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_7",
+    "type": 1
+  },
+  "md5": "2005515ac9340f816fb2ac7e83afe553",
+  "name": "libgcc-ng",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libgcc-ng-16.2.0-h69a702a_7.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "03b54d7008de080a17cc2174b0e4acd6d06e1c981b2eb19846f46d8f59966034",
+  "size": 28616,
+  "subdir": "linux-64",
+  "timestamp": 1790303114000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-ng-16.2.0-h69a702a_7.conda",
+  "version": "16.2.0"
+}

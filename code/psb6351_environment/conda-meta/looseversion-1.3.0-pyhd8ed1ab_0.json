@@ -1,0 +1,120 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=2"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/looseversion-1.3.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/looseversion-1.3.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/looseversion/__init__.py",
+    "lib/python3.14/site-packages/looseversion/__init__.pyi",
+    "lib/python3.14/site-packages/looseversion/py.typed",
+    "lib/python3.14/site-packages/looseversion/__pycache__/__init__.cpython-314.pyc"
+  ],
+  "fn": "looseversion-1.3.0-pyhd8ed1ab_0.conda",
+  "license": "PSF-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/looseversion-1.3.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "eb665a1045b9f42f62a45dae4cba8d85",
+  "name": "looseversion",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/looseversion-1.3.0-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "c427b8232d7eab85df3f7bd3adb36cf279e0de4cbe39a2907c780a246bce03ef",
+        "sha256_in_prefix": "c427b8232d7eab85df3f7bd3adb36cf279e0de4cbe39a2907c780a246bce03ef",
+        "size_in_bytes": 4604
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "44b55b8c0180b27a3912ad46fbfa9b3bd8b931e053bafb1275b8f25f6a22c89c",
+        "sha256_in_prefix": "44b55b8c0180b27a3912ad46fbfa9b3bd8b931e053bafb1275b8f25f6a22c89c",
+        "size_in_bytes": 908
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "7da80bfd38f6f6683cd1f97097124d5b8e670436dba31174e139db73f8eddc18",
+        "sha256_in_prefix": "7da80bfd38f6f6683cd1f97097124d5b8e670436dba31174e139db73f8eddc18",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "3cd4b9e01d771e91d55137c5d41d56118e17e6512ba8672d2877af2afe0333c4",
+        "sha256_in_prefix": "3cd4b9e01d771e91d55137c5d41d56118e17e6512ba8672d2877af2afe0333c4",
+        "size_in_bytes": 108
+      },
+      {
+        "_path": "site-packages/looseversion-1.3.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "f4f80c98161f5632004d44713b5cb95e400145b40cbc0297f1f50c27b54befdb",
+        "sha256_in_prefix": "f4f80c98161f5632004d44713b5cb95e400145b40cbc0297f1f50c27b54befdb",
+        "size_in_bytes": 2490
+      },
+      {
+        "_path": "site-packages/looseversion/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "609c63e7339b8ed4707c5cbab8db1f6a861b2ad10ed84e27234775772e61841e",
+        "sha256_in_prefix": "609c63e7339b8ed4707c5cbab8db1f6a861b2ad10ed84e27234775772e61841e",
+        "size_in_bytes": 9328
+      },
+      {
+        "_path": "site-packages/looseversion/__init__.pyi",
+        "path_type": "hardlink",
+        "sha256": "c3b928b9e96ede8344a05c2b825c91730834d05c1995bc17cc0b3cc31a1b235d",
+        "sha256_in_prefix": "c3b928b9e96ede8344a05c2b825c91730834d05c1995bc17cc0b3cc31a1b235d",
+        "size_in_bytes": 559
+      },
+      {
+        "_path": "site-packages/looseversion/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.14/site-packages/looseversion/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "a997e117de33f397be5e7409938375ea3e91a50522397edc5b6829fbc9d87789",
+  "size": 14298,
+  "subdir": "noarch",
+  "timestamp": 1688586611000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/looseversion-1.3.0-pyhd8ed1ab_0.conda",
+  "version": "1.3.0"
+}

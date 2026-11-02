@@ -1,0 +1,7 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+
+Name: XF86DRIProto
+Description: XF86DRI extension headers
+Version: 2.1.1
+Cflags: -I${includedir}/X11/dri

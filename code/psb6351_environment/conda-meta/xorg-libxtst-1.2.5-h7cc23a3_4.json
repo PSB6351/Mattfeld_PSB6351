@@ -1,0 +1,101 @@
+{
+  "build": "h7cc23a3_4",
+  "build_number": 4,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "xorg-libx11 >=1.8.13,<2.0a0",
+    "xorg-libxext >=1.3.7,<2.0a0",
+    "xorg-libxi >=1.8.3,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/xorg-libxtst-1.2.5-h7cc23a3_4",
+  "files": [
+    "include/X11/extensions/XTest.h",
+    "include/X11/extensions/record.h",
+    "lib/libXtst.so",
+    "lib/libXtst.so.6",
+    "lib/libXtst.so.6.1.0",
+    "lib/pkgconfig/xtst.pc",
+    "share/doc/libXtst/recordlib.xml",
+    "share/doc/libXtst/xtestlib.xml"
+  ],
+  "fn": "xorg-libxtst-1.2.5-h7cc23a3_4.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/xorg-libxtst-1.2.5-h7cc23a3_4",
+    "type": 1
+  },
+  "md5": "752a5ac9322e0fbbc24146c1ce3ae44e",
+  "name": "xorg-libxtst",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/xorg-libxtst-1.2.5-h7cc23a3_4.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/X11/extensions/XTest.h",
+        "path_type": "hardlink",
+        "sha256": "a414a0c6932131e6a128c8b74d293c7be396b51ca89419d040f4ac17cb31b925",
+        "sha256_in_prefix": "a414a0c6932131e6a128c8b74d293c7be396b51ca89419d040f4ac17cb31b925",
+        "size_in_bytes": 3451
+      },
+      {
+        "_path": "include/X11/extensions/record.h",
+        "path_type": "hardlink",
+        "sha256": "744232d2fa7c64d158ef3bd535fe723c0f55d9cb1bebf65408d385002efc391c",
+        "sha256_in_prefix": "744232d2fa7c64d158ef3bd535fe723c0f55d9cb1bebf65408d385002efc391c",
+        "size_in_bytes": 4738
+      },
+      {
+        "_path": "lib/libXtst.so",
+        "path_type": "softlink",
+        "sha256": "771977cf1b31e365c76ec615789cdfc9c86ba021f036e2bd67de2f86695bb986",
+        "size_in_bytes": 34888
+      },
+      {
+        "_path": "lib/libXtst.so.6",
+        "path_type": "softlink",
+        "sha256": "771977cf1b31e365c76ec615789cdfc9c86ba021f036e2bd67de2f86695bb986",
+        "size_in_bytes": 34888
+      },
+      {
+        "_path": "lib/libXtst.so.6.1.0",
+        "path_type": "hardlink",
+        "sha256": "771977cf1b31e365c76ec615789cdfc9c86ba021f036e2bd67de2f86695bb986",
+        "sha256_in_prefix": "771977cf1b31e365c76ec615789cdfc9c86ba021f036e2bd67de2f86695bb986",
+        "size_in_bytes": 34888
+      },
+      {
+        "_path": "lib/pkgconfig/xtst.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xorg-libxtst_1787359884835/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "e7ee2001f0f97710394e91a5908338f532bf5a0a08dd2f2460368e63356c046c",
+        "sha256_in_prefix": "c9a3915027eb48dc5e5c984fdd9ebfd01d07e93773fa5f038bb1e795d31800e7",
+        "size_in_bytes": 508
+      },
+      {
+        "_path": "share/doc/libXtst/recordlib.xml",
+        "path_type": "hardlink",
+        "sha256": "69e23eecd778b24c4cf2f7bc24c05ea5dc93a34e7753a653646e91ed24334493",
+        "sha256_in_prefix": "69e23eecd778b24c4cf2f7bc24c05ea5dc93a34e7753a653646e91ed24334493",
+        "size_in_bytes": 54087
+      },
+      {
+        "_path": "share/doc/libXtst/xtestlib.xml",
+        "path_type": "hardlink",
+        "sha256": "5c3d3b3f5d7b6a84080adcb3f5eed7bfa63518c7b719b98152da43644c0ce5ac",
+        "sha256_in_prefix": "5c3d3b3f5d7b6a84080adcb3f5eed7bfa63518c7b719b98152da43644c0ce5ac",
+        "size_in_bytes": 16593
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d66525e7b1c492aa179c6c55610fc8dfb0a9a62ea7d4fb9f904fa6af62127f61",
+  "size": 35052,
+  "subdir": "linux-64",
+  "timestamp": 1787360025000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/xorg-libxtst-1.2.5-h7cc23a3_4.conda",
+  "version": "1.2.5"
+}

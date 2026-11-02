@@ -1,0 +1,312 @@
+{
+  "build": "pyhcf101f3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python-tzdata",
+    "python >=3.10",
+    "python-dateutil >=2.7.0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/arrow-1.4.0-pyhcf101f3_0",
+  "files": [
+    "etc/conda/test-files/arrow/1/tests/__init__.py",
+    "etc/conda/test-files/arrow/1/tests/conftest.py",
+    "etc/conda/test-files/arrow/1/tests/test_api.py",
+    "etc/conda/test-files/arrow/1/tests/test_arrow.py",
+    "etc/conda/test-files/arrow/1/tests/test_factory.py",
+    "etc/conda/test-files/arrow/1/tests/test_formatter.py",
+    "etc/conda/test-files/arrow/1/tests/test_locales.py",
+    "etc/conda/test-files/arrow/1/tests/test_parser.py",
+    "etc/conda/test-files/arrow/1/tests/test_util.py",
+    "etc/conda/test-files/arrow/1/tests/utils.py",
+    "lib/python3.14/site-packages/arrow/__init__.py",
+    "lib/python3.14/site-packages/arrow/_version.py",
+    "lib/python3.14/site-packages/arrow/api.py",
+    "lib/python3.14/site-packages/arrow/arrow.py",
+    "lib/python3.14/site-packages/arrow/constants.py",
+    "lib/python3.14/site-packages/arrow/factory.py",
+    "lib/python3.14/site-packages/arrow/formatter.py",
+    "lib/python3.14/site-packages/arrow/locales.py",
+    "lib/python3.14/site-packages/arrow/parser.py",
+    "lib/python3.14/site-packages/arrow/py.typed",
+    "lib/python3.14/site-packages/arrow/util.py",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/arrow-1.4.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/arrow/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/api.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/arrow.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/constants.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/factory.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/formatter.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/locales.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/arrow/__pycache__/util.cpython-314.pyc"
+  ],
+  "fn": "arrow-1.4.0-pyhcf101f3_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/arrow-1.4.0-pyhcf101f3_0",
+    "type": 1
+  },
+  "md5": "85c4f19f377424eafc4ed7911b291642",
+  "name": "arrow",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/arrow-1.4.0-pyhcf101f3_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "7f5a631ecd5ffc83ca03b31182c1344112d193002c86a349868d5ed47bf56fc3",
+        "sha256_in_prefix": "7f5a631ecd5ffc83ca03b31182c1344112d193002c86a349868d5ed47bf56fc3",
+        "size_in_bytes": 2083
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_api.py",
+        "path_type": "hardlink",
+        "sha256": "735bf618fa806832c1b10531dce22964a8117fd207b3e7b9037a8ec4b8331c7a",
+        "sha256_in_prefix": "735bf618fa806832c1b10531dce22964a8117fd207b3e7b9037a8ec4b8331c7a",
+        "size_in_bytes": 770
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_arrow.py",
+        "path_type": "hardlink",
+        "sha256": "e44f0c08aeed8917b32cfcecd1928a658e0c4c74f10e0469d1d86eec20e0500e",
+        "sha256_in_prefix": "e44f0c08aeed8917b32cfcecd1928a658e0c4c74f10e0469d1d86eec20e0500e",
+        "size_in_bytes": 109925
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_factory.py",
+        "path_type": "hardlink",
+        "sha256": "0ed52e84fff2d3c6c1f0eba14afff42151a47c41c3fc2146b81317f40a659bc6",
+        "sha256_in_prefix": "0ed52e84fff2d3c6c1f0eba14afff42151a47c41c3fc2146b81317f40a659bc6",
+        "size_in_bytes": 13217
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_formatter.py",
+        "path_type": "hardlink",
+        "sha256": "a5ed7f6c8751d21e780aab774d00fc85d27efa26c6976c3b441338654cfaaf63",
+        "sha256_in_prefix": "a5ed7f6c8751d21e780aab774d00fc85d27efa26c6976c3b441338654cfaaf63",
+        "size_in_bytes": 9553
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_locales.py",
+        "path_type": "hardlink",
+        "sha256": "608f8378fa5343245213650f6db5e830a275f1784baf16f8e69218563d5c23db",
+        "sha256_in_prefix": "608f8378fa5343245213650f6db5e830a275f1784baf16f8e69218563d5c23db",
+        "size_in_bytes": 180229
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_parser.py",
+        "path_type": "hardlink",
+        "sha256": "b0ed21728429373dec7fb1817b97a9ff0e857d16fae351ea51e85d4b09e7f379",
+        "sha256_in_prefix": "b0ed21728429373dec7fb1817b97a9ff0e857d16fae351ea51e85d4b09e7f379",
+        "size_in_bytes": 61843
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "e2b297090f38400b17faddeaff93e6a2f3e079cd5620b9548f45739b27184979",
+        "sha256_in_prefix": "e2b297090f38400b17faddeaff93e6a2f3e079cd5620b9548f45739b27184979",
+        "size_in_bytes": 4552
+      },
+      {
+        "_path": "etc/conda/test-files/arrow/1/tests/utils.py",
+        "path_type": "hardlink",
+        "sha256": "d313a906adcea5f56e3922c420c755200088509c2653e953a2d7f3e2290a6b38",
+        "sha256_in_prefix": "d313a906adcea5f56e3922c420c755200088509c2653e953a2d7f3e2290a6b38",
+        "size_in_bytes": 1370
+      },
+      {
+        "_path": "site-packages/arrow/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "820d3004bbceb2d8427c62ebe1e7e7e5a6f5222033205e222bff5c1b33372033",
+        "sha256_in_prefix": "820d3004bbceb2d8427c62ebe1e7e7e5a6f5222033205e222bff5c1b33372033",
+        "size_in_bytes": 928
+      },
+      {
+        "_path": "site-packages/arrow/_version.py",
+        "path_type": "hardlink",
+        "sha256": "f148686045c7b3539a8bb056fc4c419aec169d123ec8c1bfbb57d0017322cc74",
+        "sha256_in_prefix": "f148686045c7b3539a8bb056fc4c419aec169d123ec8c1bfbb57d0017322cc74",
+        "size_in_bytes": 22
+      },
+      {
+        "_path": "site-packages/arrow/api.py",
+        "path_type": "hardlink",
+        "sha256": "89b607f6cbc6b6fa19d82169f5219dbd3a4badfff7a634da4b43fc5c2fb03a1d",
+        "sha256_in_prefix": "89b607f6cbc6b6fa19d82169f5219dbd3a4badfff7a634da4b43fc5c2fb03a1d",
+        "size_in_bytes": 2735
+      },
+      {
+        "_path": "site-packages/arrow/arrow.py",
+        "path_type": "hardlink",
+        "sha256": "2a1ad15d91e91c6fc8c33d9a71fa62e5ab38672b7b6aaebdd894b2edaf52fead",
+        "sha256_in_prefix": "2a1ad15d91e91c6fc8c33d9a71fa62e5ab38672b7b6aaebdd894b2edaf52fead",
+        "size_in_bytes": 64985
+      },
+      {
+        "_path": "site-packages/arrow/constants.py",
+        "path_type": "hardlink",
+        "sha256": "cff3cc420315708b9979833270efbeb74b00c2e1030a5e73874d74c81c439916",
+        "sha256_in_prefix": "cff3cc420315708b9979833270efbeb74b00c2e1030a5e73874d74c81c439916",
+        "size_in_bytes": 3117
+      },
+      {
+        "_path": "site-packages/arrow/factory.py",
+        "path_type": "hardlink",
+        "sha256": "9d4119efab4da3a7cd5b556969b673ff833623b5cb6a6aab55fa9bfa619a643b",
+        "sha256_in_prefix": "9d4119efab4da3a7cd5b556969b673ff833623b5cb6a6aab55fa9bfa619a643b",
+        "size_in_bytes": 11375
+      },
+      {
+        "_path": "site-packages/arrow/formatter.py",
+        "path_type": "hardlink",
+        "sha256": "6a6da8d7331ae308f2f71f1c4071d8f93430c882bd84a049a9ee27b60893091e",
+        "sha256_in_prefix": "6a6da8d7331ae308f2f71f1c4071d8f93430c882bd84a049a9ee27b60893091e",
+        "size_in_bytes": 5139
+      },
+      {
+        "_path": "site-packages/arrow/locales.py",
+        "path_type": "hardlink",
+        "sha256": "87ac80d93d4dabb183f77629aafa96fef5902e9039136f2de1a714e3261f84fc",
+        "sha256_in_prefix": "87ac80d93d4dabb183f77629aafa96fef5902e9039136f2de1a714e3261f84fc",
+        "size_in_bytes": 160035
+      },
+      {
+        "_path": "site-packages/arrow/parser.py",
+        "path_type": "hardlink",
+        "sha256": "f736b5b53cc5317503ec4d7b8a278d7c6876b37391aab2cdbd7855dd80171a42",
+        "sha256_in_prefix": "f736b5b53cc5317503ec4d7b8a278d7c6876b37391aab2cdbd7855dd80171a42",
+        "size_in_bytes": 33345
+      },
+      {
+        "_path": "site-packages/arrow/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/arrow/util.py",
+        "path_type": "hardlink",
+        "sha256": "c670debea47235e6166e5df1fa7fd3ca8e1c3a01dc7606f1144085b09d57a047",
+        "sha256_in_prefix": "c670debea47235e6166e5df1fa7fd3ca8e1c3a01dc7606f1144085b09d57a047",
+        "size_in_bytes": 3679
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "36407a40cd6a7f3147f8c8ab802d516fb4c152d7e2aabab52718ff3407a1706d",
+        "sha256_in_prefix": "36407a40cd6a7f3147f8c8ab802d516fb4c152d7e2aabab52718ff3407a1706d",
+        "size_in_bytes": 7719
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "29f2702f11af40008febb0577f14080f59530795237b9f7575c20543f44ad9ea",
+        "sha256_in_prefix": "29f2702f11af40008febb0577f14080f59530795237b9f7575c20543f44ad9ea",
+        "size_in_bytes": 1819
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+        "sha256_in_prefix": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+        "size_in_bytes": 82
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "b2601f8e62eb47d99d6f06d8887673746a64ca355e30b9b7efc8cd191a501e9f",
+        "sha256_in_prefix": "b2601f8e62eb47d99d6f06d8887673746a64ca355e30b9b7efc8cd191a501e9f",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "site-packages/arrow-1.4.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b481f87296cb0abdb13fd8cbb94b14c328be880ec9e68547a61b84dacffd067a",
+        "sha256_in_prefix": "b481f87296cb0abdb13fd8cbb94b14c328be880ec9e68547a61b84dacffd067a",
+        "size_in_bytes": 11341
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/_version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/api.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/arrow.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/constants.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/factory.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/formatter.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/locales.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/arrow/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "792da8131b1b53ff667bd6fc617ea9087b570305ccb9913deb36b8e12b3b5141",
+  "size": 113854,
+  "subdir": "noarch",
+  "timestamp": 1760831179000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/arrow-1.4.0-pyhcf101f3_0.conda",
+  "version": "1.4.0"
+}

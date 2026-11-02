@@ -1,0 +1,166 @@
+{
+  "build": "ha427ee3_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [
+    "__glibc >=2.17"
+  ],
+  "depends": [
+    "fonts-conda-ecosystem",
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libxml2-16 >=2.15.4",
+    "fontconfig >=2.18.3,<3.0a0",
+    "libglib >=2.90.0,<3.0a0",
+    "gdk-pixbuf >=2.44.8,<3.0a0",
+    "pango >=1.58.2,<2.0a0",
+    "libharfbuzz >=14.5.0",
+    "cairo >=1.18.6,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/librsvg-2.62.4-ha427ee3_0",
+  "files": [
+    "bin/rsvg-convert",
+    "include/librsvg-2.0/librsvg/rsvg-cairo.h",
+    "include/librsvg-2.0/librsvg/rsvg-features.h",
+    "include/librsvg-2.0/librsvg/rsvg-pixbuf.h",
+    "include/librsvg-2.0/librsvg/rsvg-version.h",
+    "include/librsvg-2.0/librsvg/rsvg.h",
+    "lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so",
+    "lib/girepository-1.0/Rsvg-2.0.typelib",
+    "lib/librsvg-2.so",
+    "lib/librsvg-2.so.2",
+    "lib/librsvg-2.so.2.62.4",
+    "lib/pkgconfig/librsvg-2.0.pc",
+    "share/gir-1.0/Rsvg-2.0.gir",
+    "share/man/man1/rsvg-convert.1",
+    "share/thumbnailers/librsvg.thumbnailer"
+  ],
+  "fn": "librsvg-2.62.4-ha427ee3_0.conda",
+  "license": "LGPL-2.1-or-later",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/librsvg-2.62.4-ha427ee3_0",
+    "type": 1
+  },
+  "md5": "f9bda2728debbde4c641bd1af103c623",
+  "name": "librsvg",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/librsvg-2.62.4-ha427ee3_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/rsvg-convert",
+        "path_type": "hardlink",
+        "sha256": "08f7ac2b599ce305ff77119e7bfb10c5bb1d0f18fb426bbaf51c3012129edd14",
+        "sha256_in_prefix": "08f7ac2b599ce305ff77119e7bfb10c5bb1d0f18fb426bbaf51c3012129edd14",
+        "size_in_bytes": 6441704
+      },
+      {
+        "_path": "include/librsvg-2.0/librsvg/rsvg-cairo.h",
+        "path_type": "hardlink",
+        "sha256": "55f25d5872497328697a409798869c69fb42befa2061ae6d99348991b6d52a3d",
+        "sha256_in_prefix": "55f25d5872497328697a409798869c69fb42befa2061ae6d99348991b6d52a3d",
+        "size_in_bytes": 17851
+      },
+      {
+        "_path": "include/librsvg-2.0/librsvg/rsvg-features.h",
+        "path_type": "hardlink",
+        "sha256": "4aa2986c6a89bd98145289a0b6ab35370adc8cfdd67eb34dabe2dcb60fae3980",
+        "sha256_in_prefix": "4aa2986c6a89bd98145289a0b6ab35370adc8cfdd67eb34dabe2dcb60fae3980",
+        "size_in_bytes": 6027
+      },
+      {
+        "_path": "include/librsvg-2.0/librsvg/rsvg-pixbuf.h",
+        "path_type": "hardlink",
+        "sha256": "f7fb578507baaff57ba52b27585bf4edd6c210f54997603ac9ce0ec03b64ba7d",
+        "sha256_in_prefix": "f7fb578507baaff57ba52b27585bf4edd6c210f54997603ac9ce0ec03b64ba7d",
+        "size_in_bytes": 9678
+      },
+      {
+        "_path": "include/librsvg-2.0/librsvg/rsvg-version.h",
+        "path_type": "hardlink",
+        "sha256": "05ea6d7eb09826d157f677b52553d977cfa7a5919773157e801a93e0049dfe2a",
+        "sha256_in_prefix": "05ea6d7eb09826d157f677b52553d977cfa7a5919773157e801a93e0049dfe2a",
+        "size_in_bytes": 338
+      },
+      {
+        "_path": "include/librsvg-2.0/librsvg/rsvg.h",
+        "path_type": "hardlink",
+        "sha256": "244fb9d8696e42f4b98b1c094296c5280f8f8382817b68555f2f9aee114e4ca5",
+        "sha256_in_prefix": "244fb9d8696e42f4b98b1c094296c5280f8f8382817b68555f2f9aee114e4ca5",
+        "size_in_bytes": 50515
+      },
+      {
+        "_path": "lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so",
+        "path_type": "hardlink",
+        "sha256": "129cf78e791fad2a9dc079ff33611c1f4289f4c529fb4bc95d0b4567215c8419",
+        "sha256_in_prefix": "129cf78e791fad2a9dc079ff33611c1f4289f4c529fb4bc95d0b4567215c8419",
+        "size_in_bytes": 343376
+      },
+      {
+        "_path": "lib/girepository-1.0/Rsvg-2.0.typelib",
+        "path_type": "hardlink",
+        "sha256": "b2f98c0a639d5a30a0fe605a091cb339d24e1da87de3d53061860526981c5130",
+        "sha256_in_prefix": "b2f98c0a639d5a30a0fe605a091cb339d24e1da87de3d53061860526981c5130",
+        "size_in_bytes": 8712
+      },
+      {
+        "_path": "lib/librsvg-2.so",
+        "path_type": "softlink",
+        "sha256": "5488e06af0d688be05dca79f4a99e36cd099492c0ce2c3023ed5644d4473077b",
+        "size_in_bytes": 14
+      },
+      {
+        "_path": "lib/librsvg-2.so.2",
+        "path_type": "softlink",
+        "sha256": "5488e06af0d688be05dca79f4a99e36cd099492c0ce2c3023ed5644d4473077b",
+        "size_in_bytes": 19
+      },
+      {
+        "_path": "lib/librsvg-2.so.2.62.4",
+        "path_type": "hardlink",
+        "sha256": "5488e06af0d688be05dca79f4a99e36cd099492c0ce2c3023ed5644d4473077b",
+        "sha256_in_prefix": "5488e06af0d688be05dca79f4a99e36cd099492c0ce2c3023ed5644d4473077b",
+        "size_in_bytes": 8435032
+      },
+      {
+        "_path": "lib/pkgconfig/librsvg-2.0.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_librsvg_1790276295/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "cff10b3b51de48673d4b0f907b5dc795f670833fe8af303242823dd3099f2ee1",
+        "sha256_in_prefix": "431bbcc4d67ce74e940368e33ad55a467f10fa5d9d2d8cf1e9743e78e951c88d",
+        "size_in_bytes": 799
+      },
+      {
+        "_path": "share/gir-1.0/Rsvg-2.0.gir",
+        "path_type": "hardlink",
+        "sha256": "20f5fbef5f0854b279c7cb43135bbb8584451c07d3ac95bcaafdc940aff0fbb6",
+        "sha256_in_prefix": "20f5fbef5f0854b279c7cb43135bbb8584451c07d3ac95bcaafdc940aff0fbb6",
+        "size_in_bytes": 141586
+      },
+      {
+        "_path": "share/man/man1/rsvg-convert.1",
+        "path_type": "hardlink",
+        "sha256": "92249aeb88fdb9b06b4e042c49ab043924ae81511fa346e7e94478ff7e101d5e",
+        "sha256_in_prefix": "92249aeb88fdb9b06b4e042c49ab043924ae81511fa346e7e94478ff7e101d5e",
+        "size_in_bytes": 26718
+      },
+      {
+        "_path": "share/thumbnailers/librsvg.thumbnailer",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_librsvg_1790276295/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "18062ed5644fea17dc7d2c47b5d0e6442d3c3b6559c206d4344a83a4e2095b0b",
+        "sha256_in_prefix": "b7e1a3c8a624a1e530fe240327812ba92a4de389524dafb5c2aa1d8950b5cdc8",
+        "size_in_bytes": 660
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b8036adad17ceddcef416790131492fd236d34c64a0b2754934903087fa84279",
+  "size": 4692221,
+  "subdir": "linux-64",
+  "timestamp": 1790276295000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/librsvg-2.62.4-ha427ee3_0.conda",
+  "version": "2.62.4"
+}

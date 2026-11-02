@@ -1,0 +1,11 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libgvpr
+Description: The GVPR library
+Version: 14.1.2
+Libs: -L${libdir} -lgvpr -lcgraph -lcdt
+Cflags: -I${includedir} -I${includedir}/graphviz
+

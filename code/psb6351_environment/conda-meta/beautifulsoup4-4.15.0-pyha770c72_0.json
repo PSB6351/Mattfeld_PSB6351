@@ -1,0 +1,304 @@
+{
+  "build": "pyha770c72_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "typing-extensions",
+    "python >=3.10",
+    "soupsieve >=1.2"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/beautifulsoup4-4.15.0-pyha770c72_0",
+  "files": [
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/licenses/AUTHORS",
+    "lib/python3.14/site-packages/beautifulsoup4-4.15.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/bs4/__init__.py",
+    "lib/python3.14/site-packages/bs4/_deprecation.py",
+    "lib/python3.14/site-packages/bs4/_typing.py",
+    "lib/python3.14/site-packages/bs4/_warnings.py",
+    "lib/python3.14/site-packages/bs4/builder/__init__.py",
+    "lib/python3.14/site-packages/bs4/builder/_html5lib.py",
+    "lib/python3.14/site-packages/bs4/builder/_htmlparser.py",
+    "lib/python3.14/site-packages/bs4/builder/_lxml.py",
+    "lib/python3.14/site-packages/bs4/css.py",
+    "lib/python3.14/site-packages/bs4/dammit.py",
+    "lib/python3.14/site-packages/bs4/diagnose.py",
+    "lib/python3.14/site-packages/bs4/element.py",
+    "lib/python3.14/site-packages/bs4/exceptions.py",
+    "lib/python3.14/site-packages/bs4/filter.py",
+    "lib/python3.14/site-packages/bs4/formatter.py",
+    "lib/python3.14/site-packages/bs4/py.typed",
+    "lib/python3.14/site-packages/bs4/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/_deprecation.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/_typing.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/_warnings.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/builder/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/builder/__pycache__/_html5lib.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/builder/__pycache__/_htmlparser.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/builder/__pycache__/_lxml.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/css.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/dammit.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/diagnose.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/element.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/filter.cpython-314.pyc",
+    "lib/python3.14/site-packages/bs4/__pycache__/formatter.cpython-314.pyc"
+  ],
+  "fn": "beautifulsoup4-4.15.0-pyha770c72_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/beautifulsoup4-4.15.0-pyha770c72_0",
+    "type": 1
+  },
+  "md5": "3b261da3fe9b4168738712832410b022",
+  "name": "beautifulsoup4",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/beautifulsoup4-4.15.0-pyha770c72_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "b2f888103259f1607c85f3b1163be1bc49fc9941a3243c3b89a21075bfc6d4fb",
+        "sha256_in_prefix": "b2f888103259f1607c85f3b1163be1bc49fc9941a3243c3b89a21075bfc6d4fb",
+        "size_in_bytes": 3812
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3b6a02237c4040709921c1ecdbe5ed2e9ee4cf2b26c9f69fbb7af0b11e9ee74a",
+        "sha256_in_prefix": "3b6a02237c4040709921c1ecdbe5ed2e9ee4cf2b26c9f69fbb7af0b11e9ee74a",
+        "size_in_bytes": 2633
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "99f7cfcbcc019d9427d959c9514e6313df4ab316927e2c8c1d5f58b7468b571b",
+        "sha256_in_prefix": "99f7cfcbcc019d9427d959c9514e6313df4ab316927e2c8c1d5f58b7468b571b",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "bf2c06cb804144d70579ff08f90ed0afcef5efb0d6e061ec21d8a24d78bf571c",
+        "sha256_in_prefix": "bf2c06cb804144d70579ff08f90ed0afcef5efb0d6e061ec21d8a24d78bf571c",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/licenses/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f",
+        "sha256_in_prefix": "b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f",
+        "size_in_bytes": 2201
+      },
+      {
+        "_path": "site-packages/beautifulsoup4-4.15.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2",
+        "sha256_in_prefix": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2",
+        "size_in_bytes": 1441
+      },
+      {
+        "_path": "site-packages/bs4/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "90e007f82a9fc5bcf22a8df3b395b7bc5245e54d65cd68fd51ca12a414718d4e",
+        "sha256_in_prefix": "90e007f82a9fc5bcf22a8df3b395b7bc5245e54d65cd68fd51ca12a414718d4e",
+        "size_in_bytes": 44562
+      },
+      {
+        "_path": "site-packages/bs4/_deprecation.py",
+        "path_type": "hardlink",
+        "sha256": "9e21c90a4dfb00f83c284b8539ae7b6576b12dd06673fd95eaeb9a26abbbaf7d",
+        "sha256_in_prefix": "9e21c90a4dfb00f83c284b8539ae7b6576b12dd06673fd95eaeb9a26abbbaf7d",
+        "size_in_bytes": 2408
+      },
+      {
+        "_path": "site-packages/bs4/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "ccd731ed1d720932bc5b0b6e98fdbc85cec2277a4cc995e3fd501e61a3573190",
+        "sha256_in_prefix": "ccd731ed1d720932bc5b0b6e98fdbc85cec2277a4cc995e3fd501e61a3573190",
+        "size_in_bytes": 7549
+      },
+      {
+        "_path": "site-packages/bs4/_warnings.py",
+        "path_type": "hardlink",
+        "sha256": "66e3844e072711b660c363749e73579fac2fb6b9f6badec017477df1bbe43057",
+        "sha256_in_prefix": "66e3844e072711b660c363749e73579fac2fb6b9f6badec017477df1bbe43057",
+        "size_in_bytes": 4711
+      },
+      {
+        "_path": "site-packages/bs4/builder/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "465e2a8ce5ef772cb28dac8e16a6e4828528a3cd48828c8a0fe47059e54ae7d8",
+        "sha256_in_prefix": "465e2a8ce5ef772cb28dac8e16a6e4828528a3cd48828c8a0fe47059e54ae7d8",
+        "size_in_bytes": 31194
+      },
+      {
+        "_path": "site-packages/bs4/builder/_html5lib.py",
+        "path_type": "hardlink",
+        "sha256": "84beb1524e3f2368b908c82e16860596b236e9c6380eeb7b7ce110ad472d1c83",
+        "sha256_in_prefix": "84beb1524e3f2368b908c82e16860596b236e9c6380eeb7b7ce110ad472d1c83",
+        "size_in_bytes": 23607
+      },
+      {
+        "_path": "site-packages/bs4/builder/_htmlparser.py",
+        "path_type": "hardlink",
+        "sha256": "4ab8d0bee2fc48a3ab5f28f33611355d3049a46b25a44d4b2bedc1d6f9bbfebd",
+        "sha256_in_prefix": "4ab8d0bee2fc48a3ab5f28f33611355d3049a46b25a44d4b2bedc1d6f9bbfebd",
+        "size_in_bytes": 19866
+      },
+      {
+        "_path": "site-packages/bs4/builder/_lxml.py",
+        "path_type": "hardlink",
+        "sha256": "92cd5ef1ba00fe7380da8a26021c5eb9d71c47a4e16c413e125945a874683cb0",
+        "sha256_in_prefix": "92cd5ef1ba00fe7380da8a26021c5eb9d71c47a4e16c413e125945a874683cb0",
+        "size_in_bytes": 18969
+      },
+      {
+        "_path": "site-packages/bs4/css.py",
+        "path_type": "hardlink",
+        "sha256": "fe6fe5ff84865879d8eb6d15276d63fea407d515f7a7dd6c6157a680ac5a2ec3",
+        "sha256_in_prefix": "fe6fe5ff84865879d8eb6d15276d63fea407d515f7a7dd6c6157a680ac5a2ec3",
+        "size_in_bytes": 12713
+      },
+      {
+        "_path": "site-packages/bs4/dammit.py",
+        "path_type": "hardlink",
+        "sha256": "d261705bff87925c9ba2dfcc8378284ea6187ca7e5b8a253fd6254e288db405e",
+        "sha256_in_prefix": "d261705bff87925c9ba2dfcc8378284ea6187ca7e5b8a253fd6254e288db405e",
+        "size_in_bytes": 57485
+      },
+      {
+        "_path": "site-packages/bs4/diagnose.py",
+        "path_type": "hardlink",
+        "sha256": "6adf7c8aec723aba9e73857c8b091321b354a810acabd2ebddf0c0431db5dbd6",
+        "sha256_in_prefix": "6adf7c8aec723aba9e73857c8b091321b354a810acabd2ebddf0c0431db5dbd6",
+        "size_in_bytes": 7846
+      },
+      {
+        "_path": "site-packages/bs4/element.py",
+        "path_type": "hardlink",
+        "sha256": "a109bc64af4fd5137b4e739ac254b9c1d518c2cb36391d21e59113e95b862641",
+        "sha256_in_prefix": "a109bc64af4fd5137b4e739ac254b9c1d518c2cb36391d21e59113e95b862641",
+        "size_in_bytes": 125805
+      },
+      {
+        "_path": "site-packages/bs4/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "43d14e69d35ef1046fcc331a2925ded96b65f092bfa00656ee66c564154ffc61",
+        "sha256_in_prefix": "43d14e69d35ef1046fcc331a2925ded96b65f092bfa00656ee66c564154ffc61",
+        "size_in_bytes": 951
+      },
+      {
+        "_path": "site-packages/bs4/filter.py",
+        "path_type": "hardlink",
+        "sha256": "77dc2d587920f1cc776d4d013e32de1a01691d5391cd7e870277ed07aaec5ea3",
+        "sha256_in_prefix": "77dc2d587920f1cc776d4d013e32de1a01691d5391cd7e870277ed07aaec5ea3",
+        "size_in_bytes": 29180
+      },
+      {
+        "_path": "site-packages/bs4/formatter.py",
+        "path_type": "hardlink",
+        "sha256": "b814f493a5bc3b9909f4f0ae2588eb6bdef2a14a82f9d94cf43feffa844cd2bf",
+        "sha256_in_prefix": "b814f493a5bc3b9909f4f0ae2588eb6bdef2a14a82f9d94cf43feffa844cd2bf",
+        "size_in_bytes": 10478
+      },
+      {
+        "_path": "site-packages/bs4/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/_deprecation.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/_typing.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/_warnings.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/builder/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/builder/__pycache__/_html5lib.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/builder/__pycache__/_htmlparser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/builder/__pycache__/_lxml.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/css.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/dammit.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/diagnose.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/element.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/filter.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/bs4/__pycache__/formatter.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "aed4b9dcf68ec2a75e5645fed14d77fd884d38d2e52bfa6ef4b278d90cd88781",
+  "size": 92704,
+  "subdir": "noarch",
+  "timestamp": 1780853175000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/beautifulsoup4-4.15.0-pyha770c72_0.conda",
+  "version": "4.15.0"
+}

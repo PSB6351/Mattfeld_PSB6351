@@ -1,0 +1,10 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-gobject
+Description: HarfBuzz text shaping library GObject integration
+Version: 14.5.1
+Requires: harfbuzz =  14.5.1, glib-2.0 >=  2.30.0, gobject-2.0 >=  2.30.0
+Libs: -L${libdir} -lharfbuzz-gobject
+Cflags: -I${includedir}/harfbuzz

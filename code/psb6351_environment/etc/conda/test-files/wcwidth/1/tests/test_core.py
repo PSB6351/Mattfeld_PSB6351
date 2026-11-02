@@ -1,0 +1,764 @@
+"""Core tests for wcwidth module."""
+# std imports
+import re
+import sys
+import importlib
+import importlib.metadata
+from pathlib import Path
+from itertools import product
+
+# 3rd party
+import pytest
+
+# local
+import wcwidth
+from wcwidth._width import _WIDTH_FAST_PATH_MIN_LEN
+
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# libwcwidth/ ships in the source distribution, see MANIFEST.in: a user installing from sdist
+# compiles the extension from these sources, so its absence is a packaging failure, not a
+# reason to skip.
+_LIBWCWIDTH_CONFIG_H = _PROJECT_ROOT / 'libwcwidth' / 'include' / 'wcwidth' / 'wcwidth_config.h'
+
+
+def _pyproject_version():
+    """Return the ``version`` declared by pyproject.toml."""
+    pyproject = (_PROJECT_ROOT / 'pyproject.toml').read_text()
+    return re.search(r'^version = "([^"]+)"', pyproject, re.M).group(1)
+
+
+def test_package_version():
+    """wcwidth.__version__ is expected value."""
+    # given,
+    expected = importlib.metadata.version('wcwidth')
+
+    # exercise,
+    result = wcwidth.__version__
+
+    # verify.
+    assert result == expected
+
+
+def test_cmake_and_setuptools_source_lists_parity():
+    """Libwcwidth source lists stay in parity and cover the Makefile glob."""
+    # given,
+    setup_py = (_PROJECT_ROOT / 'setup.py').read_text()
+    cmake = (_PROJECT_ROOT / 'libwcwidth' / 'CMakeLists.txt').read_text()
+
+    # exercise,
+    py_sources = set(re.findall(r'"libwcwidth/(src/(?:tables/)?[a-z0-9_]+\.c)"', setup_py))
+    cm_sources = set(re.findall(r'^    (src/(?:tables/)?[a-z0-9_]+\.c)$', cmake, re.M))
+    on_disk = {
+        path.relative_to(_PROJECT_ROOT / 'libwcwidth').as_posix()
+        for path in (_PROJECT_ROOT / 'libwcwidth' / 'src').glob('*.c')
+    } | {
+        path.relative_to(_PROJECT_ROOT / 'libwcwidth').as_posix()
+        for path in (_PROJECT_ROOT / 'libwcwidth' / 'src' / 'tables').glob('*.c')
+    }
+
+    # verify,
+    assert py_sources == cm_sources == on_disk
+
+
+def test_version_matches_pyproject():
+    """pyproject.toml version is stamped into __version__."""
+    # given,
+    version = _pyproject_version()
+
+    # verify,
+    assert wcwidth.__version__ == version
+
+
+def test_version_matches_libwcwidth():
+    """pyproject.toml version is stamped into libwcwidth's wcwidth_config.h."""
+    # given,
+    version = _pyproject_version()
+    config = _LIBWCWIDTH_CONFIG_H.read_text()
+    macros = re.search(
+        r'#define WCWIDTH_VERSION_MAJOR (\d+)\n'
+        r'#define WCWIDTH_VERSION_MINOR (\d+)\n'
+        r'#define WCWIDTH_VERSION_PATCH (\d+)', config)
+
+    # verify,
+    assert re.search(r'#define WCWIDTH_VERSION "([^"]+)"', config).group(1) == version
+    # the numeric macros carry only the release segment, a pre-release suffix is not an int
+    release = re.match(r'\d+\.\d+\.\d+', version).group(0)
+    assert f'{macros.group(1)}.{macros.group(2)}.{macros.group(3)}' == release
+
+
+def test_empty_string():
+    """
+    Test empty string is OK.
+
+    https://github.com/jquast/wcwidth/issues/24
+    """
+    phrase = ""
+    expect_length_each = 0
+    expect_length_phrase = 0
+
+    # exercise,
+    length_each = wcwidth.wcwidth(phrase)
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def basic_string_type():
+    """
+    This is a python 2-specific test of the basic "string type".
+
+    Such strings cannot contain anything but ascii in python2.
+    """
+    # given,
+    phrase = 'hello\x00world'
+    expect_length_each = (1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1)
+    expect_length_phrase = sum(expect_length_each)
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_hello_jp():
+    """
+    Width of Japanese phrase: コンニチハ, セカイ!
+
+    Given a phrase of 5 and 3 Katakana ideographs, joined with 3 English-ASCII punctuation
+    characters, totaling 11, this phrase consumes 19 cells of a terminal emulator.
+    """
+    # given,
+    phrase = 'コンニチハ, セカイ!'
+    expect_length_each = (2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1)
+    expect_length_phrase = sum(expect_length_each)
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_wcswidth_substr():
+    """
+    Test wcswidth() optional 2nd parameter, ``n``.
+
+    ``n`` determines at which position of the string to stop counting length.
+    """
+    # given,
+    phrase = 'コンニチハ, セカイ!'
+    end = 7
+    expect_length_each = (2, 2, 2, 2, 2, 1, 1,)
+    expect_length_phrase = sum(expect_length_each)
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))[:end]
+    length_phrase = wcwidth.wcswidth(phrase, end)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_null_width_0():
+    """NULL (0) reports width 0."""
+    # given,
+    phrase = 'abc\x00def'
+    expect_length_each = (1, 1, 1, 0, 1, 1, 1)
+    expect_length_phrase = sum(expect_length_each)
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase, len(phrase))
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_control_c0_width_negative_1():
+    """
+    How the API reacts to CSI (Control sequence initiate).
+
+    An example of bad fortune, this terminal sequence is a width of 0 on all terminals, but wcwidth
+    doesn't parse Control-Sequence-Inducer (CSI) sequences.
+
+    Also the "legacy" posix functions wcwidth and wcswidth return -1 for any string containing the
+    C1 control character \x1b (ESC).
+    """
+    # given,
+    phrase = '\x1b[0m'
+    expect_length_each = (-1, 1, 1, 1)
+    expect_length_phrase = -1
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify, though this is actually *0* width for a terminal emulator
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_combining_width():
+    """Simple test combining reports total width of 4."""
+    # given,
+    phrase = '--\u05bf--'
+    expect_length_each = (1, 1, 0, 1, 1)
+    expect_length_phrase = 4
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_combining_cafe():
+    """Phrase cafe + COMBINING ACUTE ACCENT is café of length 4."""
+    phrase = "cafe\u0301"
+    expect_length_each = (1, 1, 1, 1, 0)
+    expect_length_phrase = 4
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_combining_enclosing():
+    """CYRILLIC CAPITAL LETTER A + COMBINING CYRILLIC HUNDRED THOUSANDS SIGN is of length 1."""
+    phrase = "\u0410\u0488"
+    expect_length_each = (1, 0)
+    expect_length_phrase = 1
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_balinese_script():
+    """
+    Balinese kapal (ship) is length 3.
+
+    This may be an example that is not yet correctly rendered by any terminal so far, like
+    devanagari.
+    """
+    phrase = ("\u1B13"    # Category 'Lo', EAW 'N' -- BALINESE LETTER KA
+              "\u1B28"    # Category 'Lo', EAW 'N' -- BALINESE LETTER PA KAPAL
+              "\u1B2E"    # Category 'Lo', EAW 'N' -- BALINESE LETTER LA
+              "\u1B44")   # Category 'Mc', EAW 'N' -- BALINESE ADEG ADEG (virama)
+    expect_length_each = (1, 1, 1, 0)
+    expect_length_phrase = 3
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+    # verify width() parse mode also handles Mc correctly
+    assert wcwidth.width(phrase) == expect_length_phrase
+
+    # standalone Mc has zero width
+    assert wcwidth.wcswidth("\u1B44") == 0
+    assert wcwidth.width("\u1B44") == 0
+
+
+def test_kr_jamo():
+    """
+    Test basic combining of HANGUL CHOSEONG and JUNGSEONG.
+
+    Example and from Raymond Chen's blog post,
+    https://devblogs.microsoft.com/oldnewthing/20201009-00/?p=104351
+    """
+    # This is an example where both characters are "wide" when displayed alone.
+    #
+    # But JUNGSEONG (vowel) is designed for combination with a CHOSEONG (consonant).
+    #
+    # This wcwidth library understands their width only when combination,
+    # and not by independent display, like other zero-width characters that may
+    # only combine with an appropriate preceding character.
+    phrase = (
+        "\u1100"  # ᄀ HANGUL CHOSEONG KIYEOK (consonant)
+        "\u1161"  # ᅡ HANGUL JUNGSEONG A (vowel)
+    )
+    expect_length_each = (2, 0)
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_kr_jamo_filler():
+    """
+    Jamo filler is 0 width.
+
+    Example from https://www.unicode.org/L2/L2006/06310-hangul-decompose9.pdf
+    """
+    phrase = (
+        "\u1100"  # HANGUL CHOSEONG KIYEOK (consonant)
+        "\u1160"  # HANGUL JUNGSEONG FILLER (vowel)
+    )
+    expect_length_each = (2, 0)
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+
+
+def test_devanagari_script():
+    """
+    Attempt to test the measurement width of Devanagari script.
+
+    I believe this 'phrase' should be length 3.
+
+    This is a difficult problem, and this library does not yet get it right,
+    because we interpret the unicode data files programmatically, but they do
+    not correctly describe how their terminal width is measured.
+
+    There are very few Terminals that do!
+
+    As of 2023,
+
+    - iTerm2: correct length but individual characters are out of order and
+              horizaontally misplaced as to be unreadable in its language when
+              using 'Noto Sans' font.
+    - mlterm: mixed results, it offers several options in the configuration
+              dialog, "Xft", "Cario", and "Variable Column Width" have some
+              effect, but with neither 'Noto Sans' or 'unifont', it is not
+              recognizable as the Devanagari script it is meant to display.
+
+    Previous testing with Devanagari documented at address https://benizi.com/vim/devanagari/
+
+    See also, https://askubuntu.com/questions/8437/is-there-a-good-mono-spaced-font-for-devanagari-script-in-the-terminal
+    """
+    # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+    # please note that document correctly points out that the final width cannot be determined
+    # as a sum of each individual width, as this library currently performs with exception of
+    # ZWJ, but I think it incorrectly gestures what a stateless call to wcwidth.wcwidth of
+    # each codepoint *should* return.
+    phrase = ("\u0915"    # Akhand, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER KA
+              "\u094D"    # Joiner, Category 'Mn', East Asian Width property 'N' -- DEVANAGARI SIGN VIRAMA
+              "\u0937"    # Fused, Category 'Lo', East Asian Width property 'N' -- DEVANAGARI LETTER SSA
+              "\u093F")   # MatraL, Category 'Mc', East Asian Width property 'N' -- DEVANAGARI VOWEL SIGN I
+    # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+    expect_length_each = (1, 0, 1, 0)
+    # grapheme cluster capped at 2 cells (ghostty, foot, Windows Terminal)
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+    assert wcwidth.width(phrase) == expect_length_phrase
+
+
+def test_tamil_script():
+    # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+    phrase = ("\u0b95"    # Akhand, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER KA
+              "\u0bcd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- TAMIL SIGN VIRAMA
+              "\u0bb7"    # Fused, Category 'Lo', East Asian Width property 'N' -- TAMIL LETTER SSA
+              "\u0bcc")   # MatraLR, Category 'Mc', East Asian Width property 'N' -- TAMIL VOWEL SIGN AU
+    # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (3, 0, 0, 4)
+    expect_length_each = (1, 0, 1, 0)
+
+    # grapheme cluster capped at 2 cells (ghostty, foot, Windows Terminal)
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+    assert wcwidth.width(phrase) == expect_length_phrase
+
+
+def test_kannada_script():
+    # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+    # |ರ್ಝೈ|
+    # |123|
+    phrase = ("\u0cb0"    # Repha, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+              "\u0ccd"    # Joiner, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+              "\u0c9d"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER JHA
+              "\u0cc8")   # MatraUR, Category 'Mc', East Asian Width property 'N' -- KANNADA VOWEL SIGN AI
+    # 23107-terminal-suppt.pdf suggests should be (2, 0, 3, 1)
+    expect_length_each = (1, 0, 1, 0)
+    # grapheme cluster capped at 2 cells (ghostty, foot, Windows Terminal)
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+    assert wcwidth.width(phrase) == expect_length_phrase
+
+
+def test_kannada_script_2():
+    # This test adapted from https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf
+    # |ರ಼್ಚ|
+    # |12|
+    phrase = ("\u0cb0"    # Base, Category 'Lo', East Asian Width property 'N' -- KANNADA LETTER RA
+              "\u0cbc"    # Nukta, Category 'Mn', East Asian Width property 'N' -- KANNADA SIGN NUKTA
+              "\u0ccd"    # Joiner, Category 'Lo', East Asian Width property 'N' -- KANNADA SIGN VIRAMA
+              "\u0c9a")   # Subjoin, Category 'Mc', East Asian Width property 'N' -- KANNADA LETTER CA
+    # 23107-terminal-suppt.pdf suggests wcwidth.wcwidth should return (2, 0, 0, 1)
+    expect_length_each = (1, 0, 0, 1)
+    # virama conjunct collapses RA(+Nukta)+virama+CA into one cell
+    expect_length_phrase = 2
+
+    # exercise,
+    length_each = tuple(map(wcwidth.wcwidth, phrase))
+    length_phrase = wcwidth.wcswidth(phrase)
+
+    # verify.
+    assert length_each == expect_length_each
+    assert length_phrase == expect_length_phrase
+    assert wcwidth.width(phrase) == expect_length_phrase
+
+
+def test_bengali_nukta_mc():
+    # Mc following Mn (Nukta) is still counted as spacing mark.
+    #
+    # Discovered via UDHR Bengali text where wrap() produced lines exceeding the requested width.
+    # The root cause was that width() only recognized a Spacing Combining Mark (Mc) when it was
+    # *immediately* adjacent to the base character (index == last_base + 1).
+    #
+    # In Bengali, a Nukta (U+09BC, category Mn) commonly sits between the consonant and the vowel
+    # sign, so the Mc vowel sign was skipped and measured as zero instead of one.
+    #
+    # The nukta between consonant and vowel sign does not break the combining sequence, so the Mc
+    # must still be counted.
+    phrase = "\u09AF\u09BC\u09C7"
+    assert wcwidth.wcwidth("\u09C7") == 0
+    assert wcwidth.wcswidth(phrase) == 2
+    assert wcwidth.width(phrase) == 2
+
+
+@pytest.mark.parametrize("repeat", [1, _WIDTH_FAST_PATH_MIN_LEN])
+def test_mc_width_consistency(repeat):
+    """Check width() to wcswidth() consistency."""
+    # repeat value 'WIDTH_FAST_PATH_MIN_LEN' ensures both "fast" and "slow" paths are taken
+    phrases = [
+        "\u0915\u094D\u0937\u093F",
+        "\u0b95\u0bcd\u0bb7\u0bcc",
+        "\u0cb0\u0ccd\u0c9d\u0cc8",
+        "\u0cb0\u0cbc\u0ccd\u0c9a",
+        "\u09AF\u09BC\u09C7",
+        "\u09B9\u09AF\u09BC\u09C7\u099B\u09C7",
+        "\u0915\u09BE\u0999\u09CD\u0996\u09BE",
+    ]
+    # Virama conjunct collapsing is context-sensitive across grapheme
+    # boundaries (virama ends one grapheme, consonant starts the next),
+    # so per-grapheme width sums may exceed wcswidth/width totals for
+    # phrases containing conjuncts.
+    no_conjunct_phrases = [
+        "\u09AF\u09BC\u09C7",
+    ]
+    for phrase in phrases:
+        text = phrase * repeat
+        assert wcwidth.width(text) == wcwidth.wcswidth(text)
+    for phrase in no_conjunct_phrases:
+        text = phrase * repeat
+        grapheme_sum = sum(wcwidth.width(g) for g in wcwidth.iter_graphemes(text))
+        assert wcwidth.width(text) == grapheme_sum
+
+
+@pytest.mark.parametrize("phrase,expected", [
+    ("\u0999\u09CD\u0997\u09C7", 2),
+    ("\u0915\u094D\u0924\u093F", 2),
+    ("\u0915\u094D\u0930\u093F", 2),
+    ("\u0A95\u0ACD\u0A95\u0ACB", 2),
+    ("\u0938\u094D\u0924\u094D\u0930", 2),
+    ("\u0938\u094D\u0924", 2),
+    ("\u0915\u094D\u0020", 2),
+    ("\u09A4\u09CD\u200D\u09AA", 2),
+    ("\u0915\u094D\u200D\u0924", 2),
+    ("\u0D15\u0D4D\u0D15\u0D41\u0D02", 2),
+    ("\u0915\u094D\u0924\u0941\u0902", 2),
+])
+def test_virama_conjunct(phrase, expected):
+    assert wcwidth.wcswidth(phrase) == expected
+    assert wcwidth.width(phrase) == expected
+
+
+@pytest.mark.parametrize("phrase,expected", [
+    ("\u0995\u09CD\u09A4\u09BF", 2),       # Bengali C+V+C+Mc: ক্তি (capped at 2)
+    ("\u0915\u094D\u0924\u093F", 2),       # Devanagari C+V+C+Mc: क्ति (capped at 2)
+    ("\u0995\u09CD\u09A4", 2),             # C+V+C (no Mc), unchanged
+    ("\u0995\u09BF", 2),                   # C+Mc (no virama), unchanged
+])
+def test_virama_conjunct_mc_vowel(phrase, expected):
+    """Mc combines into base; cluster capped at 2."""
+    assert wcwidth.wcswidth(phrase) == expected
+    assert wcwidth.width(phrase) == expected
+    assert wcwidth.wcswidth(phrase) == expected
+    assert wcwidth.width(phrase) == expected
+
+
+@pytest.mark.parametrize("phrase,expected", [
+    ("\uA9A0\uA9C0\uA9B1\uA9C0\uA9AE", 2),  # Javanese C+V+C+V+C: TA+PANGKON+SA+PANGKON+WA
+    ("\uA9A0\uA9C0\uA9B1", 2),               # Javanese C+V+C: TA+PANGKON+SA
+    ("\u1B04\u1B44\u1B05", 2),               # Balinese C+V+C: A+ADEG ADEG+I
+    ("\U000111C0\U000111C0", 0),             # Sharada virama alone (zero-width)
+])
+def test_virama_mc_category_overlap(phrase, expected):
+    """Virama codepoints in Mc category check ISC before Mc."""
+    assert wcwidth.wcswidth(phrase) == expected
+    assert wcwidth.width(phrase) == expected
+
+
+@pytest.mark.parametrize("phrase,expected", [
+    ("\u1000\u1039\u1000", 2),             # Burmese KA+VIRAMA+KA
+    ("\u1000\u1039\u1000\u1039\u1002", 2),  # Burmese KA+V+KA+V+GA (capped)
+    ("\u1000\u1039\u200D\u1000", 2),       # Burmese KA+V+ZWJ+KA
+    ("\u1782\u17D2\u1782\u17C1", 2),       # Khmer KO+COENG+KO+VOWEL_E (capped)
+    ("\u1780\u17D2\u1780", 2),             # Khmer KA+COENG+KA
+])
+def test_virama_conjunct_invisible_stacker(phrase, expected):
+    assert wcwidth.wcswidth(phrase) == expected
+    assert wcwidth.width(phrase) == expected
+
+
+def test_zwj_at_end_of_string():
+    """ZWJ at end of string (not after virama) is consumed with zero width."""
+    assert wcwidth.wcswidth('a\u200D') == 1
+
+
+def test_wcswidth_n_exceeds_length():
+    """Verify wcswidth() with n > len(string) does not raise IndexError."""
+    assert wcwidth.wcswidth('hello', n=999) == 5
+    assert wcwidth.wcswidth('\u30B3\u30F3', n=999) == 4
+
+
+def test_soft_hyphen():
+    # Test SOFT HYPHEN, category 'Cf' usually are zero-width, but most
+    # implementations agree to draw it was '1' cell, visually
+    # indistinguishable from a space, ' ' in Konsole, for example.
+    assert wcwidth.wcwidth(chr(0x000ad)) == 1
+
+
+PREPENDED_CONCATENATION_MARKS = [
+    (0x0600, 'ARABIC NUMBER SIGN'),
+    (0x0601, 'ARABIC SIGN SANAH'),
+    (0x0602, 'ARABIC FOOTNOTE MARKER'),
+    (0x0603, 'ARABIC SIGN SAFHA'),
+    (0x0604, 'ARABIC SIGN SAMVAT'),
+    (0x0605, 'ARABIC NUMBER MARK ABOVE'),
+    (0x06DD, 'ARABIC END OF AYAH'),
+    (0x070F, 'SYRIAC ABBREVIATION MARK'),
+    (0x0890, 'ARABIC POUND MARK ABOVE'),
+    (0x0891, 'ARABIC PIASTRE MARK ABOVE'),
+    (0x08E2, 'ARABIC DISPUTED END OF AYAH'),
+    (0x110BD, 'KAITHI NUMBER SIGN'),
+    (0x110CD, 'KAITHI NUMBER SIGN ABOVE'),
+]
+
+
+@pytest.mark.parametrize('codepoint,name', PREPENDED_CONCATENATION_MARKS)
+def test_prepended_concatenation_mark_width(codepoint, name):
+    """Prepended Concatenation Marks have width 1, not 0."""
+    # https://github.com/jquast/wcwidth/issues/119
+    assert wcwidth.wcwidth(chr(codepoint)) == 1
+
+
+def test_legacy_module():
+    """Verify legacy ``wcwidth.wcwidth`` module's public items are importable."""
+    # pylint: disable=import-outside-toplevel
+    # The package pre-imports the legacy submodule so that a later import
+    # cannot rebind 'wcwidth.wcwidth' from the function to the module.
+    assert 'wcwidth.wcwidth' in sys.modules
+
+    _legacy = __import__('wcwidth.wcwidth', fromlist=['wcwidth'])
+    assert callable(wcwidth.wcwidth), (
+        'importing wcwidth.wcwidth rebound the package attribute to a module')
+
+    for name in _legacy.__all__:
+        attr = getattr(_legacy, name)
+        assert attr is not None, f"wcwidth.wcwidth.{name} is None"
+
+    # Verify that individual imports from the legacy path also work,
+    # e.g. 'from wcwidth.wcwidth import wcswidth'
+    # local
+    from wcwidth.wcwidth import wcswidth as legacy_wcswidth
+    assert legacy_wcswidth('ab') == 2
+
+
+@pytest.mark.parametrize('pwcs,n', [
+    ('abc', 2),
+    ('abc', 1),
+    ('abc', 0),
+    ('abc', None),
+    ('', 0),
+    ('', None),
+    ('\U0001F600', 1),
+    ('\U0001F600\U0001F600', 2),
+])
+def test_wcstwidth_positional_args(pwcs, n):
+    """Wcstwidth() accepts n as a positional argument."""
+    result = wcwidth.wcstwidth(pwcs, n)
+    assert isinstance(result, int)
+    assert result >= 0
+
+
+@pytest.mark.parametrize('func', [wcwidth.ljust, wcwidth.rjust, wcwidth.center],
+                         ids=lambda f: f.__name__)
+def test_align_control_codes_strict_rejects_illegal_control(func):
+    """Ljust()/rjust()/center() honor control_codes='strict'."""
+    with pytest.raises(ValueError):
+        func('\x01x', 10, ' ', control_codes='strict')
+
+
+def test_width_large_cursor_movement_saturates():
+    """Width() handles a CSI cursor-movement parameter far beyond any real column."""
+    assert wcwidth.width('\x1b[100000000000000000000C', control_codes='parse') >= 0
+
+
+def test_wrap_tabsize_zero_passes_through():
+    """Wrap() accepts tabsize=0 without raising."""
+    result = wcwidth.wrap('a\tb', 3, tabsize=0, replace_whitespace=False)
+    assert isinstance(result, list)
+
+
+@pytest.mark.parametrize('text', ['\udcbf', '\udc80', '\udcbf\udcbf\udcbf'])
+def test_wrap_lone_surrogate_escaped_bytes(text):
+    """Wrap() handles a lone/incomplete surrogate-escaped byte without raising."""
+    result = wcwidth.wrap(text, 3)
+    assert isinstance(result, list)
+
+
+def test_python_functions_stay_python():
+    """Functions without C support always bind the Python implementation."""
+    python = {
+        'iter_graphemes_reverse': 'wcwidth.grapheme',
+        'grapheme_boundary_before': 'wcwidth.grapheme',
+        'iter_sequences': 'wcwidth.escape_sequences',
+    }
+    for name, module in python.items():
+        assert getattr(wcwidth, name).__module__ == module
+
+
+def test_python_env_var(monkeypatch):
+    """WCWIDTH_PYTHON=1 forces the Python implementation."""
+    monkeypatch.setenv('WCWIDTH_PYTHON', '1')
+    try:
+        importlib.reload(wcwidth)
+        assert not wcwidth.HAS_C_EXTENSION
+        assert wcwidth.wcwidth.__module__ == 'wcwidth._wcwidth'
+    finally:
+        monkeypatch.undo()
+        importlib.reload(wcwidth)
+
+
+def test_import_error_fallback():
+    """A broken extension at import time falls back to the Python implementation."""
+    sys.modules['wcwidth._wcwidth_c'] = None
+    try:
+        importlib.reload(wcwidth)
+        assert not wcwidth.HAS_C_EXTENSION
+        assert wcwidth.wcwidth.__module__ == 'wcwidth._wcwidth'
+    finally:
+        del sys.modules['wcwidth._wcwidth_c']
+        importlib.reload(wcwidth)
+
+
+_C_PARITY_ALPHABET = (
+    'ab',
+    '中文',
+    '\t',
+    '\x1b[31m',
+    '\x1b]8;;http://x\x1b\\',
+    '\x1b]8;;\x1b\\',
+    '\x1b]66;w=2:A\x1b\\',
+    '\x1b]0;t\x07',
+    '\x1b[2J',
+    '\x1b(B',
+    '\x1bP q\x1b\\',
+    '\x1b_x\x1b\\',
+    '\x1b^x\x1b\\',
+    '\x1bXx\x1b\\',
+    '\x1b(\n',
+    '\x1b)\n',
+    '\x1b[\n',
+    '\x1b]8;',
+    '\x1b \n',
+    '\x1b',
+)
+
+
+def _c_parity_corpus():
+    corpus = list(_C_PARITY_ALPHABET)
+    corpus += [a + b for a in _C_PARITY_ALPHABET for b in _C_PARITY_ALPHABET]
+    corpus += [''.join(t) for t in product(_C_PARITY_ALPHABET, repeat=3)]
+    return corpus
+
+
+def _c_parity_pairs():
+    """Each (name, python callable, C callable) triple to compare."""
+    # local
+    from wcwidth.align import ljust, rjust, center
+    from wcwidth._width import width
+    from wcwidth._wcwidth_c import ljust as c_ljust
+    from wcwidth._wcwidth_c import rjust as c_rjust
+    from wcwidth._wcwidth_c import width as c_width
+    from wcwidth._wcwidth_c import center as c_center
+    from wcwidth._wcwidth_c import strip_sequences as c_strip
+    from wcwidth.escape_sequences import strip_sequences
+
+    return (
+        ('width', width, c_width),
+        ('ljust', lambda text: ljust(text, 20), lambda text: c_ljust(text, 20)),
+        ('rjust', lambda text: rjust(text, 20), lambda text: c_rjust(text, 20)),
+        ('center', lambda text: center(text, 20), lambda text: c_center(text, 20)),
+        ('strip_sequences', strip_sequences, c_strip),
+    )
+
+
+@pytest.mark.skipif(not wcwidth.HAS_C_EXTENSION,
+                    reason="C extension not built; there is nothing to compare against")
+def test_c_extension_parity():
+    """The C functions bound by wcwidth/__init__.py match their Python counterparts."""
+    pairs = _c_parity_pairs()
+    divergent = []
+    for text in _c_parity_corpus():
+        for name, py_fn, c_fn in pairs:
+            py_result, c_result = py_fn(text), c_fn(text)
+            if py_result != c_result:
+                divergent.append((name, text, py_result, c_result))
+    assert not divergent[:10]

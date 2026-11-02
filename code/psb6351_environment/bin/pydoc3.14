@@ -1,0 +1,5 @@
+#!/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/bin/python3.14
+
+import pydoc
+if __name__ == '__main__':
+    pydoc.cli()

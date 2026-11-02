@@ -1,0 +1,7 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+
+Name: XineramaProto
+Description: Xinerama extension headers
+Version: 1.2.1
+Cflags: -I${includedir}

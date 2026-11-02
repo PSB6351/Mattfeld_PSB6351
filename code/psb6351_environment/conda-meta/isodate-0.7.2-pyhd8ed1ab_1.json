@@ -1,0 +1,242 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/isodate-0.7.2-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/LICENSE",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/METADATA",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/RECORD",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/WHEEL",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/isodate-0.7.2.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/isodate/__init__.py",
+    "lib/python3.14/site-packages/isodate/duration.py",
+    "lib/python3.14/site-packages/isodate/isodates.py",
+    "lib/python3.14/site-packages/isodate/isodatetime.py",
+    "lib/python3.14/site-packages/isodate/isoduration.py",
+    "lib/python3.14/site-packages/isodate/isoerror.py",
+    "lib/python3.14/site-packages/isodate/isostrf.py",
+    "lib/python3.14/site-packages/isodate/isotime.py",
+    "lib/python3.14/site-packages/isodate/isotzinfo.py",
+    "lib/python3.14/site-packages/isodate/tzinfo.py",
+    "lib/python3.14/site-packages/isodate/version.py",
+    "lib/python3.14/site-packages/isodate/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/duration.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isodates.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isodatetime.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isoduration.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isoerror.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isostrf.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isotime.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/isotzinfo.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/tzinfo.cpython-314.pyc",
+    "lib/python3.14/site-packages/isodate/__pycache__/version.cpython-314.pyc"
+  ],
+  "fn": "isodate-0.7.2-pyhd8ed1ab_1.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/isodate-0.7.2-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "14c42a6334f38c412449f5a5e4043a5a",
+  "name": "isodate",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/isodate-0.7.2-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43",
+        "sha256_in_prefix": "ce5fe4893fb6ab843de77b367bfa9db974d7b00ab9033fcca8d7760a97fe1b43",
+        "size_in_bytes": 1609
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "90bc9d1eee7c3c97fd3a52001dece07c0f9b480cfc8fbbf767ca4ae0ab848529",
+        "sha256_in_prefix": "90bc9d1eee7c3c97fd3a52001dece07c0f9b480cfc8fbbf767ca4ae0ab848529",
+        "size_in_bytes": 11852
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "a784d3f5b5ae6ec6c4056bac14df5690ac6f9775d21eb9118a6c0c063c51036c",
+        "sha256_in_prefix": "a784d3f5b5ae6ec6c4056bac14df5690ac6f9775d21eb9118a6c0c063c51036c",
+        "size_in_bytes": 2030
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "eeb5ee73c40ac39b8caf9a4b4bd768a5930772fe5154c87b36f96ca2879191a8",
+        "sha256_in_prefix": "eeb5ee73c40ac39b8caf9a4b4bd768a5930772fe5154c87b36f96ca2879191a8",
+        "size_in_bytes": 103
+      },
+      {
+        "_path": "site-packages/isodate-0.7.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "26076a687070d15c7be0a9b4c59d7eea7a4e5077bfe9c287481084c7aa6955ef",
+        "sha256_in_prefix": "26076a687070d15c7be0a9b4c59d7eea7a4e5077bfe9c287481084c7aa6955ef",
+        "size_in_bytes": 8
+      },
+      {
+        "_path": "site-packages/isodate/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c1f3c8de67039cb6c49dd89d6a8cd62bf8bf5c6b4ecab1a14c5737e4fa6df483",
+        "sha256_in_prefix": "c1f3c8de67039cb6c49dd89d6a8cd62bf8bf5c6b4ecab1a14c5737e4fa6df483",
+        "size_in_bytes": 2397
+      },
+      {
+        "_path": "site-packages/isodate/duration.py",
+        "path_type": "hardlink",
+        "sha256": "0fd54b240e12f7d8bafb73976821ebac3cdcd395ac22bd884a17c84a57892fb6",
+        "sha256_in_prefix": "0fd54b240e12f7d8bafb73976821ebac3cdcd395ac22bd884a17c84a57892fb6",
+        "size_in_bytes": 11008
+      },
+      {
+        "_path": "site-packages/isodate/isodates.py",
+        "path_type": "hardlink",
+        "sha256": "c5bdf9ed2b2fa0145256c114a46d9fa814a78c68f0914c6c8b95479231a31b39",
+        "sha256_in_prefix": "c5bdf9ed2b2fa0145256c114a46d9fa814a78c68f0914c6c8b95479231a31b39",
+        "size_in_bytes": 8529
+      },
+      {
+        "_path": "site-packages/isodate/isodatetime.py",
+        "path_type": "hardlink",
+        "sha256": "f5932783a9f86e52964ac147024d41b03ca89b45db1d3cfb3ebc695a220c3a3e",
+        "sha256_in_prefix": "f5932783a9f86e52964ac147024d41b03ca89b45db1d3cfb3ebc695a220c3a3e",
+        "size_in_bytes": 1373
+      },
+      {
+        "_path": "site-packages/isodate/isoduration.py",
+        "path_type": "hardlink",
+        "sha256": "a7b4af05bc7cd32895c977434c9ecc909c6a146618e9f343492f8e44512b65b2",
+        "sha256_in_prefix": "a7b4af05bc7cd32895c977434c9ecc909c6a146618e9f343492f8e44512b65b2",
+        "size_in_bytes": 5423
+      },
+      {
+        "_path": "site-packages/isodate/isoerror.py",
+        "path_type": "hardlink",
+        "sha256": "c7a48eeb2e1d0dc7498163a48f054d470f8e3a28a172d323e537bd74eaabaac1",
+        "sha256_in_prefix": "c7a48eeb2e1d0dc7498163a48f054d470f8e3a28a172d323e537bd74eaabaac1",
+        "size_in_bytes": 168
+      },
+      {
+        "_path": "site-packages/isodate/isostrf.py",
+        "path_type": "hardlink",
+        "sha256": "97b035981e77d9b4389f458cc3639a2cab2ae7795515ee85dc54ad305925eacd",
+        "sha256_in_prefix": "97b035981e77d9b4389f458cc3639a2cab2ae7795515ee85dc54ad305925eacd",
+        "size_in_bytes": 7039
+      },
+      {
+        "_path": "site-packages/isodate/isotime.py",
+        "path_type": "hardlink",
+        "sha256": "ba7e1ab87f758cb8e1f7d06e1e83f5570fed8c258e6fc04dbf246cb78934217a",
+        "sha256_in_prefix": "ba7e1ab87f758cb8e1f7d06e1e83f5570fed8c258e6fc04dbf246cb78934217a",
+        "size_in_bytes": 5544
+      },
+      {
+        "_path": "site-packages/isodate/isotzinfo.py",
+        "path_type": "hardlink",
+        "sha256": "544cd352cf48ba50310b509ecff52ea62c04656da34b1a8a610d13315d6f7ee3",
+        "sha256_in_prefix": "544cd352cf48ba50310b509ecff52ea62c04656da34b1a8a610d13315d6f7ee3",
+        "size_in_bytes": 2672
+      },
+      {
+        "_path": "site-packages/isodate/tzinfo.py",
+        "path_type": "hardlink",
+        "sha256": "36dd7944a8eacfb89807202c4fef47225c2fcaf31150259e42b5be22d6baa2e9",
+        "sha256_in_prefix": "36dd7944a8eacfb89807202c4fef47225c2fcaf31150259e42b5be22d6baa2e9",
+        "size_in_bytes": 3784
+      },
+      {
+        "_path": "site-packages/isodate/version.py",
+        "path_type": "hardlink",
+        "sha256": "4b0be43e5ec62e11b15852be1837adc6ceaa92af134ea09f9f1254349aa65ad5",
+        "sha256_in_prefix": "4b0be43e5ec62e11b15852be1837adc6ceaa92af134ea09f9f1254349aa65ad5",
+        "size_in_bytes": 411
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/duration.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isodates.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isodatetime.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isoduration.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isoerror.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isostrf.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isotime.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/isotzinfo.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/tzinfo.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/isodate/__pycache__/version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "845fc87dfaf3f96245ad6ad69c5e5b31b084979f64f9e32157888ee0a08f39ba",
+  "size": 23778,
+  "subdir": "noarch",
+  "timestamp": 1733230826000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/isodate-0.7.2-pyhd8ed1ab_1.conda",
+  "version": "0.7.2"
+}

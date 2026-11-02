@@ -1,0 +1,11 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+libdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib
+includedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.42.4
+Cflags: -I${includedir}/uuid
+Libs.private:  -lpthread
+Libs: -L${libdir} -luuid

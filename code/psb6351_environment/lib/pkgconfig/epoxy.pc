@@ -1,0 +1,15 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+epoxy_has_glx=1
+epoxy_has_egl=1
+epoxy_has_wgl=0
+
+Name: epoxy
+Description: GL dispatch library
+Version: 1.5.10
+Requires.private: egl, gl egl
+Libs: -L${libdir} -lepoxy
+Libs.private: -ldl
+Cflags: -I${includedir}

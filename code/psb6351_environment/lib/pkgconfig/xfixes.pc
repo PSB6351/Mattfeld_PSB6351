@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: Xfixes
+Description: X Fixes Library
+URL: https://gitlab.freedesktop.org/xorg/lib/libxfixes/
+Version: 6.0.2
+Requires: xproto fixesproto >= 6.0
+Requires.private: x11
+Libs: -L${libdir} -lXfixes
+Cflags: -I${includedir}

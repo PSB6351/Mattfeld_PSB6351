@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: Xxf86vm
+Description: XFree86 Video Mode Extension Library
+URL: https://gitlab.freedesktop.org/xorg/lib/libxxf86vm/
+Version: 1.1.7
+Requires: xf86vidmodeproto
+Requires.private: x11 >=  1.6, xext
+Libs: -L${libdir} -lXxf86vm
+Cflags: -I${includedir}

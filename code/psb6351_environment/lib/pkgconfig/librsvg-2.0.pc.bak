@@ -1,0 +1,12 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: librsvg
+Description: library that renders svg files
+Version: 2.60.0
+Requires: glib-2.0 >=  2.50.0, gio-2.0 >=  2.50.0, gdk-pixbuf-2.0 >=  2.20, cairo >=  1.18.0
+Requires.private: cairo-gobject >=  1.18.0, cairo-png >=  1.18.0, freetype2 >=  20.0.14, harfbuzz >=  2.0.0, libxml-2.0 >=  2.9.0, pangocairo >=  1.50.0, pangoft2 >=  1.50.0, gmodule-2.0 >=  2.50.0
+Libs: -L${libdir} -lrsvg-2
+Libs.private: -lgcc_s -lpthread -lc -lutil -lm -ldl -lrt
+Cflags: -I${includedir}/librsvg-2.0

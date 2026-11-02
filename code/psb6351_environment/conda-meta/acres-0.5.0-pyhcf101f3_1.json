@@ -1,0 +1,160 @@
+{
+  "build": "pyhcf101f3_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/acres-0.5.0-pyhcf101f3_1",
+  "files": [
+    "lib/python3.14/site-packages/acres/__init__.py",
+    "lib/python3.14/site-packages/acres/_compat.py",
+    "lib/python3.14/site-packages/acres/cache.py",
+    "lib/python3.14/site-packages/acres/py.typed",
+    "lib/python3.14/site-packages/acres/typ.py",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/acres-0.5.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/acres/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/acres/__pycache__/_compat.cpython-314.pyc",
+    "lib/python3.14/site-packages/acres/__pycache__/cache.cpython-314.pyc",
+    "lib/python3.14/site-packages/acres/__pycache__/typ.cpython-314.pyc"
+  ],
+  "fn": "acres-0.5.0-pyhcf101f3_1.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/acres-0.5.0-pyhcf101f3_1",
+    "type": 1
+  },
+  "md5": "4f9fa050d6de5d0a9b199d128222e636",
+  "name": "acres",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/acres-0.5.0-pyhcf101f3_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/acres/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bbac000a69ffbd9283f25a5a31df147e9c64ad452f2e082df6a8faece8fd5934",
+        "sha256_in_prefix": "bbac000a69ffbd9283f25a5a31df147e9c64ad452f2e082df6a8faece8fd5934",
+        "size_in_bytes": 6873
+      },
+      {
+        "_path": "site-packages/acres/_compat.py",
+        "path_type": "hardlink",
+        "sha256": "8a2735d24045ed8afd9c30cc1be24bb7395a0448b3330eb90dba6c9d3bfd505d",
+        "sha256_in_prefix": "8a2735d24045ed8afd9c30cc1be24bb7395a0448b3330eb90dba6c9d3bfd505d",
+        "size_in_bytes": 370
+      },
+      {
+        "_path": "site-packages/acres/cache.py",
+        "path_type": "hardlink",
+        "sha256": "dd5c72af79dc2b627e25771d8a0bfa29907e35e7d189f936824c25778fad8629",
+        "sha256_in_prefix": "dd5c72af79dc2b627e25771d8a0bfa29907e35e7d189f936824c25778fad8629",
+        "size_in_bytes": 407
+      },
+      {
+        "_path": "site-packages/acres/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/acres/typ.py",
+        "path_type": "hardlink",
+        "sha256": "9e3db7b34881ea94f96bc2a44589365764a6e3754cb47bddcbb391a79846d4d5",
+        "sha256_in_prefix": "9e3db7b34881ea94f96bc2a44589365764a6e3754cb47bddcbb391a79846d4d5",
+        "size_in_bytes": 3062
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "bdf8297da1bd18c6020566ab4b7e81624010296f8334bfd4bfd1839bc00eb09f",
+        "sha256_in_prefix": "bdf8297da1bd18c6020566ab4b7e81624010296f8334bfd4bfd1839bc00eb09f",
+        "size_in_bytes": 6217
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "462993347b64e3ab90efc5dc10e9129a29cc299c01cd08556f151b66a2d629ca",
+        "sha256_in_prefix": "462993347b64e3ab90efc5dc10e9129a29cc299c01cd08556f151b66a2d629ca",
+        "size_in_bytes": 1193
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "f4fdb2811c43ad3273de0b1a81cd19f7aba4af18ebf8b14118e82fdc0b8a9420",
+        "sha256_in_prefix": "f4fdb2811c43ad3273de0b1a81cd19f7aba4af18ebf8b14118e82fdc0b8a9420",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "9c7ee7ea5be09de6ba27b646ccbc52eb7c931c703e038ed0f61ff0e4e67e42c9",
+        "sha256_in_prefix": "9c7ee7ea5be09de6ba27b646ccbc52eb7c931c703e038ed0f61ff0e4e67e42c9",
+        "size_in_bytes": 116
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "sha256_in_prefix": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "size_in_bytes": 34
+      },
+      {
+        "_path": "site-packages/acres-0.5.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "daa3ef7c1f3f71a0155455743ef87e6ef0e65beacaefc3393e924a524059305e",
+        "sha256_in_prefix": "daa3ef7c1f3f71a0155455743ef87e6ef0e65beacaefc3393e924a524059305e",
+        "size_in_bytes": 11348
+      },
+      {
+        "_path": "lib/python3.14/site-packages/acres/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/acres/__pycache__/_compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/acres/__pycache__/cache.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/acres/__pycache__/typ.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "9ac979adca81569d1bf1f4d1195d0067a071a827a1894abdd5aa8bd48d7b9da3",
+  "size": 22572,
+  "subdir": "noarch",
+  "timestamp": 1762519020000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/acres-0.5.0-pyhcf101f3_1.conda",
+  "version": "0.5.0"
+}

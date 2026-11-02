@@ -1,0 +1,9 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: EGL
+Description: EGL library and headers
+Version: 1.5
+Libs: -L${libdir} -lEGL
+Cflags: -I${includedir}

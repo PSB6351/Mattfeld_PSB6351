@@ -1,0 +1,200 @@
+{
+  "build": "pyhc90fa1f_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "__unix",
+    "ptyprocess",
+    "python >=3.10",
+    "tornado >=6.1.0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/terminado-0.18.1-pyhc90fa1f_1",
+  "files": [
+    "etc/conda/test-files/terminado/1/tests/__init__.py",
+    "etc/conda/test-files/terminado/1/tests/basic_test.py",
+    "lib/python3.14/site-packages/terminado/__init__.py",
+    "lib/python3.14/site-packages/terminado/_static/terminado.js",
+    "lib/python3.14/site-packages/terminado/_version.py",
+    "lib/python3.14/site-packages/terminado/management.py",
+    "lib/python3.14/site-packages/terminado/py.typed",
+    "lib/python3.14/site-packages/terminado/uimod_embed.js",
+    "lib/python3.14/site-packages/terminado/uimodule.py",
+    "lib/python3.14/site-packages/terminado/websocket.py",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/METADATA",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/RECORD",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/WHEEL",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/terminado-0.18.1.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/terminado/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/terminado/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/terminado/__pycache__/management.cpython-314.pyc",
+    "lib/python3.14/site-packages/terminado/__pycache__/uimodule.cpython-314.pyc",
+    "lib/python3.14/site-packages/terminado/__pycache__/websocket.cpython-314.pyc"
+  ],
+  "fn": "terminado-0.18.1-pyhc90fa1f_1.conda",
+  "license": "BSD-2-Clause",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/terminado-0.18.1-pyhc90fa1f_1",
+    "type": 1
+  },
+  "md5": "17b43cee5cc84969529d5d0b0309b2cb",
+  "name": "terminado",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/terminado-0.18.1-pyhc90fa1f_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "etc/conda/test-files/terminado/1/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "etc/conda/test-files/terminado/1/tests/basic_test.py",
+        "path_type": "hardlink",
+        "sha256": "8e4ce2ba0cbe9fa07a42780b7065d85ef7345be819d94b0da81f1bfe0a5ff1cc",
+        "sha256_in_prefix": "8e4ce2ba0cbe9fa07a42780b7065d85ef7345be819d94b0da81f1bfe0a5ff1cc",
+        "size_in_bytes": 11726
+      },
+      {
+        "_path": "site-packages/terminado/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "89bccec0b56fe55432092801a90552d8114f361645e7825bbe4f84d8621c739f",
+        "sha256_in_prefix": "89bccec0b56fe55432092801a90552d8114f361645e7825bbe4f84d8621c739f",
+        "size_in_bytes": 496
+      },
+      {
+        "_path": "site-packages/terminado/_static/terminado.js",
+        "path_type": "hardlink",
+        "sha256": "182a0c22e1ac956589528de0a7ef9d12c9f3d153d3222ff995a0bf72e84f6664",
+        "sha256_in_prefix": "182a0c22e1ac956589528de0a7ef9d12c9f3d153d3222ff995a0bf72e84f6664",
+        "size_in_bytes": 1114
+      },
+      {
+        "_path": "site-packages/terminado/_version.py",
+        "path_type": "hardlink",
+        "sha256": "8e0e17f21c9aba2d867d515b3cdd0389316f7187ad6e44af6ebefca97cac3edc",
+        "sha256_in_prefix": "8e0e17f21c9aba2d867d515b3cdd0389316f7187ad6e44af6ebefca97cac3edc",
+        "size_in_bytes": 57
+      },
+      {
+        "_path": "site-packages/terminado/management.py",
+        "path_type": "hardlink",
+        "sha256": "38b107c4706198dfe159ffdc5a7e58d05b93d0004d33eb92d2b2a1951779eb79",
+        "sha256_in_prefix": "38b107c4706198dfe159ffdc5a7e58d05b93d0004d33eb92d2b2a1951779eb79",
+        "size_in_bytes": 15884
+      },
+      {
+        "_path": "site-packages/terminado/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/terminado/uimod_embed.js",
+        "path_type": "hardlink",
+        "sha256": "0361993ac1f20d61380b28cd919e511aff080ebe2b01becbbe05afb17a44bbcd",
+        "sha256_in_prefix": "0361993ac1f20d61380b28cd919e511aff080ebe2b01becbbe05afb17a44bbcd",
+        "size_in_bytes": 785
+      },
+      {
+        "_path": "site-packages/terminado/uimodule.py",
+        "path_type": "hardlink",
+        "sha256": "de7d3c1e306f86f7de7d3839e23aa76786fb148041c2bf9612663c02b6a9921e",
+        "sha256_in_prefix": "de7d3c1e306f86f7de7d3839e23aa76786fb148041c2bf9612663c02b6a9921e",
+        "size_in_bytes": 1208
+      },
+      {
+        "_path": "site-packages/terminado/websocket.py",
+        "path_type": "hardlink",
+        "sha256": "304acffc1522f04364b419a0e7f63bdc05ba8ff4c806f9735f6c0155e41304e7",
+        "sha256_in_prefix": "304acffc1522f04364b419a0e7f63bdc05ba8ff4c806f9735f6c0155e41304e7",
+        "size_in_bytes": 5560
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "a7dec529bd8812e62f764e054ac83b3480e34c078ecdcd268a8d5a2ba37f9014",
+        "sha256_in_prefix": "a7dec529bd8812e62f764e054ac83b3480e34c078ecdcd268a8d5a2ba37f9014",
+        "size_in_bytes": 5788
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f936d7d7bcee1e2818525c2903098a710c8dc8045c5497c7bad2783152efc846",
+        "sha256_in_prefix": "f936d7d7bcee1e2818525c2903098a710c8dc8045c5497c7bad2783152efc846",
+        "size_in_bytes": 1491
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "sha256_in_prefix": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "6d56da146fb6147cf2fa9cb73f71ee4ee69fc505907bd5430f4969780e2af32d",
+        "sha256_in_prefix": "6d56da146fb6147cf2fa9cb73f71ee4ee69fc505907bd5430f4969780e2af32d",
+        "size_in_bytes": 120
+      },
+      {
+        "_path": "site-packages/terminado-0.18.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b38817ed2bf43224f06a27155039897cf337201c1a07ca02199a35f59b656941",
+        "sha256_in_prefix": "b38817ed2bf43224f06a27155039897cf337201c1a07ca02199a35f59b656941",
+        "size_in_bytes": 1401
+      },
+      {
+        "_path": "lib/python3.14/site-packages/terminado/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/terminado/__pycache__/_version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/terminado/__pycache__/management.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/terminado/__pycache__/uimodule.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/terminado/__pycache__/websocket.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6b6727a13d1ca6a23de5e6686500d0669081a117736a87c8abf444d60c1e40eb",
+  "size": 24749,
+  "subdir": "noarch",
+  "timestamp": 1766513766000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/terminado-0.18.1-pyhc90fa1f_1.conda",
+  "version": "0.18.1"
+}

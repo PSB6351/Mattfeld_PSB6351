@@ -1,0 +1,77 @@
+{
+  "build": "h7cc23a3_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "xorg-libx11 >=1.8.13,<2.0a0",
+    "xorg-libxext >=1.3.7,<2.0a0",
+    "xorg-libxrender >=0.9.12,<0.10.0a0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/xorg-libxrandr-1.5.5-h7cc23a3_1",
+  "files": [
+    "include/X11/extensions/Xrandr.h",
+    "lib/libXrandr.so",
+    "lib/libXrandr.so.2",
+    "lib/libXrandr.so.2.2.0",
+    "lib/pkgconfig/xrandr.pc"
+  ],
+  "fn": "xorg-libxrandr-1.5.5-h7cc23a3_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/xorg-libxrandr-1.5.5-h7cc23a3_1",
+    "type": 1
+  },
+  "md5": "798a8c9d171859a022e1cb89e7d0eb10",
+  "name": "xorg-libxrandr",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/xorg-libxrandr-1.5.5-h7cc23a3_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/X11/extensions/Xrandr.h",
+        "path_type": "hardlink",
+        "sha256": "01008d50eb985344bb059810899bf98ab1e77bf69d002f773dd5b53359e09c8c",
+        "sha256_in_prefix": "01008d50eb985344bb059810899bf98ab1e77bf69d002f773dd5b53359e09c8c",
+        "size_in_bytes": 17060
+      },
+      {
+        "_path": "lib/libXrandr.so",
+        "path_type": "softlink",
+        "sha256": "3beaff4bff036cf1e7889cc484adb7c093e94ad4b61395f37e6e94a2f0c2ff56",
+        "size_in_bytes": 57760
+      },
+      {
+        "_path": "lib/libXrandr.so.2",
+        "path_type": "softlink",
+        "sha256": "3beaff4bff036cf1e7889cc484adb7c093e94ad4b61395f37e6e94a2f0c2ff56",
+        "size_in_bytes": 57760
+      },
+      {
+        "_path": "lib/libXrandr.so.2.2.0",
+        "path_type": "hardlink",
+        "sha256": "3beaff4bff036cf1e7889cc484adb7c093e94ad4b61395f37e6e94a2f0c2ff56",
+        "sha256_in_prefix": "3beaff4bff036cf1e7889cc484adb7c093e94ad4b61395f37e6e94a2f0c2ff56",
+        "size_in_bytes": 57760
+      },
+      {
+        "_path": "lib/pkgconfig/xrandr.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/xorg-libxrandr_1787246505854/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "4525db69a957ae4b452160005be1c9f519e79a8a90c1e692f819e6ddd5470b09",
+        "sha256_in_prefix": "07b968215c20c49b23af589b89ab253361dd3e42489267136fbf0f748757934d",
+        "size_in_bytes": 575
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "05a7f25d7f7f5cd32b27a019233ece97167fd8ade255bc13a0e49e53387f4c30",
+  "size": 31106,
+  "subdir": "linux-64",
+  "timestamp": 1787246614000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/xorg-libxrandr-1.5.5-h7cc23a3_1.conda",
+  "version": "1.5.5"
+}

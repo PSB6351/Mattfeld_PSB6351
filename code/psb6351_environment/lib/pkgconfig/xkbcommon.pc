@@ -1,0 +1,14 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+xkb_root=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share/xkeyboard-config-2
+xkb_extra_path=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/etc/xkb
+xkb_unversioned_extensions_path=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share/xkeyboard-config.d
+xkb_versioned_extensions_path=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share/xkeyboard-config-2.d
+
+Name: xkbcommon
+Description: XKB API common to servers and clients
+Version: 1.13.2
+Libs: -L${libdir} -lxkbcommon
+Cflags: -I${includedir}

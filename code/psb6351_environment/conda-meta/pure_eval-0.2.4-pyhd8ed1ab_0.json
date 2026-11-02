@@ -1,0 +1,172 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.11"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pure_eval-0.2.4-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/METADATA",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/RECORD",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/WHEEL",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/licenses/LICENSE.txt",
+    "lib/python3.14/site-packages/pure_eval-0.2.4.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/pure_eval/__init__.py",
+    "lib/python3.14/site-packages/pure_eval/core.py",
+    "lib/python3.14/site-packages/pure_eval/my_getattr_static.py",
+    "lib/python3.14/site-packages/pure_eval/py.typed",
+    "lib/python3.14/site-packages/pure_eval/utils.py",
+    "lib/python3.14/site-packages/pure_eval/version.py",
+    "lib/python3.14/site-packages/pure_eval/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pure_eval/__pycache__/core.cpython-314.pyc",
+    "lib/python3.14/site-packages/pure_eval/__pycache__/my_getattr_static.cpython-314.pyc",
+    "lib/python3.14/site-packages/pure_eval/__pycache__/utils.cpython-314.pyc",
+    "lib/python3.14/site-packages/pure_eval/__pycache__/version.cpython-314.pyc"
+  ],
+  "fn": "pure_eval-0.2.4-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pure_eval-0.2.4-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "35993ea8ef5e76333e6efb6a0ffb3771",
+  "name": "pure_eval",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pure_eval-0.2.4-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0",
+        "sha256_in_prefix": "4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0",
+        "size_in_bytes": 6351
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "dfb2ee8ed956c8f46c806d6b2a791996e08aface103179c537dca60c6e321e14",
+        "sha256_in_prefix": "dfb2ee8ed956c8f46c806d6b2a791996e08aface103179c537dca60c6e321e14",
+        "size_in_bytes": 1411
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ad5ced664cdd2b97869dfaacabe7dd879823b374baafe1bc50d8d3fc21e8610e",
+        "sha256_in_prefix": "ad5ced664cdd2b97869dfaacabe7dd879823b374baafe1bc50d8d3fc21e8610e",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/licenses/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "a476a2cb0ef4c41450340a577a28b91ac4c7f669136b2ee148047fabd5fc4181",
+        "sha256_in_prefix": "a476a2cb0ef4c41450340a577a28b91ac4c7f669136b2ee148047fabd5fc4181",
+        "size_in_bytes": 1066
+      },
+      {
+        "_path": "site-packages/pure_eval-0.2.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "6a3db8bf3c37c1cdd7b0bdd0d2c1e27485fa37b4da562103af547f47841b823a",
+        "sha256_in_prefix": "6a3db8bf3c37c1cdd7b0bdd0d2c1e27485fa37b4da562103af547f47841b823a",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/pure_eval/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0e91487e2c28901bb3e7e2fc3fe83f8fb86b91b85b160fcf47a17ded41600391",
+        "sha256_in_prefix": "0e91487e2c28901bb3e7e2fc3fe83f8fb86b91b85b160fcf47a17ded41600391",
+        "size_in_bytes": 434
+      },
+      {
+        "_path": "site-packages/pure_eval/core.py",
+        "path_type": "hardlink",
+        "sha256": "6f1b215a0855c026b07557eb35d5cba878f950ea5a3f3d5a0240744f7c61ff74",
+        "sha256_in_prefix": "6f1b215a0855c026b07557eb35d5cba878f950ea5a3f3d5a0240744f7c61ff74",
+        "size_in_bytes": 15309
+      },
+      {
+        "_path": "site-packages/pure_eval/my_getattr_static.py",
+        "path_type": "hardlink",
+        "sha256": "77e71dd3b32d4991471c10457ac30abcf1c744dd88edd206437a9a313072cb02",
+        "sha256_in_prefix": "77e71dd3b32d4991471c10457ac30abcf1c744dd88edd206437a9a313072cb02",
+        "size_in_bytes": 4210
+      },
+      {
+        "_path": "site-packages/pure_eval/py.typed",
+        "path_type": "hardlink",
+        "sha256": "c37c58268ef5cc0ee90e717ae71afabbc14bf20bc9ec674028c2522eebf620f5",
+        "sha256_in_prefix": "c37c58268ef5cc0ee90e717ae71afabbc14bf20bc9ec674028c2522eebf620f5",
+        "size_in_bytes": 68
+      },
+      {
+        "_path": "site-packages/pure_eval/utils.py",
+        "path_type": "hardlink",
+        "sha256": "b0f667d0f022476e3f6e28ec695b67bfb199293d9ac6ff3aac56f7706841ff96",
+        "sha256_in_prefix": "b0f667d0f022476e3f6e28ec695b67bfb199293d9ac6ff3aac56f7706841ff96",
+        "size_in_bytes": 4612
+      },
+      {
+        "_path": "site-packages/pure_eval/version.py",
+        "path_type": "hardlink",
+        "sha256": "a9fb0f286497e186d3909fe6be0e247c017ad12c743a5efb2928a7262969915c",
+        "sha256_in_prefix": "a9fb0f286497e186d3909fe6be0e247c017ad12c743a5efb2928a7262969915c",
+        "size_in_bytes": 21
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pure_eval/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pure_eval/__pycache__/core.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pure_eval/__pycache__/my_getattr_static.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pure_eval/__pycache__/utils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pure_eval/__pycache__/version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2151e981a422ef57031482b28df9c8432d54c1f44996e7760774813f167be863",
+  "size": 18473,
+  "subdir": "noarch",
+  "timestamp": 1789159440000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pure_eval-0.2.4-pyhd8ed1ab_0.conda",
+  "version": "0.2.4"
+}

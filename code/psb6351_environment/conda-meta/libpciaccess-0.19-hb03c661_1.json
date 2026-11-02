@@ -1,0 +1,76 @@
+{
+  "build": "hb03c661_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libpciaccess-0.19-hb03c661_1",
+  "files": [
+    "include/pciaccess.h",
+    "lib/libpciaccess.so",
+    "lib/libpciaccess.so.0",
+    "lib/libpciaccess.so.0.11.1",
+    "lib/pkgconfig/pciaccess.pc"
+  ],
+  "fn": "libpciaccess-0.19-hb03c661_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libpciaccess-0.19-hb03c661_1",
+    "type": 1
+  },
+  "md5": "35fa2b34bbced424e6976d30f5fde576",
+  "name": "libpciaccess",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libpciaccess-0.19-hb03c661_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/pciaccess.h",
+        "path_type": "hardlink",
+        "sha256": "81fb60f5fafa7722ddc55df5f5a38b46d701d21fd2b8a1d2c7a99b06968100c4",
+        "sha256_in_prefix": "81fb60f5fafa7722ddc55df5f5a38b46d701d21fd2b8a1d2c7a99b06968100c4",
+        "size_in_bytes": 15608
+      },
+      {
+        "_path": "lib/libpciaccess.so",
+        "path_type": "softlink",
+        "sha256": "33146a6439deb869741787c6993eea690c669f308d6f412d8c7509f2aa13a824",
+        "size_in_bytes": 50928
+      },
+      {
+        "_path": "lib/libpciaccess.so.0",
+        "path_type": "softlink",
+        "sha256": "33146a6439deb869741787c6993eea690c669f308d6f412d8c7509f2aa13a824",
+        "size_in_bytes": 50928
+      },
+      {
+        "_path": "lib/libpciaccess.so.0.11.1",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libpciaccess_1785971574545/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "33146a6439deb869741787c6993eea690c669f308d6f412d8c7509f2aa13a824",
+        "sha256_in_prefix": "94784c8a76a6c45d2f918f19b650212f8a57de984d607a9257d1fc7ec662a54a",
+        "size_in_bytes": 50928
+      },
+      {
+        "_path": "lib/pkgconfig/pciaccess.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libpciaccess_1785971574545/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "55de80c7ca6d6ef53638c8a11f8a0b786b26216d8e40c2f4081242ae7a4c6d4e",
+        "sha256_in_prefix": "7a3d2aa47cbeff42e4f3e2dbfc41d7444cacfc87c01c2f463b9dd8883dcea6a8",
+        "size_in_bytes": 471
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "addc80c69d362a9e6c40305c493139a8e9ee504b2f45a6687dbdaa9da3c6183c",
+  "size": 30070,
+  "subdir": "linux-64",
+  "timestamp": 1785971678000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libpciaccess-0.19-hb03c661_1.conda",
+  "version": "0.19"
+}

@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: Xinerama
+Description: The Xinerama Library
+URL: https://gitlab.freedesktop.org/xorg/lib/libxinerama/
+Version: 1.1.6
+Requires: xineramaproto
+Requires.private: x11 xext
+Libs: -L${libdir} -lXinerama
+Cflags: -I${includedir}

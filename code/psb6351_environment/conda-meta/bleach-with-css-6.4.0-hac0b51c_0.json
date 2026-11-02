@@ -1,0 +1,34 @@
+{
+  "build": "hac0b51c_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "tinycss2",
+    "bleach ==6.4.0 pyhcf101f3_0"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/bleach-with-css-6.4.0-hac0b51c_0",
+  "files": [],
+  "fn": "bleach-with-css-6.4.0-hac0b51c_0.conda",
+  "license": "Apache-2.0 AND MIT",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/bleach-with-css-6.4.0-hac0b51c_0",
+    "type": 1
+  },
+  "md5": "5f710eab1f3c4e773c75686f5e8e6481",
+  "name": "bleach-with-css",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/bleach-with-css-6.4.0-hac0b51c_0.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "ede77e412304cd080e23967352a7904932207d0167ecdccd6a9e210530942be6",
+  "size": 4406,
+  "subdir": "noarch",
+  "timestamp": 1780675823000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/bleach-with-css-6.4.0-hac0b51c_0.conda",
+  "version": "6.4.0"
+}

@@ -1,0 +1,12 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+plugins=8
+
+Name: libgvc
+Description: The GraphVizContext library 
+Version: 14.1.2
+Libs: -L${libdir} -lgvc -lcgraph -lcdt
+Cflags: -I${includedir} -I${includedir}/graphviz
+

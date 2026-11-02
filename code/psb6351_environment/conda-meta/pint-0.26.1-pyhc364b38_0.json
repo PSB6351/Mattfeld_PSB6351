@@ -1,0 +1,1597 @@
+{
+  "build": "pyhc364b38_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [
+    "numpy >=2.0.0"
+  ],
+  "depends": [
+    "python >=3.12",
+    "platformdirs >=2.1.0",
+    "flexcache >=0.3",
+    "flexparser >=0.4",
+    "typing_extensions >=4.0.0",
+    "python"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pint-0.26.1-pyhc364b38_0",
+  "files": [
+    "bin/pint-convert",
+    "lib/python3.14/site-packages/pint/__init__.py",
+    "lib/python3.14/site-packages/pint/_typing.py",
+    "lib/python3.14/site-packages/pint/babel_names.py",
+    "lib/python3.14/site-packages/pint/compat.py",
+    "lib/python3.14/site-packages/pint/constants_en.txt",
+    "lib/python3.14/site-packages/pint/converters.py",
+    "lib/python3.14/site-packages/pint/default_en.txt",
+    "lib/python3.14/site-packages/pint/definitions.py",
+    "lib/python3.14/site-packages/pint/delegates/__init__.py",
+    "lib/python3.14/site-packages/pint/delegates/base_defparser.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__init__.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/_compound_unit_helpers.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/_format_helpers.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/_spec_helpers.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/_to_register.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/full.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/html.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/latex.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/plain.py",
+    "lib/python3.14/site-packages/pint/delegates/formatter/sorting.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__init__.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/block.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/common.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/context.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/defaults.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/defparser.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/group.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/plain.py",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/system.py",
+    "lib/python3.14/site-packages/pint/errors.py",
+    "lib/python3.14/site-packages/pint/facets/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/context/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/context/definitions.py",
+    "lib/python3.14/site-packages/pint/facets/context/objects.py",
+    "lib/python3.14/site-packages/pint/facets/context/registry.py",
+    "lib/python3.14/site-packages/pint/facets/dask/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/group/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/group/definitions.py",
+    "lib/python3.14/site-packages/pint/facets/group/objects.py",
+    "lib/python3.14/site-packages/pint/facets/group/registry.py",
+    "lib/python3.14/site-packages/pint/facets/measurement/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/measurement/objects.py",
+    "lib/python3.14/site-packages/pint/facets/measurement/registry.py",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/definitions.py",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/objects.py",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/registry.py",
+    "lib/python3.14/site-packages/pint/facets/numpy/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/numpy/numpy_func.py",
+    "lib/python3.14/site-packages/pint/facets/numpy/quantity.py",
+    "lib/python3.14/site-packages/pint/facets/numpy/registry.py",
+    "lib/python3.14/site-packages/pint/facets/numpy/unit.py",
+    "lib/python3.14/site-packages/pint/facets/plain/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/plain/definitions.py",
+    "lib/python3.14/site-packages/pint/facets/plain/objects.py",
+    "lib/python3.14/site-packages/pint/facets/plain/qto.py",
+    "lib/python3.14/site-packages/pint/facets/plain/quantity.py",
+    "lib/python3.14/site-packages/pint/facets/plain/registry.py",
+    "lib/python3.14/site-packages/pint/facets/plain/unit.py",
+    "lib/python3.14/site-packages/pint/facets/system/__init__.py",
+    "lib/python3.14/site-packages/pint/facets/system/definitions.py",
+    "lib/python3.14/site-packages/pint/facets/system/objects.py",
+    "lib/python3.14/site-packages/pint/facets/system/registry.py",
+    "lib/python3.14/site-packages/pint/formatting.py",
+    "lib/python3.14/site-packages/pint/matplotlib.py",
+    "lib/python3.14/site-packages/pint/pint_convert.py",
+    "lib/python3.14/site-packages/pint/pint_eval.py",
+    "lib/python3.14/site-packages/pint/py.typed",
+    "lib/python3.14/site-packages/pint/registry.py",
+    "lib/python3.14/site-packages/pint/registry_helpers.py",
+    "lib/python3.14/site-packages/pint/testing.py",
+    "lib/python3.14/site-packages/pint/testsuite/__init__.py",
+    "lib/python3.14/site-packages/pint/testsuite/baseline/test_basic_plot.png",
+    "lib/python3.14/site-packages/pint/testsuite/baseline/test_plot_with_non_default_format.png",
+    "lib/python3.14/site-packages/pint/testsuite/baseline/test_plot_with_set_units.png",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__init__.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/conftest.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_00_common.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_01_eval.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_05_registry_creation.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_10_registry.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_20_quantity.py",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/test_30_numpy.py",
+    "lib/python3.14/site-packages/pint/testsuite/conftest.py",
+    "lib/python3.14/site-packages/pint/testsuite/helpers.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_application_registry.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_babel.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_compat.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_compat_downcast.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_compat_upcast.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_contexts.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_converters.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_dask.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_definitions.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_diskcache.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_errors.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_formatter.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_formatting.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_infer_base_unit.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_issues.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_log_units.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_matplotlib.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_measurement.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_non_int.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_numpy.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_numpy_func.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_pint_eval.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_pitheorem.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_quantity.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_systems.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_testing.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_umath.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_unit.py",
+    "lib/python3.14/site-packages/pint/testsuite/test_util.py",
+    "lib/python3.14/site-packages/pint/util.py",
+    "lib/python3.14/site-packages/pint/xtranslated.txt",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/METADATA",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/RECORD",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/WHEEL",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/licenses/AUTHORS",
+    "lib/python3.14/site-packages/pint-0.26.1.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/pint/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/_typing.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/babel_names.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/compat.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/converters.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/__pycache__/base_defparser.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_compound_unit_helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_format_helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_spec_helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_to_register.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/full.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/html.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/latex.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/plain.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/sorting.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/block.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/common.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/context.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/defaults.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/defparser.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/group.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/plain.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/system.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/errors.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/context/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/context/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/context/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/context/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/dask/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/group/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/group/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/group/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/group/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/numpy_func.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/quantity.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/unit.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/qto.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/quantity.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/plain/__pycache__/unit.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/system/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/system/__pycache__/definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/system/__pycache__/objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/facets/system/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/formatting.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/matplotlib.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/pint_convert.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/pint_eval.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/registry_helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/testing.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/conftest.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_00_common.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_01_eval.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_05_registry_creation.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_10_registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_20_quantity.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_30_numpy.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/conftest.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/helpers.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_application_registry.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_babel.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat_downcast.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat_upcast.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_contexts.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_converters.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_dask.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_definitions.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_diskcache.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_errors.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_formatter.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_formatting.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_infer_base_unit.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_issues.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_log_units.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_matplotlib.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_measurement.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_non_int.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_numpy.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_numpy_func.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_pint_eval.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_pitheorem.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_quantity.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_systems.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_testing.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_umath.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_unit.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_util.cpython-314.pyc",
+    "lib/python3.14/site-packages/pint/__pycache__/util.cpython-314.pyc"
+  ],
+  "fn": "pint-0.26.1-pyhc364b38_0.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pint-0.26.1-pyhc364b38_0",
+    "type": 1
+  },
+  "md5": "efb8cc09053e36fe613b69f747a12543",
+  "name": "pint",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pint-0.26.1-pyhc364b38_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "python-scripts/pint-convert",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/bld/rattler-build_pint_1789769966/host_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "sha256": "6818deb1a12467fa305de709a91cc5bad942667473494a3907badc931d668e1e",
+        "sha256_in_prefix": "9c394dc48665b59a711d6a6b8629378e6afc54ab542e6c86e25fb80bf0bc9530",
+        "size_in_bytes": 447
+      },
+      {
+        "_path": "site-packages/pint/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b4ede1988254d6277021bef1caca71fde897676e3f0021d363ee2aa5e4c2485e",
+        "sha256_in_prefix": "b4ede1988254d6277021bef1caca71fde897676e3f0021d363ee2aa5e4c2485e",
+        "size_in_bytes": 4405
+      },
+      {
+        "_path": "site-packages/pint/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "ac232caf6cd8ecc3dd4b6700a9807a4526678cba86ef692f35e361be333f2f29",
+        "sha256_in_prefix": "ac232caf6cd8ecc3dd4b6700a9807a4526678cba86ef692f35e361be333f2f29",
+        "size_in_bytes": 1514
+      },
+      {
+        "_path": "site-packages/pint/babel_names.py",
+        "path_type": "hardlink",
+        "sha256": "fb12d3f0648706e1e12433bb28c25846d6a524826bc9ead33307288dd66739ba",
+        "sha256_in_prefix": "fb12d3f0648706e1e12433bb28c25846d6a524826bc9ead33307288dd66739ba",
+        "size_in_bytes": 4637
+      },
+      {
+        "_path": "site-packages/pint/compat.py",
+        "path_type": "hardlink",
+        "sha256": "c176fbf76ce7b584bbeed559c5b7273889a827e720968ac7d02341f56e1e1ace",
+        "sha256_in_prefix": "c176fbf76ce7b584bbeed559c5b7273889a827e720968ac7d02341f56e1e1ace",
+        "size_in_bytes": 10939
+      },
+      {
+        "_path": "site-packages/pint/constants_en.txt",
+        "path_type": "hardlink",
+        "sha256": "a713dd2974ee78de1fb89c9ac633afdc262938b07ea77a5275ae3091147b2e7b",
+        "sha256_in_prefix": "a713dd2974ee78de1fb89c9ac633afdc262938b07ea77a5275ae3091147b2e7b",
+        "size_in_bytes": 4844
+      },
+      {
+        "_path": "site-packages/pint/converters.py",
+        "path_type": "hardlink",
+        "sha256": "e7ca91ecd764167165603a0f4a9815c22b714e3c2903a655b466ff2a5e69af88",
+        "sha256_in_prefix": "e7ca91ecd764167165603a0f4a9815c22b714e3c2903a655b466ff2a5e69af88",
+        "size_in_bytes": 2261
+      },
+      {
+        "_path": "site-packages/pint/default_en.txt",
+        "path_type": "hardlink",
+        "sha256": "d6d6e8fd4f930a4cf79e3669aa9608a0336547074ae56861287e38dca8689036",
+        "sha256_in_prefix": "d6d6e8fd4f930a4cf79e3669aa9608a0336547074ae56861287e38dca8689036",
+        "size_in_bytes": 32587
+      },
+      {
+        "_path": "site-packages/pint/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "7fbb075904a69059d8c19898cf18b8de51be9308d302a9d1959dfe852fb78c2e",
+        "sha256_in_prefix": "7fbb075904a69059d8c19898cf18b8de51be9308d302a9d1959dfe852fb78c2e",
+        "size_in_bytes": 1297
+      },
+      {
+        "_path": "site-packages/pint/delegates/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3694f0f7d8a80f4cd80efa42bd888b7836210a7ca503df6ff4f18dc1a539f30d",
+        "sha256_in_prefix": "3694f0f7d8a80f4cd80efa42bd888b7836210a7ca503df6ff4f18dc1a539f30d",
+        "size_in_bytes": 452
+      },
+      {
+        "_path": "site-packages/pint/delegates/base_defparser.py",
+        "path_type": "hardlink",
+        "sha256": "6616fd5a0133b0f520e52a0eb4de84e5665e4e04905ada0c9fe19ca6fd9e14a3",
+        "sha256_in_prefix": "6616fd5a0133b0f520e52a0eb4de84e5665e4e04905ada0c9fe19ca6fd9e14a3",
+        "size_in_bytes": 3326
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "fcc69f55d30f07f32cc8ee553c1c19304056f3c879fffb7a0270c2780df9fdd7",
+        "sha256_in_prefix": "fcc69f55d30f07f32cc8ee553c1c19304056f3c879fffb7a0270c2780df9fdd7",
+        "size_in_bytes": 696
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/_compound_unit_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "7c2031ed33bfbd85ffc96c7e7337b6fefbb5ac3aac9351fa32cc30942974e506",
+        "sha256_in_prefix": "7c2031ed33bfbd85ffc96c7e7337b6fefbb5ac3aac9351fa32cc30942974e506",
+        "size_in_bytes": 7769
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/_format_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "cdfd2c92de23167859089831dbad083a70c266809f7f31b1f73bb8f31b226e77",
+        "sha256_in_prefix": "cdfd2c92de23167859089831dbad083a70c266809f7f31b1f73bb8f31b226e77",
+        "size_in_bytes": 7781
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/_spec_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "7c7bd1c1e984c16785e777da4c5280e778494f60234d49fa3a3e1f1b613224e7",
+        "sha256_in_prefix": "7c7bd1c1e984c16785e777da4c5280e778494f60234d49fa3a3e1f1b613224e7",
+        "size_in_bytes": 6246
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/_to_register.py",
+        "path_type": "hardlink",
+        "sha256": "e3c3d61d233985744f387a97030b9da324e66303cddfdeb49b4a52b56ff4e1ca",
+        "sha256_in_prefix": "e3c3d61d233985744f387a97030b9da324e66303cddfdeb49b4a52b56ff4e1ca",
+        "size_in_bytes": 4569
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/full.py",
+        "path_type": "hardlink",
+        "sha256": "4102a8d70270d1720aee696d96e01b2eda19dddac0712408a39792ec688b2e0e",
+        "sha256_in_prefix": "4102a8d70270d1720aee696d96e01b2eda19dddac0712408a39792ec688b2e0e",
+        "size_in_bytes": 8317
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/html.py",
+        "path_type": "hardlink",
+        "sha256": "59a496d41b1c85ae63af01ccc12fe99a73bd766fbd9c1b36ffe39101834b6ea5",
+        "sha256_in_prefix": "59a496d41b1c85ae63af01ccc12fe99a73bd766fbd9c1b36ffe39101834b6ea5",
+        "size_in_bytes": 6111
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/latex.py",
+        "path_type": "hardlink",
+        "sha256": "637cdb0aed56b5bdbc602feead5e3afee4103b3c2b923fc27739ce010f744561",
+        "sha256_in_prefix": "637cdb0aed56b5bdbc602feead5e3afee4103b3c2b923fc27739ce010f744561",
+        "size_in_bytes": 12864
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/plain.py",
+        "path_type": "hardlink",
+        "sha256": "d23fb8e05d716522ff6dc6f1d4c87cc7415a3906589b040ca44116699df67db3",
+        "sha256_in_prefix": "d23fb8e05d716522ff6dc6f1d4c87cc7415a3906589b040ca44116699df67db3",
+        "size_in_bytes": 16295
+      },
+      {
+        "_path": "site-packages/pint/delegates/formatter/sorting.py",
+        "path_type": "hardlink",
+        "sha256": "77fac90f01ee5fd86d525a4f823e3529ee61504f363cd9a28754ed0d6d4acd35",
+        "sha256_in_prefix": "77fac90f01ee5fd86d525a4f823e3529ee61504f363cd9a28754ed0d6d4acd35",
+        "size_in_bytes": 2888
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d22f2560fbbf47305c41dc4c9664d1363fd055affc950f935e31313970306064",
+        "sha256_in_prefix": "d22f2560fbbf47305c41dc4c9664d1363fd055affc950f935e31313970306064",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/block.py",
+        "path_type": "hardlink",
+        "sha256": "18325b4d525a95f02385e597ea2caaaf633c5b6942d584cb2d176f3760c81230",
+        "sha256_in_prefix": "18325b4d525a95f02385e597ea2caaaf633c5b6942d584cb2d176f3760c81230",
+        "size_in_bytes": 1153
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/common.py",
+        "path_type": "hardlink",
+        "sha256": "23c941a2e3f7abb04ef26789b921c3e826203e707e9cb8eb795b03e216bee4da",
+        "sha256_in_prefix": "23c941a2e3f7abb04ef26789b921c3e826203e707e9cb8eb795b03e216bee4da",
+        "size_in_bytes": 1641
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/context.py",
+        "path_type": "hardlink",
+        "sha256": "766f4530328f80906b710830005c25cee97e2e7efc14c600befd275b6cd6a215",
+        "sha256_in_prefix": "766f4530328f80906b710830005c25cee97e2e7efc14c600befd275b6cd6a215",
+        "size_in_bytes": 6139
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/defaults.py",
+        "path_type": "hardlink",
+        "sha256": "cdd4347ad683a9ac9b02fc0896355dc982ee4a81072385c305162857c319bd97",
+        "sha256_in_prefix": "cdd4347ad683a9ac9b02fc0896355dc982ee4a81072385c305162857c319bd97",
+        "size_in_bytes": 2054
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/defparser.py",
+        "path_type": "hardlink",
+        "sha256": "b0642575f2a02a75bd6de18f4e87b701ed0ac560c71d1fbc22b7b5880efd0f7e",
+        "sha256_in_prefix": "b0642575f2a02a75bd6de18f4e87b701ed0ac560c71d1fbc22b7b5880efd0f7e",
+        "size_in_bytes": 4658
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/group.py",
+        "path_type": "hardlink",
+        "sha256": "0430114bd24139b2135bf660d3466f43cd9075f130f457f29709e273ddd7a6f4",
+        "sha256_in_prefix": "0430114bd24139b2135bf660d3466f43cd9075f130f457f29709e273ddd7a6f4",
+        "size_in_bytes": 2908
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/plain.py",
+        "path_type": "hardlink",
+        "sha256": "eef113d1fea1899d25c0437b21f892f7cefcaa685212429146e30e6a1d735f7a",
+        "sha256_in_prefix": "eef113d1fea1899d25c0437b21f892f7cefcaa685212429146e30e6a1d735f7a",
+        "size_in_bytes": 7908
+      },
+      {
+        "_path": "site-packages/pint/delegates/txt_defparser/system.py",
+        "path_type": "hardlink",
+        "sha256": "01e00be1267d78fa56f7281b009b56930f77cacbe0591ebb25a90b6aeb43b4a6",
+        "sha256_in_prefix": "01e00be1267d78fa56f7281b009b56930f77cacbe0591ebb25a90b6aeb43b4a6",
+        "size_in_bytes": 3322
+      },
+      {
+        "_path": "site-packages/pint/errors.py",
+        "path_type": "hardlink",
+        "sha256": "059af75bff01f2f63d0762255004e5c69819a06e3af4265b95ff167623ca1a1a",
+        "sha256_in_prefix": "059af75bff01f2f63d0762255004e5c69819a06e3af4265b95ff167623ca1a1a",
+        "size_in_bytes": 7969
+      },
+      {
+        "_path": "site-packages/pint/facets/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "5fa59d3597e0717bb2565e707b03936f8d78a8618a3a8005d6337b7abb00db81",
+        "sha256_in_prefix": "5fa59d3597e0717bb2565e707b03936f8d78a8618a3a8005d6337b7abb00db81",
+        "size_in_bytes": 3880
+      },
+      {
+        "_path": "site-packages/pint/facets/context/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "37d8b56b25483700c583b254eae43c171eae2ea2aa6c257ff9ee7048d4390163",
+        "sha256_in_prefix": "37d8b56b25483700c583b254eae43c171eae2ea2aa6c257ff9ee7048d4390163",
+        "size_in_bytes": 513
+      },
+      {
+        "_path": "site-packages/pint/facets/context/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "31eb3cac1996a2766192d8569b15cadb5be343d1a633f9a1fcfb071b20b35ffc",
+        "sha256_in_prefix": "31eb3cac1996a2766192d8569b15cadb5be343d1a633f9a1fcfb071b20b35ffc",
+        "size_in_bytes": 4784
+      },
+      {
+        "_path": "site-packages/pint/facets/context/objects.py",
+        "path_type": "hardlink",
+        "sha256": "e332a72d45268c0060ccebb1ba3cb59404dc169e8870350ddb5a8ce72cb01a7a",
+        "sha256_in_prefix": "e332a72d45268c0060ccebb1ba3cb59404dc169e8870350ddb5a8ce72cb01a7a",
+        "size_in_bytes": 11367
+      },
+      {
+        "_path": "site-packages/pint/facets/context/registry.py",
+        "path_type": "hardlink",
+        "sha256": "cc8eb9352cf81ab67639f7a737c49283d64785c33bfeb6c2d284818da8fe3ba8",
+        "sha256_in_prefix": "cc8eb9352cf81ab67639f7a737c49283d64785c33bfeb6c2d284818da8fe3ba8",
+        "size_in_bytes": 15247
+      },
+      {
+        "_path": "site-packages/pint/facets/dask/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0fdefb7dd00a1bcc4c20caefa12873169519cc11ba414fb8b0012d4707c59df4",
+        "sha256_in_prefix": "0fdefb7dd00a1bcc4c20caefa12873169519cc11ba414fb8b0012d4707c59df4",
+        "size_in_bytes": 3566
+      },
+      {
+        "_path": "site-packages/pint/facets/group/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bd2abf0fa9455f18bb0ca0d721ecf1490e3cb2fd80a6f5426a24ab55b7c5c808",
+        "sha256_in_prefix": "bd2abf0fa9455f18bb0ca0d721ecf1490e3cb2fd80a6f5426a24ab55b7c5c808",
+        "size_in_bytes": 523
+      },
+      {
+        "_path": "site-packages/pint/facets/group/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "05c5cbdf0445bf4402d504e9617dfa76a3dc5564fe6ec5d63ca51e2fa1394f81",
+        "sha256_in_prefix": "05c5cbdf0445bf4402d504e9617dfa76a3dc5564fe6ec5d63ca51e2fa1394f81",
+        "size_in_bytes": 1705
+      },
+      {
+        "_path": "site-packages/pint/facets/group/objects.py",
+        "path_type": "hardlink",
+        "sha256": "e35736a69c7a9dbe0963105217cac96c05ae933e6a981cfc5359f6bd2873b4eb",
+        "sha256_in_prefix": "e35736a69c7a9dbe0963105217cac96c05ae933e6a981cfc5359f6bd2873b4eb",
+        "size_in_bytes": 6385
+      },
+      {
+        "_path": "site-packages/pint/facets/group/registry.py",
+        "path_type": "hardlink",
+        "sha256": "d00e9a036c8a6d4b104c6893e485722a8eae2b0ebf374d81b8b544036825b4d3",
+        "sha256_in_prefix": "d00e9a036c8a6d4b104c6893e485722a8eae2b0ebf374d81b8b544036825b4d3",
+        "size_in_bytes": 4621
+      },
+      {
+        "_path": "site-packages/pint/facets/measurement/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9e4a4af6f28778934950fe92098b64e5d6c49315ffb3ebda372c72b940227872",
+        "sha256_in_prefix": "9e4a4af6f28778934950fe92098b64e5d6c49315ffb3ebda372c72b940227872",
+        "size_in_bytes": 531
+      },
+      {
+        "_path": "site-packages/pint/facets/measurement/objects.py",
+        "path_type": "hardlink",
+        "sha256": "6883378904d2572cdda8e28bf3fcee1075ef6c8aa3b21aaeacea60b682d3e3aa",
+        "sha256_in_prefix": "6883378904d2572cdda8e28bf3fcee1075ef6c8aa3b21aaeacea60b682d3e3aa",
+        "size_in_bytes": 6723
+      },
+      {
+        "_path": "site-packages/pint/facets/measurement/registry.py",
+        "path_type": "hardlink",
+        "sha256": "2b840aa5fdd15508cbf698051bcd6c77180dddab51294bef4f6f98f47c7220bd",
+        "sha256_in_prefix": "2b840aa5fdd15508cbf698051bcd6c77180dddab51294bef4f6f98f47c7220bd",
+        "size_in_bytes": 1371
+      },
+      {
+        "_path": "site-packages/pint/facets/nonmultiplicative/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4fffb43b312fbdb3a8497b474cd682aa95ee23bcae3757589b92d35c9c3b91d6",
+        "sha256_in_prefix": "4fffb43b312fbdb3a8497b474cd682aa95ee23bcae3757589b92d35c9c3b91d6",
+        "size_in_bytes": 632
+      },
+      {
+        "_path": "site-packages/pint/facets/nonmultiplicative/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "35935dc878cff8bf5e0f9c1c7fb6907192b6eee7cac1bf70d3dcbc2ad0fad303",
+        "sha256_in_prefix": "35935dc878cff8bf5e0f9c1c7fb6907192b6eee7cac1bf70d3dcbc2ad0fad303",
+        "size_in_bytes": 3597
+      },
+      {
+        "_path": "site-packages/pint/facets/nonmultiplicative/objects.py",
+        "path_type": "hardlink",
+        "sha256": "75e51f7b5c8d55c4c259bdc0f5550156961c97e05b7299c38d48dd157b8f571e",
+        "sha256_in_prefix": "75e51f7b5c8d55c4c259bdc0f5550156961c97e05b7299c38d48dd157b8f571e",
+        "size_in_bytes": 2646
+      },
+      {
+        "_path": "site-packages/pint/facets/nonmultiplicative/registry.py",
+        "path_type": "hardlink",
+        "sha256": "6d699108f66cb332b34a6f58b54bc8d08dda9c34552e735e80aea7bbd2163b27",
+        "sha256_in_prefix": "6d699108f66cb332b34a6f58b54bc8d08dda9c34552e735e80aea7bbd2163b27",
+        "size_in_bytes": 10193
+      },
+      {
+        "_path": "site-packages/pint/facets/numpy/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "be4849bfb071a5bf1ccc40d6d53e0fd0de33ad75c315360d6ea2e8f9c8d14ecd",
+        "sha256_in_prefix": "be4849bfb071a5bf1ccc40d6d53e0fd0de33ad75c315360d6ea2e8f9c8d14ecd",
+        "size_in_bytes": 355
+      },
+      {
+        "_path": "site-packages/pint/facets/numpy/numpy_func.py",
+        "path_type": "hardlink",
+        "sha256": "29a9da981752e5a6736f6b6b14033b54e65a9374771fa5e097a43eb06d4bc270",
+        "sha256_in_prefix": "29a9da981752e5a6736f6b6b14033b54e65a9374771fa5e097a43eb06d4bc270",
+        "size_in_bytes": 39586
+      },
+      {
+        "_path": "site-packages/pint/facets/numpy/quantity.py",
+        "path_type": "hardlink",
+        "sha256": "0f6bd8f5085dbd65ea6242b79b7980bc428c5f0d83ab18394ff86310ccaaefac",
+        "sha256_in_prefix": "0f6bd8f5085dbd65ea6242b79b7980bc428c5f0d83ab18394ff86310ccaaefac",
+        "size_in_bytes": 13878
+      },
+      {
+        "_path": "site-packages/pint/facets/numpy/registry.py",
+        "path_type": "hardlink",
+        "sha256": "d4db15cd52662b39e6ff6de2608f131bbd8a32ad5fc0aaf147c6d06642205884",
+        "sha256_in_prefix": "d4db15cd52662b39e6ff6de2608f131bbd8a32ad5fc0aaf147c6d06642205884",
+        "size_in_bytes": 703
+      },
+      {
+        "_path": "site-packages/pint/facets/numpy/unit.py",
+        "path_type": "hardlink",
+        "sha256": "3e52f780e6d581460218db08b50d8991976971fbfa4b39b71d3bb5a755028f22",
+        "sha256_in_prefix": "3e52f780e6d581460218db08b50d8991976971fbfa4b39b71d3bb5a755028f22",
+        "size_in_bytes": 1280
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "aea59e512e0363a0c9c8fa5424a5118b61b786fcd5e27ac6f57fdc82454babbe",
+        "sha256_in_prefix": "aea59e512e0363a0c9c8fa5424a5118b61b786fcd5e27ac6f57fdc82454babbe",
+        "size_in_bytes": 759
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "ff1e14a29b4a15ff2a9cba34ec5e538ae066b906713d37f09d9b515d17500c34",
+        "sha256_in_prefix": "ff1e14a29b4a15ff2a9cba34ec5e538ae066b906713d37f09d9b515d17500c34",
+        "size_in_bytes": 8659
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/objects.py",
+        "path_type": "hardlink",
+        "sha256": "ba28506eda0846db704876459de9adc8d183cc5fb6599e938944fc67a3be790c",
+        "sha256_in_prefix": "ba28506eda0846db704876459de9adc8d183cc5fb6599e938944fc67a3be790c",
+        "size_in_bytes": 346
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/qto.py",
+        "path_type": "hardlink",
+        "sha256": "ff0966356344562eab7ca71a63584c67208b59b04f9bf81d10d52b61f216b838",
+        "sha256_in_prefix": "ff0966356344562eab7ca71a63584c67208b59b04f9bf81d10d52b61f216b838",
+        "size_in_bytes": 15967
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/quantity.py",
+        "path_type": "hardlink",
+        "sha256": "901a43f23f33ccb9d1990803157b566c8313cbb19adb2c298e0abd95a237f594",
+        "sha256_in_prefix": "901a43f23f33ccb9d1990803157b566c8313cbb19adb2c298e0abd95a237f594",
+        "size_in_bytes": 70599
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/registry.py",
+        "path_type": "hardlink",
+        "sha256": "e895621a8961b7e35a30c8247b4c736981166ea550320a7de935e20beb4bb23e",
+        "sha256_in_prefix": "e895621a8961b7e35a30c8247b4c736981166ea550320a7de935e20beb4bb23e",
+        "size_in_bytes": 52467
+      },
+      {
+        "_path": "site-packages/pint/facets/plain/unit.py",
+        "path_type": "hardlink",
+        "sha256": "d9f624c65fcc45753bef0913e29a09ee2877f0cc0c1647055cb197487a7fe689",
+        "sha256_in_prefix": "d9f624c65fcc45753bef0913e29a09ee2877f0cc0c1647055cb197487a7fe689",
+        "size_in_bytes": 10297
+      },
+      {
+        "_path": "site-packages/pint/facets/system/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3525f27e0803c63b96d34cb72c633cff608680c4987f1bd664ab582216cd46d6",
+        "sha256_in_prefix": "3525f27e0803c63b96d34cb72c633cff608680c4987f1bd664ab582216cd46d6",
+        "size_in_bytes": 454
+      },
+      {
+        "_path": "site-packages/pint/facets/system/definitions.py",
+        "path_type": "hardlink",
+        "sha256": "4e94ae227d4a0f9d0d5a8e8a9ea605bf5ef904e1cd7a507e6967e9e68e075376",
+        "sha256_in_prefix": "4e94ae227d4a0f9d0d5a8e8a9ea605bf5ef904e1cd7a507e6967e9e68e075376",
+        "size_in_bytes": 2933
+      },
+      {
+        "_path": "site-packages/pint/facets/system/objects.py",
+        "path_type": "hardlink",
+        "sha256": "9f3e5af92175778077ff6bbdf46cb9f3754164be6f0012b6defaf2ecb06e61f4",
+        "sha256_in_prefix": "9f3e5af92175778077ff6bbdf46cb9f3754164be6f0012b6defaf2ecb06e61f4",
+        "size_in_bytes": 6761
+      },
+      {
+        "_path": "site-packages/pint/facets/system/registry.py",
+        "path_type": "hardlink",
+        "sha256": "27f1a429bea9c212ea4155b68cab6dc47cf5c5b00d54d99b55772e80ec830596",
+        "sha256_in_prefix": "27f1a429bea9c212ea4155b68cab6dc47cf5c5b00d54d99b55772e80ec830596",
+        "size_in_bytes": 9048
+      },
+      {
+        "_path": "site-packages/pint/formatting.py",
+        "path_type": "hardlink",
+        "sha256": "33a23e42fc08af4740d4ce6396571c6d65da49fed54ad2636128b16edc90bf37",
+        "sha256_in_prefix": "33a23e42fc08af4740d4ce6396571c6d65da49fed54ad2636128b16edc90bf37",
+        "size_in_bytes": 4079
+      },
+      {
+        "_path": "site-packages/pint/matplotlib.py",
+        "path_type": "hardlink",
+        "sha256": "c262ef4121fab06939ac76f09ba192e5adf787f5cbe933ef699a31eb0aa2bfa4",
+        "sha256_in_prefix": "c262ef4121fab06939ac76f09ba192e5adf787f5cbe933ef699a31eb0aa2bfa4",
+        "size_in_bytes": 2600
+      },
+      {
+        "_path": "site-packages/pint/pint_convert.py",
+        "path_type": "hardlink",
+        "sha256": "f8ac1611d03a526aa3cdfc38c06a3e708a49ac37f3216feba6aef12b68d073fb",
+        "sha256_in_prefix": "f8ac1611d03a526aa3cdfc38c06a3e708a49ac37f3216feba6aef12b68d073fb",
+        "size_in_bytes": 6180
+      },
+      {
+        "_path": "site-packages/pint/pint_eval.py",
+        "path_type": "hardlink",
+        "sha256": "240ede672a596f0f021bb0d5cca8ac1182985a3521704728743f2a0d581a1a13",
+        "sha256_in_prefix": "240ede672a596f0f021bb0d5cca8ac1182985a3521704728743f2a0d581a1a13",
+        "size_in_bytes": 20833
+      },
+      {
+        "_path": "site-packages/pint/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pint/registry.py",
+        "path_type": "hardlink",
+        "sha256": "2519af63b4d0660ee21e174a7a832902f8a2e10ecef9a0b6f4821f293b120824",
+        "sha256_in_prefix": "2519af63b4d0660ee21e174a7a832902f8a2e10ecef9a0b6f4821f293b120824",
+        "size_in_bytes": 22438
+      },
+      {
+        "_path": "site-packages/pint/registry_helpers.py",
+        "path_type": "hardlink",
+        "sha256": "b6885de5724a418900f71519097654cad665e56dc3309846cf8035d6b0e80e1d",
+        "sha256_in_prefix": "b6885de5724a418900f71519097654cad665e56dc3309846cf8035d6b0e80e1d",
+        "size_in_bytes": 13183
+      },
+      {
+        "_path": "site-packages/pint/testing.py",
+        "path_type": "hardlink",
+        "sha256": "7e8fad7805768007276b0aeb554a321d1f64302d847ea8d3b01930f93664db20",
+        "sha256_in_prefix": "7e8fad7805768007276b0aeb554a321d1f64302d847ea8d3b01930f93664db20",
+        "size_in_bytes": 4592
+      },
+      {
+        "_path": "site-packages/pint/testsuite/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "18224c8654ce020d8d4df74d7fff59db31e1d42815f79474db9e5d26a0b6f419",
+        "sha256_in_prefix": "18224c8654ce020d8d4df74d7fff59db31e1d42815f79474db9e5d26a0b6f419",
+        "size_in_bytes": 3129
+      },
+      {
+        "_path": "site-packages/pint/testsuite/baseline/test_basic_plot.png",
+        "path_type": "hardlink",
+        "sha256": "427b47dbd7909a1b8d7df2c46534620d95138882378f0ed65b4dd74479c1ac41",
+        "sha256_in_prefix": "427b47dbd7909a1b8d7df2c46534620d95138882378f0ed65b4dd74479c1ac41",
+        "size_in_bytes": 17415
+      },
+      {
+        "_path": "site-packages/pint/testsuite/baseline/test_plot_with_non_default_format.png",
+        "path_type": "hardlink",
+        "sha256": "47811e153663d817d54e12ab915e442a22009e2da0059ea812d2e9f20bfdc5ed",
+        "sha256_in_prefix": "47811e153663d817d54e12ab915e442a22009e2da0059ea812d2e9f20bfdc5ed",
+        "size_in_bytes": 16617
+      },
+      {
+        "_path": "site-packages/pint/testsuite/baseline/test_plot_with_set_units.png",
+        "path_type": "hardlink",
+        "sha256": "217144293b9d842c22a2ae5d653a3a995b6c74230b303e0486a05e90a05794e1",
+        "sha256_in_prefix": "217144293b9d842c22a2ae5d653a3a995b6c74230b303e0486a05e90a05794e1",
+        "size_in_bytes": 18176
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_00_common.py",
+        "path_type": "hardlink",
+        "sha256": "a2759d75f25f8cacd328af9e36fd0848585415e523da4a3b896d20bf2bb8bcd0",
+        "sha256_in_prefix": "a2759d75f25f8cacd328af9e36fd0848585415e523da4a3b896d20bf2bb8bcd0",
+        "size_in_bytes": 580
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_01_eval.py",
+        "path_type": "hardlink",
+        "sha256": "e2f1d6b879d7314386285f14a4d0d77fee90dbd0e7e139f108621ca0fe905d76",
+        "sha256_in_prefix": "e2f1d6b879d7314386285f14a4d0d77fee90dbd0e7e139f108621ca0fe905d76",
+        "size_in_bytes": 495
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_05_registry_creation.py",
+        "path_type": "hardlink",
+        "sha256": "1193b2109a83b21ef5e3be2b483ef8645494da8adf95d38488cd8a3b41ddbfeb",
+        "sha256_in_prefix": "1193b2109a83b21ef5e3be2b483ef8645494da8adf95d38488cd8a3b41ddbfeb",
+        "size_in_bytes": 608
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_10_registry.py",
+        "path_type": "hardlink",
+        "sha256": "9bccc2c70b094a979c7639820a3d2187baff2adb45824242123a5b9174973fc3",
+        "sha256_in_prefix": "9bccc2c70b094a979c7639820a3d2187baff2adb45824242123a5b9174973fc3",
+        "size_in_bytes": 6116
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_20_quantity.py",
+        "path_type": "hardlink",
+        "sha256": "d3bb7bab0bad5e99e0a15ffcf95861abf9da50445d82278460dd84e416302d0a",
+        "sha256_in_prefix": "d3bb7bab0bad5e99e0a15ffcf95861abf9da50445d82278460dd84e416302d0a",
+        "size_in_bytes": 2187
+      },
+      {
+        "_path": "site-packages/pint/testsuite/benchmarks/test_30_numpy.py",
+        "path_type": "hardlink",
+        "sha256": "0eb29545e4d7a2d163acb8f568eaa88efefd67a212df7ce058e94dabed347271",
+        "sha256_in_prefix": "0eb29545e4d7a2d163acb8f568eaa88efefd67a212df7ce058e94dabed347271",
+        "size_in_bytes": 3209
+      },
+      {
+        "_path": "site-packages/pint/testsuite/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "250b5ab05419d59401d794d2c3f393bd82fe1bfad6453ccf79f60f0341880289",
+        "sha256_in_prefix": "250b5ab05419d59401d794d2c3f393bd82fe1bfad6453ccf79f60f0341880289",
+        "size_in_bytes": 2246
+      },
+      {
+        "_path": "site-packages/pint/testsuite/helpers.py",
+        "path_type": "hardlink",
+        "sha256": "3fe82342da1beb86d36a69d634d629e4e975dfe64199ac193d457c4fdf554b6c",
+        "sha256_in_prefix": "3fe82342da1beb86d36a69d634d629e4e975dfe64199ac193d457c4fdf554b6c",
+        "size_in_bytes": 4131
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_application_registry.py",
+        "path_type": "hardlink",
+        "sha256": "ccd619c2819856b6cc1be3e3aa1b7ed7a17e8eb6fb11026a731f7a4c8a99cf08",
+        "sha256_in_prefix": "ccd619c2819856b6cc1be3e3aa1b7ed7a17e8eb6fb11026a731f7a4c8a99cf08",
+        "size_in_bytes": 9377
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_babel.py",
+        "path_type": "hardlink",
+        "sha256": "a3f5e7218163519c145b70548c4ee8a65f3e4beec0238c0b36178dce4a601e32",
+        "sha256_in_prefix": "a3f5e7218163519c145b70548c4ee8a65f3e4beec0238c0b36178dce4a601e32",
+        "size_in_bytes": 3122
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_compat.py",
+        "path_type": "hardlink",
+        "sha256": "d25127e7a1213e9b10cab23b81af845c936d4d5581917d208755f9c506d7a7a8",
+        "sha256_in_prefix": "d25127e7a1213e9b10cab23b81af845c936d4d5581917d208755f9c506d7a7a8",
+        "size_in_bytes": 2974
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_compat_downcast.py",
+        "path_type": "hardlink",
+        "sha256": "dfbe8f894fb67f5bda87c3cd9cba0fb17a890241951eeb4bf04c7ec2f456c8d0",
+        "sha256_in_prefix": "dfbe8f894fb67f5bda87c3cd9cba0fb17a890241951eeb4bf04c7ec2f456c8d0",
+        "size_in_bytes": 5691
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_compat_upcast.py",
+        "path_type": "hardlink",
+        "sha256": "4ac8526efc182a8a0bbb7c337999ef69d0130cd82b046f7c2466b3bf3a294b6b",
+        "sha256_in_prefix": "4ac8526efc182a8a0bbb7c337999ef69d0130cd82b046f7c2466b3bf3a294b6b",
+        "size_in_bytes": 4376
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_contexts.py",
+        "path_type": "hardlink",
+        "sha256": "8814e22719526ed168dfde23e4ba38bef299abbc72619d007853c765c5095690",
+        "sha256_in_prefix": "8814e22719526ed168dfde23e4ba38bef299abbc72619d007853c765c5095690",
+        "size_in_bytes": 32400
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_converters.py",
+        "path_type": "hardlink",
+        "sha256": "8de1cb08300e167a683629300252c748b4f50202f75c8b88a857c6dce37b65d1",
+        "sha256_in_prefix": "8de1cb08300e167a683629300252c748b4f50202f75c8b88a857c6dce37b65d1",
+        "size_in_bytes": 3679
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_dask.py",
+        "path_type": "hardlink",
+        "sha256": "b27c2cee5033755598aa45bcf1c2c45bcc4f7f56aa26f5a16f704582303a02b5",
+        "sha256_in_prefix": "b27c2cee5033755598aa45bcf1c2c45bcc4f7f56aa26f5a16f704582303a02b5",
+        "size_in_bytes": 7245
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_definitions.py",
+        "path_type": "hardlink",
+        "sha256": "a5c61b43964c64aa2efcd924d0f6095a9cca70a2238125d2f375312b3d2c3be9",
+        "sha256_in_prefix": "a5c61b43964c64aa2efcd924d0f6095a9cca70a2238125d2f375312b3d2c3be9",
+        "size_in_bytes": 7500
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_diskcache.py",
+        "path_type": "hardlink",
+        "sha256": "db16239cdc18686b1049843a72e19d231bfba288c2f662f8b30b5e1aa787f533",
+        "sha256_in_prefix": "db16239cdc18686b1049843a72e19d231bfba288c2f662f8b30b5e1aa787f533",
+        "size_in_bytes": 3306
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_errors.py",
+        "path_type": "hardlink",
+        "sha256": "ba5db1366d2baa334b828d099e229169eba5330c2190c750d3c8eb80eb9981d0",
+        "sha256_in_prefix": "ba5db1366d2baa334b828d099e229169eba5330c2190c750d3c8eb80eb9981d0",
+        "size_in_bytes": 5224
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_formatter.py",
+        "path_type": "hardlink",
+        "sha256": "09207ad4e544d02a41a74ed36e74ab0bce9236e83d6f151deda54175e77912e5",
+        "sha256_in_prefix": "09207ad4e544d02a41a74ed36e74ab0bce9236e83d6f151deda54175e77912e5",
+        "size_in_bytes": 3088
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_formatting.py",
+        "path_type": "hardlink",
+        "sha256": "eff914a6e6f3558243729ef925e5117d0bd67da50b1f69c3f8492d18deb03aa7",
+        "sha256_in_prefix": "eff914a6e6f3558243729ef925e5117d0bd67da50b1f69c3f8492d18deb03aa7",
+        "size_in_bytes": 5477
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_infer_base_unit.py",
+        "path_type": "hardlink",
+        "sha256": "3bb8f22b0899123bc18fac43f0d02a8e1fb3cfa706c08eb23196d41d8918f7fe",
+        "sha256_in_prefix": "3bb8f22b0899123bc18fac43f0d02a8e1fb3cfa706c08eb23196d41d8918f7fe",
+        "size_in_bytes": 3870
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_issues.py",
+        "path_type": "hardlink",
+        "sha256": "1bd26b00da7e1d0df65a3f47a9a997f5a84d71c173ca884e5fd58ce0b563a5bd",
+        "sha256_in_prefix": "1bd26b00da7e1d0df65a3f47a9a997f5a84d71c173ca884e5fd58ce0b563a5bd",
+        "size_in_bytes": 60634
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_log_units.py",
+        "path_type": "hardlink",
+        "sha256": "cf14a65d0c198bf22974ee9ca2568707c24b3cdcb7cedbbfa998a94e1e25cf26",
+        "sha256_in_prefix": "cf14a65d0c198bf22974ee9ca2568707c24b3cdcb7cedbbfa998a94e1e25cf26",
+        "size_in_bytes": 10406
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_matplotlib.py",
+        "path_type": "hardlink",
+        "sha256": "a824ce4d183b788bd8796a775dd487b158c4045fab770f70f1060bce1ba11378",
+        "sha256_in_prefix": "a824ce4d183b788bd8796a775dd487b158c4045fab770f70f1060bce1ba11378",
+        "size_in_bytes": 1960
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_measurement.py",
+        "path_type": "hardlink",
+        "sha256": "13ac223e2f37c967735ae284f7611df9badb7049f7e1e53bea0ca3e4e9069c05",
+        "sha256_in_prefix": "13ac223e2f37c967735ae284f7611df9badb7049f7e1e53bea0ca3e4e9069c05",
+        "size_in_bytes": 11324
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_non_int.py",
+        "path_type": "hardlink",
+        "sha256": "5905d83e5a1086eb19504c5f6651777eb6c69b91a1ae972b24697a6ab6004c76",
+        "sha256_in_prefix": "5905d83e5a1086eb19504c5f6651777eb6c69b91a1ae972b24697a6ab6004c76",
+        "size_in_bytes": 48146
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_numpy.py",
+        "path_type": "hardlink",
+        "sha256": "dff3116ed9fbfa08bc03181e2b68eabc525db7c7a83901fa977c8ff06c244d5a",
+        "sha256_in_prefix": "dff3116ed9fbfa08bc03181e2b68eabc525db7c7a83901fa977c8ff06c244d5a",
+        "size_in_bytes": 57253
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_numpy_func.py",
+        "path_type": "hardlink",
+        "sha256": "8727ff68faeb0c1080a406d956bd0f0a33e46f3d34116080a9a8ff875c8457df",
+        "sha256_in_prefix": "8727ff68faeb0c1080a406d956bd0f0a33e46f3d34116080a9a8ff875c8457df",
+        "size_in_bytes": 14067
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_pint_eval.py",
+        "path_type": "hardlink",
+        "sha256": "e1d4f89f4aab7061cf2db8b889c4809edeee7f6189edfda0a2d7ef75a3233420",
+        "sha256_in_prefix": "e1d4f89f4aab7061cf2db8b889c4809edeee7f6189edfda0a2d7ef75a3233420",
+        "size_in_bytes": 8046
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_pitheorem.py",
+        "path_type": "hardlink",
+        "sha256": "91b8443f323a4d28b360b8c1bb73a8201d9eb885882dcad7c67a8565dc6fbbcb",
+        "sha256_in_prefix": "91b8443f323a4d28b360b8c1bb73a8201d9eb885882dcad7c67a8565dc6fbbcb",
+        "size_in_bytes": 1198
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_quantity.py",
+        "path_type": "hardlink",
+        "sha256": "9f024167e165de4bb2c8f6f8f34e9540a6a04d362aade58751426eb1e016f3eb",
+        "sha256_in_prefix": "9f024167e165de4bb2c8f6f8f34e9540a6a04d362aade58751426eb1e016f3eb",
+        "size_in_bytes": 93922
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_systems.py",
+        "path_type": "hardlink",
+        "sha256": "f95fef5ae9352f651aacf1226117d6253f9ad2172c0673846a4079886213c4fc",
+        "sha256_in_prefix": "f95fef5ae9352f651aacf1226117d6253f9ad2172c0673846a4079886213c4fc",
+        "size_in_bytes": 12259
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_testing.py",
+        "path_type": "hardlink",
+        "sha256": "e319bfdab462470b540b4229e2759144e72f7713b57c1037357cd04b69055fa5",
+        "sha256_in_prefix": "e319bfdab462470b540b4229e2759144e72f7713b57c1037357cd04b69055fa5",
+        "size_in_bytes": 3423
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_umath.py",
+        "path_type": "hardlink",
+        "sha256": "c81f4afecfac62f76e410887a82e32e72e3e666ffa629f41f7f74feadc50cc3d",
+        "sha256_in_prefix": "c81f4afecfac62f76e410887a82e32e72e3e666ffa629f41f7f74feadc50cc3d",
+        "size_in_bytes": 28076
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_unit.py",
+        "path_type": "hardlink",
+        "sha256": "124da0bab9ff64bd47f7f500b872002b48ba92c711ff68232387cff78259034f",
+        "sha256_in_prefix": "124da0bab9ff64bd47f7f500b872002b48ba92c711ff68232387cff78259034f",
+        "size_in_bytes": 41297
+      },
+      {
+        "_path": "site-packages/pint/testsuite/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "422630c2d278f8690dae38815098c8932586a174f5f3f3a554b8ca3c8027eb22",
+        "sha256_in_prefix": "422630c2d278f8690dae38815098c8932586a174f5f3f3a554b8ca3c8027eb22",
+        "size_in_bytes": 13847
+      },
+      {
+        "_path": "site-packages/pint/util.py",
+        "path_type": "hardlink",
+        "sha256": "ce6cbc7ecd5b907aef373556dacf2d3e670a86d2829ec4dcc5b7a0442eb05ad4",
+        "sha256_in_prefix": "ce6cbc7ecd5b907aef373556dacf2d3e670a86d2829ec4dcc5b7a0442eb05ad4",
+        "size_in_bytes": 34475
+      },
+      {
+        "_path": "site-packages/pint/xtranslated.txt",
+        "path_type": "hardlink",
+        "sha256": "ec4242bf905d33ebecb8292a3f4856edee6ea82cef3d670ede849203fbada426",
+        "sha256_in_prefix": "ec4242bf905d33ebecb8292a3f4856edee6ea82cef3d670ede849203fbada426",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "a9d146863fa802c320a652db484b1914a21b3201f138316441ab021426551652",
+        "sha256_in_prefix": "a9d146863fa802c320a652db484b1914a21b3201f138316441ab021426551652",
+        "size_in_bytes": 10739
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "b0a2a89a65e96772e2bd800abae03783c65fd42b2b27f3193dffc9a67a0e6384",
+        "sha256_in_prefix": "b0a2a89a65e96772e2bd800abae03783c65fd42b2b27f3193dffc9a67a0e6384",
+        "size_in_bytes": 17765
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "4c769fa1bee87cdf8db2e30decc838a99c8769023b2a40fe4257106ad6215cfa",
+        "sha256_in_prefix": "4c769fa1bee87cdf8db2e30decc838a99c8769023b2a40fe4257106ad6215cfa",
+        "size_in_bytes": 87
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "fe78b12ae1e4b1cbb3ac84f8d6d7364ff865460d06e963b3218d159054e125a8",
+        "sha256_in_prefix": "fe78b12ae1e4b1cbb3ac84f8d6d7364ff865460d06e963b3218d159054e125a8",
+        "size_in_bytes": 115
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "0b62b4ed34d32c5fc9a5e5dc229e5185ba2ba534fab86867168eb5cb53fafbf0",
+        "sha256_in_prefix": "0b62b4ed34d32c5fc9a5e5dc229e5185ba2ba534fab86867168eb5cb53fafbf0",
+        "size_in_bytes": 56
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/licenses/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "f4a11fb914899773f93c50af710b242880d37dd3d232d4b79914800c5910d391",
+        "sha256_in_prefix": "f4a11fb914899773f93c50af710b242880d37dd3d232d4b79914800c5910d391",
+        "size_in_bytes": 2116
+      },
+      {
+        "_path": "site-packages/pint-0.26.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "46e43fb463fe2e0e28b32c900bbbdb6f376959df3936e1c134566860a55b2112",
+        "sha256_in_prefix": "46e43fb463fe2e0e28b32c900bbbdb6f376959df3936e1c134566860a55b2112",
+        "size_in_bytes": 1584
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/_typing.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/babel_names.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/converters.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/__pycache__/base_defparser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_compound_unit_helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_format_helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_spec_helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/_to_register.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/full.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/html.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/latex.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/plain.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/formatter/__pycache__/sorting.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/block.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/common.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/context.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/defaults.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/defparser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/group.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/plain.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/delegates/txt_defparser/__pycache__/system.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/errors.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/context/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/context/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/context/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/context/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/dask/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/group/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/group/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/group/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/group/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/measurement/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/nonmultiplicative/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/numpy_func.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/quantity.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/numpy/__pycache__/unit.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/qto.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/quantity.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/plain/__pycache__/unit.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/system/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/system/__pycache__/definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/system/__pycache__/objects.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/facets/system/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/formatting.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/matplotlib.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/pint_convert.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/pint_eval.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/registry_helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/testing.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/conftest.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_00_common.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_01_eval.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_05_registry_creation.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_10_registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_20_quantity.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/benchmarks/__pycache__/test_30_numpy.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/conftest.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/helpers.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_application_registry.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_babel.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat_downcast.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_compat_upcast.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_contexts.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_converters.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_dask.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_definitions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_diskcache.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_errors.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_formatter.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_formatting.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_infer_base_unit.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_issues.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_log_units.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_matplotlib.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_measurement.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_non_int.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_numpy.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_numpy_func.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_pint_eval.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_pitheorem.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_quantity.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_systems.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_testing.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_umath.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_unit.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/testsuite/__pycache__/test_util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pint/__pycache__/util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "b429c457fd9b838f8abce08f8171c06615c0b53d956e9ce2428f0581060803e0",
+  "size": 260473,
+  "subdir": "noarch",
+  "timestamp": 1789769966000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/pint-0.26.1-pyhc364b38_0.conda",
+  "version": "0.26.1"
+}

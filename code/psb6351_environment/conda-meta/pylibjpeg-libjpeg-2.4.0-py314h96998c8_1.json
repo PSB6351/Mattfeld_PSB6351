@@ -1,0 +1,255 @@
+{
+  "build": "py314h96998c8_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "python",
+    "numpy >=2.0.0,<3.0.0",
+    "cython >=3.0.10",
+    "libstdcxx >=15",
+    "libgcc >=15",
+    "__glibc >=2.17,<3.0.a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/pylibjpeg-libjpeg-2.4.0-py314h96998c8_1",
+  "files": [
+    "lib/python3.14/site-packages/_libjpeg.cpython-314-x86_64-linux-gnu.so",
+    "lib/python3.14/site-packages/libjpeg/__init__.py",
+    "lib/python3.14/site-packages/libjpeg/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/__pycache__/utils.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/_libjpeg.cpp",
+    "lib/python3.14/site-packages/libjpeg/_libjpeg.pyx",
+    "lib/python3.14/site-packages/libjpeg/_version.py",
+    "lib/python3.14/site-packages/libjpeg/py.typed",
+    "lib/python3.14/site-packages/libjpeg/tests/README.rst",
+    "lib/python3.14/site-packages/libjpeg/tests/__init__.py",
+    "lib/python3.14/site-packages/libjpeg/tests/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_decode.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_handler.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_parameters.cpython-314.pyc",
+    "lib/python3.14/site-packages/libjpeg/tests/test_decode.py",
+    "lib/python3.14/site-packages/libjpeg/tests/test_handler.py",
+    "lib/python3.14/site-packages/libjpeg/tests/test_parameters.py",
+    "lib/python3.14/site-packages/libjpeg/utils.py",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/LICENSE",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/entry_points.txt"
+  ],
+  "fn": "pylibjpeg-libjpeg-2.4.0-py314h96998c8_1.conda",
+  "license": "GPL-3.0-only",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/pylibjpeg-libjpeg-2.4.0-py314h96998c8_1",
+    "type": 1
+  },
+  "md5": "e35e54ecb9c8f9610c9975f2c5a249cc",
+  "name": "pylibjpeg-libjpeg",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/pylibjpeg-libjpeg-2.4.0-py314h96998c8_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/_libjpeg.cpython-314-x86_64-linux-gnu.so",
+        "path_type": "hardlink",
+        "sha256": "19654ff7d3be138bf0bd8acfb88db4990e41adc480e38fbe0625b76d8a702020",
+        "sha256_in_prefix": "19654ff7d3be138bf0bd8acfb88db4990e41adc480e38fbe0625b76d8a702020",
+        "size_in_bytes": 2311368
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "4e730f8b31fc53bb0a66d449e455e112c2889d9dd3ff59921b2a46c754932015",
+        "sha256_in_prefix": "4e730f8b31fc53bb0a66d449e455e112c2889d9dd3ff59921b2a46c754932015",
+        "size_in_bytes": 153
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "b8299a0d77d6a17d789683090a5bb33eae786f6a938723c6fd7046118fe48fec",
+        "sha256_in_prefix": "b8299a0d77d6a17d789683090a5bb33eae786f6a938723c6fd7046118fe48fec",
+        "size_in_bytes": 581
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/__pycache__/_version.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0fcda61a5278291f71d2e3879d0be2bdd94673e7c1669f4f5792dccc3a38c473",
+        "sha256_in_prefix": "0fcda61a5278291f71d2e3879d0be2bdd94673e7c1669f4f5792dccc3a38c473",
+        "size_in_bytes": 833
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/__pycache__/utils.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9b89bb13858462a85d52779851b607a5e3838fefab88a8e7be51f4612df3ef0e",
+        "sha256_in_prefix": "9b89bb13858462a85d52779851b607a5e3838fefab88a8e7be51f4612df3ef0e",
+        "size_in_bytes": 11809
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/_libjpeg.cpp",
+        "path_type": "hardlink",
+        "sha256": "8579dc4c67b5a3b93afa5a460dc89a9c02a2aca3d56c6bcac239432ef6f88c55",
+        "sha256_in_prefix": "8579dc4c67b5a3b93afa5a460dc89a9c02a2aca3d56c6bcac239432ef6f88c55",
+        "size_in_bytes": 472629
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/_libjpeg.pyx",
+        "path_type": "hardlink",
+        "sha256": "0bbaf0e2a4e80bf4452660d165aaad6ff6cf7cf1c6a9de57f4e9553461f65499",
+        "sha256_in_prefix": "0bbaf0e2a4e80bf4452660d165aaad6ff6cf7cf1c6a9de57f4e9553461f65499",
+        "size_in_bytes": 3623
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/_version.py",
+        "path_type": "hardlink",
+        "sha256": "a8a7b826e7058badb3e5dbe2a409d7bd28bd2d1816aab8f04cee59b7fd795624",
+        "sha256_in_prefix": "a8a7b826e7058badb3e5dbe2a409d7bd28bd2d1816aab8f04cee59b7fd795624",
+        "size_in_bytes": 140
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/README.rst",
+        "path_type": "hardlink",
+        "sha256": "a6e4adebf3f77bcc7ddbf519e7c1dfe9da5b8a7683a13d9b5390bbbfbe2ac448",
+        "sha256_in_prefix": "a6e4adebf3f77bcc7ddbf519e7c1dfe9da5b8a7683a13d9b5390bbbfbe2ac448",
+        "size_in_bytes": 289
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e2908c945823ece63a559e5a7bdf73e57dfd0cd49185000f4951a00ff07a221d",
+        "sha256_in_prefix": "e2908c945823ece63a559e5a7bdf73e57dfd0cd49185000f4951a00ff07a221d",
+        "size_in_bytes": 242
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "65894943758da04c33f70355b2ae8d1458a4633066a38cd0fcc565bce7fcc2ee",
+        "sha256_in_prefix": "65894943758da04c33f70355b2ae8d1458a4633066a38cd0fcc565bce7fcc2ee",
+        "size_in_bytes": 648
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_decode.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6bfcf0dfb7090502a213fdc0bf201d306780e0dc8bd53e40e4b9650b15be72a4",
+        "sha256_in_prefix": "6bfcf0dfb7090502a213fdc0bf201d306780e0dc8bd53e40e4b9650b15be72a4",
+        "size_in_bytes": 27899
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_handler.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "c41048019041247d63cba60318413b32833d28aba73cbf06175d9532166d63ce",
+        "sha256_in_prefix": "c41048019041247d63cba60318413b32833d28aba73cbf06175d9532166d63ce",
+        "size_in_bytes": 54859
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/__pycache__/test_parameters.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "859ea39b19b206ac2b7ae7651282a4ef08debe3746572ec1937cba915584167c",
+        "sha256_in_prefix": "859ea39b19b206ac2b7ae7651282a4ef08debe3746572ec1937cba915584167c",
+        "size_in_bytes": 16959
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/test_decode.py",
+        "path_type": "hardlink",
+        "sha256": "3a0d19094ba27dad777184d0164335abb33da2d799fb3cd6011291a1b96763b4",
+        "sha256_in_prefix": "3a0d19094ba27dad777184d0164335abb33da2d799fb3cd6011291a1b96763b4",
+        "size_in_bytes": 21064
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/test_handler.py",
+        "path_type": "hardlink",
+        "sha256": "21c8d0da10f0b7bd29b221b74ff751e30c33d309d1a5dd939688bbb00c51cd16",
+        "sha256_in_prefix": "21c8d0da10f0b7bd29b221b74ff751e30c33d309d1a5dd939688bbb00c51cd16",
+        "size_in_bytes": 40925
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/tests/test_parameters.py",
+        "path_type": "hardlink",
+        "sha256": "d02a88a3962db2694c65b56fc77c144e33df786df61aebb37896e5b0e433f99f",
+        "sha256_in_prefix": "d02a88a3962db2694c65b56fc77c144e33df786df61aebb37896e5b0e433f99f",
+        "size_in_bytes": 12799
+      },
+      {
+        "_path": "lib/python3.14/site-packages/libjpeg/utils.py",
+        "path_type": "hardlink",
+        "sha256": "0aeb26151464f75746d7d2ef20ea339fb32445e3dac9809fc1decb2a609e9619",
+        "sha256_in_prefix": "0aeb26151464f75746d7d2ef20ea339fb32445e3dac9809fc1decb2a609e9619",
+        "size_in_bytes": 8847
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "4adc843b5affcbc1f273b08289031b984c280285af2b798e61502d9a7738a947",
+        "sha256_in_prefix": "4adc843b5affcbc1f273b08289031b984c280285af2b798e61502d9a7738a947",
+        "size_in_bytes": 32640
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "bb1ed7bc1bcf9d16ee370c28aaa80d39b43a84174df5e328501fc49d1d7265be",
+        "sha256_in_prefix": "bb1ed7bc1bcf9d16ee370c28aaa80d39b43a84174df5e328501fc49d1d7265be",
+        "size_in_bytes": 4752
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "635b37d1af8e5bdcebdd1791c75017944402ec7ea8eaccbf639d09644d139835",
+        "sha256_in_prefix": "635b37d1af8e5bdcebdd1791c75017944402ec7ea8eaccbf639d09644d139835",
+        "size_in_bytes": 2105
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "185fa441c9878a98c0bfcaa4e7157cb68d7b34b25dc58b3f06c93d712755fb4f",
+        "sha256_in_prefix": "185fa441c9878a98c0bfcaa4e7157cb68d7b34b25dc58b3f06c93d712755fb4f",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8cea1361ef1fc801345c15f7382f8c2cb8e1d396f6cfcbc65ad19971c34f529f",
+        "sha256_in_prefix": "8cea1361ef1fc801345c15f7382f8c2cb8e1d396f6cfcbc65ad19971c34f529f",
+        "size_in_bytes": 128
+      },
+      {
+        "_path": "lib/python3.14/site-packages/pylibjpeg_libjpeg-2.4.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "61f00e093fa5658ce62ec520fe6eff25069705ef586b289589a6546d73567fa4",
+        "sha256_in_prefix": "61f00e093fa5658ce62ec520fe6eff25069705ef586b289589a6546d73567fa4",
+        "size_in_bytes": 483
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "559260651d6f32d0240265c2a0ec7c4515e2364e6121edf3936a63d936b460bd",
+  "size": 689671,
+  "subdir": "linux-64",
+  "timestamp": 1790092526000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/pylibjpeg-libjpeg-2.4.0-py314h96998c8_1.conda",
+  "version": "2.4.0"
+}

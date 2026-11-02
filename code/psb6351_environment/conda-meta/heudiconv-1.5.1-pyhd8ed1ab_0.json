@@ -1,0 +1,865 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "dcm2niix",
+    "dcmstack",
+    "nibabel >=5.0",
+    "nipype",
+    "pathlib",
+    "pydicom",
+    "python >=3.9",
+    "rdflib"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/heudiconv-1.5.1-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/METADATA",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/RECORD",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/WHEEL",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/heudiconv-1.5.1.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/heudiconv/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/_version.py",
+    "lib/python3.14/site-packages/heudiconv/bids.py",
+    "lib/python3.14/site-packages/heudiconv/cli/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/cli/monitor.py",
+    "lib/python3.14/site-packages/heudiconv/cli/run.py",
+    "lib/python3.14/site-packages/heudiconv/convert.py",
+    "lib/python3.14/site-packages/heudiconv/dicoms.py",
+    "lib/python3.14/site-packages/heudiconv/due.py",
+    "lib/python3.14/site-packages/heudiconv/external/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/external/dlad.py",
+    "lib/python3.14/site-packages/heudiconv/external/tests/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/external/tests/test_dlad.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/banda-bids.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/bids_ME.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/bids_PhoenixReport.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/bids_with_ses.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/cmrr_heuristic.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/convertall.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/convertall_custom.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/example.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/multires_7Tbold.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/reproin.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/studyforrest_phase2.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/test_b0dwi_for_fmap.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/test_reproin.py",
+    "lib/python3.14/site-packages/heudiconv/heuristics/uc_bids.py",
+    "lib/python3.14/site-packages/heudiconv/info.py",
+    "lib/python3.14/site-packages/heudiconv/main.py",
+    "lib/python3.14/site-packages/heudiconv/parser.py",
+    "lib/python3.14/site-packages/heudiconv/py.typed",
+    "lib/python3.14/site-packages/heudiconv/queue.py",
+    "lib/python3.14/site-packages/heudiconv/tests/__init__.py",
+    "lib/python3.14/site-packages/heudiconv/tests/anonymize_script.py",
+    "lib/python3.14/site-packages/heudiconv/tests/conftest.py",
+    "lib/python3.14/site-packages/heudiconv/tests/data/01-anat-scout/0001.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/01-fmap_acq-3mm/1.3.12.2.1107.5.2.43.66112.2016101409263663466202201.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/MRI_102TD_PHA_S.MR.Chen_Matthews_1.3.1.2022.11.16.15.50.20.357.31204541.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/Phoenix/01+AA/01+AA+00001.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/Phoenix/99+PhoenixDocument/99+PhoenixDocument+00001.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/axasc35.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00001.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00002.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00003.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/phantom.dcm",
+    "lib/python3.14/site-packages/heudiconv/tests/data/sample_nifti.nii.gz",
+    "lib/python3.14/site-packages/heudiconv/tests/data/sample_nifti_params.txt",
+    "lib/python3.14/site-packages/heudiconv/tests/test_archives.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_bids.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_convert.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_dicoms.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_heuristics.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_main.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_monitor.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_queue.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_regression.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_setup.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_tarballs.py",
+    "lib/python3.14/site-packages/heudiconv/tests/test_utils.py",
+    "lib/python3.14/site-packages/heudiconv/tests/utils.py",
+    "lib/python3.14/site-packages/heudiconv/utils.py",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/bids.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/cli/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/cli/__pycache__/monitor.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/cli/__pycache__/run.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/convert.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/dicoms.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/due.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/external/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/external/__pycache__/dlad.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/external/tests/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/external/tests/__pycache__/test_dlad.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/banda-bids.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_ME.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_PhoenixReport.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_with_ses.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/cmrr_heuristic.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/convertall.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/convertall_custom.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/example.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/multires_7Tbold.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/reproin.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/studyforrest_phase2.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/test_b0dwi_for_fmap.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/test_reproin.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/uc_bids.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/info.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/main.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/queue.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/anonymize_script.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/conftest.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_archives.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_bids.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_convert.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_dicoms.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_heuristics.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_main.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_monitor.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_queue.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_regression.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_setup.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_tarballs.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_utils.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/tests/__pycache__/utils.cpython-314.pyc",
+    "lib/python3.14/site-packages/heudiconv/__pycache__/utils.cpython-314.pyc",
+    "bin/heudiconv",
+    "bin/heudiconv_monitor"
+  ],
+  "fn": "heudiconv-1.5.1-pyhd8ed1ab_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/heudiconv-1.5.1-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "2087721fdc181bb82141f4a314bb6950",
+  "name": "heudiconv",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/heudiconv-1.5.1-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ead5789bbcccd8092b1ebba2c58ff98ec660e495ffcde520dcf74250ffe090f0",
+        "sha256_in_prefix": "ead5789bbcccd8092b1ebba2c58ff98ec660e495ffcde520dcf74250ffe090f0",
+        "size_in_bytes": 8590
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "dea29bb9d7cbf5fb2bf3970b7872a736b995ca9c32712d0fa9eccc29b90b112b",
+        "sha256_in_prefix": "dea29bb9d7cbf5fb2bf3970b7872a736b995ca9c32712d0fa9eccc29b90b112b",
+        "size_in_bytes": 9523
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "9f024ab9c070b86cf66fb3865bc85ffd18ba4a5c562910a5857c14864d8377db",
+        "sha256_in_prefix": "9f024ab9c070b86cf66fb3865bc85ffd18ba4a5c562910a5857c14864d8377db",
+        "size_in_bytes": 105
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "1ae0209566932606190ce94139699a41d58ac0162aeb533778599c2433ca7ee3",
+        "sha256_in_prefix": "1ae0209566932606190ce94139699a41d58ac0162aeb533778599c2433ca7ee3",
+        "size_in_bytes": 100
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "72c1611ebdc93193caa1d1c5af8450cf5f8f83c7c173654f2ce79f5b8b7f7704",
+        "sha256_in_prefix": "72c1611ebdc93193caa1d1c5af8450cf5f8f83c7c173654f2ce79f5b8b7f7704",
+        "size_in_bytes": 789
+      },
+      {
+        "_path": "site-packages/heudiconv-1.5.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "ad8e7d002450f9f74038f0fcae9b972995d8c01bcbd3d4004dd1d2e9bcc8c8f4",
+        "sha256_in_prefix": "ad8e7d002450f9f74038f0fcae9b972995d8c01bcbd3d4004dd1d2e9bcc8c8f4",
+        "size_in_bytes": 10
+      },
+      {
+        "_path": "site-packages/heudiconv/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "76d41bd87a98d7d6867ac0c919788d3338fafc045ede23d34d6fe5aa49f100ac",
+        "sha256_in_prefix": "76d41bd87a98d7d6867ac0c919788d3338fafc045ede23d34d6fe5aa49f100ac",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "site-packages/heudiconv/_version.py",
+        "path_type": "hardlink",
+        "sha256": "f2b9b1877e179154fbcaee73818ba98a97c3acab368601828ce30420adc4e282",
+        "sha256_in_prefix": "f2b9b1877e179154fbcaee73818ba98a97c3acab368601828ce30420adc4e282",
+        "size_in_bytes": 22
+      },
+      {
+        "_path": "site-packages/heudiconv/bids.py",
+        "path_type": "hardlink",
+        "sha256": "64f634e2638bcc1824180a7c800b0e148d8d00b72dba2312e35ea59bc780a8ee",
+        "sha256_in_prefix": "64f634e2638bcc1824180a7c800b0e148d8d00b72dba2312e35ea59bc780a8ee",
+        "size_in_bytes": 43932
+      },
+      {
+        "_path": "site-packages/heudiconv/cli/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/cli/monitor.py",
+        "path_type": "hardlink",
+        "sha256": "5188f43e50972de6d30f53ec282b286316c51e6d5a156e5460f907c34b8b340b",
+        "sha256_in_prefix": "5188f43e50972de6d30f53ec282b286316c51e6d5a156e5460f907c34b8b340b",
+        "size_in_bytes": 5901
+      },
+      {
+        "_path": "site-packages/heudiconv/cli/run.py",
+        "path_type": "hardlink",
+        "sha256": "bab0771b41448c81647f304f70cedc9f2c3e8272c2eb09c798eaf8739f8fa4e7",
+        "sha256_in_prefix": "bab0771b41448c81647f304f70cedc9f2c3e8272c2eb09c798eaf8739f8fa4e7",
+        "size_in_bytes": 7231
+      },
+      {
+        "_path": "site-packages/heudiconv/convert.py",
+        "path_type": "hardlink",
+        "sha256": "a636cf96228f1349b0a63b5f67607930b04e8789aa8bf590e3fcbac6e2a96ece",
+        "sha256_in_prefix": "a636cf96228f1349b0a63b5f67607930b04e8789aa8bf590e3fcbac6e2a96ece",
+        "size_in_bytes": 40666
+      },
+      {
+        "_path": "site-packages/heudiconv/dicoms.py",
+        "path_type": "hardlink",
+        "sha256": "682abf2fbb46891e7df23b034aa8f9d00ad493fb1cfa7b441c24b5a0fd961ac9",
+        "sha256_in_prefix": "682abf2fbb46891e7df23b034aa8f9d00ad493fb1cfa7b441c24b5a0fd961ac9",
+        "size_in_bytes": 28459
+      },
+      {
+        "_path": "site-packages/heudiconv/due.py",
+        "path_type": "hardlink",
+        "sha256": "393e62724b5ef92fbc8484ff5669422787a10da3ffc40d65ebda2292f17b0a1b",
+        "sha256_in_prefix": "393e62724b5ef92fbc8484ff5669422787a10da3ffc40d65ebda2292f17b0a1b",
+        "size_in_bytes": 2021
+      },
+      {
+        "_path": "site-packages/heudiconv/external/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/external/dlad.py",
+        "path_type": "hardlink",
+        "sha256": "7e5c16d1b5b3565f3d46a3456384225a709e4a217e260446c373a5413a19d0d8",
+        "sha256_in_prefix": "7e5c16d1b5b3565f3d46a3456384225a709e4a217e260446c373a5413a19d0d8",
+        "size_in_bytes": 7393
+      },
+      {
+        "_path": "site-packages/heudiconv/external/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/external/tests/test_dlad.py",
+        "path_type": "hardlink",
+        "sha256": "5a5dd9094d1548c2f8381ecccf048b8306334a69cfcdb91aeadfb70a1b4f082c",
+        "sha256_in_prefix": "5a5dd9094d1548c2f8381ecccf048b8306334a69cfcdb91aeadfb70a1b4f082c",
+        "size_in_bytes": 1455
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/banda-bids.py",
+        "path_type": "hardlink",
+        "sha256": "5474319eec72d081f77d9f5a0204824ec16fa19e86bc4623964dbd6748a9a536",
+        "sha256_in_prefix": "5474319eec72d081f77d9f5a0204824ec16fa19e86bc4623964dbd6748a9a536",
+        "size_in_bytes": 4845
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/bids_ME.py",
+        "path_type": "hardlink",
+        "sha256": "feaf03d7116f11c0adb2d91500fdd4bb8f2449f591f29febef69149b189efbd6",
+        "sha256_in_prefix": "feaf03d7116f11c0adb2d91500fdd4bb8f2449f591f29febef69149b189efbd6",
+        "size_in_bytes": 1721
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/bids_PhoenixReport.py",
+        "path_type": "hardlink",
+        "sha256": "19b771fd3c88c94d3dec33d15adf6f0ae2417f3b531fd872ba2df83961ad5686",
+        "sha256_in_prefix": "19b771fd3c88c94d3dec33d15adf6f0ae2417f3b531fd872ba2df83961ad5686",
+        "size_in_bytes": 1923
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/bids_with_ses.py",
+        "path_type": "hardlink",
+        "sha256": "d07bb333c0b8dd7fd202f0e985955b4e200cf1535fb3be7a0bed7b29881d8621",
+        "sha256_in_prefix": "d07bb333c0b8dd7fd202f0e985955b4e200cf1535fb3be7a0bed7b29881d8621",
+        "size_in_bytes": 3723
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/cmrr_heuristic.py",
+        "path_type": "hardlink",
+        "sha256": "ae2205ac5d2d820acee98910ebad4c989881bafa2b2aaea39779fbe9c871f392",
+        "sha256_in_prefix": "ae2205ac5d2d820acee98910ebad4c989881bafa2b2aaea39779fbe9c871f392",
+        "size_in_bytes": 4651
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/convertall.py",
+        "path_type": "hardlink",
+        "sha256": "15f4382f89845029fbcd31b7e2443ff71dfdae2b9cc103563dfe64916adcf3ee",
+        "sha256_in_prefix": "15f4382f89845029fbcd31b7e2443ff71dfdae2b9cc103563dfe64916adcf3ee",
+        "size_in_bytes": 1575
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/convertall_custom.py",
+        "path_type": "hardlink",
+        "sha256": "7b732fdcb582a3d691bf7ec2c4a68667ab463077eb3f16099753c82040f7f096",
+        "sha256_in_prefix": "7b732fdcb582a3d691bf7ec2c4a68667ab463077eb3f16099753c82040f7f096",
+        "size_in_bytes": 1062
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/example.py",
+        "path_type": "hardlink",
+        "sha256": "2fbfc0228096fbb7ba2c79269b172a73172dac106854cea2f6acae8b6b496834",
+        "sha256_in_prefix": "2fbfc0228096fbb7ba2c79269b172a73172dac106854cea2f6acae8b6b496834",
+        "size_in_bytes": 5433
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/multires_7Tbold.py",
+        "path_type": "hardlink",
+        "sha256": "f1c15576a4d59b79d4288c46ff01485f0573e01fd1c56bbe896d6904d280faf6",
+        "sha256_in_prefix": "f1c15576a4d59b79d4288c46ff01485f0573e01fd1c56bbe896d6904d280faf6",
+        "size_in_bytes": 2926
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/reproin.py",
+        "path_type": "hardlink",
+        "sha256": "35229e7ef6eca48735171b1a21b3a97c918b6a8f9578a16341c67b6bb09e380a",
+        "sha256_in_prefix": "35229e7ef6eca48735171b1a21b3a97c918b6a8f9578a16341c67b6bb09e380a",
+        "size_in_bytes": 40091
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/studyforrest_phase2.py",
+        "path_type": "hardlink",
+        "sha256": "861a0ba3be31e9674bbbd2cb013b82046e4d8fb9915b0c7a69c25d661c2095d9",
+        "sha256_in_prefix": "861a0ba3be31e9674bbbd2cb013b82046e4d8fb9915b0c7a69c25d661c2095d9",
+        "size_in_bytes": 2031
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/test_b0dwi_for_fmap.py",
+        "path_type": "hardlink",
+        "sha256": "10ecf8365fbdb489e68769a086d16e264b05bda193c098814255369a2826cea2",
+        "sha256_in_prefix": "10ecf8365fbdb489e68769a086d16e264b05bda193c098814255369a2826cea2",
+        "size_in_bytes": 1470
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/test_reproin.py",
+        "path_type": "hardlink",
+        "sha256": "7fea12d88d7f07a65f2a18d93b0ff2d5e8bfb9856ab7bc5da67efeaba81d3bf8",
+        "sha256_in_prefix": "7fea12d88d7f07a65f2a18d93b0ff2d5e8bfb9856ab7bc5da67efeaba81d3bf8",
+        "size_in_bytes": 13397
+      },
+      {
+        "_path": "site-packages/heudiconv/heuristics/uc_bids.py",
+        "path_type": "hardlink",
+        "sha256": "78cfb5f47b13d4fdb7b6306d434966d4a2b004cc09630a8b6d0d979fde4c44a4",
+        "sha256_in_prefix": "78cfb5f47b13d4fdb7b6306d434966d4a2b004cc09630a8b6d0d979fde4c44a4",
+        "size_in_bytes": 3492
+      },
+      {
+        "_path": "site-packages/heudiconv/info.py",
+        "path_type": "hardlink",
+        "sha256": "a01f4fd6a5824965abc70a8660ec1d5824684d922f92856f5afdabc3c14292c1",
+        "sha256_in_prefix": "a01f4fd6a5824965abc70a8660ec1d5824684d922f92856f5afdabc3c14292c1",
+        "size_in_bytes": 450
+      },
+      {
+        "_path": "site-packages/heudiconv/main.py",
+        "path_type": "hardlink",
+        "sha256": "4a686dbb7d88cdc461ebe6031e68022ff78bf2d31fc7feb353e2078675849631",
+        "sha256_in_prefix": "4a686dbb7d88cdc461ebe6031e68022ff78bf2d31fc7feb353e2078675849631",
+        "size_in_bytes": 19442
+      },
+      {
+        "_path": "site-packages/heudiconv/parser.py",
+        "path_type": "hardlink",
+        "sha256": "6ccc7cbc278232c411c48a9b330cc60c4f55b98c6a24df3e7988725e8bc77f7d",
+        "sha256_in_prefix": "6ccc7cbc278232c411c48a9b330cc60c4f55b98c6a24df3e7988725e8bc77f7d",
+        "size_in_bytes": 11882
+      },
+      {
+        "_path": "site-packages/heudiconv/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/queue.py",
+        "path_type": "hardlink",
+        "sha256": "a86a950919371cd38d76b32b5841cb884dbb290e6cee329ff4e357b09acb11b6",
+        "sha256_in_prefix": "a86a950919371cd38d76b32b5841cb884dbb290e6cee329ff4e357b09acb11b6",
+        "size_in_bytes": 3336
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/anonymize_script.py",
+        "path_type": "hardlink",
+        "sha256": "e7bcb88ef02009d7b1b0432634f8a70bf039b6f380273be18bc1195a14862297",
+        "sha256_in_prefix": "e7bcb88ef02009d7b1b0432634f8a70bf039b6f380273be18bc1195a14862297",
+        "size_in_bytes": 414
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/conftest.py",
+        "path_type": "hardlink",
+        "sha256": "204ffd6c562ccfb3a7a1c6539fc4f1888a002d0a9f12d0d6e35f522e97b58656",
+        "sha256_in_prefix": "204ffd6c562ccfb3a7a1c6539fc4f1888a002d0a9f12d0d6e35f522e97b58656",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/01-anat-scout/0001.dcm",
+        "path_type": "hardlink",
+        "sha256": "097d495fbc5dd6075e9a04f1b8d26e6486a4041e1bc9265b2b66d343b32c037e",
+        "sha256_in_prefix": "097d495fbc5dd6075e9a04f1b8d26e6486a4041e1bc9265b2b66d343b32c037e",
+        "size_in_bytes": 174070
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/01-fmap_acq-3mm/1.3.12.2.1107.5.2.43.66112.2016101409263663466202201.dcm",
+        "path_type": "hardlink",
+        "sha256": "a29b385abb751745541a609edc185ad814758e510d6eaa9d685e397677c37749",
+        "sha256_in_prefix": "a29b385abb751745541a609edc185ad814758e510d6eaa9d685e397677c37749",
+        "size_in_bytes": 122162
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/MRI_102TD_PHA_S.MR.Chen_Matthews_1.3.1.2022.11.16.15.50.20.357.31204541.dcm",
+        "path_type": "hardlink",
+        "sha256": "32819bfd02b9be68395c6cfcb4bb89694c4d92c0c41ec51040a20d3e24cbcefb",
+        "sha256_in_prefix": "32819bfd02b9be68395c6cfcb4bb89694c4d92c0c41ec51040a20d3e24cbcefb",
+        "size_in_bytes": 316172
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/Phoenix/01+AA/01+AA+00001.dcm",
+        "path_type": "hardlink",
+        "sha256": "c3603d397f8a262a295e5ebcd21bde2b27abd1d0e83ed0848b5ada1f2f0834b6",
+        "sha256_in_prefix": "c3603d397f8a262a295e5ebcd21bde2b27abd1d0e83ed0848b5ada1f2f0834b6",
+        "size_in_bytes": 207270
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/Phoenix/99+PhoenixDocument/99+PhoenixDocument+00001.dcm",
+        "path_type": "hardlink",
+        "sha256": "3f935633ae8c9fc1dac1c824a0d6f1bc47ffed025975fb97f5a786a524289f3c",
+        "sha256_in_prefix": "3f935633ae8c9fc1dac1c824a0d6f1bc47ffed025975fb97f5a786a524289f3c",
+        "size_in_bytes": 255416
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/axasc35.dcm",
+        "path_type": "hardlink",
+        "sha256": "230b7cac146705fc3bce34e77d2fdbf7004d7cbaa782a7bd335191b8bfb0eb45",
+        "sha256_in_prefix": "230b7cac146705fc3bce34e77d2fdbf7004d7cbaa782a7bd335191b8bfb0eb45",
+        "size_in_bytes": 383456
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00001.dcm",
+        "path_type": "hardlink",
+        "sha256": "33b354da1a25f0f150c71b59fdc26a901f4b247cb4d66c452bfe2a464b2d82fa",
+        "sha256_in_prefix": "33b354da1a25f0f150c71b59fdc26a901f4b247cb4d66c452bfe2a464b2d82fa",
+        "size_in_bytes": 3933300
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00002.dcm",
+        "path_type": "hardlink",
+        "sha256": "5345d23bef51776a7a28b5abde3c3ed929c050895adb9485c86fac3544201d3e",
+        "sha256_in_prefix": "5345d23bef51776a7a28b5abde3c3ed929c050895adb9485c86fac3544201d3e",
+        "size_in_bytes": 3933296
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/b0dwiForFmap/b0dwi_for_fmap+00003.dcm",
+        "path_type": "hardlink",
+        "sha256": "c68968e724433aface92f7b9548f6fb4974a37ca213da23579b2ed3ed2474198",
+        "sha256_in_prefix": "c68968e724433aface92f7b9548f6fb4974a37ca213da23579b2ed3ed2474198",
+        "size_in_bytes": 3933300
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/phantom.dcm",
+        "path_type": "hardlink",
+        "sha256": "3c59f65dbe7c6fdcd0753a1d92f8c9ed413cb50cb6e53bebd6a3523f7e1b0fbb",
+        "sha256_in_prefix": "3c59f65dbe7c6fdcd0753a1d92f8c9ed413cb50cb6e53bebd6a3523f7e1b0fbb",
+        "size_in_bytes": 162304
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/sample_nifti.nii.gz",
+        "path_type": "hardlink",
+        "sha256": "899af0cbee4dc9697be0f82ae7cf75eb99317e80db6d2db4acd7682672b632b4",
+        "sha256_in_prefix": "899af0cbee4dc9697be0f82ae7cf75eb99317e80db6d2db4acd7682672b632b4",
+        "size_in_bytes": 172
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/data/sample_nifti_params.txt",
+        "path_type": "hardlink",
+        "sha256": "1ec3be26a5079fc1e35bc6257d9257d8eafff26d74e8b346ccb6720039b2c172",
+        "sha256_in_prefix": "1ec3be26a5079fc1e35bc6257d9257d8eafff26d74e8b346ccb6720039b2c172",
+        "size_in_bytes": 165
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_archives.py",
+        "path_type": "hardlink",
+        "sha256": "d1fe3d81f28d554c784702550a9eac2a1fddef9fdd422070ed1788bbd5878f2b",
+        "sha256_in_prefix": "d1fe3d81f28d554c784702550a9eac2a1fddef9fdd422070ed1788bbd5878f2b",
+        "size_in_bytes": 2526
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_bids.py",
+        "path_type": "hardlink",
+        "sha256": "70263c87a4241a9610132adc2cb816e1bdee29a4a22728862b2717d2b8276297",
+        "sha256_in_prefix": "70263c87a4241a9610132adc2cb816e1bdee29a4a22728862b2717d2b8276297",
+        "size_in_bytes": 57699
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_convert.py",
+        "path_type": "hardlink",
+        "sha256": "7bd0f5a07272243525e982fcf979d6a9df6264fcd054655b2f4a2b0d15f94904",
+        "sha256_in_prefix": "7bd0f5a07272243525e982fcf979d6a9df6264fcd054655b2f4a2b0d15f94904",
+        "size_in_bytes": 11064
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_dicoms.py",
+        "path_type": "hardlink",
+        "sha256": "abc423a6cc8a226a3fd0b64171d7bbd9d8e46f7b9ea32721544e92ba495efd11",
+        "sha256_in_prefix": "abc423a6cc8a226a3fd0b64171d7bbd9d8e46f7b9ea32721544e92ba495efd11",
+        "size_in_bytes": 11604
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_heuristics.py",
+        "path_type": "hardlink",
+        "sha256": "dc8286e72ec875ef41341a7e2d6d252bf8017db99a4b453da8b760d61f8ee387",
+        "sha256_in_prefix": "dc8286e72ec875ef41341a7e2d6d252bf8017db99a4b453da8b760d61f8ee387",
+        "size_in_bytes": 7547
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_main.py",
+        "path_type": "hardlink",
+        "sha256": "2592b46172557fe5b1be2b21d15169b0a8ee751c9f7f93aa8845e6c93bce341b",
+        "sha256_in_prefix": "2592b46172557fe5b1be2b21d15169b0a8ee751c9f7f93aa8845e6c93bce341b",
+        "size_in_bytes": 14312
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_monitor.py",
+        "path_type": "hardlink",
+        "sha256": "54c7c70811ca5a51f49adbc085984ffea9e8175e8713ac10b4811151e0aecc92",
+        "sha256_in_prefix": "54c7c70811ca5a51f49adbc085984ffea9e8175e8713ac10b4811151e0aecc92",
+        "size_in_bytes": 4437
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_queue.py",
+        "path_type": "hardlink",
+        "sha256": "570491f5db27183ed59296373997159fb203dedea82c183001d36199e4cb377c",
+        "sha256_in_prefix": "570491f5db27183ed59296373997159fb203dedea82c183001d36199e4cb377c",
+        "size_in_bytes": 2508
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_regression.py",
+        "path_type": "hardlink",
+        "sha256": "48dad4a97c2589e742536a7c49c4b9288732a71d3fab6e25000f02cb84283c92",
+        "sha256_in_prefix": "48dad4a97c2589e742536a7c49c4b9288732a71d3fab6e25000f02cb84283c92",
+        "size_in_bytes": 6037
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_setup.py",
+        "path_type": "hardlink",
+        "sha256": "c3b5da98daf710f8fe0891ee4fd57710cb0bef81ec00d980b571d01c090bcaa9",
+        "sha256_in_prefix": "c3b5da98daf710f8fe0891ee4fd57710cb0bef81ec00d980b571d01c090bcaa9",
+        "size_in_bytes": 1502
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_tarballs.py",
+        "path_type": "hardlink",
+        "sha256": "1c923108d58f5a408312fa146698690b356bb5c3d45afd2a94e52c357016b292",
+        "sha256_in_prefix": "1c923108d58f5a408312fa146698690b356bb5c3d45afd2a94e52c357016b292",
+        "size_in_bytes": 949
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/test_utils.py",
+        "path_type": "hardlink",
+        "sha256": "1e1f08758a1d52816542f9a66513925136dd20e7f81e649cc2d221667238e370",
+        "sha256_in_prefix": "1e1f08758a1d52816542f9a66513925136dd20e7f81e649cc2d221667238e370",
+        "size_in_bytes": 9655
+      },
+      {
+        "_path": "site-packages/heudiconv/tests/utils.py",
+        "path_type": "hardlink",
+        "sha256": "99209aed8932157e470049705fe90baf93a035c7b590da321dbf07a3ebbcd3ef",
+        "sha256_in_prefix": "99209aed8932157e470049705fe90baf93a035c7b590da321dbf07a3ebbcd3ef",
+        "size_in_bytes": 2342
+      },
+      {
+        "_path": "site-packages/heudiconv/utils.py",
+        "path_type": "hardlink",
+        "sha256": "fcf81f1fc19a321593f4aa4da51a2e10a5cf782e3fdf3274e1c69e0cf6d5ad14",
+        "sha256_in_prefix": "fcf81f1fc19a321593f4aa4da51a2e10a5cf782e3fdf3274e1c69e0cf6d5ad14",
+        "size_in_bytes": 27131
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/_version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/bids.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/cli/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/cli/__pycache__/monitor.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/cli/__pycache__/run.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/convert.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/dicoms.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/due.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/external/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/external/__pycache__/dlad.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/external/tests/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/external/tests/__pycache__/test_dlad.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/banda-bids.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_ME.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_PhoenixReport.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/bids_with_ses.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/cmrr_heuristic.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/convertall.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/convertall_custom.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/example.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/multires_7Tbold.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/reproin.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/studyforrest_phase2.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/test_b0dwi_for_fmap.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/test_reproin.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/heuristics/__pycache__/uc_bids.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/info.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/main.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/queue.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/anonymize_script.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/conftest.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_archives.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_bids.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_convert.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_dicoms.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_heuristics.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_main.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_monitor.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_queue.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_regression.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_setup.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_tarballs.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/test_utils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/tests/__pycache__/utils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/heudiconv/__pycache__/utils.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "bin/heudiconv",
+        "path_type": "unix_python_entry_point"
+      },
+      {
+        "_path": "bin/heudiconv_monitor",
+        "path_type": "unix_python_entry_point"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "heudiconv",
+  "sha256": "2164d402f1383ec9c18e16db18fdc6088eb328c0bc0837e1d8bd86bd615c5446",
+  "size": 8621794,
+  "subdir": "noarch",
+  "timestamp": 1790139259000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/heudiconv-1.5.1-pyhd8ed1ab_0.conda",
+  "version": "1.5.1"
+}

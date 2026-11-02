@@ -1,0 +1,251 @@
+{
+  "build": "pyh5ded981_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "typing_extensions",
+    "python >=3.11",
+    "typing-extensions",
+    "python"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/flexparser-0.4-pyh5ded981_2",
+  "files": [
+    "lib/python3.14/site-packages/flexparser/__init__.py",
+    "lib/python3.14/site-packages/flexparser/flexparser.py",
+    "lib/python3.14/site-packages/flexparser/py.typed",
+    "lib/python3.14/site-packages/flexparser/testsuite/__init__.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/bla1.txt",
+    "lib/python3.14/site-packages/flexparser/testsuite/bla2.txt",
+    "lib/python3.14/site-packages/flexparser/testsuite/common.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/test_element_block.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/test_iterators.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/test_parser.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/test_project.py",
+    "lib/python3.14/site-packages/flexparser/testsuite/test_util.py",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/METADATA",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/RECORD",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/WHEEL",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/licenses/AUTHORS",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/flexparser-0.4.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/flexparser/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/__pycache__/flexparser.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/common.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_element_block.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_iterators.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_project.cpython-314.pyc",
+    "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_util.cpython-314.pyc"
+  ],
+  "fn": "flexparser-0.4-pyh5ded981_2.conda",
+  "license": "BSD-3-Clause",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/flexparser-0.4-pyh5ded981_2",
+    "type": 1
+  },
+  "md5": "5960ecf63e2d46f99dbfafa851c2206b",
+  "name": "flexparser",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/flexparser-0.4-pyh5ded981_2.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/flexparser/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f8e6d1e47793dd8d69b83e59060d9d4377566ccd81903e29499ccc4321968d08",
+        "sha256_in_prefix": "f8e6d1e47793dd8d69b83e59060d9d4377566ccd81903e29499ccc4321968d08",
+        "size_in_bytes": 1665
+      },
+      {
+        "_path": "site-packages/flexparser/flexparser.py",
+        "path_type": "hardlink",
+        "sha256": "a2fccf88840dfde1bd1e489b2dad39411f113acda65840f4ffb6f3502ffe3f1b",
+        "sha256_in_prefix": "a2fccf88840dfde1bd1e489b2dad39411f113acda65840f4ffb6f3502ffe3f1b",
+        "size_in_bytes": 55631
+      },
+      {
+        "_path": "site-packages/flexparser/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/bla1.txt",
+        "path_type": "hardlink",
+        "sha256": "50f904f80cb8216b0f65275bd4bbfd1fa00df3cc15931a11fa3a468c0b73ad6a",
+        "sha256_in_prefix": "50f904f80cb8216b0f65275bd4bbfd1fa00df3cc15931a11fa3a468c0b73ad6a",
+        "size_in_bytes": 24
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/bla2.txt",
+        "path_type": "hardlink",
+        "sha256": "17d9d01d29f9eb4a4d3063b1372b4b6a230acc66c47a74689b09eb4fd7714c7d",
+        "sha256_in_prefix": "17d9d01d29f9eb4a4d3063b1372b4b6a230acc66c47a74689b09eb4fd7714c7d",
+        "size_in_bytes": 13
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/common.py",
+        "path_type": "hardlink",
+        "sha256": "00a38843ba9a29ccc6b66ad742a24dd60f35fc3ea8adec0ec5978669e68f5d4c",
+        "sha256_in_prefix": "00a38843ba9a29ccc6b66ad742a24dd60f35fc3ea8adec0ec5978669e68f5d4c",
+        "size_in_bytes": 2384
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/test_element_block.py",
+        "path_type": "hardlink",
+        "sha256": "94605284d4c21e84c7aaecc8b8bfbbaaa9777eba4a90d2c5a00f2318d61a3f7a",
+        "sha256_in_prefix": "94605284d4c21e84c7aaecc8b8bfbbaaa9777eba4a90d2c5a00f2318d61a3f7a",
+        "size_in_bytes": 6250
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/test_iterators.py",
+        "path_type": "hardlink",
+        "sha256": "cdf47366f83e4d7786cdd68025a94181a4bd8481f7dc7643b14d5be2b988a299",
+        "sha256_in_prefix": "cdf47366f83e4d7786cdd68025a94181a4bd8481f7dc7643b14d5be2b988a299",
+        "size_in_bytes": 8457
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/test_parser.py",
+        "path_type": "hardlink",
+        "sha256": "6d2e8b85ad8be333391f940e5ccdf964254009ecd56f3c53d31c663db3b18a6d",
+        "sha256_in_prefix": "6d2e8b85ad8be333391f940e5ccdf964254009ecd56f3c53d31c663db3b18a6d",
+        "size_in_bytes": 5070
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/test_project.py",
+        "path_type": "hardlink",
+        "sha256": "37521ca54aa53aaa20f7f4bc4a87340ace009ece7a7502dbbbd1077feb3ee14a",
+        "sha256_in_prefix": "37521ca54aa53aaa20f7f4bc4a87340ace009ece7a7502dbbbd1077feb3ee14a",
+        "size_in_bytes": 9834
+      },
+      {
+        "_path": "site-packages/flexparser/testsuite/test_util.py",
+        "path_type": "hardlink",
+        "sha256": "b3a984f268008fddfa3ee209844147b23a1e6c9cceaf25f719ab11c71ae6eb58",
+        "sha256_in_prefix": "b3a984f268008fddfa3ee209844147b23a1e6c9cceaf25f719ab11c71ae6eb58",
+        "size_in_bytes": 1682
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "sha256_in_prefix": "bc33022edcb7639ff53355b4e91dade50a0bbf0299efeb6171d1ec0ba5029cfc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "c0e28db3c9f33f2ffb9c62a7036c4922c9a3f7b396dce9c5fb162595cbacb0e5",
+        "sha256_in_prefix": "c0e28db3c9f33f2ffb9c62a7036c4922c9a3f7b396dce9c5fb162595cbacb0e5",
+        "size_in_bytes": 18680
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "49e20da4b603ecdb74ca1182009df5859413b5910e4e6cde60b0efcb509a64af",
+        "sha256_in_prefix": "49e20da4b603ecdb74ca1182009df5859413b5910e4e6cde60b0efcb509a64af",
+        "size_in_bytes": 2387
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "7b2911ae9302363f13b0183ba98be7c73d28852698ee8e5cc46cdc9d205d4a8c",
+        "sha256_in_prefix": "7b2911ae9302363f13b0183ba98be7c73d28852698ee8e5cc46cdc9d205d4a8c",
+        "size_in_bytes": 121
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/licenses/AUTHORS",
+        "path_type": "hardlink",
+        "sha256": "8f5316068b6ab607680f9edc264f52a6c97e214d1af9c76d990e84a3aa37003d",
+        "sha256_in_prefix": "8f5316068b6ab607680f9edc264f52a6c97e214d1af9c76d990e84a3aa37003d",
+        "size_in_bytes": 84
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "a276fa944e6becfe51ae313094cb048f7aa6c2e5cc823138e8c1e74f73f79d61",
+        "sha256_in_prefix": "a276fa944e6becfe51ae313094cb048f7aa6c2e5cc823138e8c1e74f73f79d61",
+        "size_in_bytes": 1584
+      },
+      {
+        "_path": "site-packages/flexparser-0.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "bf8ebd244fb6c37e5eaeef804133370d6f481a7621fa06f8674b1c2c11487e5b",
+        "sha256_in_prefix": "bf8ebd244fb6c37e5eaeef804133370d6f481a7621fa06f8674b1c2c11487e5b",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/__pycache__/flexparser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/common.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_element_block.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_iterators.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_parser.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_project.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/flexparser/testsuite/__pycache__/test_util.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "0a9caab09609fed3a84c3594b62751b3cd7b0d953a7a631175aa3f2c4052765a",
+  "size": 30745,
+  "subdir": "noarch",
+  "timestamp": 1788605800000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/flexparser-0.4-pyh5ded981_2.conda",
+  "version": "0.4"
+}

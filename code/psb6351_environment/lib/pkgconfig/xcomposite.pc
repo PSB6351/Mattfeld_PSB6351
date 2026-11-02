@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: Xcomposite
+Description: X Composite Extension Library
+URL: https://gitlab.freedesktop.org/xorg/lib/libxcomposite/
+Version: 0.4.7
+Requires: xproto compositeproto >= 0.4
+Requires.private: x11 xfixes
+Libs: -L${libdir} -lXcomposite
+Cflags: -I${includedir}

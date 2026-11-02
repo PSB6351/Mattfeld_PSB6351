@@ -1,0 +1,585 @@
+[build-system]
+requires = ["setuptools>=80.0"]
+# We need access to the 'setupbase' module at build time.
+# Hence we declare a custom build backend.
+build-backend = "_build_meta"  # just re-exports setuptools.build_meta definitions
+backend-path = ["."]
+
+[project]
+name = "ipython"
+description = "IPython: Productive Interactive Computing"
+keywords = ["Interactive", "Interpreter", "Shell", "Embedding"]
+classifiers = [
+    "Framework :: IPython",
+    "Framework :: Jupyter",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Shells",
+]
+license = "BSD-3-Clause"
+license-files = ["LICENSE", "COPYING.rst"]
+requires-python = ">=3.11"
+dependencies = [
+    'colorama>=0.4.4; sys_platform == "win32"',
+    "ipython-pygments-lexers>=1.0.0",
+    "jedi>=0.18.2",
+    "matplotlib-inline>=0.1.6",
+    'pexpect>4.6; sys_platform != "win32" and sys_platform != "emscripten"',
+    "prompt_toolkit>=3.0.41,<3.1.0",
+    'psutil>=7; sys_platform != "emscripten" and sys_platform != "cygwin"',
+    "pygments>=2.14.0", # wheel
+    "stack_data>=0.6.0",
+    "traitlets>=5.13.0",
+    "typing_extensions>=4.6; python_version<'3.12'",
+]
+dynamic = ["authors", "version"]
+
+[project.scripts]
+ipython = "IPython:start_ipython"
+ipython3 = "IPython:start_ipython"
+
+[project.readme]
+file = "long_description.rst"
+content-type = "text/x-rst"
+
+[project.urls]
+Homepage = "https://ipython.org"
+Documentation = "https://ipython.readthedocs.io/"
+Funding = "https://jupyter.org/about#donate"
+Source = "https://github.com/ipython/ipython"
+Tracker = "https://github.com/ipython/ipython/issues"
+
+[project.optional-dependencies]
+black = [
+    "black",
+]
+doc = [
+    "docrepr",
+    "exceptiongroup",
+    "intersphinx_registry",
+    "ipykernel",
+    "ipython[test,matplotlib]",
+    "setuptools>=80.0",
+    "sphinx_toml==0.0.4",
+    "sphinx-rtd-theme>=0.1.8", # wheel
+    "sphinx>=8.0",
+    "typing_extensions",
+]
+test = [
+    "pytest>=7.0.0", # keep in sync with tool.pytest.ini_options.minversion
+    "pytest-asyncio>=1.0.0",
+    "testpath>=0.2",
+    "packaging>=23.0.0",
+    "setuptools>=80.0",
+]
+test_extra = [
+    "ipython[test]",
+    "curio",
+    "jupyter_ai",
+    "ipython[matplotlib]",
+    "nbformat",
+    "nbclient",
+    "ipykernel>6.30",
+    "numpy>=2.0",
+    "pandas>2.1",
+    "trio>=0.22.0",
+]
+matplotlib = [
+   "matplotlib>3.9"
+]
+all = [
+    "ipython[doc,matplotlib,test,test_extra]",
+    "argcomplete>=3.0",
+]
+
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+follow_imports = 'silent'
+exclude = [
+   'test_\.+\.py',
+   'IPython.utils.tests.test_wildcard',
+   'testing',
+   'tests',
+   'IPython/core/application.py',
+   'IPython/core/profileapp.py',
+   'IPython/lib/deepreload.py',
+   'IPython/sphinxext/ipython_directive.py',
+   'IPython/terminal/ipapp.py',
+   'IPython/utils/path.py',
+   'IPython/core/debugger_backport.py',
+]
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+# ignore_errors = false
+# ignore_missing_imports = false
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
+warn_unreachable = true
+enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+
+[[tool.mypy.overrides]]
+module = "sphinx.*"
+follow_imports = "skip"
+#warn_unreachable = true
+#strict = true
+
+[[tool.mypy.overrides]]
+# numpy's stubs use PEP 695 `type` statements (3.12+), which mypy rejects
+# when parsing under python_version = "3.11". Skip following its stubs.
+module = "numpy.*"
+follow_imports = "skip"
+follow_imports_for_stubs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.events",
+    "IPython.core.magic",
+    "IPython.utils._process_common",
+    "IPython.utils._process_win32",
+]
+# Strictest configuration, everything turned up to the max
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+warn_return_any = true
+warn_unused_ignores = true
+warn_unreachable = true
+strict_equality = true
+no_implicit_optional = true
+ignore_errors = false
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.ultratb",
+]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = false
+disallow_untyped_decorators = true
+disallow_untyped_defs = false
+ignore_errors = false
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.crashhandler",
+    "IPython.utils.text",
+    "IPython.utils.PyColorize",
+    "IPython.utils.sentinel",
+    "IPython.utils.data",
+    "IPython.utils.importstring",
+    "IPython.utils.syspathcontext",
+    "IPython.utils.generics",
+    "IPython.utils.encoding",
+    "IPython.utils.module_paths",
+]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+ignore_errors = false
+ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.debugger",
+]
+disallow_untyped_defs = false
+ignore_errors = false
+ignore_missing_imports = true
+disallow_untyped_calls = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = true
+
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.interactiveshell",
+]
+disallow_untyped_defs = false
+ignore_errors = false
+ignore_missing_imports = true
+disallow_untyped_calls = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+disable_error_code = [
+  "arg-type",
+  "assignment",
+  "attr-defined",
+  "index",
+  "var-annotated",
+  "union-attr"
+]
+
+# Newly promoted to type-checking (previously fully ignored).
+# These pass a lenient check (real type errors surfaced) but are not yet
+# fully annotated, so untyped defs are still permitted for now.
+[[tool.mypy.overrides]]
+module = [
+    "IPython.core.async_helpers",
+    "IPython.core.builtin_trap",
+    "IPython.core.extensions",
+    "IPython.core.hooks",
+    "IPython.core.macro",
+    "IPython.core.magic_arguments",
+    "IPython.core.magics.ast_mod",
+    "IPython.core.payload",
+    "IPython.core.profiledir",
+    "IPython.external.qt_for_kernel",
+    "IPython.lib.guisupport",
+    "IPython.paths",
+    "IPython.sphinxext.ipython_console_highlighting",
+    "IPython.terminal.pt_inputhooks.asyncio",
+    "IPython.terminal.pt_inputhooks.gtk",
+    "IPython.terminal.pt_inputhooks.gtk3",
+    "IPython.terminal.pt_inputhooks.gtk4",
+    "IPython.terminal.pt_inputhooks.pyglet",
+    "IPython.terminal.pt_inputhooks.qt",
+    "IPython.terminal.pt_inputhooks.wx",
+    "IPython.terminal.ptutils",
+    "IPython.terminal.shortcuts.auto_match",
+    "IPython.utils._process_emscripten",
+    "IPython.utils.ipstruct",
+    "IPython.utils.process",
+    "IPython.utils.strdispatch",
+    "IPython.utils.terminal",
+]
+check_untyped_defs = true
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+disallow_untyped_decorators = false
+ignore_errors = false
+ignore_missing_imports = true
+
+# gloabl ignore error
+[[tool.mypy.overrides]]
+module = [
+    "IPython",
+    "IPython.terminal.pt_inputhooks",
+    "IPython.terminal.shortcuts",
+    "IPython.core.alias",
+    "IPython.core.autocall",
+    "IPython.core.compilerop",
+    "IPython.core.completer",
+    "IPython.core.completerlib",
+    "IPython.core.display",
+    "IPython.core.display_functions",
+    "IPython.core.display_trap",
+    "IPython.core.displayhook",
+    "IPython.core.displaypub",
+    "IPython.core.formatters",
+    "IPython.core.getipython",
+    "IPython.core.guarded_eval",
+    "IPython.core.historyapp",
+    "IPython.core.inputtransformer2",
+    "IPython.core.logger",
+    "IPython.core.magics.auto",
+    "IPython.core.magics.basic",
+    "IPython.core.magics.code",
+    "IPython.core.magics.config",
+    "IPython.core.magics.display",
+    "IPython.core.magics.execution",
+    "IPython.core.magics.extension",
+    "IPython.core.magics.history",
+    "IPython.core.magics.logging",
+    "IPython.core.magics.namespace",
+    "IPython.core.magics.osm",
+    "IPython.core.magics.packaging",
+    "IPython.core.magics.pylab",
+    "IPython.core.magics.script",
+    "IPython.core.oinspect",
+    "IPython.core.page",
+    "IPython.core.payloadpage",
+    "IPython.core.prefilter",
+    "IPython.core.pylabtools",
+    "IPython.core.shellapp",
+    "IPython.core.splitinput",
+    "IPython.extensions.autoreload",
+    "IPython.extensions.storemagic",
+    "IPython.external.pickleshare",
+    "IPython.external.qt_loaders",
+    "IPython.lib.backgroundjobs",
+    "IPython.lib.clipboard",
+    "IPython.lib.demo",
+    "IPython.lib.display",
+    "IPython.lib.editorhooks",
+    "IPython.lib.latextools",
+    "IPython.lib.pretty",
+    "IPython.terminal.debugger",
+    "IPython.terminal.embed",
+    "IPython.terminal.interactiveshell",
+    "IPython.terminal.magics",
+    "IPython.terminal.prompts",
+    "IPython.terminal.pt_inputhooks.glut",
+    "IPython.terminal.pt_inputhooks.osx",
+    "IPython.terminal.pt_inputhooks.tk",
+    "IPython.terminal.shortcuts.auto_suggest",
+    "IPython.terminal.shortcuts.filters",
+    "IPython.utils.capture",
+    "IPython.utils.dir2",
+    "IPython.utils.io",
+    "IPython.utils.openpy",
+    "IPython.utils.tempdir",
+    "IPython.utils.timing",
+    "IPython.utils.tokenutil",
+    "IPython.utils.wildcard",
+
+]
+disallow_untyped_defs = false
+ignore_errors = true
+ignore_missing_imports = true
+disallow_untyped_calls = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+
+[tool.pytest.ini_options]
+minversion = "7" # keep in sync with project.optional-dependencies.test
+addopts = [
+   "--durations=10",
+   "-pIPython.testing.plugin.pytest_ipdoctest",
+   "--ipdoctest-modules",
+   "--ignore=docs",
+   "--ignore=examples",
+   "--ignore=htmlcov",
+   "--ignore=ipython_kernel",
+   "--ignore=ipython_parallel",
+   "--ignore=results",
+   "--ignore=tmp",
+   "--ignore=tools",
+   "--ignore=traitlets",
+   "--ignore=tests/fake_ext_dir/",
+   "--ignore=IPython/sphinxext",
+   "--ignore=IPython/terminal/pt_inputhooks",
+   "--ignore=IPython/__main__.py",
+   "--ignore=IPython/external/qt_for_kernel.py",
+   "--ignore=IPython/utils/_process_posix.py"
+]
+doctest_optionflags = [
+   "NORMALIZE_WHITESPACE",
+   "ELLIPSIS"
+]
+ipdoctest_optionflags = [
+   "NORMALIZE_WHITESPACE",
+   "ELLIPSIS"
+]
+asyncio_mode = "strict"
+filterwarnings = [
+    "error::ResourceWarning",
+]
+
+[tool.pyright]
+pythonPlatform="All"
+
+[tool.setuptools]
+zip-safe = false
+platforms = ["Linux", "Mac OSX", "Windows"]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ["IPython*"]
+exclude = ["setupext", "tests*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"IPython" = ["py.typed"]
+"IPython.core" = ["profile/README*"]
+"IPython.testing.plugin" = ["*.txt"]
+
+[tool.setuptools.dynamic]
+version = {attr = "IPython.core.release.__version__"}
+
+[tool.coverage.run]
+omit = [
+    # omit everything in /tmp as we run tempfile
+    "/tmp/*",
+]
+
+[tool.ruff.lint]
+extend-select = [
+    #  "B",           # flake8-bugbear
+    #  "I",           # isort
+    # that will be a problem for pytest fixture unless you swap with the usefixture decorator https://docs.pytest.org/en/7.1.x/how-to/fixtures.html#use-fixtures-in-classes-and-modules-with-usefixtures
+    #  "ARG",         # flake8-unused-arguments
+    #  "C4",          # flake8-comprehensions
+    #  "EM",          # flake8-errmsg
+    #  "ICN",         # flake8-import-conventions
+    #  "G",           # flake8-logging-format
+    #  "PGH",         # pygrep-hooks
+    #  "PIE",         # flake8-pie
+    #  "PL",          # pylint
+    #  "PTH",         # flake8-use-pathlib
+    #  "PT",          # flake8-pytest-style
+    #  "RET",         # flake8-return
+    #  "RUF",         # Ruff-specific
+    #  "SIM",         # flake8-simplify
+    #  "T20",         # flake8-print
+    #    "UP",          # pyupgrade
+    "UP004",       #  1   [*] Class `...` inherits from `object`
+    # "UP006",        #  1   [*] Use `list` instead of `t.List` for type annotation
+    # "UP006",        #  1   [*] Use `tuple` instead of `t.Tuple` for type annotation
+    # "UP010",        #  1   [*] Unnecessary `__future__` import `print_function` for target Python version
+    "UP011",        #  1   [*] Unnecessary parentheses to `functools.lru_cache`
+    "UP018",        #  1   [*] Unnecessary `bool` call (rewrite as a literal)
+    # "UP006",        #182   [*] Use `...` instead of `...` for type annotation
+    # "UP007",        #  5   Use `X | Y` for type annotations
+    # "UP007",        #149   [*] Use `X | Y` for type annotations
+    # "UP008",        # 63   Use `super()` instead of `super(__class__, self)`
+    # "UP009",        # 61   [*] UTF-8 encoding declaration is unnecessary
+    "UP015",       #  0   [*] Unnecessary open modes (0 violations, locked in)
+    # "UP017",        #  2   [*] Use `datetime.UTC` alias
+    # "UP020",        # 15   [*] Use builtin `open`
+    # "UP024",        # 16   [*] Replace aliased errors with `OSError`
+    # "UP025",        # 91   [*] Remove unicode literals from strings
+    "UP028",        #  3   Replace `yield` over `for` loop with `yield from`
+    "UP029",        #  1   Unnecessary builtin import
+    # "UP030",        # 28   Use implicit references for positional format fields
+    # "UP032",        # 75   [*] Use f-string instead of `format` call
+    "UP034",        #  1   [*] Avoid extraneous parentheses
+    "UP035",       #  0   [*] Deprecated typing imports (0 violations, locked in)
+    # "UP036",        #  3   Version block is outdated for minimum Python version
+    "UP037",        #  1   [*] Remove quotes from type annotation
+    # "UP038",        # 21   Use `X | Y` in `isinstance` call instead of `(X, Y)`
+    "YTT",         # flake8-2020            (0 violations, locked in)
+    "FURB",        # refurb                 (readability/modernization)
+    "B008",        # function-call-in-default-argument      (0 violations, locked in)
+    "B022",        # useless-contextlib-suppress            (0 violations, locked in)
+    "B025",        # duplicate-try-block-exception          (0 violations, locked in)
+    "C420",        # unnecessary-dict-comprehension-for-iterable (0 violations, locked in)
+    "PLW0127",     # self-assigning-variable                (0 violations, locked in)
+    "PLW0128",     # redeclared-assigned-name               (0 violations, locked in)
+    "PLW0406",     # import-self                            (0 violations, locked in)
+    "RUF007",      # zip-instead-of-pairwise                (0 violations, locked in)
+    "S324",        # hashlib-insecure-hash-function          (0 violations, locked in)
+    "SIM110",      # reimplemented-builtin                  (0 violations, locked in)
+    "SIM211",      # if-expr-with-false-true                (0 violations, locked in)
+    "TRY203",      # useless-try-except                      (0 violations, locked in)
+    #  "EXE",         # flake8-executable   (file-mode/shebang churn across examples)
+    #  "PYI",         # flake8-pyi          (stub-oriented; little value on source)
+    #  "ICN",         # flake8-import-conventions (codebase uses plain `matplotlib`, not `mpl`)
+    #  "RUF100",      # unused `noqa` (entangled with the F401 global-ignore; strips intentional markers)
+    #  "PT",          # flake8-pytest-style (PT015 false-positives on non-test `assert False`)
+    #  "S",           # flake8-bandit
+]
+ignore = [
+    #  "E501",     # E501 Line too long (158 > 100 characters)
+    #  "SIM105",   # SIM105 Use `contextlib.suppress(...)`
+    #  "PLR",      # Design related pylint codes
+    #  "S101",     # Use of `assert` detected
+    "UP031",       # 297   Use format specifiers instead of percent format
+    "I001",        # 162   unsorted imports
+    "BLE001",      # 111   blind-except
+    "UP032",       # 90    f-strings
+    "C408",        # 33    unnecessary collection call
+    "SIM201",      # 27    collapsible IF
+    "PLC0414",      # WRONG CONFLICT WITH EXPLICT REEXPORT
+    "E713", #   1      Test for membership should be `not in`
+    "F601", #   3      Dictionary key literal `True` repeated (`True` hashes to the same value as `1`)
+    "E702", #   3      Multiple statements on one line (semicolon)
+    "E721", #   3      Use `is` and `is not` for type comparisons, or `isinstance()` for isinstance checks
+    "E401", #   5      Multiple imports on one line
+    "E711", #  14      Comparison to `None` should be `cond is None`
+    "E701", #  19      Multiple statements on one line (colon)
+    "E741", #  25      Ambiguous variable name: `<one letter>`
+    "E731", #  27      Do not assign a `lambda` expression, use a `def`
+    "E402", #  28      Module level import not at top of file
+    "E722", #  75      Do not use bare `except`
+    "F523", #   1      ; at end of line
+    "F403", #   7      import *` used; unable to detect undefined names
+    "F841", #  38      Local variable `...` is assigned to but never used
+    "F401", #  69      imported but unused
+    "F821", # 624      Undefined name
+    "FURB110", # prefer explicit `x if x else y` ternary over `x or y` (readability)
+    "SIM102", 	# collapsible-if
+    "S110",   	# try-except-pass
+    "PIE790", 	# unnecessary-placeholder
+    "RUF012", 	# mutable-class-default
+    "SIM115", 	# open-file-with-context-handler
+    "S102",   	# exec-builtin
+    "N999",   	# invalid-module-name
+    "SIM118", 	# in-dict-keys
+    "LOG015", 	# root-logger-call
+    "RUF059", 	# unused-unpacked-variable
+    "RUF022", 	# unsorted-dunder-all
+    "FLY002", 	# static-join-to-f-string
+    "RET501", 	# unnecessary-return-none
+    "T100",   	# debugger
+    "TRY002", 	# raise-vanilla-class
+    "RUF100", 	# unused-noqa
+    "UP020",  	# open-alias
+    "TRY004", 	# type-check-without-type-error
+    "B018",   	# useless-expression
+    "SIM114", 	# if-with-same-arms
+    "B009",   	# get-attr-with-constant
+    "C419",   	# unnecessary-comprehension-in-call
+    "DTZ005", 	# call-datetime-now-without-tzinfo
+    "EXE002", 	# shebang-missing-executable-file
+    "PIE810", 	# multiple-starts-ends-with
+    "RUF010", 	# explicit-f-string-type-conversion
+    "SIM103", 	# needless-bool
+    "UP009",  	# utf8-encoding-declaration
+    "B006",   	# mutable-argument-default
+    "PTH124", 	# py-path
+    "B004",   	# unreliable-callable-check
+    "EXE001", 	# shebang-not-executable
+    "G201",   	# logging-exc-info
+    "ISC004", 	# implicit-string-concatenation-in-collection-literal
+    "PIE794", 	# duplicate-class-field-definition
+    "PIE808", 	# unnecessary-range-start
+    "PLC0206",	# dict-index-missing-items
+    "PLC0208",	# iteration-over-set
+    "PLR1711",	# useless-return
+    "PLW0120",	# useless-else-on-loop
+    "PLW0602",	# global-variable-not-assigned
+    "PLW1508",	# invalid-envvar-default
+    "PYI034", 	# non-self-return-type
+    "RUF015", 	# unnecessary-iterable-allocation-for-first-element
+    "SIM101", 	# duplicate-isinstance-call
+    "SIM210", 	# if-expr-with-true-false
+    "SIM905", 	# split-static-string
+    "B010",   	# set-attr-with-constant
+    "B019",   	# cached-instance-method
+    "DTZ006", 	# call-datetime-fromtimestamp
+    "EXE005", 	# shebang-not-first-line
+    "PERF102",	# incorrect-dict-iterator
+    "PIE800", 	# unnecessary-spread
+    "PLR0402",	# manual-from-import
+    "PLR1722",	# sys-exit-alias
+    "PLR1730",	# if-stmt-min-max
+    "PLR2044",	# empty-comment
+    "PYI036", 	# bad-exit-annotation
+    "PYI063", 	# pep484-style-positional-only-parameter
+    "SIM117", 	# multiple-with-statements
+    "UP036",  	# outdated-version-block
+]
+unfixable = [
+    # Don't touch print statements
+    "T201",
+    # Don't touch noqa lines
+    "RUF100",
+]
+
+[tool.ruff]
+target-version = "py311"
+extend-exclude = ["tests"]
+
+[tool.black]
+# moved here from setup.cfg, where it had been in (ignored) INI syntax
+exclude = 'timing\.py'

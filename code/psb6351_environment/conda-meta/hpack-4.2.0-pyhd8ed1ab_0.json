@@ -1,0 +1,211 @@
+{
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.10"
+  ],
+  "extracted_package_dir": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hpack-4.2.0-pyhd8ed1ab_0",
+  "files": [
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/hpack-4.2.0.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/hpack/__init__.py",
+    "lib/python3.14/site-packages/hpack/exceptions.py",
+    "lib/python3.14/site-packages/hpack/hpack.py",
+    "lib/python3.14/site-packages/hpack/huffman.py",
+    "lib/python3.14/site-packages/hpack/huffman_constants.py",
+    "lib/python3.14/site-packages/hpack/huffman_table.py",
+    "lib/python3.14/site-packages/hpack/py.typed",
+    "lib/python3.14/site-packages/hpack/struct.py",
+    "lib/python3.14/site-packages/hpack/table.py",
+    "lib/python3.14/site-packages/hpack/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/hpack.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/huffman.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/huffman_constants.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/huffman_table.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/struct.cpython-314.pyc",
+    "lib/python3.14/site-packages/hpack/__pycache__/table.cpython-314.pyc"
+  ],
+  "fn": "hpack-4.2.0-pyhd8ed1ab_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hpack-4.2.0-pyhd8ed1ab_0",
+    "type": 1
+  },
+  "md5": "b395909221b9bd1df066e5930e18855b",
+  "name": "hpack",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/applications/spack-202506/opt/spack/linux-sapphirerapids/miniconda3-24.7.1-mjgmhiomez6fo5ujvlb7msqla46w66vu/pkgs/hpack-4.2.0-pyhd8ed1ab_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d2408cbb7b7d2f4bd041a96a850300da45e1bf79b1a380148a5fc29dcd55255f",
+        "sha256_in_prefix": "d2408cbb7b7d2f4bd041a96a850300da45e1bf79b1a380148a5fc29dcd55255f",
+        "size_in_bytes": 3288
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f4da978444c3bbb081c3dd293c3538e8c2bcb36a5350be87ffd3a91061fbe69d",
+        "sha256_in_prefix": "f4da978444c3bbb081c3dd293c3538e8c2bcb36a5350be87ffd3a91061fbe69d",
+        "size_in_bytes": 1709
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+        "sha256_in_prefix": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "365ba7523201f145e927471c07121e9d3c3a8991c4ee9df12519af8c05278c58",
+        "sha256_in_prefix": "365ba7523201f145e927471c07121e9d3c3a8991c4ee9df12519af8c05278c58",
+        "size_in_bytes": 101
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+        "sha256_in_prefix": "763a9342a04df62046c9dc748a5287934eb0a5331c6863b3ca0aee20e18cb4ed",
+        "size_in_bytes": 1080
+      },
+      {
+        "_path": "site-packages/hpack-4.2.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9f2ad92db428fb49c2ea8b7760eff5d3da645224ed2b5334c1425f2c7b9071e1",
+        "sha256_in_prefix": "9f2ad92db428fb49c2ea8b7760eff5d3da645224ed2b5334c1425f2c7b9071e1",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/hpack/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8d7e285593c15d356e93f6b7c6856a51bb93e2cd6f95e7d74a091e5587b71471",
+        "sha256_in_prefix": "8d7e285593c15d356e93f6b7c6856a51bb93e2cd6f95e7d74a091e5587b71471",
+        "size_in_bytes": 597
+      },
+      {
+        "_path": "site-packages/hpack/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "5eacbcbe2aaf28a1c1c90ec8a3c169f873e50cfdd3ed133d6a994f4b176bf632",
+        "sha256_in_prefix": "5eacbcbe2aaf28a1c1c90ec8a3c169f873e50cfdd3ed133d6a994f4b176bf632",
+        "size_in_bytes": 1107
+      },
+      {
+        "_path": "site-packages/hpack/hpack.py",
+        "path_type": "hardlink",
+        "sha256": "4ab14aab1a856cee45aea3169854167b16dac9ef9ec4cef1ed1d5da82439769d",
+        "sha256_in_prefix": "4ab14aab1a856cee45aea3169854167b16dac9ef9ec4cef1ed1d5da82439769d",
+        "size_in_bytes": 26058
+      },
+      {
+        "_path": "site-packages/hpack/huffman.py",
+        "path_type": "hardlink",
+        "sha256": "cc3b91b4ec8511d29bf7f199acdb40a274c452ca882eb2b6b2d4a1e702e919ee",
+        "sha256_in_prefix": "cc3b91b4ec8511d29bf7f199acdb40a274c452ca882eb2b6b2d4a1e702e919ee",
+        "size_in_bytes": 2332
+      },
+      {
+        "_path": "site-packages/hpack/huffman_constants.py",
+        "path_type": "hardlink",
+        "sha256": "e0f84e31e97998dd1ab24151ae7e2756927f09339484ed6a6c544eeaefc87f63",
+        "sha256_in_prefix": "e0f84e31e97998dd1ab24151ae7e2756927f09339484ed6a6c544eeaefc87f63",
+        "size_in_bytes": 4570
+      },
+      {
+        "_path": "site-packages/hpack/huffman_table.py",
+        "path_type": "hardlink",
+        "sha256": "12452e981b596483c227a950ecb1bf6f07c38f58991225cce0035c5e34f5cd4b",
+        "sha256_in_prefix": "12452e981b596483c227a950ecb1bf6f07c38f58991225cce0035c5e34f5cd4b",
+        "size_in_bytes": 168663
+      },
+      {
+        "_path": "site-packages/hpack/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/hpack/struct.py",
+        "path_type": "hardlink",
+        "sha256": "06a10e4b74f996ae341257efec6ec24385f6a7209a93ce6657367f5c8cb1a083",
+        "sha256_in_prefix": "06a10e4b74f996ae341257efec6ec24385f6a7209a93ce6657367f5c8cb1a083",
+        "size_in_bytes": 1476
+      },
+      {
+        "_path": "site-packages/hpack/table.py",
+        "path_type": "hardlink",
+        "sha256": "500937f5f52433fafc76704a3832ffa86afdff044e9ca4150761033f60032642",
+        "sha256_in_prefix": "500937f5f52433fafc76704a3832ffa86afdff044e9ca4150761033f60032642",
+        "size_in_bytes": 10000
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/hpack.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/huffman.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/huffman_constants.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/huffman_table.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/struct.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/hpack/__pycache__/table.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "fdcea5d7cb314485d3907192ef024c704311548c5b0cbeb390cd1951051e29d2",
+  "size": 32884,
+  "subdir": "noarch",
+  "timestamp": 1782283986000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/hpack-4.2.0-pyhd8ed1ab_0.conda",
+  "version": "4.2.0"
+}

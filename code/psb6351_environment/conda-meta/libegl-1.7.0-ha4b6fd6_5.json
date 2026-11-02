@@ -1,0 +1,51 @@
+{
+  "build": "ha4b6fd6_5",
+  "build_number": 5,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libglvnd 1.7.0 ha4b6fd6_5"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libegl-1.7.0-ha4b6fd6_5",
+  "files": [
+    "lib/libEGL.so.1",
+    "lib/libEGL.so.1.1.0"
+  ],
+  "fn": "libegl-1.7.0-ha4b6fd6_5.conda",
+  "license": "LicenseRef-libglvnd",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libegl-1.7.0-ha4b6fd6_5",
+    "type": 1
+  },
+  "md5": "3a1b41c4591a0a1734382af3e2b8bc08",
+  "name": "libegl",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libegl-1.7.0-ha4b6fd6_5.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libEGL.so.1",
+        "path_type": "softlink",
+        "sha256": "bde411b870193ab4a8d8051b3072b4d9bea4fd9ee83bb1b3b36f3be4c0808b83",
+        "size_in_bytes": 93464
+      },
+      {
+        "_path": "lib/libEGL.so.1.1.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/libglvnd-split_1787309893880/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+        "sha256": "bde411b870193ab4a8d8051b3072b4d9bea4fd9ee83bb1b3b36f3be4c0808b83",
+        "sha256_in_prefix": "cf7e8fb92f0fc234a67a49413fbaae24a4b4dc881ee6413832402b5fa90bc96e",
+        "size_in_bytes": 93464
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "13d3fde9c1dcf254968cc70652222a43f25d04e69555ccf855553110e753288e",
+  "size": 46694,
+  "subdir": "linux-64",
+  "timestamp": 1787310030000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libegl-1.7.0-ha4b6fd6_5.conda",
+  "version": "1.7.0"
+}

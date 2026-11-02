@@ -1,0 +1,180 @@
+{
+  "build": "pyhd8ed1ab_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "requests",
+    "packaging",
+    "ci-info",
+    "python >=3.9"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/etelemetry-0.3.1-pyhd8ed1ab_1",
+  "files": [
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/LICENSE",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/METADATA",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/RECORD",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/WHEEL",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/etelemetry-0+unknown.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/etelemetry/__init__.py",
+    "lib/python3.14/site-packages/etelemetry/_version.py",
+    "lib/python3.14/site-packages/etelemetry/client.py",
+    "lib/python3.14/site-packages/etelemetry/config/__init__.py",
+    "lib/python3.14/site-packages/etelemetry/tests/__init__.py",
+    "lib/python3.14/site-packages/etelemetry/tests/test_client.py",
+    "lib/python3.14/site-packages/etelemetry/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/etelemetry/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/etelemetry/__pycache__/client.cpython-314.pyc",
+    "lib/python3.14/site-packages/etelemetry/config/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/etelemetry/tests/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/etelemetry/tests/__pycache__/test_client.cpython-314.pyc"
+  ],
+  "fn": "etelemetry-0.3.1-pyhd8ed1ab_1.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/etelemetry-0.3.1-pyhd8ed1ab_1",
+    "type": 1
+  },
+  "md5": "a84f5f908284122745b25dc3c2ff93cf",
+  "name": "etelemetry",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/etelemetry-0.3.1-pyhd8ed1ab_1.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "534eeda3bb841ce6d98b954fbf264baf661413a483c273685345827f26fe1fc3",
+        "sha256_in_prefix": "534eeda3bb841ce6d98b954fbf264baf661413a483c273685345827f26fe1fc3",
+        "size_in_bytes": 574
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "766f226138c7c34643df6e12793e202626de3c3ed3265af78f39b1357f039a8b",
+        "sha256_in_prefix": "766f226138c7c34643df6e12793e202626de3c3ed3265af78f39b1357f039a8b",
+        "size_in_bytes": 3176
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "da630b69cc1725fb547c2dd7c88b824a0d5fcbb31027305ee19c039a2cde7026",
+        "sha256_in_prefix": "da630b69cc1725fb547c2dd7c88b824a0d5fcbb31027305ee19c039a2cde7026",
+        "size_in_bytes": 1532
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "sha256_in_prefix": "3d9504c5d7fbd548bfb28ebb417a724ae1ed0a2dfe277c2f1783912ba93f4bc5",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "2b12fda609b4511fd871bde1d72ad86a4d3e02577d0109a15ea8921703405d76",
+        "sha256_in_prefix": "2b12fda609b4511fd871bde1d72ad86a4d3e02577d0109a15ea8921703405d76",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "site-packages/etelemetry-0+unknown.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "0b7dc9ea118deecbd8a08469281f86368b4577fbe2db09e8a85d61b0d80e00d9",
+        "sha256_in_prefix": "0b7dc9ea118deecbd8a08469281f86368b4577fbe2db09e8a85d61b0d80e00d9",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/etelemetry/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "1270b08d96298fe4545452b9176075bb7c693da10dfb12d31e6a485b1ad09413",
+        "sha256_in_prefix": "1270b08d96298fe4545452b9176075bb7c693da10dfb12d31e6a485b1ad09413",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "site-packages/etelemetry/_version.py",
+        "path_type": "hardlink",
+        "sha256": "a7dc45b586fb15b996fc4698e3ae2ddcaba051f2b752fc479d1a0eb45ab7e15b",
+        "sha256_in_prefix": "a7dc45b586fb15b996fc4698e3ae2ddcaba051f2b752fc479d1a0eb45ab7e15b",
+        "size_in_bytes": 493
+      },
+      {
+        "_path": "site-packages/etelemetry/client.py",
+        "path_type": "hardlink",
+        "sha256": "609d03aefa6f91816a91bc2d8414df6347ef13af5b927882348a2e7f05b885a3",
+        "sha256_in_prefix": "609d03aefa6f91816a91bc2d8414df6347ef13af5b927882348a2e7f05b885a3",
+        "size_in_bytes": 4131
+      },
+      {
+        "_path": "site-packages/etelemetry/config/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f14c522f0e193227e0fee0adb27f7d54c1eecd0ecc293d3b0bfdee88069dfd77",
+        "sha256_in_prefix": "f14c522f0e193227e0fee0adb27f7d54c1eecd0ecc293d3b0bfdee88069dfd77",
+        "size_in_bytes": 233
+      },
+      {
+        "_path": "site-packages/etelemetry/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/etelemetry/tests/test_client.py",
+        "path_type": "hardlink",
+        "sha256": "b21ccdc576784013dbcb26dfb7a7cc1f8ba355ed4b34f7a9c8cb056e4a700914",
+        "sha256_in_prefix": "b21ccdc576784013dbcb26dfb7a7cc1f8ba355ed4b34f7a9c8cb056e4a700914",
+        "size_in_bytes": 1763
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/__pycache__/_version.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/__pycache__/client.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/config/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/tests/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/etelemetry/tests/__pycache__/test_client.cpython-314.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e6c9993d7c821e3f815416ffc18dc158fa1cd57adb83d366294dd1f7c48cdc6b",
+  "size": 11684,
+  "subdir": "noarch",
+  "timestamp": 1734985894000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/etelemetry-0.3.1-pyhd8ed1ab_1.conda",
+  "version": "0.3.1"
+}

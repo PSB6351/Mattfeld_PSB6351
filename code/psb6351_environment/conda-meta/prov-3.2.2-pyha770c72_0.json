@@ -1,0 +1,38 @@
+{
+  "build": "pyha770c72_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.11",
+    "networkx >=2.0",
+    "lxml >=3.3.5",
+    "pydot >=1.2.0",
+    "rdflib >=7.0.0,<8",
+    "prov-core 3.2.2 pyhd8ed1ab_0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/prov-3.2.2-pyha770c72_0",
+  "files": [],
+  "fn": "prov-3.2.2-pyha770c72_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/prov-3.2.2-pyha770c72_0",
+    "type": 1
+  },
+  "md5": "99e97160c84c48d7141f60bf07aafb5b",
+  "name": "prov",
+  "noarch": "python",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/prov-3.2.2-pyha770c72_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "604705ecb7ef8f5d868ab111ec2e6217bff32e0b4c15989515c584cc2c605002",
+  "size": 7292,
+  "subdir": "noarch",
+  "timestamp": 1790086187000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/prov-3.2.2-pyha770c72_0.conda",
+  "version": "3.2.2"
+}

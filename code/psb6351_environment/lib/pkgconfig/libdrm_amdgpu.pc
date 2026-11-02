@@ -1,0 +1,11 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: libdrm_amdgpu
+Description: Userspace interface to kernel DRM services for amdgpu
+Version: 2.4.129
+Requires.private: libdrm
+Libs: -L${libdir} -ldrm_amdgpu
+Libs.private: -pthread
+Cflags: -I${includedir} -I${includedir}/libdrm

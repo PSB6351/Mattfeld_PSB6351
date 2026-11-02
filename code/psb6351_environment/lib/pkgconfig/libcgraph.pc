@@ -1,0 +1,10 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libcgraph
+Description: Graph library (file i/o, dot language parsing, graph, subgraph, node, edge, attribute, data structure manipulation)
+Version: 14.1.2
+Libs: -L${libdir} -lcgraph -lcdt
+Cflags: -I${includedir} -I${includedir}/graphviz

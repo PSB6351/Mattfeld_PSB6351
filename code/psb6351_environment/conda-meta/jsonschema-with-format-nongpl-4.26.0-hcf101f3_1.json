@@ -1,0 +1,42 @@
+{
+  "build": "hcf101f3_1",
+  "build_number": 1,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "constrains": [],
+  "depends": [
+    "idna",
+    "rfc3339-validator",
+    "uri-template",
+    "fqdn",
+    "isoduration",
+    "jsonpointer >1.13",
+    "rfc3986-validator >0.1.0",
+    "webcolors >=24.6.0",
+    "jsonschema >=4.26.0,<4.26.1.0a0",
+    "rfc3987-syntax >=1.1.0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/jsonschema-with-format-nongpl-4.26.0-hcf101f3_1",
+  "files": [],
+  "fn": "jsonschema-with-format-nongpl-4.26.0-hcf101f3_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/jsonschema-with-format-nongpl-4.26.0-hcf101f3_1",
+    "type": 1
+  },
+  "md5": "ae36c895b9e25a127d2acbdbaa87e301",
+  "name": "jsonschema-with-format-nongpl",
+  "noarch": "generic",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/jsonschema-with-format-nongpl-4.26.0-hcf101f3_1.conda",
+  "package_type": "noarch_generic",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1b8ed25276ceae973e21d269fbe11f08d0b5f73c7ac9584e2d6a9dd763b8707a",
+  "size": 4809,
+  "subdir": "noarch",
+  "timestamp": 1787579299000,
+  "url": "https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.26.0-hcf101f3_1.conda",
+  "version": "4.26.0"
+}

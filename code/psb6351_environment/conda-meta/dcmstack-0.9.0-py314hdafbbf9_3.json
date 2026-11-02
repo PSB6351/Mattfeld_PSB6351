@@ -1,0 +1,258 @@
+{
+  "build": "py314hdafbbf9_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "nibabel >=5.3.1",
+    "pint",
+    "pydicom >=0.9.7",
+    "pylibjpeg-libjpeg >=2.3.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/dcmstack-0.9.0-py314hdafbbf9_3",
+  "files": [
+    "bin/dcmstack",
+    "bin/nitool",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/licenses/COPYING",
+    "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/top_level.txt",
+    "lib/python3.14/site-packages/dcmstack/__init__.py",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/dcmmeta.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/dcmstack.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/dcmstack_cli.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/extract.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/info.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/nitool_cli.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/__pycache__/utils.cpython-314.pyc",
+    "lib/python3.14/site-packages/dcmstack/dcmmeta.py",
+    "lib/python3.14/site-packages/dcmstack/dcmstack.py",
+    "lib/python3.14/site-packages/dcmstack/dcmstack_cli.py",
+    "lib/python3.14/site-packages/dcmstack/extract.py",
+    "lib/python3.14/site-packages/dcmstack/info.py",
+    "lib/python3.14/site-packages/dcmstack/nitool_cli.py",
+    "lib/python3.14/site-packages/dcmstack/utils.py"
+  ],
+  "fn": "dcmstack-0.9.0-py314hdafbbf9_3.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/dcmstack-0.9.0-py314hdafbbf9_3",
+    "type": 1
+  },
+  "md5": "2201acda02dfa09a848d6bb547a9dc3c",
+  "name": "dcmstack",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/dcmstack-0.9.0-py314hdafbbf9_3.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "bin/dcmstack",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/dcmstack_1790295295698/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "e9e61ffe7a18fb748ee031eb0c63025fedef8d716a8a6d0d0dd2c0b24f0f0593",
+        "sha256_in_prefix": "8beb38d2b138506a97e3ac482215de16eef1dfa1ca12681aae5d2324770a0aec",
+        "size_in_bytes": 474
+      },
+      {
+        "_path": "bin/nitool",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/dcmstack_1790295295698/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+        "sha256": "21cfc1fb01ab66ab94da4931c0db46beca0b625aac0b60e6e89bc6c32d889d49",
+        "sha256_in_prefix": "9a8b260fe7d917a7b833cad338b03f7e1b2c59ef61a3ccfd6dc4999c768a2c71",
+        "size_in_bytes": 472
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "5af730f4c8bab08a3c339625fb7379b9b8567050e35eaf957b6fe44536e88559",
+        "sha256_in_prefix": "5af730f4c8bab08a3c339625fb7379b9b8567050e35eaf957b6fe44536e88559",
+        "size_in_bytes": 2637
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f0ac872b6ecc0753cb0ed2d99ed141bf92309739877e8af911a452d0a065d26a",
+        "sha256_in_prefix": "f0ac872b6ecc0753cb0ed2d99ed141bf92309739877e8af911a452d0a065d26a",
+        "size_in_bytes": 1943
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "sha256_in_prefix": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8e37c84908ad58b5f922b5e9c007b82824c575844adefe82f952735062ad84c8",
+        "sha256_in_prefix": "8e37c84908ad58b5f922b5e9c007b82824c575844adefe82f952735062ad84c8",
+        "size_in_bytes": 104
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "ee89bcc30da02e555bfb4842a4a2233dd572026f8656e37c53e2976354e95e80",
+        "sha256_in_prefix": "ee89bcc30da02e555bfb4842a4a2233dd572026f8656e37c53e2976354e95e80",
+        "size_in_bytes": 90
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/licenses/COPYING",
+        "path_type": "hardlink",
+        "sha256": "56d12fd8f0369c78112042a81af7e6cae9eeb470fe2c8b362da31c2dec15d9e0",
+        "sha256_in_prefix": "56d12fd8f0369c78112042a81af7e6cae9eeb470fe2c8b362da31c2dec15d9e0",
+        "size_in_bytes": 1347
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack-0.9.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "998b6d15e6d4c77127ef95be836ba4196104e74bc3193a979933e435badeeb37",
+        "sha256_in_prefix": "998b6d15e6d4c77127ef95be836ba4196104e74bc3193a979933e435badeeb37",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d6eb0d1ed4403ed8c18cc11491d4639776c0c5ea88b970f5a29682d1ea18aeba",
+        "sha256_in_prefix": "d6eb0d1ed4403ed8c18cc11491d4639776c0c5ea88b970f5a29682d1ea18aeba",
+        "size_in_bytes": 288
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e6b571de60e38bdb44438a37925610823783f116364d297d930e10467bd0f6b2",
+        "sha256_in_prefix": "e6b571de60e38bdb44438a37925610823783f116364d297d930e10467bd0f6b2",
+        "size_in_bytes": 463
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/dcmmeta.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "609184bd7df9a2f8e617324b4831c8d8788ea88b027412029ea5480dd2de5d1c",
+        "sha256_in_prefix": "609184bd7df9a2f8e617324b4831c8d8788ea88b027412029ea5480dd2de5d1c",
+        "size_in_bytes": 68187
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/dcmstack.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0d3bfeb49338ffd84a7ebfb7061583de2355cbcfeb3c6dc41ab3526686bfe622",
+        "sha256_in_prefix": "0d3bfeb49338ffd84a7ebfb7061583de2355cbcfeb3c6dc41ab3526686bfe622",
+        "size_in_bytes": 43340
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/dcmstack_cli.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a9e441a0d86546426302cfcd2cb1cfc599c42b0e24bdb60f478b8c1e425222f9",
+        "sha256_in_prefix": "a9e441a0d86546426302cfcd2cb1cfc599c42b0e24bdb60f478b8c1e425222f9",
+        "size_in_bytes": 15653
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/extract.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "92d953c1af5d4757d553db9592ba7a063f3a1cb1780e49564e20cab217f52edd",
+        "sha256_in_prefix": "92d953c1af5d4757d553db9592ba7a063f3a1cb1780e49564e20cab217f52edd",
+        "size_in_bytes": 20396
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/info.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6b686117b6f936ac458b458afb6cb9da7dbbbba2bc9d8ede4ef7aebf40aa6d25",
+        "sha256_in_prefix": "6b686117b6f936ac458b458afb6cb9da7dbbbba2bc9d8ede4ef7aebf40aa6d25",
+        "size_in_bytes": 1513
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/nitool_cli.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd149302b09793a09b847472983fc6a8baa97c7704734e0d5d2e7ed26d1a1142",
+        "sha256_in_prefix": "dd149302b09793a09b847472983fc6a8baa97c7704734e0d5d2e7ed26d1a1142",
+        "size_in_bytes": 14067
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/__pycache__/utils.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f2c0998c6ff4b38e5ac35a6acc2330fe3048c5127423ccd1c467718d311b6671",
+        "sha256_in_prefix": "f2c0998c6ff4b38e5ac35a6acc2330fe3048c5127423ccd1c467718d311b6671",
+        "size_in_bytes": 860
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/dcmmeta.py",
+        "path_type": "hardlink",
+        "sha256": "f5584a9bb2685c9cabe4f22f3e05f32f4068377e6800fe90cfc0228e4f2cd99c",
+        "sha256_in_prefix": "f5584a9bb2685c9cabe4f22f3e05f32f4068377e6800fe90cfc0228e4f2cd99c",
+        "size_in_bytes": 70594
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/dcmstack.py",
+        "path_type": "hardlink",
+        "sha256": "d22c13c1cc2efc1bb28015765a6404263e476a894bc3a79c71348ae7f597f446",
+        "sha256_in_prefix": "d22c13c1cc2efc1bb28015765a6404263e476a894bc3a79c71348ae7f597f446",
+        "size_in_bytes": 42924
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/dcmstack_cli.py",
+        "path_type": "hardlink",
+        "sha256": "a0d9f8656c82a5aeec3ed370a88c9e88c594eed5998361f3f2ca1cfb6dd7f019",
+        "sha256_in_prefix": "a0d9f8656c82a5aeec3ed370a88c9e88c594eed5998361f3f2ca1cfb6dd7f019",
+        "size_in_bytes": 15189
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/extract.py",
+        "path_type": "hardlink",
+        "sha256": "83d224e4d1a642cc4d9f1e3768fe1c1343fed24785ef8a948591400c867d5e31",
+        "sha256_in_prefix": "83d224e4d1a642cc4d9f1e3768fe1c1343fed24785ef8a948591400c867d5e31",
+        "size_in_bytes": 18012
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/info.py",
+        "path_type": "hardlink",
+        "sha256": "86f0d7571b6e4218f0293f22762e77a09715da7ee7b20c059337362a7601f057",
+        "sha256_in_prefix": "86f0d7571b6e4218f0293f22762e77a09715da7ee7b20c059337362a7601f057",
+        "size_in_bytes": 1930
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/nitool_cli.py",
+        "path_type": "hardlink",
+        "sha256": "1cd6999360f21e030312d72575b80ce5f3dde6bb40edda680590d0056a680744",
+        "sha256_in_prefix": "1cd6999360f21e030312d72575b80ce5f3dde6bb40edda680590d0056a680744",
+        "size_in_bytes": 10156
+      },
+      {
+        "_path": "lib/python3.14/site-packages/dcmstack/utils.py",
+        "path_type": "hardlink",
+        "sha256": "67d35130a060a4d0ad7979459c7027f520770976c4f00fd6e35074564b4c2927",
+        "sha256_in_prefix": "67d35130a060a4d0ad7979459c7027f520770976c4f00fd6e35074564b4c2927",
+        "size_in_bytes": 393
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "157453fb52042bcffd5b905e74f02325e925249bcaa2d0be87559e6756651815",
+  "size": 100177,
+  "subdir": "linux-64",
+  "timestamp": 1790295383000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/dcmstack-0.9.0-py314hdafbbf9_3.conda",
+  "version": "0.9.0"
+}

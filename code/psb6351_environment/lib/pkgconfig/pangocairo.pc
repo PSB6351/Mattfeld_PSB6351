@@ -1,0 +1,12 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: Pango Cairo
+Description: Cairo rendering support for Pango
+Version: 1.58.2
+Requires: pango, cairo >=  1.18.0
+Requires.private: pangoft2, glib-2.0 >=  2.88, gobject-2.0 >=  2.88, gio-2.0 >=  2.88, fribidi >=  1.0.6, harfbuzz >=  11.0.0, fontconfig >=  2.17.0, freetype2, harfbuzz-gobject >=  11.0.0
+Libs: -L${libdir} -lpangocairo-1.0
+Libs.private: -lm
+Cflags: -I${includedir}/pango-1.0

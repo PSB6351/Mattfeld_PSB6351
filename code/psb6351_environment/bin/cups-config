@@ -1,0 +1,128 @@
+#!/bin/sh
+#
+# CUPS configuration utility.
+#
+# Copyright © 2007-2019 by Apple Inc.
+# Copyright © 2001-2006 by Easy Software Products, all rights reserved.
+#
+# Licensed under Apache License v2.0.  See the file "LICENSE" for more
+# information.
+#
+
+VERSION="2.3.3"
+APIVERSION="2.3"
+BUILD="cups-2.3.3"
+
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+bindir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/bin
+includedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/include
+libdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib
+datarootdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share
+datadir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share
+sysconfdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/etc
+cups_datadir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/share/cups
+cups_serverbin=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib/cups
+cups_serverroot=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/etc/cups
+INSTALLSTATIC=
+
+# flags for compiler and linker...
+CFLAGS=""
+LDFLAGS="-Wl,-rpath,/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib"
+LIBS="-L/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib -Wl,--enable-new-dtags -Wl,-rpath -Wl,/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err   -lz -lpthread -lm -lrt  -lz"
+
+# Check for local invocation...
+selfdir=`dirname $0`
+
+if test -f "$selfdir/cups/cups.h"; then
+    CFLAGS="-I$selfdir"
+    LDFLAGS="-L$selfdir/cups $LDFLAGS"
+    libdir="$selfdir/cups"
+else
+    if test $includedir != /usr/include; then
+	CFLAGS="$CFLAGS -I$includedir"
+    fi
+
+    if test $libdir != /usr/lib -a $libdir != /usr/lib32 -a $libdir != /usr/lib64; then
+	LDFLAGS="$LDFLAGS -L$libdir"
+    fi
+fi
+
+
+usage ()
+{
+    echo "Usage: cups-config --api-version"
+    echo "       cups-config --build"
+    echo "       cups-config --cflags"
+    echo "       cups-config --datadir"
+    echo "       cups-config --help"
+    echo "       cups-config --ldflags"
+    echo "       cups-config [--image] [--static] --libs"
+    echo "       cups-config --serverbin"
+    echo "       cups-config --serverroot"
+    echo "       cups-config --version"
+
+    exit $1
+}
+
+if test $# -eq 0; then
+    usage 1
+fi
+
+# Parse command line options
+static=no
+
+while test $# -gt 0; do
+    case $1 in
+	--api-version)
+	    echo $APIVERSION
+	    ;;
+	--build)
+	    echo $BUILD
+	    ;;
+	--cflags)
+	    echo $CFLAGS
+	    ;;
+	--datadir)
+	    echo $cups_datadir
+	    ;;
+	--help)
+	    usage 0
+	    ;;
+	--image)
+	    # Do nothing
+	    ;;
+	--ldflags)
+	    echo $LDFLAGS
+	    ;;
+	--libs)
+	    if test $static = no; then
+	        libs="-lcups";
+	    else
+	        libs="$libdir/libcups.a $LIBS";
+	    fi
+	    echo $libs
+	    ;;
+	--serverbin)
+	    echo $cups_serverbin
+	    ;;
+	--serverroot)
+	    echo $cups_serverroot
+	    ;;
+	--static)
+	    if test -z "$INSTALLSTATIC"; then
+	        echo "WARNING: Static libraries not installed." >&2
+	    else
+	        static=yes
+	    fi
+	    ;;
+	--version)
+	    echo $VERSION
+	    ;;
+	*)
+	    usage 1
+	    ;;
+    esac
+
+    shift
+done

@@ -1,0 +1,16 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+sysconfdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/etc
+localstatedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/var
+confdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/etc/fonts
+cachedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/var/cache/fontconfig
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.18.3
+Requires.private: freetype2 >=  21.0.15, expat
+Libs: -L${libdir} -lfontconfig
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

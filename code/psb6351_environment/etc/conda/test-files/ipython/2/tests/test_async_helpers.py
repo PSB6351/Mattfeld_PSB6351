@@ -1,0 +1,473 @@
+"""
+Test for async helpers.
+
+Should only trigger on python 3.5+ or will have syntax errors.
+"""
+
+import contextlib
+import sys
+from itertools import chain, repeat
+from textwrap import dedent, indent
+from typing import TYPE_CHECKING
+
+import pytest
+
+from IPython.core.async_helpers import _should_be_async
+from IPython.testing.decorators import skip_without
+
+if TYPE_CHECKING:
+    from IPython import get_ipython
+
+    ip = get_ipython()
+
+
+def iprc(x):
+    return ip.run_cell(dedent(x)).raise_error()
+
+
+def iprc_nr(x):
+    return ip.run_cell(dedent(x))
+
+
+def _finally_return_warning():
+    """Context manager for the ``{val}="return"`` + ``"finally"`` test case.
+
+    Compiling a ``return`` that exits a ``finally`` block emits
+    ``SyntaxWarning: 'return' in a 'finally' block`` starting with Python
+    3.14 (PEP 765). That warning does not exist on older Pythons, so only
+    assert it there; on earlier versions this is a no-op.
+    """
+    if sys.version_info >= (3, 14):
+        return pytest.warns(SyntaxWarning, match="'return' in a 'finally' block")
+    return contextlib.nullcontext()
+
+
+@pytest.fixture(autouse=True)
+def reset_loop_runner():
+    yield
+    ip.loop_runner = "asyncio"
+
+
+def test_should_be_async():
+    assert not _should_be_async("False")
+    assert _should_be_async("await bar()")
+    assert _should_be_async("x = await bar()")
+    assert not _should_be_async(
+        dedent(
+            """
+    async def awaitable():
+        pass
+"""
+        )
+    )
+
+    assert not _should_be_async("return await foo()")
+    assert not _should_be_async("return bar()")
+    assert not _should_be_async("some invalid Python code")
+
+    assert not _should_be_async("'\\ud800'")
+
+    if sys.version_info >= (3, 13):
+        # Note: the next assert assumes the tests run without the `-OO` flag
+        assert not _should_be_async("'\\ud800'\nawait foo")
+
+
+def _get_top_level_cases():
+        # These are test cases that should be valid in a function
+        # but invalid outside of a function.
+        test_cases = []
+        test_cases.append(("basic", "{val}"))
+
+        # Note, in all conditional cases, I use True instead of
+        # False so that the peephole optimizer won't optimize away
+        # the return, so CPython will see this as a syntax error:
+        #
+        # while True:
+        #    break
+        #    return
+        #
+        # But not this:
+        #
+        # while False:
+        #    return
+        #
+        # See https://bugs.python.org/issue1875
+
+        test_cases.append(
+            (
+                "if",
+                dedent(
+                    """
+        if True:
+            {val}
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "while",
+                dedent(
+                    """
+        while True:
+            {val}
+            break
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "try",
+                dedent(
+                    """
+        try:
+            {val}
+        except:
+            pass
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "except",
+                dedent(
+                    """
+        try:
+            pass
+        except:
+            {val}
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "finally",
+                dedent(
+                    """
+        try:
+            pass
+        except:
+            pass
+        finally:
+            {val}
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "for",
+                dedent(
+                    """
+        for _ in range(4):
+            {val}
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "nested",
+                dedent(
+                    """
+        if True:
+            while True:
+                {val}
+                break
+        """
+                ),
+            )
+        )
+
+        test_cases.append(
+            (
+                "deep-nested",
+                dedent(
+                    """
+        if True:
+            while True:
+                break
+                for x in range(3):
+                    if True:
+                        while True:
+                            for x in range(3):
+                                {val}
+        """
+                ),
+            )
+        )
+
+        return test_cases
+
+def _get_ry_syntax_errors():
+    # This is a mix of tests that should be a syntax error if
+    # return or yield whether or not they are in a function
+
+    test_cases = []
+
+    test_cases.append(
+        (
+            "class",
+            dedent(
+                """
+    class V:
+        {val}
+    """
+            ),
+        )
+    )
+
+    test_cases.append(
+        (
+            "nested-class",
+            dedent(
+                """
+    class V:
+        class C:
+            {val}
+    """
+            ),
+        )
+    )
+
+    return test_cases
+
+
+def test_top_level_return_error():
+    tl_err_test_cases = _get_top_level_cases()
+    tl_err_test_cases.extend(_get_ry_syntax_errors())
+
+    vals = (
+        "return",
+        "yield",
+        "yield from (_ for _ in range(3))",
+        dedent(
+            """
+                def f():
+                    pass
+                return
+                """
+        ),
+    )
+
+    with _finally_return_warning():
+        for test_name, test_case in tl_err_test_cases:
+            # This example should work if 'pass' is used as the value
+            iprc(test_case.format(val="pass"))
+
+            # It should fail with all the values
+            for val in vals:
+                with pytest.raises(SyntaxError):
+                    iprc(test_case.format(val=val))
+
+
+def test_in_func_no_error():
+    # Test that the implementation of top-level return/yield
+    # detection isn't *too* aggressive, and works inside a function
+    func_contexts = []
+
+    func_contexts.append(
+        (
+            "func",
+            False,
+            dedent(
+                """
+    def f():"""
+            ),
+        )
+    )
+
+    func_contexts.append(
+        (
+            "method",
+            False,
+            dedent(
+                """
+    class MyClass:
+        def __init__(self):
+    """
+            ),
+        )
+    )
+
+    func_contexts.append(
+        (
+            "async-func",
+            True,
+            dedent(
+                """
+    async def f():"""
+            ),
+        )
+    )
+
+    func_contexts.append(
+        (
+            "async-method",
+            True,
+            dedent(
+                """
+    class MyClass:
+        async def f(self):"""
+            ),
+        )
+    )
+
+    func_contexts.append(
+        (
+            "closure",
+            False,
+            dedent(
+                """
+    def f():
+        def g():
+    """
+            ),
+        )
+    )
+
+    def nest_case(context, case):
+        # Detect indentation
+        lines = context.strip().splitlines()
+        prefix_len = 0
+        for c in lines[-1]:
+            if c != " ":
+                break
+            prefix_len += 1
+
+        indented_case = indent(case, " " * (prefix_len + 4))
+        return context + "\n" + indented_case
+
+    # yield is allowed in async functions, starting in Python 3.6,
+    # and yield from is not allowed in any version
+    vals = ("return", "yield", "yield from (_ for _ in range(3))")
+
+    success_tests = zip(_get_top_level_cases(), repeat(False))
+    failure_tests = zip(_get_ry_syntax_errors(), repeat(True))
+
+    tests = chain(success_tests, failure_tests)
+
+    with _finally_return_warning():
+        for context_name, async_func, context in func_contexts:
+            for (test_name, test_case), should_fail in tests:
+                nested_case = nest_case(context, test_case)
+
+                for val in vals:
+                    cell = nested_case.format(val=val)
+
+                    if should_fail:
+                        with pytest.raises(SyntaxError):
+                            iprc(cell)
+                    else:
+                        iprc(cell)
+
+
+def test_nonlocal():
+    # fails if outer scope is not a function scope or if var not defined
+    with pytest.raises(SyntaxError):
+        iprc("nonlocal x")
+    with pytest.raises(SyntaxError):
+        iprc(
+            """
+        x = 1
+        def f():
+            nonlocal x
+            x = 10000
+            yield x
+        """
+        )
+    with pytest.raises(SyntaxError):
+        iprc(
+            """
+        def f():
+            def g():
+                nonlocal x
+                x = 10000
+                yield x
+        """
+        )
+
+    # works if outer scope is a function scope and var exists
+    iprc(
+        """
+    def f():
+        x = 20
+        def g():
+            nonlocal x
+            x = 10000
+            yield x
+    """
+    )
+
+
+def test_execute():
+    iprc(
+        """
+    import asyncio
+    await asyncio.sleep(0.001)
+    """
+    )
+
+
+def test_autoawait():
+    iprc("%autoawait False")
+    iprc("%autoawait True")
+    iprc(
+        """
+    from asyncio import sleep
+    await sleep(0.1)
+    """
+    )
+
+
+def test_memory_error():
+    """The pgen parser in 3.8 or before use to raise MemoryError on too many nested parens."""
+    iprc("(" * 200 + ")" * 200)
+
+
+@pytest.mark.xfail(reason="fail on curio 1.6 and before on Python 3.12")
+@pytest.mark.skip(
+    reason="skip_without(curio) fails on 3.12 for now even with other skip so must uncond skip"
+)
+def test_autoawait_curio():
+    iprc("%autoawait curio")
+
+
+@skip_without("trio")
+def test_autoawait_trio():
+    iprc("%autoawait trio")
+
+
+@skip_without("trio")
+def test_autoawait_trio_wrong_sleep():
+    iprc("%autoawait trio")
+    res = iprc_nr(
+        """
+    import asyncio
+    await asyncio.sleep(0)
+    """
+    )
+    with pytest.raises(TypeError):
+        res.raise_error()
+
+
+@skip_without("trio")
+def test_autoawait_asyncio_wrong_sleep():
+    iprc("%autoawait asyncio")
+    res = iprc_nr(
+        """
+    import trio
+    await trio.sleep(0)
+    """
+    )
+    with pytest.raises(RuntimeError):
+        res.raise_error()

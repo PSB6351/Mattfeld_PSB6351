@@ -1,0 +1,60 @@
+{
+  "build": "hdc7f604_106_cp314",
+  "build_number": 106,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libstdcxx >=15"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libpython-3.14.7-hdc7f604_106_cp314",
+  "files": [
+    "lib/libpython3.14.so",
+    "lib/libpython3.14.so.1.0",
+    "lib/libpython3.so"
+  ],
+  "fn": "libpython-3.14.7-hdc7f604_106_cp314.conda",
+  "license": "Python-2.0",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libpython-3.14.7-hdc7f604_106_cp314",
+    "type": 1
+  },
+  "md5": "28af2158bb8dbb62e55b0af3b44f9d4a",
+  "name": "libpython",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libpython-3.14.7-hdc7f604_106_cp314.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libpython3.14.so",
+        "path_type": "softlink",
+        "sha256": "82f61579adac41f0572530d0f2b809065b14526bb402b51649368864cb99a62c",
+        "size_in_bytes": 36099368
+      },
+      {
+        "_path": "lib/libpython3.14.so.1.0",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "prefix_placeholder": "/home/conda/feedstock_root/build_artifacts/python-split_1788382683094/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol",
+        "sha256": "82f61579adac41f0572530d0f2b809065b14526bb402b51649368864cb99a62c",
+        "sha256_in_prefix": "d4765b8161df076342f54ba4a8c69dc1bfa0bd02e50ad5a301bed4373f15473f",
+        "size_in_bytes": 36099368
+      },
+      {
+        "_path": "lib/libpython3.so",
+        "path_type": "hardlink",
+        "sha256": "2036c55b208bc5a1b59d906fc6aec1a12e08242357608898bbf86ebd10e06b6c",
+        "sha256_in_prefix": "2036c55b208bc5a1b59d906fc6aec1a12e08242357608898bbf86ebd10e06b6c",
+        "size_in_bytes": 14920
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5f879892bd439c3d94f4a97b06c214b9a19c4b92f74d84f0305c6ca1b2b239b2",
+  "size": 10520530,
+  "subdir": "linux-64",
+  "timestamp": 1788383918000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libpython-3.14.7-hdc7f604_106_cp314.conda",
+  "version": "3.14.7"
+}

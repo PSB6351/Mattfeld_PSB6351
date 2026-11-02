@@ -1,0 +1,219 @@
+{
+  "build": "h23af247_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.17,<3.0.a0",
+    "libgcc >=15",
+    "libstdcxx >=15",
+    "libzlib >=1.3.2,<2.0a0",
+    "libfreetype >=2.14.3",
+    "libfreetype6 >=2.14.3",
+    "icu >=78.3,<79.0a0",
+    "libglib >=2.90.0,<3.0a0",
+    "libpng >=1.6.59,<1.7.0a0",
+    "cairo >=1.18.6,<2.0a0",
+    "graphite2 >=1.3.15,<2.0a0"
+  ],
+  "extracted_package_dir": "/home/umcca001/.conda/pkgs/libharfbuzz-14.5.1-h23af247_0",
+  "files": [
+    "lib/libharfbuzz-cairo.so",
+    "lib/libharfbuzz-cairo.so.0",
+    "lib/libharfbuzz-cairo.so.0.61451.0",
+    "lib/libharfbuzz-gobject.so",
+    "lib/libharfbuzz-gobject.so.0",
+    "lib/libharfbuzz-gobject.so.0.61451.0",
+    "lib/libharfbuzz-gpu.so",
+    "lib/libharfbuzz-gpu.so.0",
+    "lib/libharfbuzz-gpu.so.0.61451.0",
+    "lib/libharfbuzz-icu.so",
+    "lib/libharfbuzz-icu.so.0",
+    "lib/libharfbuzz-icu.so.0.61451.0",
+    "lib/libharfbuzz-raster.so",
+    "lib/libharfbuzz-raster.so.0",
+    "lib/libharfbuzz-raster.so.0.61451.0",
+    "lib/libharfbuzz-subset.so",
+    "lib/libharfbuzz-subset.so.0",
+    "lib/libharfbuzz-subset.so.0.61451.0",
+    "lib/libharfbuzz-vector.so",
+    "lib/libharfbuzz-vector.so.0",
+    "lib/libharfbuzz-vector.so.0.61451.0",
+    "lib/libharfbuzz.so",
+    "lib/libharfbuzz.so.0",
+    "lib/libharfbuzz.so.0.61451.0"
+  ],
+  "fn": "libharfbuzz-14.5.1-h23af247_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/home/umcca001/.conda/pkgs/libharfbuzz-14.5.1-h23af247_0",
+    "type": 1
+  },
+  "md5": "c29c810ee25f6ef4f3fefc183142a0ab",
+  "name": "libharfbuzz",
+  "package_tarball_full_path": "/home/umcca001/.conda/pkgs/libharfbuzz-14.5.1-h23af247_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "lib/libharfbuzz-cairo.so",
+        "path_type": "softlink",
+        "sha256": "d63c08a0dbfecb3a7ac96087f375247c8bcc5de76d1afc7ef73df8f679afb341",
+        "size_in_bytes": 65688
+      },
+      {
+        "_path": "lib/libharfbuzz-cairo.so.0",
+        "path_type": "softlink",
+        "sha256": "d63c08a0dbfecb3a7ac96087f375247c8bcc5de76d1afc7ef73df8f679afb341",
+        "size_in_bytes": 65688
+      },
+      {
+        "_path": "lib/libharfbuzz-cairo.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "d63c08a0dbfecb3a7ac96087f375247c8bcc5de76d1afc7ef73df8f679afb341",
+        "sha256_in_prefix": "d63c08a0dbfecb3a7ac96087f375247c8bcc5de76d1afc7ef73df8f679afb341",
+        "size_in_bytes": 65688
+      },
+      {
+        "_path": "lib/libharfbuzz-gobject.so",
+        "path_type": "softlink",
+        "sha256": "92ed29e74b87cc5b562126389d3d3f4de975e7e140a14ce3f57f1be1b49f9a49",
+        "size_in_bytes": 146040
+      },
+      {
+        "_path": "lib/libharfbuzz-gobject.so.0",
+        "path_type": "softlink",
+        "sha256": "92ed29e74b87cc5b562126389d3d3f4de975e7e140a14ce3f57f1be1b49f9a49",
+        "size_in_bytes": 146040
+      },
+      {
+        "_path": "lib/libharfbuzz-gobject.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "92ed29e74b87cc5b562126389d3d3f4de975e7e140a14ce3f57f1be1b49f9a49",
+        "sha256_in_prefix": "92ed29e74b87cc5b562126389d3d3f4de975e7e140a14ce3f57f1be1b49f9a49",
+        "size_in_bytes": 146040
+      },
+      {
+        "_path": "lib/libharfbuzz-gpu.so",
+        "path_type": "softlink",
+        "sha256": "9ae9e32635767a83c0a0a9c4dae8279a02eab602d731187c603375296b8345dd",
+        "size_in_bytes": 193872
+      },
+      {
+        "_path": "lib/libharfbuzz-gpu.so.0",
+        "path_type": "softlink",
+        "sha256": "9ae9e32635767a83c0a0a9c4dae8279a02eab602d731187c603375296b8345dd",
+        "size_in_bytes": 193872
+      },
+      {
+        "_path": "lib/libharfbuzz-gpu.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "9ae9e32635767a83c0a0a9c4dae8279a02eab602d731187c603375296b8345dd",
+        "sha256_in_prefix": "9ae9e32635767a83c0a0a9c4dae8279a02eab602d731187c603375296b8345dd",
+        "size_in_bytes": 193872
+      },
+      {
+        "_path": "lib/libharfbuzz-icu.so",
+        "path_type": "softlink",
+        "sha256": "3ff474c8fd75512682c95e6678045e852560159f65d276a20c344573ab82e27b",
+        "size_in_bytes": 17232
+      },
+      {
+        "_path": "lib/libharfbuzz-icu.so.0",
+        "path_type": "softlink",
+        "sha256": "3ff474c8fd75512682c95e6678045e852560159f65d276a20c344573ab82e27b",
+        "size_in_bytes": 17232
+      },
+      {
+        "_path": "lib/libharfbuzz-icu.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "3ff474c8fd75512682c95e6678045e852560159f65d276a20c344573ab82e27b",
+        "sha256_in_prefix": "3ff474c8fd75512682c95e6678045e852560159f65d276a20c344573ab82e27b",
+        "size_in_bytes": 17232
+      },
+      {
+        "_path": "lib/libharfbuzz-raster.so",
+        "path_type": "softlink",
+        "sha256": "13e66fdcfe603f4abf145f809b584521233800362a94ef210987962262a98feb",
+        "size_in_bytes": 141040
+      },
+      {
+        "_path": "lib/libharfbuzz-raster.so.0",
+        "path_type": "softlink",
+        "sha256": "13e66fdcfe603f4abf145f809b584521233800362a94ef210987962262a98feb",
+        "size_in_bytes": 141040
+      },
+      {
+        "_path": "lib/libharfbuzz-raster.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "13e66fdcfe603f4abf145f809b584521233800362a94ef210987962262a98feb",
+        "sha256_in_prefix": "13e66fdcfe603f4abf145f809b584521233800362a94ef210987962262a98feb",
+        "size_in_bytes": 141040
+      },
+      {
+        "_path": "lib/libharfbuzz-subset.so",
+        "path_type": "softlink",
+        "sha256": "9b6e4aaf1ade3a0014209aafb177e7a937d1ff08328890ba3f39c1f5f9a7bba6",
+        "size_in_bytes": 1805192
+      },
+      {
+        "_path": "lib/libharfbuzz-subset.so.0",
+        "path_type": "softlink",
+        "sha256": "9b6e4aaf1ade3a0014209aafb177e7a937d1ff08328890ba3f39c1f5f9a7bba6",
+        "size_in_bytes": 1805192
+      },
+      {
+        "_path": "lib/libharfbuzz-subset.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "9b6e4aaf1ade3a0014209aafb177e7a937d1ff08328890ba3f39c1f5f9a7bba6",
+        "sha256_in_prefix": "9b6e4aaf1ade3a0014209aafb177e7a937d1ff08328890ba3f39c1f5f9a7bba6",
+        "size_in_bytes": 1805192
+      },
+      {
+        "_path": "lib/libharfbuzz-vector.so",
+        "path_type": "softlink",
+        "sha256": "99b140888671e6e7bef58d96c731e8f1c484092e011a97326f800158c5eb5fee",
+        "size_in_bytes": 198264
+      },
+      {
+        "_path": "lib/libharfbuzz-vector.so.0",
+        "path_type": "softlink",
+        "sha256": "99b140888671e6e7bef58d96c731e8f1c484092e011a97326f800158c5eb5fee",
+        "size_in_bytes": 198264
+      },
+      {
+        "_path": "lib/libharfbuzz-vector.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "99b140888671e6e7bef58d96c731e8f1c484092e011a97326f800158c5eb5fee",
+        "sha256_in_prefix": "99b140888671e6e7bef58d96c731e8f1c484092e011a97326f800158c5eb5fee",
+        "size_in_bytes": 198264
+      },
+      {
+        "_path": "lib/libharfbuzz.so",
+        "path_type": "softlink",
+        "sha256": "50959eeee2369a8ed098f361e804ea5af544926c37e0202fb5c9855e196bbfe9",
+        "size_in_bytes": 1647416
+      },
+      {
+        "_path": "lib/libharfbuzz.so.0",
+        "path_type": "softlink",
+        "sha256": "50959eeee2369a8ed098f361e804ea5af544926c37e0202fb5c9855e196bbfe9",
+        "size_in_bytes": 1647416
+      },
+      {
+        "_path": "lib/libharfbuzz.so.0.61451.0",
+        "path_type": "hardlink",
+        "sha256": "50959eeee2369a8ed098f361e804ea5af544926c37e0202fb5c9855e196bbfe9",
+        "sha256_in_prefix": "50959eeee2369a8ed098f361e804ea5af544926c37e0202fb5c9855e196bbfe9",
+        "size_in_bytes": 1647416
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "eb8ee0fd0f11bcd8f73d260fd2e64c7338e7c829ed204d9abbfd9dc75e55b031",
+  "size": 1411575,
+  "subdir": "linux-64",
+  "timestamp": 1790860722000,
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/libharfbuzz-14.5.1-h23af247_0.conda",
+  "version": "14.5.1"
+}

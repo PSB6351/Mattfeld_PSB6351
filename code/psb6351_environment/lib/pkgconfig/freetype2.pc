@@ -1,0 +1,13 @@
+prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+exec_prefix=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment
+libdir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib
+includedir=/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 26.6.20
+Requires: 
+Libs: -L/home/umcca001/Mattfeld_PSB6351/code/psb6351_environment/lib -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

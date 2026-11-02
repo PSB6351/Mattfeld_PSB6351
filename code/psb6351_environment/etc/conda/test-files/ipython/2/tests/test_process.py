@@ -1,0 +1,240 @@
+"""
+Tests for platutils.py
+"""
+
+# -----------------------------------------------------------------------------
+#  Copyright (C) 2008-2011  The IPython Development Team
+#
+#  Distributed under the terms of the BSD License.  The full license is in
+#  the file COPYING, distributed as part of this software.
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# Imports
+# -----------------------------------------------------------------------------
+
+import sys
+import signal
+import os
+import time
+from _thread import interrupt_main  # Py 3
+import threading
+
+import pytest
+
+from IPython.utils.process import (
+    find_cmd,
+    FindCmdError,
+    arg_split,
+    arg_split_with_quotes,
+    system,
+    getoutput,
+    getoutputerror,
+    get_output_error_code,
+)
+from IPython.utils.capture import capture_output
+from IPython.testing import decorators as dec
+from IPython.testing import tools as tt
+from IPython.utils.io import temp_pyfile
+
+python = os.path.basename(sys.executable)
+
+# -----------------------------------------------------------------------------
+# Tests
+# -----------------------------------------------------------------------------
+
+
+@dec.skip_win32
+def test_find_cmd_ls():
+    """Make sure we can find the full path to ls."""
+    path = find_cmd("ls")
+    assert path.endswith("ls")
+
+
+@dec.skip_if_not_win32
+def test_find_cmd_pythonw():
+    """Try to find pythonw on Windows."""
+    path = find_cmd("pythonw")
+    assert path.lower().endswith("pythonw.exe"), path
+
+
+def test_find_cmd_fail():
+    """Make sure that FindCmdError is raised if we can't find the cmd."""
+    pytest.raises(FindCmdError, find_cmd, "asdfasdf")
+
+
+@dec.skip_win32
+@pytest.mark.parametrize(
+    "argstr, argv",
+    [
+        ("hi", ["hi"]),
+        ("hello there", ["hello", "there"]),
+        # \u01ce == \N{LATIN SMALL LETTER A WITH CARON}
+        # Do not use \N because the tests crash with syntax error in
+        # some cases, for example windows python2.6.
+        ("h\u01cello", ["h\u01cello"]),
+        ('something "with quotes"', ["something", '"with quotes"']),
+    ],
+)
+def test_arg_split(argstr, argv):
+    """Ensure that argument lines are correctly split like in a shell."""
+    assert arg_split(argstr) == argv
+
+
+@dec.skip_if_not_win32
+@pytest.mark.parametrize(
+    "argstr,argv",
+    [
+        ("hi", ["hi"]),
+        ("hello there", ["hello", "there"]),
+        ("h\u01cello", ["h\u01cello"]),
+        ('something "with quotes"', ["something", "with quotes"]),
+    ],
+)
+def test_arg_split_win32(argstr, argv):
+    """Ensure that argument lines are correctly split like in a shell."""
+    assert arg_split(argstr) == argv
+
+
+@pytest.mark.parametrize(
+    "argstr,expected",
+    [
+        ("foo bar", [("foo", False), ("bar", False)]),
+        ('"*.txt"', [("*.txt", True)]),
+        ("'*.txt'", [("*.txt", True)]),
+        # The repro from #12726: bare, double-quoted and single-quoted
+        # versions of the same chars.
+        (
+            "p \"p\" 'p' * \"*\" '*'",
+            [
+                ("p", False),
+                ("p", True),
+                ("p", True),
+                ("*", False),
+                ("*", True),
+                ("*", True),
+            ],
+        ),
+        (
+            '-i demo.py "*.txt" *.txt',
+            [
+                ("-i", False),
+                ("demo.py", False),
+                ("*.txt", True),
+                ("*.txt", False),
+            ],
+        ),
+    ],
+)
+def test_arg_split_with_quotes(argstr, expected):
+    """``arg_split_with_quotes`` flags tokens that came from quoted segments."""
+    assert arg_split_with_quotes(argstr) == expected
+
+
+def test_arg_split_with_quotes_strict_false():
+    """Unbalanced quotes should not raise when ``strict=False``."""
+    result = arg_split_with_quotes('foo "unbalanced', strict=False)
+    assert ("foo", False) in result
+
+
+_SUBPROCESS_SRC = "\n".join([
+    "import sys",
+    "print('on stdout', end='', file=sys.stdout)",
+    "print('on stderr', end='', file=sys.stderr)",
+    "sys.stdout.flush()",
+    "sys.stderr.flush()",
+])
+
+
+@pytest.fixture
+def subprocess_tmpfile():
+    fname = temp_pyfile(_SUBPROCESS_SRC)
+    yield fname
+    try:
+        os.unlink(fname)
+    except OSError:
+        pass
+
+
+def _assert_interrupts(command):
+    """Interrupt a subprocess after a second."""
+    if threading.main_thread() != threading.current_thread():
+        raise pytest.skip("Can't run this test if not in main thread.")
+
+    signal.signal(signal.SIGINT, signal.default_int_handler)
+
+    def interrupt():
+        time.sleep(0.5)
+        interrupt_main()
+
+    thread = threading.Thread(target=interrupt)
+    thread.start()
+    start = time.time()
+    try:
+        result = command()
+    except KeyboardInterrupt:
+        pass
+    end = time.time()
+    thread.join()
+    assert end - start < 2, "Process didn't die quickly: %s" % (end - start)
+    return result
+
+
+def test_system(subprocess_tmpfile):
+    status = system(f'{python} "{subprocess_tmpfile}"')
+    assert status == 0
+
+
+def test_system_quotes():
+    status = system('%s -c "import sys"' % python)
+    assert status == 0
+
+
+# ``system()`` forks a pty, and this test deliberately does so while the
+# interrupting thread of ``_assert_interrupts`` is alive, which Python 3.12 and
+# above warn about. The interrupt has to come from another thread for the test
+# to mean anything, so the warning is expected here.
+@pytest.mark.filterwarnings("ignore:This process .*is multi-threaded")
+def test_system_interrupt():
+    """When interrupted in the way ipykernel interrupts IPython, the subprocess is interrupted."""
+    def command():
+        return system('%s -c "import time; time.sleep(5)"' % python)
+
+    status = _assert_interrupts(command)
+    assert status != 0, f"The process wasn't interrupted. Status: {status}"
+
+
+def test_getoutput(subprocess_tmpfile):
+    out = getoutput(f'{python} "{subprocess_tmpfile}"')
+    assert out in ("on stderron stdout", "on stdouton stderr")
+
+
+def test_getoutput_quoted():
+    out = getoutput('%s -c "print (1)"' % python)
+    assert out.strip() == "1"
+
+
+@dec.skip_win32
+def test_getoutput_quoted2():
+    out = getoutput("%s -c 'print (1)'" % python)
+    assert out.strip() == "1"
+    out = getoutput("%s -c 'print (\"1\")'" % python)
+    assert out.strip() == "1"
+
+
+def test_getoutput_error(subprocess_tmpfile):
+    out, err = getoutputerror(f'{python} "{subprocess_tmpfile}"')
+    assert out == "on stdout"
+    assert err == "on stderr"
+
+
+def test_get_output_error_code(subprocess_tmpfile):
+    quiet_exit = '%s -c "import sys; sys.exit(1)"' % python
+    out, err, code = get_output_error_code(quiet_exit)
+    assert out == ""
+    assert err == ""
+    assert code == 1
+    out, err, code = get_output_error_code(f'{python} "{subprocess_tmpfile}"')
+    assert out == "on stdout"
+    assert err == "on stderr"
+    assert code == 0
