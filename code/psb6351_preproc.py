@@ -185,13 +185,13 @@ psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
 psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 # NODE 10: Coregistration of functional to anatomical node using freesurfer's bbregister
-#fs_register = pe.Node(fs.BBRegister(init='fsl'),
-#                      name ='fs_register')
-#fs_register.inputs.contrast_type = 't2'
-#fs_register.inputs.out_fsl_file = True
-#fs_register.inputs.subjects_dir = fs_dir
-#psb6351_wf.connect(subjID_infosource, 'subject_id', fs_register, 'subject_id')
-#psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
+fs_register = pe.Node(fs.BBRegister(init='fsl'),
+                      name ='fs_register')
+fs_register.inputs.contrast_type = 't2'
+fs_register.inputs.out_fsl_file = True
+fs_register.inputs.subjects_dir = fs_dir
+psb6351_wf.connect(subjID_infosource, 'subject_id', fs_register, 'subject_id')
+psb6351_wf.connect(extractref, 'roi_file', fs_register, 'source_file')
 
 # BIG NOTE: A lot of the steps that you'll start doing now require a 
 #           hefty amount of memory. Your nodes may crash without very
@@ -258,6 +258,21 @@ psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
 
 # NODES FOR SPATIAL SMOOTHING GO HERE!!!!
 
+# NODE 11: Spatial smoothing using FSL
+smooth = pe.MapNode(fsl.Smooth(output_type='NIFTI_GZ'),
+                    iterfield=['in_file'],
+                    name='smooth')
+smooth.iterables = ('fwhm', [3.0, 6.0, 9.0, 12.0])
+psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
+
+
+
+
+
+
+
+
+
 #Smooth each functional run using the selected FWHM
 smooth = pe.MapNode(
     fsl.Smooth(output_type='NIFTI_GZ'),
@@ -293,6 +308,14 @@ psb6351_wf.connect(fwhm_infosource, 'fwhm', smooth, 'fwhm')
 
 # NODES FOR TEMPORAL FILTERING GO HERE !!!!!
 
+# NODE 12: High-pass filtering using FSL
+highpass = pe.MapNode(fsl.ImageMaths(op_string='-bptf 28.41 -1'),
+                      iterfield=['in_file'],
+                      name='highpass')
+psb6351_wf.connect(smooth, 'out_file', highpass, 'in_file')
+
+
+
 #Demonstration cutoff: 100 seconds
 #TR matches the 1.76 seconds currently specified for slice timing
 tr_seconds = 1.76
@@ -313,60 +336,18 @@ psb6351_wf.connect(smooth, 'smoothed_file', hp_filter, 'in_file')
 # NODE FINAL: DataSink. Modify to save only the files you want at the completion of your workflow
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
-psb6351_wf.connect(subjID_infosource, 'subject_id', datasink, 'container')
-# Give each smoothing width a separate output directory.
-def smoothing_output_dir(fwhm):
-    return '/home/umcca001/Mattfeld_PSB6351/derivatives/preproc/fwhm_%s' % fwhm
 
-psb6351_wf.connect(
-    fwhm_infosource, ('fwhm', smoothing_output_dir),
-    datasink, 'base_directory'
-)
+psb6351_wf.connect(subjID_infosource, 'subject_id', datasink, 'container')
 psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
-#psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
-#psb6351_wf.connect(fs_register, 'min_cost_file', datasink, 'register.@reg_cost')
-#psb6351_wf.connect(fs_register, 'out_fsl_file', datasink, 'register.@reg_fsl_file')
+psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
+psb6351_wf.connect(fs_register, 'min_cost_file', datasink, 'register.@reg_cost')
+psb6351_wf.connect(fs_register, 'out_fsl_file', datasink, 'register.@reg_fsl_file')
 
-# ADD datasink connections to save spatially smoothed and temporally filtered data
-
-
-#Save corrected functional data before spatial smoothing
-psb6351_wf.connect(
-    tshifter, 'out_file',
-    datasink, 'unsmoothed.@func'
-)
-
-#Save each smoothing level before high-pass filtering
-psb6351_wf.connect(
-    smooth, 'smoothed_file',
-    datasink, 'smoothed.@before_highpass'
-)
-
-#Save each smoothing level after high-pass filtering
-psb6351_wf.connect(
-    hp_filter, 'out_file',
-    datasink, 'highpass.@after_highpass'
-)
-
-
-# if you implemented more than one method for diadatic purposes...save accordingly
+# Save spatially smoothed and temporally filtered data
+psb6351_wf.connect(smooth, 'out_file', datasink, 'smooth.@blurred')
+psb6351_wf.connect(highpass, 'out_file', datasink, 'filter.@highpass')
 
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
-
-psb6351_wf.config['execution']['use_relative_paths'] = True
-psb6351_wf.config['execution']['crashdump_dir'] = os.path.join(work_dir, 'crash')
-psb6351_wf.run(
-    plugin='SLURM',
-    plugin_args={
-        'sbatch_args': (
-            '--partition default-part '
-            '--account acc_psb6351 '
-            '--qos classroom '
-            '--mem=8G'
-        ),
-        'overwrite': True
-    }
-)
