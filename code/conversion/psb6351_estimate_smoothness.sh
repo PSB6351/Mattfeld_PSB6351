@@ -7,34 +7,25 @@
 #SBATCH --account iacc_madlab
 #SBATCH --partition 16C_128G
 
-# Need to run the below line once:
-#3dAutomask -prefix COMPLETE THIS LINE...WHAT ARE THE INPUTS, OUTPUTS,  INCLUDE AS A COMMENTED LINE WHY YOU ARE RUNNING THIS COMMAND
+# ---- paths ----
+sub=sub-021
+ref_dir=/home/aoste011/Mattfeld_PSB6351/derivatives/preproc/${sub}/study_ref
+bold=${ref_dir}/${sub}_task-loc_run-01_bold_roi.nii.gz
+out_dir=/home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs
+mask=${out_dir}/${sub}_mask.nii.gz
 
-#3dFWHMx COMPLETE THIS LINE...WHAT INPUTS, OUTPUTS, FLAGS DO YOU NEED.  WHAT ARE YOU TRYING TO ACCOMPLISH WITH THIS LINE?
+mkdir -p ${out_dir}
+cd ${out_dir}
 
-# THE OUTPUT SHOULD LOOK SOMETHING LIKE THE TEXT BELOW:
+# Need to run the below line once (already run):
+# Make a brain mask from the functional data so smoothness is only estimated
+# inside the brain (not the air/noise around the head)
+#3dAutomask -prefix ${mask} ${bold}
 
-#++ 3dFWHMx: AFNI version=AFNI_20.2.10 (Aug  4 2020) [64-bit]
-#++ Authored by: The Bob
-#*+ WARNING:   If you are performing spatial transformations on an oblique dset, 
-#  such as /home/amattfel/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz,
-#  or viewing/combining it with volumes of differing obliquity,
-#  you should consider running: 
-#     3dWarp -deoblique 
-#  on this and  other oblique datasets in the same session.
-# See 3dWarp -help for details.
-#++ Oblique dataset:/home/amattfel/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
-#++ Number of voxels in mask = 220228
-#++ Oblique dataset:/home/amattfel/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-loc_run-1_bold_roi.nii.gz is 30.000002 degrees from plumb.
-#++ start ACF calculations out to radius = 17.31 mm
-# + ACF done (0.00 CPU s thus far)
-# old-style FWHM parameters
-# 0  0  0    0
-# ACF model parameters for a*exp(-r*r/(2*b*b))+(1-a)*exp(-r/c) plus effective FWHM
-#--># #######  #######  #######    ###### <-- THIS IS THE MOST IMPORTANT LINE....WHAT HAS BEEN MASKED HERE THAT YOU NEED FOR COMMAND BELOW?
-#++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2
-#++ 1dplot: AFNI version=AFNI_20.2.10 (Aug  4 2020) [64-bit]
-#++ Authored by: RWC et al.
-#++ and 1dplot-ed to file acf2.png
+# Estimate the spatial smoothness of the data inside the brain mask using the ACF model (already run).
+# Output: a=0.506649 b=24.4878 c=4.53657, effective FWHM=22.1896 mm
+#3dFWHMx -mask ${mask} -input ${bold} -acf acf2 > fwhmx_results.txt
 
-3dClustSim -mask WHAT GOES HERE??? -acf ######  ######  ####### -prefix psb6351_clustsim.1D
+# Simulate noise with the measured smoothness (ACF a, b, c) inside the same mask to find
+# the minimum cluster size needed at each voxel p-threshold and corrected alpha (replaces AlphaSim)
+3dClustSim -mask ${mask} -acf 0.506649 24.4878 4.53657 -prefix psb6351_clustsim

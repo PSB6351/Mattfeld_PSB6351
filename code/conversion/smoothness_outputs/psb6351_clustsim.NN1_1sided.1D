@@ -1,0 +1,17 @@
+# 3dClustSim -mask /home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz -acf 0.506649 24.4878 4.53657 -prefix psb6351_clustsim
+# 1-sided thresholding
+# Grid: 100x100x66 2.00x2.00x2.00 mm^3 (217032 voxels in mask)
+#
+# CLUSTER SIZE THRESHOLD(pthr,alpha) in Voxels
+# -NN 1  | alpha = Prob(Cluster >= given size)
+#  pthr  | .10000 .05000 .02000 .01000
+# ------ | ------ ------ ------ ------
+ 0.050000   11129  13937  17236  19359
+ 0.020000  3942.5 5196.5 6750.0 7980.0
+ 0.010000  1884.0 2645.0 3661.0 4367.0
+ 0.005000   904.0 1389.0 2025.0 2518.0
+ 0.002000   345.0  558.7  896.5 1202.0
+ 0.001000   164.2  274.4  492.0  674.0
+ 0.000500    79.3  136.0  259.0  372.0
+ 0.000200    33.3   56.6  107.2  163.0
+ 0.000100    17.9   31.0   56.4   87.0

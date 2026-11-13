@@ -1,0 +1,18 @@
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 217032 voxels in mask (32.88% of total)
+++ Kernel function radius = 62.26 mm
+++ ACF(0.51,24.49,4.54) => FWHM=22.19 => 100x100x66 pads to 192x192x160
+ + Kernel image dimensions 95 x 95 x 79
+++ Startup clock time = 0.5 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 1221.3 s

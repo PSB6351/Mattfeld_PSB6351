@@ -1,0 +1,55 @@
+++ 3dAutomask: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: Emperor Zhark
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/aoste011/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-loc_run-01_bold_roi.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/aoste011/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-loc_run-01_bold_roi.nii.gz is 30.000002 degrees from plumb.
+++ Loading dataset /home/aoste011/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-loc_run-01_bold_roi.nii.gz
+++ Forming automask
+ + Fixed clip level = 126.550598
+ + Used gradual clip level = 93.546997 .. 153.076004
+ + Number voxels above clip level = 235121
+ + Clustering voxels ...
+ + Largest cluster has 230848 voxels
+ + Clustering voxels ...
+ + Largest cluster has 208886 voxels
+ + Filled  3374 voxels in small holes; now have 212260 voxels
+ + Filled  4683 voxels in large holes; now have 216943 voxels
+ + Clustering voxels ...
+ + Largest cluster has 216939 voxels
+ + Clustering non-brain voxels ...
+ + Clustering voxels ...
+ + Largest cluster has 442968 voxels
+ + Mask now has 217032 voxels
+++ 217032 voxels in the mask [out of 660000: 32.88%]
+++ first  12 x-planes are zero [from R]
+++ last   16 x-planes are zero [from L]
+++ first   0 y-planes are zero [from P]
+++ last    2 y-planes are zero [from A]
+++ first   0 z-planes are zero [from I]
+++ last    0 z-planes are zero [from S]
+++ Output dataset /home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz
+++ CPU time = 0.000000 sec
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/aoste011/Mattfeld_PSB6351/code/conversion/smoothness_outputs/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 217032
+++ Oblique dataset:/home/aoste011/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-loc_run-01_bold_roi.nii.gz is 30.000002 degrees from plumb.
+++ start ACF calculations out to radius = 17.31 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2.png
+ + and 1dplot-ed to file acf2.png
