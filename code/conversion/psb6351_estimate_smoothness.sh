@@ -46,3 +46,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/applications/spack-202506/opt/spac
 #++ and 1dplot-ed to file acf2.png
 
 3dClustSim -mask /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz -acf 0.587693 2.73243 7.66919 -prefix psb6351_clustsim.1D
+
+
+# also, i had to check manually for the -acf values after running 3dFWHMx. is this standard practice or is there a better way of doing this (pipeline / pipe function??)
