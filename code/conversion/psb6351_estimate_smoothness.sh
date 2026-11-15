@@ -12,10 +12,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/applications/spack-202506/opt/spac
 
 # Need to run the below line once:
 #3dAutomask -prefix COMPLETE THIS LINE...WHAT ARE THE INPUTS, OUTPUTS,  INCLUDE AS A COMMENTED LINE WHY YOU ARE RUNNING THIS COMMAND
-
+# run 3dAutomask makes a brain-only mask from the preprocessed EPI so smoothness is estimated (via 3dfwhmx) and simulated later w 3dClustSim only inside the brain, not in empty space around the head, which would distort the outputs
 3dAutomask -prefix /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered/_highpass0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz
 
 #3dFWHMx COMPLETE THIS LINE...WHAT INPUTS, OUTPUTS, FLAGS DO YOU NEED.  WHAT ARE YOU TRYING TO ACCOMPLISH WITH THIS LINE?
+# inputs are coded below. 3dfwhmx estimates how spatially smoothened the data is. -acf fits the spatial autocorrelation fun a * exp(-r^2 / (2b^2)) + (1 - a) * exp(-r/c). the a b and c values are what 3dclustsim needs to work
 
 3dFWHMx -mask /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz -input /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered/_highpass0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz -acf acf2
 
