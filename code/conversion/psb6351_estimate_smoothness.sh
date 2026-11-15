@@ -6,11 +6,14 @@
 #SBATCH --qos pq_madlab
 #SBATCH --account iacc_madlab
 #SBATCH --partition 16C_128G
+module load afni
 
 # Need to run the below line once:
-#3dAutomask -prefix COMPLETE THIS LINE...WHAT ARE THE INPUTS, OUTPUTS,  INCLUDE AS A COMMENTED LINE WHY YOU ARE RUNNING THIS COMMAND
+# Makes a brain mask from the functional image so smoothness is only estimated
+# inside the brain, not the empty space around the head
+3dAutomask -prefix /home/cknowlto/Mattfeld_PSB6351/derivatives/preproc_only_slice_and_motion_correction/sub-021/motion/sub-021_mask.nii.gz /home/cknowlto/Mattfeld_PSB6351/derivatives/preproc_only_slice_and_motion_correction/sub-021/motion/sub-021_task-study_run-3_bold_roi.nii.gz
 
-#3dFWHMx COMPLETE THIS LINE...WHAT INPUTS, OUTPUTS, FLAGS DO YOU NEED.  WHAT ARE YOU TRYING TO ACCOMPLISH WITH THIS LINE?
+3dFWHMx -mask /home/cknowlto/Mattfeld_PSB6351/derivatives/preproc_only_slice_and_motion_correction/sub-021/motion/sub-021_mask.nii.gz -input /home/cknowlto/Mattfeld_PSB6351/derivatives/preproc_only_slice_and_motion_correction/sub-021/motion/sub-021_task-study_run-3_bold_roi.nii.gz -acf acf2
 
 # THE OUTPUT SHOULD LOOK SOMETHING LIKE THE TEXT BELOW:
 
@@ -37,4 +40,4 @@
 #++ Authored by: RWC et al.
 #++ and 1dplot-ed to file acf2.png
 
-3dClustSim -mask WHAT GOES HERE??? -acf ######  ######  ####### -prefix psb6351_clustsim.1D
+3dClustSim -mask /home/cknowlto/Mattfeld_PSB6351/derivatives/preproc_only_slice_and_motion_correction/sub-021/motion/sub-021_mask.nii.gz -acf A B C -prefix psb6351_clustsim.1D
