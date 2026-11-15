@@ -10,7 +10,7 @@
 
 # Need to run the below line once:
 #3dAutomask -prefix COMPLETE THIS LINE...WHAT ARE THE INPUTS, OUTPUTS,  INCLUDE AS A COMMENTED LINE WHY YOU ARE RUNNING THIS COMMAND
-T
+
 # 3dAutomask creates a brain-only binary mask dataset (composed of 0 for outside the brain and 1 for inside the brain) based on EPI or skull-stripped anatomical data. Looking at a breakdown by Andy's Brain Book (https://andysbrainbook.readthedocs.io/en/stable/AFNI/AFNI_Short_Course/AFNI_Preprocessing/06_AFNI_Masking_Scaling.html), 
 # our data can be reduced by applying a mask, which would indicate which voxels should be analyzed in AFNI. This binary separation is like tracing an outline on paper before cutting out your desired image! Here,
 # assumed noise is cut off via the 3dAutomask line. 
@@ -25,6 +25,24 @@ T
 # ----------------------------------------------------------------- 
 
 #3dFWHMx COMPLETE THIS LINE...WHAT INPUTS, OUTPUTS, FLAGS DO YOU NEED.  WHAT ARE YOU TRYING TO ACCOMPLISH WITH THIS LINE?
+
+# Originally I only ran this line:
+# 3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf2 -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_task-REVL_run-01_bold_roi.nii.gz
+# This only accounts for one set mm size, so to look for differences I 
+
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_3mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_3/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_3mm.1D
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_5mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_5/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_5mm.1D
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_6mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_6/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_6mm.1D
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_8mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_8/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_8mm.1D
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_10mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_10/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_10mm.1D
+
+#3dFWHMx -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf_12mm -input /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/highpass/_fwhm_12/_highpass0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth_maths.nii.gz > fwhmx_12mm.1D
+
 
 # The goal for this 3dFWHMx line is to estimate the amount of smoothness (RECALL!! INTRINSIC SPATIAL SMOOTHNESS) of the noise in our data. 
 # By gathering/estimating smoothness, this can then be applied to the 3dClustStim line below to run Montecarlo simulations! 
@@ -77,8 +95,23 @@ T
 # Now that the two lines ran once, I will comment them out so they remain in the script, but they won't run again.  
 
 #3dClustSim -mask WHAT GOES HERE??? -acf ######  ######  ####### -prefix psb6351_clustsim.1D
-3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.480572 24.9153 4.75515 -prefix psb6351_clustsim.1D
+#3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.480572 24.9153 4.75515 -prefix psb6351_clustsim.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.771975 1.9046 7.24015 -prefix psb6351_clustsim_3mm.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.611402 3.29976 10.5605 -prefix psb6351_clustsim_5mm.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.557681 4.0328 12.0684 -prefix psb6351_clustsim_6mm.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.503852 5.64576 15.0071 -prefix psb6351_clustsim_8mm.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.559274 7.4153 19.2182 -prefix psb6351_clustsim_10mm.1D
+
+3dClustSim -mask /home/amele052/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.517576 9.26294 20.8996 -prefix psb6351_clustsim_12mm.1D
+
+# These 3dClustSims account for the 6 different kernel sizes I have set up. Each one has their own unique acf parameters, so you want to create 3dClustSims accordingly. These should give you their respective output files. 
+
 
 # While running 3dClustSim, I realized it was running...for an INSANELY long time. To see if this helps with the speed of running this line, I added two #SBATCH lines at the top, taking reference to an earlier assignment! 
-# Specifically, I wenapt based off an edit I made to my preproc workflow from an earlier assignment, and I specified the amount of cpus-per-task that I wanted, as well as 
+# Specifically, I went based off an edit I made to my preproc workflow from an earlier assignment, and I specified the amount of cpus-per-task that I wanted, as well as 
 # the amount of memory-per-cpu. Note that requesting more memory may go beyond what the --qos allows and may result in a longer queue time! 

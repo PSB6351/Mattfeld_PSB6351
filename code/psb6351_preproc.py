@@ -290,11 +290,13 @@ psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 smooth = pe.MapNode(fsl.Smooth(),
         iterfield=['in_file'],
         name='smooth')
-smooth.inputs.fwhm = 8.0
+smooth.iterables = ('fwhm', [3, 5, 6, 8, 10, 12])
 smooth.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
 psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
 
-# I set fwhm to 8.0 to match the Nipype's example of "Setting the kernel width using fwhm"!
+# To compare how smoothing kernels play a role in cluster size estimation for Monte Carlo simulations, I went and tweaked this file a bit. Instead of strictly setting my smoothing to 8mm,
+# I created a list of iterables that should HOPEFULLY create 6 branches that iterate our fwhm over different mm values.
+# That way, I can now run 3dFWHMx AND 3dClustSim with these iterables and look at any differences in their outputs! 
 
 
 
@@ -379,9 +381,21 @@ psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
 # ADD datasink connections to save spatially smoothed and temporally filtered data
 # if you implemented more than one method for diadatic purposes...save accordingly
 
-psb6351_wf.connect(smooth, 'smoothed_file', datasink, 'smooth.@file')
-psb6351_wf.connect(highpass, 'out_file', datasink, 'highpass.@file')
+# Fixing this on 11/13/26: To prevent extra copies, I'm also tweaking this part again! Want to keep files separate so that motion/coreg/study_ref aren't saved again.
+# Just making it more organized for when I run AFNI's Monte Carlo sims :) 
+# Commenting out wf.connect lines for smooth and highpass!
+
+
+# psb6351_wf.connect(smooth, 'smoothed_file', datasink, 'smooth.@file')
+# psb6351_wf.connect(highpass, 'out_file', datasink, 'highpass.@file')
 # psb6351_wf.connect(remlfit, 'errts_file', datasink, 'dct.@residuals')
+
+# Just the highpass-filtered data (i.e., what goes into 3dDeconvolve) is saved, similar to 'resids'.
+highpass_sink = pe.Node(nio.DataSink(), name = "highpass_sink")
+highpass_sink.inputs.base_directory = sink_dir
+psb6351_wf.connect(subjID_infosource, 'subject_id', highpass_sink, 'container')
+psb6351_wf.connect(getsubs, 'subs', highpass_sink, 'substitutions')
+psb6351_wf.connect(highpass, 'out_file', highpass_sink, 'highpass.@file')
 
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 psb6351_wf.connect(coreg, 'out_file', datasink, 'coreg.@out_file')
