@@ -1,0 +1,13 @@
+3mm ACF params (a b c FWHM):  0.888962  1.82715  7.50829    4.56692
+5mm ACF params (a b c FWHM):  0.760671  3.06321  10.0621    7.80889
+6mm ACF params (a b c FWHM):  0.725508  3.71509  11.782    9.5562
+9mm ACF params (a b c FWHM):  0.617926  5.77003  15.0068    14.9271
+12mm ACF params (a b c FWHM):  0.582507  8.14116  18.8104    20.716
+
+===== smoothness summary (also saved to smoothness_summary.txt) =====
+kernel_mm	a	b	c	effective_FWHM_mm	k_NN1_2sided_p001_a05
+3	0.888962	1.82715	7.50829	4.56692	7.9
+5	0.760671	3.06321	10.0621	7.80889	29.2
+6	0.725508	3.71509	11.782	9.5562	46.4
+9	0.617926	5.77003	15.0068	14.9271	122.8
+12	0.582507	8.14116	18.8104	20.716	231.5

@@ -1,0 +1,196 @@
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 203370
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered_3mm/_highpass_3mm0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz is 30.000002 degrees from plumb.
+[7m*+ WARNING:[0m removed 50 voxels from mask because they are constant in time
+++ detrending start: 25 baseline funcs, 355 time points
+ + detrending done (0.00 CPU s thus far)
+++ start ACF calculations out to radius = 9.47 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2_3mm
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2_3mm.png
+ + and 1dplot-ed to file acf2_3mm.png
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 203370 voxels in mask (30.81% of total)
+++ Kernel function radius = 12.87 mm
+++ ACF(0.89,1.83,7.51) => FWHM=4.49 => 100x100x66 pads to 120x120x80
+ + Kernel image dimensions 59 x 59 x 39
+++ Startup clock time = 0.1 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 342.2 s
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 203370
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered/_highpass0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz is 30.000002 degrees from plumb.
+++ detrending start: 25 baseline funcs, 355 time points
+ + detrending done (0.00 CPU s thus far)
+++ start ACF calculations out to radius = 15.55 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2.png
+ + and 1dplot-ed to file acf2.png
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 203370 voxels in mask (30.81% of total)
+++ Kernel function radius = 24.98 mm
+++ ACF(0.76,3.06,10.06) => FWHM=7.81 => 100x100x66 pads to 128x128x96
+ + Kernel image dimensions 63 x 63 x 47
+++ Startup clock time = 0.1 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 459.1 s
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 203370
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered_6mm/_highpass_6mm0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz is 30.000002 degrees from plumb.
+++ detrending start: 25 baseline funcs, 355 time points
+ + detrending done (0.00 CPU s thus far)
+++ start ACF calculations out to radius = 18.32 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2_6mm
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2_6mm.png
+ + and 1dplot-ed to file acf2_6mm.png
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 203370 voxels in mask (30.81% of total)
+++ Kernel function radius = 30.86 mm
+++ ACF(0.73,3.72,11.78) => FWHM=9.56 => 100x100x66 pads to 160x160x120
+ + Kernel image dimensions 79 x 79 x 59
+++ Startup clock time = 0.3 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 1134.7 s
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 203370
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered_9mm/_highpass_9mm0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz is 30.000002 degrees from plumb.
+++ detrending start: 25 baseline funcs, 355 time points
+ + detrending done (0.00 CPU s thus far)
+++ start ACF calculations out to radius = 25.04 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2_9mm
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2_9mm.png
+ + and 1dplot-ed to file acf2_9mm.png
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 203370 voxels in mask (30.81% of total)
+++ Kernel function radius = 44.27 mm
+++ ACF(0.62,5.77,15.01) => FWHM=14.93 => 100x100x66 pads to 160x160x120
+ + Kernel image dimensions 70 x 70 x 52
+++ Startup clock time = 0.2 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 578.2 s
+++ 3dFWHMx: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: The Bob
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ Number of voxels in mask = 203370
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/filtered_12mm/_highpass_12mm0/sub-021_task-study_run-1_bold_volreg_tshift_maths_smooth_tempfilt.nii.gz is 30.000002 degrees from plumb.
+++ detrending start: 25 baseline funcs, 355 time points
+ + detrending done (0.00 CPU s thus far)
+++ start ACF calculations out to radius = 29.62 mm
+ + ACF done (0.00 CPU s thus far)
+++ ACF 1D file [radius ACF mixed_model gaussian_NEWmodel] written to acf2_12mm
+++ 1dplot: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RWC et al.
+[7m** ERROR:[0m missing program pnmtopng, cannot write acf2_12mm.png
+ + and 1dplot-ed to file acf2_12mm.png
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/eskog001/Mattfeld_PSB6351_eas/derivatives/preproc/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 203370 voxels in mask (30.81% of total)
+++ Kernel function radius = 57.16 mm
+++ ACF(0.58,8.14,18.81) => FWHM=20.72 => 100x100x66 pads to 160x160x128
+ + Kernel image dimensions 50 x 50 x 40
+++ Startup clock time = 0.3 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 441.7 s
