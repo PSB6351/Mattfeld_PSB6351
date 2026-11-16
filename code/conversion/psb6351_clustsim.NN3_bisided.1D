@@ -1,0 +1,17 @@
+# 3dClustSim -mask /home/cbeac004/Mattfeld_PSB6351/derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.480604 24.9129 4.7546 -iter 1000 -prefix psb6351_clustsim
+# bi-sided thresholding
+# Grid: 100x100x66 2.00x2.00x2.00 mm^3 (220494 voxels in mask)
+#
+# CLUSTER SIZE THRESHOLD(pthr,alpha) in Voxels
+# -NN 3  | alpha = Prob(Cluster >= given size)
+#  pthr  | .10000 .05000 .02000 .01000
+# ------ | ------ ------ ------ ------
+ 0.050000  6941.5 8604.0  10451  11848
+ 0.020000  2716.0 3466.0 4493.0 5300.0
+ 0.010000  1392.0 1898.5 2474.0 3007.0
+ 0.005000   714.0 1027.0 1369.0 1683.0
+ 0.002000   292.0  434.0  655.0  871.0
+ 0.001000   143.3  225.0  367.0  511.0
+ 0.000500    76.5  121.0  198.0  284.0
+ 0.000200    34.5   55.0   89.0  133.0
+ 0.000100    19.0   30.2   50.5   65.5
