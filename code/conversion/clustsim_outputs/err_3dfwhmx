@@ -1,0 +1,20 @@
+[2026-11-16T10:17:54.863] error: Unable to create TMPDIR [/scratch/afni]: Permission denied
+[2026-11-16T10:17:54.863] error: Setting TMPDIR to /tmp
+++ 3dClustSim: AFNI version=AFNI_25.2.07 (Aug  6 2025) [64-bit]
+++ Authored by: RW Cox and BD Ward
+[7m*+ WARNING:[0m   If you are performing spatial transformations on an oblique dset,
+  such as /home/sfrai003/Mattfeld_PSB6351/derivatives/clustsim/sub-021/sub-021_mask.nii.gz,
+  or viewing/combining it with volumes of differing obliquity,
+  you should consider running: 
+     3dWarp -deoblique 
+  on this and  other oblique datasets in the same session.
+ See 3dWarp -help for details.
+++ Oblique dataset:/home/sfrai003/Mattfeld_PSB6351/derivatives/clustsim/sub-021/sub-021_mask.nii.gz is 30.000002 degrees from plumb.
+++ 219900 voxels in mask (33.32% of total)
+++ Kernel function radius = 18.64 mm
+++ ACF(0.64,1.74,6.43) => FWHM=4.77 => 100x100x66 pads to 120x120x96
+ + Kernel image dimensions 59 x 59 x 47
+++ Startup clock time = 0.1 s
+++ Using 4 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 1082.4 s
