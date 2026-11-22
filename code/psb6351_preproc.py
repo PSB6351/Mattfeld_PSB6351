@@ -24,6 +24,7 @@ import json
 import nipype.interfaces.io as nio
 import nipype.pipeline.engine as pe 
 import nipype.interfaces.utility as util
+import nipype.algorithms.rapidart as ra
 
 # list of subject ids
 sids = ['sub-021']
@@ -427,6 +428,42 @@ psb6351_wf.connect(maskfunc, 'out_file', highpass, 'in_file')
 psb6351_wf.connect(meanfunc, 'out_file', highpass, 'in_file2')
 
 
+# NODE 13: RAPID ARTIFACT DETECTION (rapidart / ArtifactDetect)
+# Flags timepoints whose frame-wise displacement (FWD) is above a threshold.
+# - MapNode: one run at a time; iterfield pairs each motion-corrected run
+#   with its own motion parameter file from volreg (same order).
+# - parameter_source='AFNI' tells rapidart the .1D columns are AFNI volreg
+#   format (roll, pitch, yaw in degrees; dS, dL, dP in mm).
+# - use_differences=[True, False]: the FIRST True means motion is measured
+#   as the change from the previous volume (frame-wise displacement) rather
+#   than distance from the reference volume. The second value is for the
+#   intensity check, which stays absolute.
+# - use_norm=True + norm_threshold: combines translations and rotations into
+#   one composite displacement in mm and flags volumes above the threshold.
+# - zintensity_threshold=3: also flags global-intensity spikes > 3 SD.
+#   (The FWD counts below come from the motion part only.)
+# - mask_type='file': uses the EPI-space brain mask from SUSAN NODE 3.
+# Two nodes, identical except for the threshold: 1mm and 0.5mm.
+def make_art(name, thresh):
+    art = pe.MapNode(ra.ArtifactDetect(),
+                     iterfield=['realigned_files', 'realignment_parameters'],
+                     name=name)
+    art.inputs.parameter_source = 'AFNI'
+    art.inputs.use_differences = [True, False]
+    art.inputs.use_norm = True
+    art.inputs.norm_threshold = thresh
+    art.inputs.zintensity_threshold = 3
+    art.inputs.mask_type = 'file'
+    art.inputs.save_plot = True
+    psb6351_wf.connect(volreg, 'out_file', art, 'realigned_files')
+    psb6351_wf.connect(volreg, 'oned_file', art, 'realignment_parameters')
+    psb6351_wf.connect(masktransform, 'transformed_file', art, 'mask_file')
+    return art
+
+art_1mm = make_art('art_1mm', 1.0)
+art_05mm = make_art('art_05mm', 0.5)
+
+
 # NODE FINAL: DataSink. Modify to save only the files you want at the completion of your workflow
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
@@ -446,6 +483,13 @@ psb6351_wf.connect(maskfunc, 'out_file', datasink, 'masked.@unsmoothed')
 psb6351_wf.connect(smooth, 'smoothed_file', datasink, 'smooth.@smoothed')
 psb6351_wf.connect(highpass, 'out_file', datasink, 'hpf.@filtered')
 
+# Rapidart outputs: outlier index lists, per-run stats, FWD values, plots
+for art, folder in [(art_1mm, 'fwd1mm'), (art_05mm, 'fwd05mm')]:
+    psb6351_wf.connect(art, 'outlier_files', datasink, 'art.%s.@outliers' % folder)
+    psb6351_wf.connect(art, 'statistic_files', datasink, 'art.%s.@stats' % folder)
+    psb6351_wf.connect(art, 'norm_files', datasink, 'art.%s.@norm' % folder)
+    psb6351_wf.connect(art, 'plot_files', datasink, 'art.%s.@plots' % folder)
+
 psb6351_wf.connect(getsubs, 'subs', datasink, 'substitutions')
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
@@ -460,4 +504,3 @@ psb6351_wf.run(plugin='SLURM',
                plugin_args={'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=16G'),
                             'template': slurm_template,
                             'overwrite':True})
-
