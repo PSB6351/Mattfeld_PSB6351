@@ -422,6 +422,45 @@ temporal_filter.inputs.suffix = '_tempfilt'
 psb6351_wf.connect(susan, 'smoothed_file',temporal_filter, 'in_file')
 
 
+
+# NODE 7A: Rapid artifact detection for each functional run
+# Detect motion outliers at two displacement thresholds: 1.0 mm and 0.5 mm.
+# Both MapNodes use the motion-corrected BOLD images and AFNI motion parameters.
+
+from nipype.algorithms.rapidart import ArtifactDetect
+
+# Motion artifact detection at 1 mm
+art_1mm = pe.MapNode(ArtifactDetect(
+        parameter_source='AFNI',
+        use_norm=True,
+        use_differences=[True, False],
+        norm_threshold=1.0,
+        zintensity_threshold=3.0,
+        mask_type='thresh',
+        mask_threshold=0.1),
+    iterfield=['realigned_files', 'realignment_parameters'],
+    name='art_1mm')
+
+psb6351_wf.connect(volreg, 'out_file', art_1mm, 'realigned_files')
+psb6351_wf.connect(volreg, 'oned_file', art_1mm, 'realignment_parameters')
+
+# Motion artifact detection at 0.5 mm
+art_05mm = pe.MapNode(ArtifactDetect(
+        parameter_source='AFNI',
+        use_norm=True,
+        use_differences=[True, False],
+        norm_threshold=0.5,
+        zintensity_threshold=3.0,
+        mask_type='thresh',
+        mask_threshold=0.1),
+    iterfield=['realigned_files', 'realignment_parameters'],
+    name='art_05mm')
+
+psb6351_wf.connect(volreg, 'out_file',art_05mm, 'realigned_files')
+psb6351_wf.connect(volreg, 'oned_file',art_05mm, 'realignment_parameters')
+
+
+
 # NODE FINAL: DataSink. Modify to save only the files you want at the completion of your workflow
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
@@ -437,6 +476,13 @@ psb6351_wf.connect(transform_mask, 'transformed_file', datasink, 'coreg.@mask')
 psb6351_wf.connect(maskfunc, 'out_file', datasink, 'func.@mask')
 psb6351_wf.connect(susan,'smoothed_file',datasink,'func.@smoothed')
 psb6351_wf.connect(temporal_filter, 'out_file', datasink, 'func.@tempfilt')
+psb6351_wf.connect(art_1mm, 'norm_files', datasink, 'artifacts.@motion_1mm')
+psb6351_wf.connect(art_1mm, 'outlier_files', datasink, 'artifacts.@outliers_1mm')
+psb6351_wf.connect(art_1mm, 'statistic_files', datasink, 'artifacts.@stats_1mm')
+psb6351_wf.connect(art_05mm, 'norm_files', datasink, 'artifacts.@motion_05mm')
+psb6351_wf.connect(art_05mm, 'outlier_files', datasink, 'artifacts.@outliers_05mm')
+psb6351_wf.connect(art_05mm, 'statistic_files', datasink, 'artifacts.@stats_05mm')
+
 
 psb6351_wf.config['execution']['use_relative_paths'] = True
 psb6351_wf.config['execution']['crashdump_dir'] = '/scratch/classroom/psb6351/mali092/Mattfeld_PSB6351/ATM/crash'
