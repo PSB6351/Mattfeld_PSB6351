@@ -3,14 +3,26 @@
 #SBATCH -J psb6351_3dfwhmx
 #SBATCH -o out_3dfwhmx
 #SBATCH -e err_3dfwhmx
-#SBATCH --qos pq_madlab
-#SBATCH --account iacc_madlab
-#SBATCH --partition 16C_128G
+#SBATCH --qos=classroom
+#SBATCH --account=acc_psb6351
+#SBATCH --partition=default-part
+#SBATCH --mem=8G
+
 
 # Need to run the below line once:
 #3dAutomask -prefix COMPLETE THIS LINE...WHAT ARE THE INPUTS, OUTPUTS,  INCLUDE AS A COMMENTED LINE WHY YOU ARE RUNNING THIS COMMAND
 
+# 3dAutomask uses the functional reference image as input to generate a binary brain mask as output, which excludes nonbrain voxels so that smoothness estimation and cluster simulation are restricted to brain tissue.
+
+#3dAutomask -prefix ../../derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz ../../derivatives/preproc/sub-021/study_ref/sub-021_task-REVL_run-01_bold_roi.nii.gz
+
+
 #3dFWHMx COMPLETE THIS LINE...WHAT INPUTS, OUTPUTS, FLAGS DO YOU NEED.  WHAT ARE YOU TRYING TO ACCOMPLISH WITH THIS LINE?
+
+# 3dFWHMx uses the functional image and brain mask as inputs to estimate spatial smoothness within the brain. The -mask flag restricts the analysis to brain voxels, while -acf estimates the spatial autocorrelation parameters needed for cluster-size correction and saves the results to acf2.
+
+3dFWHMx -detrend -mask ../../derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf acf2 -input ../../derivatives/preproc/sub-021/smoothed/_fwhm_6/_smooth0/sub-021_task-REVL_run-01_bold_volreg_tshift_smooth.nii.gz
+
 
 # THE OUTPUT SHOULD LOOK SOMETHING LIKE THE TEXT BELOW:
 
@@ -37,4 +49,4 @@
 #++ Authored by: RWC et al.
 #++ and 1dplot-ed to file acf2.png
 
-3dClustSim -mask WHAT GOES HERE??? -acf ######  ######  ####### -prefix psb6351_clustsim.1D
+3dClustSim -mask ../../derivatives/preproc/sub-021/study_ref/sub-021_mask.nii.gz -acf 0.686777 3.93611 12.4821 -prefix psb6351_clustsim.1D
