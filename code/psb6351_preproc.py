@@ -26,6 +26,9 @@ import json
 import nipype.interfaces.io as nio
 import nipype.pipeline.engine as pe 
 import nipype.interfaces.utility as util
+import nipype.algorithms.rapidart as rapidart
+# For my final edits to this workflow, I will import Nipype's rapidart (for 11/23/26) as shown in line 29 ^^.
+
 
 # list of subject ids
 sids = ['sub-021']
@@ -99,6 +102,8 @@ psb6351_wf.base_dir = work_dir
 subjID_infosource = pe.Node(IdentityInterface(fields=['subject_id']), name = 'subjID_infosource')
 subjID_infosource.iterables = ('subject_id', sids)
 
+# ---------------------------------------------------------------------------------------------------
+
 # NODE 2: DataGrabber, currently collecting fMRI and JSON files
 info = dict(
             fmri_files=[['subject_id', 'subject_id']],
@@ -117,6 +122,7 @@ datasource.inputs.template_args = info
 datasource.inputs.sort_filelist = True
 datasource.inputs.raise_on_empty = True
 psb6351_wf.connect(subjID_infosource, 'subject_id', datasource, 'subject_id')
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 3: Substitution function to be used with DataSink 
 getsubs = pe.Node(Function(input_names=['subject_id'],
@@ -124,6 +130,8 @@ getsubs = pe.Node(Function(input_names=['subject_id'],
                            function=get_subs),
                   name='getsubs')
 psb6351_wf.connect(subjID_infosource, 'subject_id', getsubs, 'subject_id')    
+
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 4: Identify number of outliers in the
 #         first fMRI run (note applciation of pickfirst fxn)
@@ -135,6 +143,8 @@ id_outliers.inputs.polort = 4
 id_outliers.inputs.out_file = 'outlier_file'
 psb6351_wf.connect(datasource, ('fmri_files', pickfirst), id_outliers, 'in_file')
 
+# ---------------------------------------------------------------------------------------------------
+
 # NODE 5: Pass outlier text file to this function to pick best volume
 getbestvol = pe.Node(Function(input_names=['outlier_count', 'middlebest'],
                               output_names=['best_vol_num'],
@@ -143,11 +153,15 @@ getbestvol = pe.Node(Function(input_names=['outlier_count', 'middlebest'],
 getbestvol.inputs.middlebest = False
 psb6351_wf.connect(id_outliers, 'out_file', getbestvol, 'outlier_count')
 
+# ---------------------------------------------------------------------------------------------------
+
 # NODE 6: Use FSL tool to isolate/extract best volume
 extractref = pe.Node(fsl.ExtractROI(t_size=1),
                      name = "extractref")
 psb6351_wf.connect(getbestvol, 'best_vol_num', extractref, 't_min')
 psb6351_wf.connect(datasource, ('fmri_files', pickfirst), extractref, 'in_file')
+
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 7: Motion correction node - NOTE Applying this before slicetimeing
 volreg = pe.MapNode(afni.Volreg(),
@@ -158,12 +172,51 @@ volreg.inputs.zpad = 4
 psb6351_wf.connect(extractref, 'roi_file', volreg, 'basefile')
 psb6351_wf.connect(datasource, 'fmri_files', volreg, 'in_file')
 
+# NODE 7.1: Artifact Detect - Detects outliers in a functional imaging series. AKA, it finds outlier timepoints (vols) in fMRI imaging series
+# caused by sudden head movement or signal spikes.
+
+# 1mm FWD Threshold:
+art_detect_1mm = pe.MapNode(rapidart.ArtifactDetect(),
+                    iterfield=['realigned_files', 'realignment_parameters'],
+                    name = 'art_detect_1mm')
+art_detect_1mm.inputs.parameter_source = 'AFNI'
+art_detect_1mm.inputs.norm_threshold = 1 
+art_detect_1mm.inputs.use_differences = [True, False]
+art_detect_1mm.inputs.zintensity_threshold = 3
+art_detect_1mm.inputs.mask_type = 'spm_global'
+art_detect_1mm.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=8G'), 'overwrite': True}   # <-- added memory since ART gave errors at the default
+psb6351_wf.connect(volreg, 'out_file', art_detect_1mm, 'realigned_files')
+psb6351_wf.connect(volreg, 'oned_file', art_detect_1mm, 'realignment_parameters')
+
+
+# 0.5mm FWD Threshold:
+art_detect_05mm = pe.MapNode(rapidart.ArtifactDetect(),
+                    iterfield=['realigned_files', 'realignment_parameters'],
+                    name = 'art_detect_05mm')
+art_detect_05mm.inputs.parameter_source = 'AFNI'
+art_detect_05mm.inputs.norm_threshold = 0.5
+art_detect_05mm.inputs.use_differences = [True, False]
+art_detect_05mm.inputs.zintensity_threshold = 3
+art_detect_05mm.inputs.mask_type = 'spm_global'
+art_detect_05mm.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --mem=8G'), 'overwrite': True}   # <-- added memory since ART gave errors at the default
+psb6351_wf.connect(volreg, 'out_file', art_detect_05mm, 'realigned_files')
+psb6351_wf.connect(volreg, 'oned_file', art_detect_05mm, 'realignment_parameters')
+
+
+# I had first created one MapNode, setting the threshold to JUST 1mm FWD (AKA, just the 1mm FWD lines). Had I kept the MapNode that way, 
+# I would only get outlier timepoints based on a threshold of 1mm FWD. To adjust to include calculations at 0.5mm FWD,
+# the node will be split in two, running for the two thresholds!
+
+# ---------------------------------------------------------------------------------------------------
+
 # NODE 8: Get list of slice times from JSON files.
 getslctime = pe.Node(Function(input_names=['json_file_list'],
                               output_names=['slctime_list'],
                               function=slc_time),
                      name='getslctime')
 psb6351_wf.connect(datasource, 'json_files', getslctime, 'json_file_list')
+
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 9: Slicetiming correction node - applied after motion correction
 #         list of fMRI files must equal list of slice_timing derived from JSONs
@@ -174,6 +227,9 @@ tshifter.inputs.tr = '1.76'
 tshifter.inputs.outputtype = 'NIFTI_GZ'
 psb6351_wf.connect(volreg, 'out_file', tshifter, 'in_file')
 psb6351_wf.connect(getslctime, 'slctime_list', tshifter, 'slice_timing')
+
+
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 10: Coregistration of functional to anatomical node using freesurfer's bbregister
 
@@ -286,11 +342,14 @@ psb6351_wf.connect(extractref, 'roi_file', coreg, 'in_file')
 
 # NODES FOR SPATIAL SMOOTHING GO HERE!!!!
 
+# ---------------------------------------------------------------------------------------------------
+
 # NODE 11: SPATIAL SMOOTHING USING FSL SMOOTH (based on https://nipype.readthedocs.io/en/latest/api/generated/nipype.interfaces.fsl.utils.html#nipype.interfaces.fsl.utils.Smooth)
 smooth = pe.MapNode(fsl.Smooth(),
         iterfield=['in_file'],
         name='smooth')
-smooth.iterables = ('fwhm', [3, 5, 6, 8, 10, 12])
+#smooth.iterables = ('fwhm', [3, 5, 6, 8, 10, 12]); used for AlphaSim kernel comparison, commenting it out for final script
+smooth.inputs.fwhm = 6.0 
 smooth.plugin_args = {'sbatch_args': ('--account acc_psb6351 --qos classroom --cpus-per-task=3'), 'overwrite': True}
 psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
 
@@ -298,7 +357,11 @@ psb6351_wf.connect(tshifter, 'out_file', smooth, 'in_file')
 # I created a list of iterables that should HOPEFULLY create 6 branches that iterate our fwhm over different mm values.
 # That way, I can now run 3dFWHMx AND 3dClustSim with these iterables and look at any differences in their outputs! 
 
+# Now that the files for different kernel sizes has been created (for Week 13), I commented out my smooth.iterables line and replaced it with smooth.inputs.fwhm, setting it to 6mm. That'll require less time to run my job, while also preventing the creation of more files.
 
+
+
+# ---------------------------------------------------------------------------------------------------
 
 # NODE 12: TEMPORAL FILTERING OR SMOOTHING
 # I want you to add a node here to temporally filter the functional data --> should this be a mapnode or regular node?
@@ -364,6 +427,8 @@ psb6351_wf.connect(smooth, 'smoothed_file', highpass, 'in_file')
 
 # I also chose a cutoff time of 100s--based on this week's discussion on spatial and temporal smoothing, the goal is to have cycle over 65-70s (anything less than that range would cause signal loss in lower frequencies), hence why I went for 100s.
 
+# ---------------------------------------------------------------------------------------------------
+
 # NODE FINAL: DataSink. Modify to save only the files you want at the completion of your workflow
 datasink = pe.Node(nio.DataSink(), name="datasink")
 datasink.inputs.base_directory = sink_dir
@@ -372,6 +437,15 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
+
+psb6351_wf.connect(art_detect_1mm, 'outlier_files', datasink, 'art_1mm.@outliers')
+psb6351_wf.connect(art_detect_1mm, 'statistic_files', datasink, 'art_1mm.@stats')
+psb6351_wf.connect(art_detect_1mm, 'norm_files', datasink, 'art_1mm.@norm')
+psb6351_wf.connect(art_detect_05mm, 'outlier_files', datasink, 'art_05mm.@outliers')
+psb6351_wf.connect(art_detect_05mm, 'statistic_files', datasink, 'art_05mm.@stats')
+psb6351_wf.connect(art_detect_05mm, 'norm_files', datasink, 'art_05mm.@norm')
+# ALSO for DataSink --> art_detect outputs! ^^ as for the output names, I went based off of Nipype's output section from the rapidart doc (https://nipype.readthedocs.io/en/latest/api/generated/nipype.algorithms.rapidart.html).
+# The site also mentioned how these outputs come out (one file per  run), meaning my  MapNode should result in six of each (one per run). 
 
 # Original fs_register lines have been commented out, otherwise they'd cause the code to crash since I used FSL Flirt in the coregistration assignment. Keeping them here for reference!
 #psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
