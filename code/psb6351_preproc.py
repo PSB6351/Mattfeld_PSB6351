@@ -23,6 +23,7 @@ import json
 import nipype.interfaces.io as nio
 import nipype.pipeline.engine as pe 
 import nipype.interfaces.utility as util
+import nipype.algorithms.rapidart as ra
 
 # list of subject ids
 sids = ['sub-021']
@@ -93,6 +94,36 @@ def best_vol(outlier_count, middlebest):
 
     return best_vol_num
 
+# Function for counting outlier timepoints in each run from rapidart outputs.
+# norm_files hold the frame-wise displacement (FWD, mm) for every timepoint
+# (rapidart's composite norm, frame differenced because use_differences[0]=True),
+# so counting values above the threshold gives the number of FWD outliers.
+# outlier_files hold every timepoint rapidart flagged (FWD + intensity outliers).
+# Writes one csv per threshold with a row per run.
+def count_outliers(norm_files, outlier_files, threshold):
+    import os
+    import numpy as np
+    import pandas as pd
+    rows = []
+    for run_num, (norm_file, outlier_file) in enumerate(zip(norm_files, outlier_files)):
+        fwd = np.atleast_1d(np.loadtxt(norm_file))
+        if os.path.getsize(outlier_file) > 0:
+            all_outliers = np.atleast_1d(np.loadtxt(outlier_file))
+        else:
+            all_outliers = np.array([])
+        rows.append({'run': run_num + 1,
+                     'func_file': os.path.basename(norm_file).replace('norm.', '').replace('.txt', ''),
+                     'fwd_threshold_mm': threshold,
+                     'n_timepoints': len(fwd),
+                     'n_fwd_outliers': int(np.sum(fwd > threshold)),
+                     'n_total_art_outliers': len(all_outliers),
+                     'mean_fwd_mm': float(np.mean(fwd)),
+                     'max_fwd_mm': float(np.max(fwd))})
+    out_file = os.path.abspath('outlier_counts_fwd%smm.csv' % str(threshold).replace('.', 'p'))
+    pd.DataFrame(rows).to_csv(out_file, index=False)
+    print(pd.DataFrame(rows).to_string(index=False))
+    return out_file
+
 # Establish workflow and working directory
 psb6351_wf = pe.Workflow(name='psb6351_wf')
 psb6351_wf.base_dir = work_dir
@@ -159,6 +190,44 @@ volreg.inputs.outputtype = 'NIFTI_GZ'
 volreg.inputs.zpad = 4
 psb6351_wf.connect(extractref, 'roi_file', volreg, 'basefile')
 psb6351_wf.connect(datasource, 'fmri_files', volreg, 'in_file')
+
+# NODE 7b: Rapid artifact detection (rapidart) over all functional runs
+# https://nipype.readthedocs.io/en/latest/api/generated/nipype.algorithms.rapidart.html
+# Uses the motion corrected runs and AFNI's 3dvolreg motion parameters
+# (parameter_source='AFNI' tells rapidart the column order/units of the .1D file).
+# norm_threshold is the frame-wise displacement (FWD) cutoff in mm.
+# use_differences=[True, False] -> motion is frame-to-frame (FWD), intensity is not.
+# zintensity_threshold flags timepoints whose global signal is > 3 SD from the mean.
+# It's a MapNode so every run gets its own outlier file.
+# One node per threshold (1mm and 0.5mm) instead of iterables so the
+# smoothing/filtering branches below aren't duplicated for each threshold.
+fwd_thresholds = [1.0, 0.5]
+art_nodes = {}
+for thresh in fwd_thresholds:
+    thresh_name = str(thresh).replace('.', 'p')
+    art = pe.MapNode(ra.ArtifactDetect(),
+                     iterfield=['realigned_files', 'realignment_parameters'],
+                     name='art_fwd%smm' % thresh_name)
+    art.inputs.parameter_source = 'AFNI'
+    art.inputs.use_differences = [True, False]
+    art.inputs.use_norm = True
+    art.inputs.norm_threshold = thresh
+    art.inputs.zintensity_threshold = 3
+    art.inputs.mask_type = 'spm_global'
+    art.inputs.save_plot = True
+    art.plugin_args = {'sbatch_args': '--account acc_psb6351 --qos classroom --mem=16G', 'overwrite': True}
+    psb6351_wf.connect(volreg, 'out_file', art, 'realigned_files')
+    psb6351_wf.connect(volreg, 'oned_file', art, 'realignment_parameters')
+
+    # Count the outlier timepoints for each run at this threshold
+    countart = pe.Node(Function(input_names=['norm_files', 'outlier_files', 'threshold'],
+                                output_names=['count_file'],
+                                function=count_outliers),
+                       name='count_outliers_fwd%smm' % thresh_name)
+    countart.inputs.threshold = thresh
+    psb6351_wf.connect(art, 'norm_files', countart, 'norm_files')
+    psb6351_wf.connect(art, 'outlier_files', countart, 'outlier_files')
+    art_nodes[thresh_name] = (art, countart)
 
 # NODE 8: Get list of slice times from JSON files.
 getslctime = pe.Node(Function(input_names=['json_file_list'],
@@ -447,6 +516,14 @@ psb6351_wf.connect(extractref, 'roi_file', datasink, 'study_ref')
 psb6351_wf.connect(volreg, 'out_file', datasink, 'motion.@corrfile')
 psb6351_wf.connect(volreg, 'oned_matrix_save', datasink, 'motion.@matrix')
 psb6351_wf.connect(volreg, 'oned_file', datasink, 'motion.@par')
+# rapidart outputs, one folder per FWD threshold
+for thresh_name, (art, countart) in art_nodes.items():
+    art_dir = 'art.fwd%smm' % thresh_name
+    psb6351_wf.connect(art, 'outlier_files', datasink, art_dir + '.@outlier_files')
+    psb6351_wf.connect(art, 'norm_files', datasink, art_dir + '.@norm_files')
+    psb6351_wf.connect(art, 'statistic_files', datasink, art_dir + '.@stat_files')
+    psb6351_wf.connect(art, 'plot_files', datasink, art_dir + '.@plot_files')
+    psb6351_wf.connect(countart, 'count_file', datasink, art_dir + '.@counts')
 if use_freesurfer:
     psb6351_wf.connect(fs_register, 'out_reg_file', datasink, 'register.@reg_file')
     psb6351_wf.connect(fs_register, 'min_cost_file', datasink, 'register.@reg_cost')
