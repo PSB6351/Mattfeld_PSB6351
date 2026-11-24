@@ -40,6 +40,9 @@ HP_CUTOFF_SEC = 100.0
 # Trying 7 as recommended. Don't fully understand this conceptually
 POLORT = 7
 
+# Framewise Displacement (FWD) thresholds in mm for rapid art (artifact detection)
+ART_NORM_THRESHOLDS = [1.0, 0.5]
+
 # Setting arguments for running here so I can just reference it alter
 # Tried setting a memory request but it is lowkey a random number
 HPC_ARGS = {'sbatch_args': ('--partition highmem1-sapphirerapids --cpus-per-task=3 --mem=32G '
@@ -65,6 +68,7 @@ import json
 import nipype.interfaces.io as nio
 import nipype.pipeline.engine as pe 
 import nipype.interfaces.utility as util
+import nipype.algorithms.rapidart as ra
 
 # list of subject ids
 sids = ['sub-021']
@@ -489,8 +493,32 @@ if 'susan' in SMOOTH_METHODS:
     psb6351_wf.connect(merge_usans, ('out', getusans), smooth_susan, 'usans')
     psb6351_wf.connect(fwhm_infosource, 'fwhm', smooth_susan, 'fwhm')
 
-# NODE DATASINK - Modify your datasink node to collect the smoothed output files so you can visualize
-# --> I will come back to this later...
+# ------- 5E. ARTIFACT DETECTIONS ---------
+# NODE 11: RAPID ART OUTLIER DETECTION, ALL FUNC RUNS
+# I will iterate over runs using a mapnode and over FWD thresholds using an iterable
+# the volreg.out_file and volreg.oned_file should be 1 list
+# per func run, each
+# it's should run 6 subnodes (0-5), pairing the nifti w motion parameters 
+art = pe.MapNode(ra.ArtifactDetect(),
+                iterfield=['realigned_files', 'realignment_parameters'],
+                name='art') # zipped pairwise
+art.inputs.parameter_source = 'AFNI' # consistent with file types!
+art.inputs.use_norm = True
+art.inputs.use_differences = [True, False]
+art.inputs.zintensity_threshold = 3 # default
+art.inputs.mask_type = 'file' # specifies a brain mask file, 0s and 1s
+art.inputs.bound_by_brainmask = False # default
+art.inputs.save_plot = True
+art.inputs.plot_type = 'png'
+# splits whole execution into 2 parallel branches
+# one for threshold 1, one for threshold 0.5
+art.iterables = ('norm_threshold', ART_NORM_THRESHOLDS)
+art.plugin_args = HPC_ARGS
+
+psb6351_wf.connect(volreg, 'out_file', art, 'realigned_files')
+psb6351_wf.connect(volreg, 'oned_file', art, 'realignment_parameters')
+# warp mask is single node, one brain mask, not per run but for all runs
+psb6351_wf.connect(warp_mask, 'transformed_file', art, 'mask_file')
 
 # ===================================
 # 6. TEMPORAL FILTERING, TASK DATA
@@ -626,6 +654,24 @@ if 'fsl_hpf' in TEMPORAL_METHODS:
 if 'afni_legendre' in TEMPORAL_METHODS:
     psb6351_wf.connect(remlfit, 'errts_file', datasink_fwhm, 'tempfilt_afni_%s.@errts' % TEMPORAL_INPUT)
     psb6351_wf.connect(deconvolve, 'x1D', datasink_fwhm, 'tempfilt_afni_%s.@x1D' % TEMPORAL_INPUT)
+
+# Artifact detection outputs, sink
+# not re-executing other nodes, just this one
+# accounts for both thresholds, 1 & 0.5
+# outlier files -> TRs flagged for motion / intensity
+# statistic files -> one file for each func run, info for diff types
+#   of artifacts... outputting this too bc im curious!
+
+datasink_art = pe.Node(nio.DataSink(), name="datasink_art")
+datasink_art.inputs.base_directory = sink_dir
+datasink_art.inputs.substitutions = [('_subject_id_%s' % sids[0], ''),
+                                    ('_norm_threshold_', 'fwd-')]
+psb6351_wf.connect(subjID_infosource, 'subject_id', datasink_art, 'container')
+psb6351_wf.connect(art, 'outlier_files', datasink_art, 'artifact_detect.@outliers')
+psb6351_wf.connect(art, 'statistic_files', datasink_art, 'artifact_detect.@stats')
+psb6351_wf.connect(art, 'norm_files', datasink_art, 'artifact_detect.@norm')
+psb6351_wf.connect(art, 'intensity_files', datasink_art, 'artifact_detect.@intensity')
+psb6351_wf.connect(art, 'plot_files', datasink_art, 'artifact_detect.@plots')
 
 # =======================
 # 8. RUN
