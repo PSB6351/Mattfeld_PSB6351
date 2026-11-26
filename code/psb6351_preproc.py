@@ -362,7 +362,7 @@ psb6351_wf.connect(medianval, 'out_stat', mergenode, 'in2')
 #       and its own mean image.
 fwhm_source = pe.Node(IdentityInterface(fields=['fwhm']),
                       name='fwhm_source')
-fwhm_source.iterables = ('fwhm', [3.0, 6.0, 9.0, 12.0])
+fwhm_source.iterables = ('fwhm', [8.0])
 
 smooth = pe.MapNode(fsl.SUSAN(),
                     iterfield=['in_file', 'brightness_threshold', 'usans'],
